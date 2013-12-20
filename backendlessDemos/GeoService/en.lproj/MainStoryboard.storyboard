@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="StartViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Backendless Geo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shh-X0-nW1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="272" id="xfU-Et-bGI"/>
+                                    <constraint firstAttribute="height" constant="21" id="zYx-oB-nfp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your coordinates:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEn-FM-M5x">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="S80-NP-eFJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="lat: 30.1234  long: 24.0975" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogh-RW-Tvj">
+                                <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Unf-cJ-b8T">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="276" id="Rwq-nR-kcd"/>
+                                    <constraint firstAttribute="width" constant="285" id="cTH-g1-aX6"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CitiesTableCell" id="6Xu-1U-clX">
+                                        <rect key="frame" x="0.0" y="22" width="285" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="285" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="gOk-sG-CEq"/>
+                                    <outlet property="delegate" destination="2" id="OMP-YX-Okw"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Search nearby cities - radius (km) :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-z6-NBg">
+                                <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minValue="1" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="hTn-FR-kCI">
+                                <connections>
+                                    <action selector="changeRadius:" destination="2" eventType="valueChanged" id="HvL-Lg-KnI"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPq-At-GFf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="0hX-VN-lLY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa3-yr-eXe">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="uAD-Kz-yCI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJZ-SB-TnA">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="gEh-v7-KH5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yPq-At-GFf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0qi-jB-YZu"/>
+                            <constraint firstItem="LEn-FM-M5x" firstAttribute="leading" secondItem="ogh-RW-Tvj" secondAttribute="leading" type="default" id="3qc-Fg-upX"/>
+                            <constraint firstItem="OJZ-SB-TnA" firstAttribute="centerX" secondItem="hTn-FR-kCI" secondAttribute="centerX" type="default" id="BCf-re-iwd"/>
+                            <constraint firstAttribute="trailing" secondItem="ogh-RW-Tvj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ESy-ZY-4t6"/>
+                            <constraint firstItem="yPq-At-GFf" firstAttribute="baseline" secondItem="sa3-yr-eXe" secondAttribute="baseline" type="default" id="EcO-rO-Lol"/>
+                            <constraint firstItem="yPq-At-GFf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="144" id="IVF-Ku-5sq"/>
+                            <constraint firstItem="ogh-RW-Tvj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="73" id="P3O-oh-IZ7"/>
+                            <constraint firstAttribute="trailing" secondItem="shh-X0-nW1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QlE-va-Ubo"/>
+                            <constraint firstAttribute="trailing" secondItem="sa3-yr-eXe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="SAs-x3-Fbv"/>
+                            <constraint firstItem="hTn-FR-kCI" firstAttribute="top" secondItem="3" secondAttribute="top" constant="124" id="UKB-gW-Ik1"/>
+                            <constraint firstAttribute="trailing" secondItem="hTn-FR-kCI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Wr9-rh-fjn"/>
+                            <constraint firstItem="OJZ-SB-TnA" firstAttribute="top" secondItem="yPq-At-GFf" secondAttribute="top" type="default" id="aq8-lB-A2z"/>
+                            <constraint firstItem="Unf-cJ-b8T" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="c3t-HE-rnV"/>
+                            <constraint firstItem="shh-X0-nW1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="dug-qq-OuP"/>
+                            <constraint firstItem="LEn-FM-M5x" firstAttribute="top" secondItem="shh-X0-nW1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hoM-A7-kEp"/>
+                            <constraint firstItem="hfz-z6-NBg" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="n4J-Xt-oeQ"/>
+                            <constraint firstItem="Unf-cJ-b8T" firstAttribute="top" secondItem="yPq-At-GFf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ruw-pf-mjJ"/>
+                            <constraint firstItem="LEn-FM-M5x" firstAttribute="leading" secondItem="shh-X0-nW1" secondAttribute="leading" type="default" id="wEo-5W-tBX"/>
+                            <constraint firstAttribute="trailing" secondItem="hfz-z6-NBg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xbT-Vu-m1V"/>
+                            <constraint firstItem="hTn-FR-kCI" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xdo-Qq-C1g"/>
+                            <constraint firstItem="hfz-z6-NBg" firstAttribute="top" secondItem="ogh-RW-Tvj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zDj-NI-hQa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="citiesTableView" destination="Unf-cJ-b8T" id="3fN-wr-JCw"/>
+                        <outlet property="coordinatesLabel" destination="ogh-RW-Tvj" id="2uG-Du-2G8"/>
+                        <outlet property="radiusLabel" destination="OJZ-SB-TnA" id="qrH-MG-BvS"/>
+                        <outlet property="radiusSlider" destination="hTn-FR-kCI" id="rOr-QN-u7b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="25"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="StartViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StartViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="cancelChat:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="changeRadius:"/>
+                <relationship kind="action" name="deleteSelectedObjects:"/>
+                <relationship kind="action" name="login:"/>
+                <relationship kind="action" name="logout:"/>
+                <relationship kind="action" name="playbackControl:"/>
+                <relationship kind="action" name="publishControl:"/>
+                <relationship kind="action" name="registration:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="selectEntity:"/>
+                <relationship kind="action" name="sendMessage:"/>
+                <relationship kind="action" name="stopMediaControl:"/>
+                <relationship kind="action" name="switchCamerasControl:"/>
+                <relationship kind="action" name="takePhoto:"/>
+                <relationship kind="outlet" name="btnLogin" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnLogout" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnRegister" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnStopMedia" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnSwapCamera" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="citiesTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="coordinatesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="countLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="deleteButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="loginInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="loginLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mainTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="messageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playbackView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="preview" candidateClass="UIView"/>
+                <relationship kind="outlet" name="radiusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="radiusSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
