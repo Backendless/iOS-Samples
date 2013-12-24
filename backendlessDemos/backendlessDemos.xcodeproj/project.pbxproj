@@ -38,6 +38,30 @@
 		914E715F182BCD21000F96CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		914E7160182BCD38000F96CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
 		915144F416DFCDB2007F0E50 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915144F316DFCDB2007F0E50 /* StartViewController.m */; };
+		9154F4781869CD4A00426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F4791869CD5200426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F47A1869CD5B00426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F47B1869CD6000426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F47C1869CD6500426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F47D1869CD6900426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F47E1869CD6E00426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F47F1869CD7300426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F4801869CD7A00426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F4831869CD9500426C78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
+		9154F4841869CD9800426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F4851869CDA900426C78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
+		9154F4861869CDB500426C78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
+		9154F4891869CDED00426C78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
+		9154F48A1869CDEF00426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F48B1869CDF800426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F48C1869CDF800426C78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
+		9154F48D1869CE0200426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F48E1869CE0200426C78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
+		9154F48F1869CE0800426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F4901869CE0800426C78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
+		9154F4911869CE0C00426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		9154F4921869CE0C00426C78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
+		9154F4931869CE1900426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
 		91628E6917FADBDB00ACC36F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91628E6717FADBDB00ACC36F /* InfoPlist.strings */; };
 		91628E6B17FADBDB00ACC36F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91628E6A17FADBDB00ACC36F /* main.m */; };
 		91628E6F17FADBDB00ACC36F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 91628E6D17FADBDB00ACC36F /* Credits.rtf */; };
@@ -517,6 +541,7 @@
 		9147E76E16C0F7EA000A26F4 /* images-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-1.jpeg"; sourceTree = "<group>"; };
 		915144F216DFCDB2007F0E50 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		915144F316DFCDB2007F0E50 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		9154F4771869CD4A00426C78 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		91628E5D17FADBDB00ACC36F /* ToDoDataMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoDataMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91628E6617FADBDB00ACC36F /* ToDoDataMac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoDataMac-Info.plist"; sourceTree = "<group>"; };
 		91628E6817FADBDB00ACC36F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -821,6 +846,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F4911869CE0C00426C78 /* libsqlite3.dylib in Frameworks */,
+				9154F4921869CE0C00426C78 /* SystemConfiguration.framework in Frameworks */,
 				91011884180D34E1008102A7 /* IOKit.framework in Frameworks */,
 				91011885180D34F4008102A7 /* AppKit.framework in Frameworks */,
 				9101183C180D33D4008102A7 /* Cocoa.framework in Frameworks */,
@@ -838,6 +865,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F4851869CDA900426C78 /* SystemConfiguration.framework in Frameworks */,
+				9154F4801869CD7A00426C78 /* libsqlite3.dylib in Frameworks */,
 				91628E9217FAE16C00ACC36F /* IOKit.framework in Frameworks */,
 				91628E7E17FADC1D00ACC36F /* Cocoa.framework in Frameworks */,
 				91628E8017FADC2500ACC36F /* AppKit.framework in Frameworks */,
@@ -856,6 +885,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F4831869CD9500426C78 /* SystemConfiguration.framework in Frameworks */,
+				9154F4841869CD9800426C78 /* libsqlite3.dylib in Frameworks */,
 				91628E9817FC147900ACC36F /* Cocoa.framework in Frameworks */,
 				91628EB117FC148B00ACC36F /* AppKit.framework in Frameworks */,
 				91628EB317FC149600ACC36F /* IOKit.framework in Frameworks */,
@@ -874,6 +905,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F48B1869CDF800426C78 /* libsqlite3.dylib in Frameworks */,
+				9154F48C1869CDF800426C78 /* SystemConfiguration.framework in Frameworks */,
 				91628ED917FC38DE00ACC36F /* IOKit.framework in Frameworks */,
 				91628EDA17FC38E300ACC36F /* AppKit.framework in Frameworks */,
 				91628EE017FC391000ACC36F /* libCommLibMac.a in Frameworks */,
@@ -891,6 +924,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F48A1869CDEF00426C78 /* libsqlite3.dylib in Frameworks */,
+				9154F4891869CDED00426C78 /* SystemConfiguration.framework in Frameworks */,
 				91628EE717FC557400ACC36F /* Cocoa.framework in Frameworks */,
 				91628F0017FC557E00ACC36F /* IOKit.framework in Frameworks */,
 				91628F0317FC559200ACC36F /* AppKit.framework in Frameworks */,
@@ -908,6 +943,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F48D1869CE0200426C78 /* libsqlite3.dylib in Frameworks */,
+				9154F48E1869CE0200426C78 /* SystemConfiguration.framework in Frameworks */,
 				91628F3417FD9A5200ACC36F /* Cocoa.framework in Frameworks */,
 				91628F4D17FDA52500ACC36F /* IOKit.framework in Frameworks */,
 				91628F4E17FDA52B00ACC36F /* libbackendless-mac.a in Frameworks */,
@@ -926,6 +963,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F48F1869CE0800426C78 /* libsqlite3.dylib in Frameworks */,
+				9154F4901869CE0800426C78 /* SystemConfiguration.framework in Frameworks */,
 				91628F5B17FDA79E00ACC36F /* Cocoa.framework in Frameworks */,
 				91628F7417FDA7A700ACC36F /* IOKit.framework in Frameworks */,
 				91628F7517FDA7BB00ACC36F /* AppKit.framework in Frameworks */,
@@ -944,6 +983,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F4931869CE1900426C78 /* libsqlite3.dylib in Frameworks */,
 				917C47491864889700FBB55D /* SystemConfiguration.framework in Frameworks */,
 				917C474A1864889700FBB55D /* MapKit.framework in Frameworks */,
 				9176510B1827CB3B00745497 /* CoreLocation.framework in Frameworks */,
@@ -971,6 +1011,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F1393A17C4E4D800D1AC4C /* CoreLocation.framework in Frameworks */,
+				9154F47F1869CD7300426C78 /* libsqlite3.dylib in Frameworks */,
 				91F1392817C4E39300D1AC4C /* backendless.a in Frameworks */,
 				91F1392917C4E47C00D1AC4C /* CommLibiOS.a in Frameworks */,
 				91F1392B17C4E48900D1AC4C /* libavdevice.a in Frameworks */,
@@ -988,7 +1030,6 @@
 				91F1393717C4E4B600D1AC4C /* AudioToolbox.framework in Frameworks */,
 				91F1393817C4E4BA00D1AC4C /* AVFoundation.framework in Frameworks */,
 				91F1393917C4E4D800D1AC4C /* CFNetwork.framework in Frameworks */,
-				91F1393A17C4E4D800D1AC4C /* CoreLocation.framework in Frameworks */,
 				91F1393B17C4E4D800D1AC4C /* CoreMedia.framework in Frameworks */,
 				91F1393C17C4E4D800D1AC4C /* CoreVideo.framework in Frameworks */,
 				91F1393D17C4E4D800D1AC4C /* Security.framework in Frameworks */,
@@ -996,6 +1037,7 @@
 				91F1390B17C4E37800D1AC4C /* Foundation.framework in Frameworks */,
 				91F1390C17C4E37800D1AC4C /* CoreGraphics.framework in Frameworks */,
 				91F1393E17C4E4D800D1AC4C /* CoreData.framework in Frameworks */,
+				9154F4861869CDB500426C78 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,6 +1045,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F4781869CD4A00426C78 /* libsqlite3.dylib in Frameworks */,
 				917C47361864885900FBB55D /* SystemConfiguration.framework in Frameworks */,
 				917C47351864885300FBB55D /* MapKit.framework in Frameworks */,
 				917C47341864884A00FBB55D /* CoreLocation.framework in Frameworks */,
@@ -1034,6 +1077,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F4791869CD5200426C78 /* libsqlite3.dylib in Frameworks */,
 				917C47371864886800FBB55D /* SystemConfiguration.framework in Frameworks */,
 				917C47381864886800FBB55D /* MapKit.framework in Frameworks */,
 				917C47391864886800FBB55D /* CoreLocation.framework in Frameworks */,
@@ -1097,6 +1141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F47A1869CD5B00426C78 /* libsqlite3.dylib in Frameworks */,
 				917C473A1864886D00FBB55D /* SystemConfiguration.framework in Frameworks */,
 				917C473B1864886D00FBB55D /* MapKit.framework in Frameworks */,
 				917C473C1864886D00FBB55D /* CoreLocation.framework in Frameworks */,
@@ -1128,6 +1173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F47B1869CD6000426C78 /* libsqlite3.dylib in Frameworks */,
 				917C473D1864887100FBB55D /* SystemConfiguration.framework in Frameworks */,
 				917C473E1864887100FBB55D /* MapKit.framework in Frameworks */,
 				917C473F1864887100FBB55D /* CoreLocation.framework in Frameworks */,
@@ -1159,6 +1205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F47C1869CD6500426C78 /* libsqlite3.dylib in Frameworks */,
 				91EF13A4174A41C6009C7A38 /* CoreData.framework in Frameworks */,
 				F91B671316B18DF500668A06 /* UIKit.framework in Frameworks */,
 				917C47401864887400FBB55D /* SystemConfiguration.framework in Frameworks */,
@@ -1190,6 +1237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F47D1869CD6900426C78 /* libsqlite3.dylib in Frameworks */,
 				917C47411864887700FBB55D /* SystemConfiguration.framework in Frameworks */,
 				917C47421864887700FBB55D /* MapKit.framework in Frameworks */,
 				917C47431864887700FBB55D /* CoreLocation.framework in Frameworks */,
@@ -1221,6 +1269,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154F47E1869CD6E00426C78 /* libsqlite3.dylib in Frameworks */,
 				917C47441864888300FBB55D /* SystemConfiguration.framework in Frameworks */,
 				61AC79F01851FB6A00E620E2 /* MapKit.framework in Frameworks */,
 				61AC79EF1851FB5500E620E2 /* CoreLocation.framework in Frameworks */,
@@ -1533,6 +1582,7 @@
 		F91B662516B1873B00668A06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9154F4771869CD4A00426C78 /* libsqlite3.dylib */,
 				611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */,
 				611275831861B7B500B6ACE6 /* libsqlite3.0.dylib */,
 				91628E7F17FADC2500ACC36F /* AppKit.framework */,
