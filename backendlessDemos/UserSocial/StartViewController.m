@@ -46,6 +46,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)showAlert:(NSString *)message {
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Fault:" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [av show];
+}
+
 - (void)login:(id)sender
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];

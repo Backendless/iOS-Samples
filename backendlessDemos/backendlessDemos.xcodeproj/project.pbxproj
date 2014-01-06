@@ -18,7 +18,6 @@
 		9101187F180D3440008102A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91011874180D343F008102A7 /* InfoPlist.strings */; };
 		91011880180D3440008102A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91011876180D343F008102A7 /* Images.xcassets */; };
 		91011881180D3440008102A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91011877180D3440008102A7 /* main.m */; };
-		91011882180D3440008102A7 /* PushNotifyMac-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91011878180D3440008102A7 /* PushNotifyMac-Info.plist */; };
 		91011883180D3440008102A7 /* PushNotifyMac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9101187A180D3440008102A7 /* PushNotifyMac.xcdatamodeld */; };
 		91011884180D34E1008102A7 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E9117FAE16C00ACC36F /* IOKit.framework */; };
 		91011885180D34F4008102A7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E7F17FADC2500ACC36F /* AppKit.framework */; };
@@ -27,8 +26,6 @@
 		91011888180D34F4008102A7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		91011889180D34F4008102A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
 		9101188A180D34F4008102A7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
-		9101188E180D352C008102A7 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8F17FAE13C00ACC36F /* libbackendless-mac.a */; };
-		9101188F180D352C008102A7 /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8A17FADD4400ACC36F /* libCommLibMac.a */; };
 		912E136D16C2754C00AD58C8 /* BEFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 912E136C16C2754C00AD58C8 /* BEFile.m */; };
 		912E137016C2783E00AD58C8 /* BrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912E136F16C2783E00AD58C8 /* BrowseViewController.m */; };
 		912E137316C27B1400AD58C8 /* ImagePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912E137216C27B1400AD58C8 /* ImagePreviewViewController.m */; };
@@ -76,9 +73,7 @@
 		91628E8517FADC7E00ACC36F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
 		91628E8617FADC8200ACC36F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662A16B1873B00668A06 /* CoreGraphics.framework */; };
 		91628E8717FADC8900ACC36F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
-		91628E8B17FADD4400ACC36F /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8A17FADD4400ACC36F /* libCommLibMac.a */; };
 		91628E8E17FADF1D00ACC36F /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 91628E8D17FADF1D00ACC36F /* Task.m */; };
-		91628E9017FAE13C00ACC36F /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8F17FAE13C00ACC36F /* libbackendless-mac.a */; };
 		91628E9217FAE16C00ACC36F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E9117FAE16C00ACC36F /* IOKit.framework */; };
 		91628E9817FC147900ACC36F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E7C17FADC1100ACC36F /* Cocoa.framework */; };
 		91628E9E17FC147900ACC36F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91628E9C17FC147900ACC36F /* InfoPlist.strings */; };
@@ -94,8 +89,6 @@
 		91628EB517FC14A800ACC36F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
 		91628EB617FC14AC00ACC36F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		91628EB717FC14B000ACC36F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
-		91628EB817FC14C700ACC36F /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8F17FAE13C00ACC36F /* libbackendless-mac.a */; };
-		91628EB917FC14CF00ACC36F /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8A17FADD4400ACC36F /* libCommLibMac.a */; };
 		91628EBA17FC14E200ACC36F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
 		91628EC017FC38D300ACC36F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E7C17FADC1100ACC36F /* Cocoa.framework */; };
 		91628EC617FC38D300ACC36F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91628EC417FC38D300ACC36F /* InfoPlist.strings */; };
@@ -111,8 +104,6 @@
 		91628EDD17FC38F700ACC36F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		91628EDE17FC38FA00ACC36F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
 		91628EDF17FC38FB00ACC36F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
-		91628EE017FC391000ACC36F /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8A17FADD4400ACC36F /* libCommLibMac.a */; };
-		91628EE117FC391400ACC36F /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8F17FAE13C00ACC36F /* libbackendless-mac.a */; };
 		91628EE717FC557400ACC36F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E7C17FADC1100ACC36F /* Cocoa.framework */; };
 		91628EED17FC557500ACC36F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91628EEB17FC557500ACC36F /* InfoPlist.strings */; };
 		91628EEF17FC557500ACC36F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91628EEE17FC557500ACC36F /* main.m */; };
@@ -121,8 +112,6 @@
 		91628EF917FC557500ACC36F /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91628EF717FC557500ACC36F /* Document.xib */; };
 		91628EFC17FC557500ACC36F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91628EFA17FC557500ACC36F /* MainMenu.xib */; };
 		91628F0017FC557E00ACC36F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E9117FAE16C00ACC36F /* IOKit.framework */; };
-		91628F0117FC558400ACC36F /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8F17FAE13C00ACC36F /* libbackendless-mac.a */; };
-		91628F0217FC558A00ACC36F /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8A17FADD4400ACC36F /* libCommLibMac.a */; };
 		91628F0317FC559200ACC36F /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E7F17FADC2500ACC36F /* AppKit.framework */; };
 		91628F0417FC559600ACC36F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		91628F0517FC559D00ACC36F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
@@ -137,8 +126,6 @@
 		91628F4617FD9A5200ACC36F /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91628F4417FD9A5200ACC36F /* Document.xib */; };
 		91628F4917FD9A5300ACC36F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91628F4717FD9A5300ACC36F /* MainMenu.xib */; };
 		91628F4D17FDA52500ACC36F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E9117FAE16C00ACC36F /* IOKit.framework */; };
-		91628F4E17FDA52B00ACC36F /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8F17FAE13C00ACC36F /* libbackendless-mac.a */; };
-		91628F4F17FDA53100ACC36F /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8A17FADD4400ACC36F /* libCommLibMac.a */; };
 		91628F5017FDA53900ACC36F /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E7F17FADC2500ACC36F /* AppKit.framework */; };
 		91628F5117FDA53D00ACC36F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		91628F5217FDA54300ACC36F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
@@ -159,8 +146,6 @@
 		91628F7817FDA7BB00ACC36F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		91628F7917FDA7BB00ACC36F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
 		91628F7A17FDA7BB00ACC36F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
-		91628F7E17FDA7C300ACC36F /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8F17FAE13C00ACC36F /* libbackendless-mac.a */; };
-		91628F7F17FDA7C800ACC36F /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91628E8A17FADD4400ACC36F /* libCommLibMac.a */; };
 		91628F8217FEB6C600ACC36F /* BEFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 91628F8117FEB6C600ACC36F /* BEFile.m */; };
 		91628F8317FEFD0500ACC36F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
 		91628F8417FEFE7F00ACC36F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
@@ -174,16 +159,6 @@
 		917650E01827CA5E00745497 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 917650DE1827CA5E00745497 /* Main.storyboard */; };
 		917650E31827CA5E00745497 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 917650E21827CA5E00745497 /* ViewController.m */; };
 		917650E51827CA5E00745497 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 917650E41827CA5E00745497 /* Images.xcassets */; };
-		917650FF1827CAEB00745497 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B679C16B191B500668A06 /* backendless.a */; };
-		917651001827CAF000745497 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67C816B191B500668A06 /* CommLibiOS.a */; };
-		917651011827CAFD00745497 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E516B191B500668A06 /* libavcodec.a */; };
-		917651021827CAFD00745497 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E616B191B500668A06 /* libavdevice.a */; };
-		917651031827CAFD00745497 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E716B191B500668A06 /* libavfilter.a */; };
-		917651041827CAFD00745497 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E816B191B500668A06 /* libavformat.a */; };
-		917651051827CAFD00745497 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E916B191B500668A06 /* libavutil.a */; };
-		917651061827CAFD00745497 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EA16B191B500668A06 /* libswresample.a */; };
-		917651071827CAFD00745497 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EB16B191B500668A06 /* libswscale.a */; };
-		917651081827CAFD00745497 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EC16B191B500668A06 /* MediaLibiOS.a */; };
 		917651091827CB3300745497 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		9176510A1827CB3800745497 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
 		9176510B1827CB3B00745497 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
@@ -226,16 +201,6 @@
 		91F1391E17C4E37800D1AC4C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91F1391D17C4E37800D1AC4C /* Default-568h@2x.png */; };
 		91F1392117C4E37800D1AC4C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F1391F17C4E37800D1AC4C /* MainStoryboard.storyboard */; };
 		91F1392417C4E37800D1AC4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F1392317C4E37800D1AC4C /* ViewController.m */; };
-		91F1392817C4E39300D1AC4C /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B679C16B191B500668A06 /* backendless.a */; };
-		91F1392917C4E47C00D1AC4C /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67C816B191B500668A06 /* CommLibiOS.a */; };
-		91F1392A17C4E48600D1AC4C /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E516B191B500668A06 /* libavcodec.a */; };
-		91F1392B17C4E48900D1AC4C /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E616B191B500668A06 /* libavdevice.a */; };
-		91F1392C17C4E48D00D1AC4C /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E716B191B500668A06 /* libavfilter.a */; };
-		91F1392D17C4E48F00D1AC4C /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E816B191B500668A06 /* libavformat.a */; };
-		91F1392E17C4E49300D1AC4C /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E916B191B500668A06 /* libavutil.a */; };
-		91F1392F17C4E49500D1AC4C /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EA16B191B500668A06 /* libswresample.a */; };
-		91F1393017C4E49700D1AC4C /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EC16B191B500668A06 /* MediaLibiOS.a */; };
-		91F1393117C4E49800D1AC4C /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EB16B191B500668A06 /* libswscale.a */; };
 		91F1393317C4E4AE00D1AC4C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91ACD51F170DBEA0000A36E2 /* AddressBook.framework */; };
 		91F1393417C4E4B000D1AC4C /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91ACD520170DBEA1000A36E2 /* AddressBookUI.framework */; };
 		91F1393517C4E4B200D1AC4C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
@@ -358,119 +323,7 @@
 		F91B679716B190AD00668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
 		F91B679816B190B100668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		F91B679916B190B700668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
-		F91B67ED16B191B500668A06 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B679C16B191B500668A06 /* backendless.a */; };
-		F91B67EE16B191B500668A06 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B679C16B191B500668A06 /* backendless.a */; };
-		F91B67EF16B191B500668A06 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B679C16B191B500668A06 /* backendless.a */; };
-		F91B67F016B191B500668A06 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B679C16B191B500668A06 /* backendless.a */; };
-		F91B67F116B191B500668A06 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B679C16B191B500668A06 /* backendless.a */; };
-		F91B67F216B191B600668A06 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B679C16B191B500668A06 /* backendless.a */; };
-		F91B67F316B191B600668A06 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B679C16B191B500668A06 /* backendless.a */; };
-		F91B67F416B191B600668A06 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B679C16B191B500668A06 /* backendless.a */; };
-		F91B67FD16B191B600668A06 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67C816B191B500668A06 /* CommLibiOS.a */; settings = {ATTRIBUTES = (Required, ); }; };
-		F91B67FE16B191B600668A06 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67C816B191B500668A06 /* CommLibiOS.a */; };
-		F91B67FF16B191B600668A06 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67C816B191B500668A06 /* CommLibiOS.a */; };
-		F91B680016B191B600668A06 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67C816B191B500668A06 /* CommLibiOS.a */; };
-		F91B680116B191B600668A06 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67C816B191B500668A06 /* CommLibiOS.a */; };
-		F91B680216B191B600668A06 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67C816B191B500668A06 /* CommLibiOS.a */; };
-		F91B680316B191B600668A06 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67C816B191B500668A06 /* CommLibiOS.a */; };
-		F91B680416B191B600668A06 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67C816B191B500668A06 /* CommLibiOS.a */; };
-		F91B680516B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CA16B191B500668A06 /* Communication Library for iOS User Guide.pdf */; };
-		F91B680616B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CA16B191B500668A06 /* Communication Library for iOS User Guide.pdf */; };
-		F91B680716B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CA16B191B500668A06 /* Communication Library for iOS User Guide.pdf */; };
-		F91B680816B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CA16B191B500668A06 /* Communication Library for iOS User Guide.pdf */; };
-		F91B680916B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CA16B191B500668A06 /* Communication Library for iOS User Guide.pdf */; };
-		F91B680A16B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CA16B191B500668A06 /* Communication Library for iOS User Guide.pdf */; };
-		F91B680B16B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CA16B191B500668A06 /* Communication Library for iOS User Guide.pdf */; };
-		F91B680C16B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CA16B191B500668A06 /* Communication Library for iOS User Guide.pdf */; };
-		F91B680D16B191B600668A06 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CB16B191B500668A06 /* WeborbClient Class Reference.odt */; };
-		F91B680E16B191B600668A06 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CB16B191B500668A06 /* WeborbClient Class Reference.odt */; };
-		F91B680F16B191B600668A06 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CB16B191B500668A06 /* WeborbClient Class Reference.odt */; };
-		F91B681016B191B600668A06 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CB16B191B500668A06 /* WeborbClient Class Reference.odt */; };
-		F91B681116B191B600668A06 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CB16B191B500668A06 /* WeborbClient Class Reference.odt */; };
-		F91B681216B191B600668A06 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CB16B191B500668A06 /* WeborbClient Class Reference.odt */; };
-		F91B681316B191B600668A06 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CB16B191B500668A06 /* WeborbClient Class Reference.odt */; };
-		F91B681416B191B600668A06 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F91B67CB16B191B500668A06 /* WeborbClient Class Reference.odt */; };
-		F91B681516B191B600668A06 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DE16B191B500668A06 /* Building Media Stream Apps.docx */; };
-		F91B681616B191B600668A06 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DE16B191B500668A06 /* Building Media Stream Apps.docx */; };
-		F91B681716B191B600668A06 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DE16B191B500668A06 /* Building Media Stream Apps.docx */; };
-		F91B681816B191B600668A06 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DE16B191B500668A06 /* Building Media Stream Apps.docx */; };
-		F91B681916B191B600668A06 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DE16B191B500668A06 /* Building Media Stream Apps.docx */; };
-		F91B681A16B191B600668A06 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DE16B191B500668A06 /* Building Media Stream Apps.docx */; };
-		F91B681B16B191B600668A06 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DE16B191B500668A06 /* Building Media Stream Apps.docx */; };
-		F91B681C16B191B600668A06 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DE16B191B500668A06 /* Building Media Stream Apps.docx */; };
-		F91B681D16B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DF16B191B500668A06 /* Media Library for iOS User Guide.docx */; };
-		F91B681E16B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DF16B191B500668A06 /* Media Library for iOS User Guide.docx */; };
-		F91B681F16B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DF16B191B500668A06 /* Media Library for iOS User Guide.docx */; };
-		F91B682016B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DF16B191B500668A06 /* Media Library for iOS User Guide.docx */; };
-		F91B682116B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DF16B191B500668A06 /* Media Library for iOS User Guide.docx */; };
-		F91B682216B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DF16B191B500668A06 /* Media Library for iOS User Guide.docx */; };
-		F91B682316B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DF16B191B500668A06 /* Media Library for iOS User Guide.docx */; };
-		F91B682416B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F91B67DF16B191B500668A06 /* Media Library for iOS User Guide.docx */; };
-		F91B682616B191B700668A06 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E516B191B500668A06 /* libavcodec.a */; };
-		F91B682716B191B700668A06 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E516B191B500668A06 /* libavcodec.a */; };
-		F91B682816B191B700668A06 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E516B191B500668A06 /* libavcodec.a */; };
-		F91B682916B191B700668A06 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E516B191B500668A06 /* libavcodec.a */; };
-		F91B682A16B191B700668A06 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E516B191B500668A06 /* libavcodec.a */; };
-		F91B682B16B191B700668A06 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E516B191B500668A06 /* libavcodec.a */; };
-		F91B682C16B191B700668A06 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E516B191B500668A06 /* libavcodec.a */; settings = {ATTRIBUTES = (Required, ); }; };
-		F91B682E16B191B700668A06 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E616B191B500668A06 /* libavdevice.a */; };
-		F91B682F16B191B700668A06 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E616B191B500668A06 /* libavdevice.a */; };
-		F91B683016B191B700668A06 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E616B191B500668A06 /* libavdevice.a */; };
-		F91B683116B191B700668A06 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E616B191B500668A06 /* libavdevice.a */; };
-		F91B683216B191B700668A06 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E616B191B500668A06 /* libavdevice.a */; };
-		F91B683316B191B700668A06 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E616B191B500668A06 /* libavdevice.a */; };
-		F91B683416B191B700668A06 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E616B191B500668A06 /* libavdevice.a */; };
-		F91B683616B191B700668A06 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E716B191B500668A06 /* libavfilter.a */; };
-		F91B683716B191B700668A06 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E716B191B500668A06 /* libavfilter.a */; };
-		F91B683816B191B700668A06 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E716B191B500668A06 /* libavfilter.a */; };
-		F91B683916B191B700668A06 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E716B191B500668A06 /* libavfilter.a */; };
-		F91B683A16B191B700668A06 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E716B191B500668A06 /* libavfilter.a */; };
-		F91B683B16B191B700668A06 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E716B191B500668A06 /* libavfilter.a */; };
-		F91B683C16B191B700668A06 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E716B191B500668A06 /* libavfilter.a */; };
-		F91B683E16B191B700668A06 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E816B191B500668A06 /* libavformat.a */; };
-		F91B683F16B191B700668A06 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E816B191B500668A06 /* libavformat.a */; };
-		F91B684016B191B700668A06 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E816B191B500668A06 /* libavformat.a */; };
-		F91B684116B191B700668A06 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E816B191B500668A06 /* libavformat.a */; };
-		F91B684216B191B700668A06 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E816B191B500668A06 /* libavformat.a */; };
-		F91B684316B191B700668A06 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E816B191B500668A06 /* libavformat.a */; };
-		F91B684416B191B700668A06 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E816B191B500668A06 /* libavformat.a */; };
-		F91B684616B191B700668A06 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E916B191B500668A06 /* libavutil.a */; };
-		F91B684716B191B700668A06 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E916B191B500668A06 /* libavutil.a */; };
-		F91B684816B191B700668A06 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E916B191B500668A06 /* libavutil.a */; };
-		F91B684916B191B700668A06 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E916B191B500668A06 /* libavutil.a */; };
-		F91B684A16B191B700668A06 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E916B191B500668A06 /* libavutil.a */; };
-		F91B684B16B191B700668A06 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E916B191B500668A06 /* libavutil.a */; };
-		F91B684C16B191B700668A06 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E916B191B500668A06 /* libavutil.a */; };
-		F91B684E16B191B700668A06 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EA16B191B500668A06 /* libswresample.a */; };
-		F91B684F16B191B700668A06 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EA16B191B500668A06 /* libswresample.a */; };
-		F91B685016B191B800668A06 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EA16B191B500668A06 /* libswresample.a */; };
-		F91B685116B191B800668A06 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EA16B191B500668A06 /* libswresample.a */; };
-		F91B685216B191B800668A06 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EA16B191B500668A06 /* libswresample.a */; };
-		F91B685316B191B800668A06 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EA16B191B500668A06 /* libswresample.a */; };
-		F91B685416B191B800668A06 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EA16B191B500668A06 /* libswresample.a */; };
-		F91B685616B191B800668A06 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EB16B191B500668A06 /* libswscale.a */; };
-		F91B685716B191B800668A06 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EB16B191B500668A06 /* libswscale.a */; };
-		F91B685816B191B800668A06 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EB16B191B500668A06 /* libswscale.a */; };
-		F91B685916B191B800668A06 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EB16B191B500668A06 /* libswscale.a */; };
-		F91B685A16B191B800668A06 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EB16B191B500668A06 /* libswscale.a */; };
-		F91B685B16B191B800668A06 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EB16B191B500668A06 /* libswscale.a */; };
-		F91B685C16B191B800668A06 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EB16B191B500668A06 /* libswscale.a */; };
-		F91B685E16B191B800668A06 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EC16B191B500668A06 /* MediaLibiOS.a */; };
-		F91B685F16B191B800668A06 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EC16B191B500668A06 /* MediaLibiOS.a */; };
-		F91B686016B191B800668A06 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EC16B191B500668A06 /* MediaLibiOS.a */; };
-		F91B686116B191B800668A06 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EC16B191B500668A06 /* MediaLibiOS.a */; };
-		F91B686216B191B800668A06 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EC16B191B500668A06 /* MediaLibiOS.a */; };
-		F91B686316B191B800668A06 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EC16B191B500668A06 /* MediaLibiOS.a */; };
-		F91B686416B191B800668A06 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EC16B191B500668A06 /* MediaLibiOS.a */; };
 		F91B6A9616B196E200668A06 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B6A9516B196E200668A06 /* RegisterViewController.m */; };
-		F91B6A9A16B1A11E00668A06 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EC16B191B500668A06 /* MediaLibiOS.a */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F91B6A9B16B1A15100668A06 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E516B191B500668A06 /* libavcodec.a */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F91B6A9C16B1A15400668A06 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E616B191B500668A06 /* libavdevice.a */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F91B6A9D16B1A15800668A06 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E716B191B500668A06 /* libavfilter.a */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F91B6A9E16B1A15A00668A06 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E816B191B500668A06 /* libavformat.a */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F91B6A9F16B1A15C00668A06 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67E916B191B500668A06 /* libavutil.a */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F91B6AA016B1A16000668A06 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EA16B191B500668A06 /* libswresample.a */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F91B6AA116B1A16300668A06 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B67EB16B191B500668A06 /* libswscale.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F91B6AA216B1A22D00668A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F91B6AA316B1A23600668A06 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F91B6AA416B1A23900668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -511,6 +364,170 @@
 		F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		F99EFF5C16D51358001AE512 /* radio_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5A16D51358001AE512 /* radio_checked.png */; };
 		F99EFF5D16D51358001AE512 /* radio_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5B16D51358001AE512 /* radio_unchecked.png */; };
+		F9BB00AF18785AB30076BC6D /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
+		F9BB00B018785AB30076BC6D /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
+		F9BB00B118785AB40076BC6D /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
+		F9BB00B218785AB40076BC6D /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
+		F9BB00B318785AB40076BC6D /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
+		F9BB00B418785AB40076BC6D /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
+		F9BB00B518785AB50076BC6D /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
+		F9BB00B618785AB50076BC6D /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
+		F9BB00B718785AB50076BC6D /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
+		F9BB00B818785AB50076BC6D /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
+		F9BB00C318785AB60076BC6D /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		F9BB00C418785AB60076BC6D /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		F9BB00C518785AB60076BC6D /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		F9BB00C618785AB60076BC6D /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		F9BB00C718785AB70076BC6D /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		F9BB00C818785AB70076BC6D /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		F9BB00C918785AB70076BC6D /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		F9BB00CA18785AB70076BC6D /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		F9BB00CB18785AB80076BC6D /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		F9BB00CC18785AB80076BC6D /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		F9BB00CD18785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */; };
+		F9BB00CE18785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */; };
+		F9BB00CF18785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */; };
+		F9BB00D018785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */; };
+		F9BB00D118785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */; };
+		F9BB00D218785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */; };
+		F9BB00D318785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */; };
+		F9BB00D418785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */; };
+		F9BB00D518785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */; };
+		F9BB00D618785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */; };
+		F9BB00D718785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
+		F9BB00D818785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
+		F9BB00D918785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
+		F9BB00DA18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
+		F9BB00DB18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
+		F9BB00DC18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
+		F9BB00DD18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
+		F9BB00DE18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
+		F9BB00DF18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
+		F9BB00E018785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
+		F9BB00EB18785AB90076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
+		F9BB00EC18785AB90076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
+		F9BB00ED18785AB90076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
+		F9BB00EE18785AB90076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
+		F9BB00EF18785AB90076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
+		F9BB00F018785ABA0076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
+		F9BB00F118785ABA0076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
+		F9BB00F218785ABA0076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
+		F9BB00F318785ABA0076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
+		F9BB00F418785ABB0076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
+		F9BB00F518785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
+		F9BB00F618785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
+		F9BB00F718785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
+		F9BB00F818785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
+		F9BB00F918785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
+		F9BB00FA18785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
+		F9BB00FB18785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
+		F9BB00FC18785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
+		F9BB00FD18785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
+		F9BB00FE18785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
+		F9BB00FF18785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
+		F9BB010018785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
+		F9BB010118785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
+		F9BB010218785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
+		F9BB010318785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
+		F9BB010418785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
+		F9BB010518785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
+		F9BB010618785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
+		F9BB010718785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
+		F9BB010818785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
+		F9BB010918785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
+		F9BB010A18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
+		F9BB010B18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
+		F9BB010C18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
+		F9BB010D18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
+		F9BB010E18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
+		F9BB010F18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
+		F9BB011018785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
+		F9BB011118785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
+		F9BB011218785ABC0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
+		F9BB011318785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
+		F9BB011418785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
+		F9BB011518785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
+		F9BB011618785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
+		F9BB011718785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
+		F9BB011818785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
+		F9BB011918785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
+		F9BB011A18785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
+		F9BB011B18785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
+		F9BB011C18785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
+		F9BB011D18785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
+		F9BB011E18785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
+		F9BB011F18785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
+		F9BB012018785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
+		F9BB012118785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
+		F9BB012218785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
+		F9BB012318785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
+		F9BB012418785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
+		F9BB012518785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
+		F9BB012618785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
+		F9BB012718785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
+		F9BB012818785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
+		F9BB012918785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
+		F9BB012A18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
+		F9BB012B18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
+		F9BB012C18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
+		F9BB012D18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
+		F9BB012E18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
+		F9BB012F18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
+		F9BB013018785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
+		F9BB013118785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
+		F9BB013218785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
+		F9BB013318785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
+		F9BB013418785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
+		F9BB013518785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
+		F9BB013618785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
+		F9BB013718785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
+		F9BB013818785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
+		F9BB013918785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
+		F9BB013A18785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
+		F9BB013B18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */; };
+		F9BB013C18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */; };
+		F9BB013D18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */; };
+		F9BB013E18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */; };
+		F9BB013F18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */; };
+		F9BB014018785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */; };
+		F9BB014118785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */; };
+		F9BB014218785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */; };
+		F9BB014318785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */; };
+		F9BB014418785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */; };
+		F9BB014518785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
+		F9BB014618785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
+		F9BB014718785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
+		F9BB014818785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
+		F9BB014918785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
+		F9BB014A18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
+		F9BB014B18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
+		F9BB014C18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
+		F9BB014D18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
+		F9BB014E18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
+		F9BB014F18785ABC0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
+		F9BB015018785ABC0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
+		F9BB015118785ABC0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
+		F9BB015218785ABD0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
+		F9BB015318785ABD0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
+		F9BB015418785ABD0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
+		F9BB015518785ABE0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
+		F9BB015618785ABE0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
+		F9BB015718785ABE0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
+		F9BB015818785ABE0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
+		F9BB0159187AB7150076BC6D /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003218785AB20076BC6D /* libbackendless-mac.a */; };
+		F9BB015A187AB71F0076BC6D /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB004C18785AB20076BC6D /* libCommLibMac.a */; };
+		F9BB015B187AB7860076BC6D /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003218785AB20076BC6D /* libbackendless-mac.a */; };
+		F9BB015C187AB78A0076BC6D /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB004C18785AB20076BC6D /* libCommLibMac.a */; };
+		F9BB015D187AB7930076BC6D /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003218785AB20076BC6D /* libbackendless-mac.a */; };
+		F9BB015E187AB7970076BC6D /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB004C18785AB20076BC6D /* libCommLibMac.a */; };
+		F9BB015F187AB79C0076BC6D /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003218785AB20076BC6D /* libbackendless-mac.a */; };
+		F9BB0160187AB7A00076BC6D /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB004C18785AB20076BC6D /* libCommLibMac.a */; };
+		F9BB0161187AB7A70076BC6D /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003218785AB20076BC6D /* libbackendless-mac.a */; };
+		F9BB0162187AB7B60076BC6D /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB004C18785AB20076BC6D /* libCommLibMac.a */; };
+		F9BB0163187AB7BF0076BC6D /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003218785AB20076BC6D /* libbackendless-mac.a */; };
+		F9BB0164187AB7C20076BC6D /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB004C18785AB20076BC6D /* libCommLibMac.a */; };
+		F9BB0165187AB7C80076BC6D /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003218785AB20076BC6D /* libbackendless-mac.a */; };
+		F9BB0166187AB7CC0076BC6D /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB004C18785AB20076BC6D /* libCommLibMac.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -554,10 +571,8 @@
 		91628E7717FADBDB00ACC36F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		91628E7C17FADC1100ACC36F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		91628E7F17FADC2500ACC36F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
-		91628E8A17FADD4400ACC36F /* libCommLibMac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCommLibMac.a; sourceTree = "<group>"; };
 		91628E8C17FADF1D00ACC36F /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		91628E8D17FADF1D00ACC36F /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
-		91628E8F17FAE13C00ACC36F /* libbackendless-mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libbackendless-mac.a"; sourceTree = "<group>"; };
 		91628E9117FAE16C00ACC36F /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
 		91628E9717FC147800ACC36F /* UserServiceMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserServiceMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91628E9B17FC147900ACC36F /* UserServiceMac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UserServiceMac-Info.plist"; sourceTree = "<group>"; };
@@ -625,18 +640,9 @@
 		917650E21827CA5E00745497 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		917650E41827CA5E00745497 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		917650EB1827CA5E00745497 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		9176510E1827CC1A00745497 /* BEAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEAnnotation.h; sourceTree = "<group>"; };
-		9176510F1827CC1A00745497 /* BECollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BECollectionView.h; sourceTree = "<group>"; };
-		917651101827CC1A00745497 /* BEMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMapView.h; sourceTree = "<group>"; };
-		917651111827CC1A00745497 /* BETableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BETableView.h; sourceTree = "<group>"; };
-		91934001182A2E5D005F3F8A /* MPMediaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaData.h; sourceTree = "<group>"; };
-		91934002182A2E5D005F3F8A /* MPMediaDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaDecoder.h; sourceTree = "<group>"; };
-		91934003182A2E5D005F3F8A /* MPMediaEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaEncoder.h; sourceTree = "<group>"; };
 		91ACD51F170DBEA0000A36E2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		91ACD520170DBEA1000A36E2 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		91E1E984170596DC00728AA1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		91F138B617C37CAD00D1AC4C /* AbstractQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractQuery.h; sourceTree = "<group>"; };
-		91F138B717C37CE600D1AC4C /* BackendlessCachePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCachePolicy.h; sourceTree = "<group>"; };
 		91F1390917C4E37800D1AC4C /* Caching-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Caching-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F1390F17C4E37800D1AC4C /* Caching-demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Caching-demo-Info.plist"; sourceTree = "<group>"; };
 		91F1391117C4E37800D1AC4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -765,73 +771,6 @@
 		F91B676C16B18EE000668A06 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F91B676E16B18EE000668A06 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F91B677116B18EE000668A06 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		F91B679C16B191B500668A06 /* backendless.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = backendless.a; sourceTree = "<group>"; };
-		F91B679F16B191B500668A06 /* AbstractProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractProperty.h; sourceTree = "<group>"; };
-		F91B67A016B191B500668A06 /* Backendless.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Backendless.h; sourceTree = "<group>"; };
-		F91B67A116B191B500668A06 /* BackendlessCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCollection.h; sourceTree = "<group>"; };
-		F91B67A216B191B500668A06 /* BackendlessDataQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessDataQuery.h; sourceTree = "<group>"; };
-		F91B67A316B191B500668A06 /* BackendlessEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessEntity.h; sourceTree = "<group>"; };
-		F91B67A416B191B500668A06 /* BackendlessFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessFile.h; sourceTree = "<group>"; };
-		F91B67A516B191B500668A06 /* BackendlessGeoQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessGeoQuery.h; sourceTree = "<group>"; };
-		F91B67A616B191B500668A06 /* QueryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryOptions.h; sourceTree = "<group>"; };
-		F91B67A716B191B500668A06 /* BackendlessUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessUser.h; sourceTree = "<group>"; };
-		F91B67A916B191B500668A06 /* DataStoreFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStoreFactory.h; sourceTree = "<group>"; };
-		F91B67AA16B191B500668A06 /* DeliveryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryOptions.h; sourceTree = "<group>"; };
-		F91B67AB16B191B500668A06 /* DeviceRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceRegistration.h; sourceTree = "<group>"; };
-		F91B67AC16B191B500668A06 /* FileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileService.h; sourceTree = "<group>"; };
-		F91B67AD16B191B500668A06 /* GeoCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoCategory.h; sourceTree = "<group>"; };
-		F91B67AE16B191B500668A06 /* GeoPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPoint.h; sourceTree = "<group>"; };
-		F91B67AF16B191B500668A06 /* GeoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoService.h; sourceTree = "<group>"; };
-		F91B67B016B191B500668A06 /* HashMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashMap.h; sourceTree = "<group>"; };
-		F91B67B116B191B500668A06 /* IDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDataStore.h; sourceTree = "<group>"; };
-		F91B67B216B191B500668A06 /* IMediaStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMediaStreamer.h; sourceTree = "<group>"; };
-		F91B67B416B191B500668A06 /* MediaPlaybackOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlaybackOptions.h; sourceTree = "<group>"; };
-		F91B67B516B191B500668A06 /* MediaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayer.h; sourceTree = "<group>"; };
-		F91B67B616B191B500668A06 /* MediaPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPublisher.h; sourceTree = "<group>"; };
-		F91B67B716B191B500668A06 /* MediaPublishOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPublishOptions.h; sourceTree = "<group>"; };
-		F91B67B816B191B500668A06 /* MediaService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaService.h; sourceTree = "<group>"; };
-		F91B67BA16B191B500668A06 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		F91B67BB16B191B500668A06 /* MessageStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageStatus.h; sourceTree = "<group>"; };
-		F91B67BC16B191B500668A06 /* MessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingService.h; sourceTree = "<group>"; };
-		F91B67BD16B191B500668A06 /* ObjectProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectProperty.h; sourceTree = "<group>"; };
-		F91B67BE16B191B500668A06 /* PersistenceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceService.h; sourceTree = "<group>"; };
-		F91B67BF16B191B500668A06 /* PublishOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishOptions.h; sourceTree = "<group>"; };
-		F91B67C016B191B500668A06 /* BESubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BESubscription.h; sourceTree = "<group>"; };
-		F91B67C116B191B500668A06 /* SubscriptionOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionOptions.h; sourceTree = "<group>"; };
-		F91B67C216B191B500668A06 /* UserProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProperty.h; sourceTree = "<group>"; };
-		F91B67C316B191B500668A06 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
-		F91B67C816B191B500668A06 /* CommLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = CommLibiOS.a; sourceTree = "<group>"; };
-		F91B67CA16B191B500668A06 /* Communication Library for iOS User Guide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Communication Library for iOS User Guide.pdf"; sourceTree = "<group>"; };
-		F91B67CB16B191B500668A06 /* WeborbClient Class Reference.odt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WeborbClient Class Reference.odt"; sourceTree = "<group>"; };
-		F91B67CD16B191B500668A06 /* BinaryCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryCodec.h; sourceTree = "<group>"; };
-		F91B67CE16B191B500668A06 /* DEBUG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEBUG.h; sourceTree = "<group>"; };
-		F91B67CF16B191B500668A06 /* IAttributeStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAttributeStore.h; sourceTree = "<group>"; };
-		F91B67D016B191B500668A06 /* IClientSharedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IClientSharedObject.h; sourceTree = "<group>"; };
-		F91B67D116B191B500668A06 /* IClientSharedObjectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IClientSharedObjectDelegate.h; sourceTree = "<group>"; };
-		F91B67D216B191B500668A06 /* IPendingServiceCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPendingServiceCallback.h; sourceTree = "<group>"; };
-		F91B67D316B191B500668A06 /* IPersistable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPersistable.h; sourceTree = "<group>"; };
-		F91B67D416B191B500668A06 /* IRTMProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRTMProtocol.h; sourceTree = "<group>"; };
-		F91B67D516B191B500668A06 /* IServiceCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IServiceCall.h; sourceTree = "<group>"; };
-		F91B67D616B191B500668A06 /* ISharedObjectListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISharedObjectListener.h; sourceTree = "<group>"; };
-		F91B67D716B191B500668A06 /* MemoryTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryTicker.h; sourceTree = "<group>"; };
-		F91B67D816B191B500668A06 /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
-		F91B67D916B191B500668A06 /* RTMPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMPClient.h; sourceTree = "<group>"; };
-		F91B67DA16B191B500668A06 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
-		F91B67DB16B191B500668A06 /* WeborbClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeborbClient.h; sourceTree = "<group>"; };
-		F91B67DE16B191B500668A06 /* Building Media Stream Apps.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Building Media Stream Apps.docx"; sourceTree = "<group>"; };
-		F91B67DF16B191B500668A06 /* Media Library for iOS User Guide.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Media Library for iOS User Guide.docx"; sourceTree = "<group>"; };
-		F91B67E116B191B500668A06 /* BroadcastStreamClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroadcastStreamClient.h; sourceTree = "<group>"; };
-		F91B67E216B191B500668A06 /* MediaConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaConstants.h; sourceTree = "<group>"; };
-		F91B67E316B191B500668A06 /* MediaStreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaStreamPlayer.h; sourceTree = "<group>"; };
-		F91B67E416B191B500668A06 /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
-		F91B67E516B191B500668A06 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
-		F91B67E616B191B500668A06 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
-		F91B67E716B191B500668A06 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
-		F91B67E816B191B500668A06 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavformat.a; sourceTree = "<group>"; };
-		F91B67E916B191B500668A06 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
-		F91B67EA16B191B500668A06 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
-		F91B67EB16B191B500668A06 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
-		F91B67EC16B191B500668A06 /* MediaLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = MediaLibiOS.a; sourceTree = "<group>"; };
 		F91B6A9416B196E200668A06 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		F91B6A9516B196E200668A06 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		F91B6AC516B6883200668A06 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
@@ -839,6 +778,156 @@
 		F91B6AC816B6EBDC00668A06 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F99EFF5A16D51358001AE512 /* radio_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_checked.png; sourceTree = "<group>"; };
 		F99EFF5B16D51358001AE512 /* radio_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_unchecked.png; sourceTree = "<group>"; };
+		F9BB000718785AB20076BC6D /* backendless.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = backendless.a; sourceTree = "<group>"; };
+		F9BB000918785AB20076BC6D /* AbstractProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractProperty.h; sourceTree = "<group>"; };
+		F9BB000A18785AB20076BC6D /* AbstractQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractQuery.h; sourceTree = "<group>"; };
+		F9BB000B18785AB20076BC6D /* Backendless.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Backendless.h; sourceTree = "<group>"; };
+		F9BB000C18785AB20076BC6D /* BackendlessCachePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCachePolicy.h; sourceTree = "<group>"; };
+		F9BB000D18785AB20076BC6D /* BackendlessCacheProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCacheProtocol.h; sourceTree = "<group>"; };
+		F9BB000E18785AB20076BC6D /* BackendlessCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCollection.h; sourceTree = "<group>"; };
+		F9BB000F18785AB20076BC6D /* BackendlessDataQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessDataQuery.h; sourceTree = "<group>"; };
+		F9BB001018785AB20076BC6D /* BackendlessEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessEntity.h; sourceTree = "<group>"; };
+		F9BB001118785AB20076BC6D /* BackendlessFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessFile.h; sourceTree = "<group>"; };
+		F9BB001218785AB20076BC6D /* BackendlessGeoQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessGeoQuery.h; sourceTree = "<group>"; };
+		F9BB001318785AB20076BC6D /* BackendlessUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessUser.h; sourceTree = "<group>"; };
+		F9BB001418785AB20076BC6D /* BEAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEAnnotation.h; sourceTree = "<group>"; };
+		F9BB001518785AB20076BC6D /* BECollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BECollectionView.h; sourceTree = "<group>"; };
+		F9BB001618785AB20076BC6D /* BEMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMapView.h; sourceTree = "<group>"; };
+		F9BB001718785AB20076BC6D /* BESubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BESubscription.h; sourceTree = "<group>"; };
+		F9BB001818785AB20076BC6D /* BETableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BETableView.h; sourceTree = "<group>"; };
+		F9BB001918785AB20076BC6D /* DataStoreFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStoreFactory.h; sourceTree = "<group>"; };
+		F9BB001A18785AB20076BC6D /* DeliveryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryOptions.h; sourceTree = "<group>"; };
+		F9BB001B18785AB20076BC6D /* DeviceRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceRegistration.h; sourceTree = "<group>"; };
+		F9BB001C18785AB20076BC6D /* FileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileService.h; sourceTree = "<group>"; };
+		F9BB001D18785AB20076BC6D /* GeoCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoCategory.h; sourceTree = "<group>"; };
+		F9BB001E18785AB20076BC6D /* GeoPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPoint.h; sourceTree = "<group>"; };
+		F9BB001F18785AB20076BC6D /* GeoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoService.h; sourceTree = "<group>"; };
+		F9BB002018785AB20076BC6D /* HashMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashMap.h; sourceTree = "<group>"; };
+		F9BB002118785AB20076BC6D /* IDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDataStore.h; sourceTree = "<group>"; };
+		F9BB002218785AB20076BC6D /* IMediaStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMediaStreamer.h; sourceTree = "<group>"; };
+		F9BB002318785AB20076BC6D /* MediaPlaybackOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlaybackOptions.h; sourceTree = "<group>"; };
+		F9BB002418785AB20076BC6D /* MediaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayer.h; sourceTree = "<group>"; };
+		F9BB002518785AB20076BC6D /* MediaPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPublisher.h; sourceTree = "<group>"; };
+		F9BB002618785AB20076BC6D /* MediaPublishOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPublishOptions.h; sourceTree = "<group>"; };
+		F9BB002718785AB20076BC6D /* MediaService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaService.h; sourceTree = "<group>"; };
+		F9BB002818785AB20076BC6D /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		F9BB002918785AB20076BC6D /* MessageStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageStatus.h; sourceTree = "<group>"; };
+		F9BB002A18785AB20076BC6D /* MessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingService.h; sourceTree = "<group>"; };
+		F9BB002B18785AB20076BC6D /* ObjectProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectProperty.h; sourceTree = "<group>"; };
+		F9BB002C18785AB20076BC6D /* PersistenceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceService.h; sourceTree = "<group>"; };
+		F9BB002D18785AB20076BC6D /* PublishOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishOptions.h; sourceTree = "<group>"; };
+		F9BB002E18785AB20076BC6D /* QueryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryOptions.h; sourceTree = "<group>"; };
+		F9BB002F18785AB20076BC6D /* SubscriptionOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionOptions.h; sourceTree = "<group>"; };
+		F9BB003018785AB20076BC6D /* UserProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProperty.h; sourceTree = "<group>"; };
+		F9BB003118785AB20076BC6D /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		F9BB003218785AB20076BC6D /* libbackendless-mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libbackendless-mac.a"; sourceTree = "<group>"; };
+		F9BB003418785AB20076BC6D /* CommLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = CommLibiOS.a; sourceTree = "<group>"; };
+		F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Communication Library for iOS User Guide.pdf"; sourceTree = "<group>"; };
+		F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WeborbClient Class Reference.odt"; sourceTree = "<group>"; };
+		F9BB003918785AB20076BC6D /* AMFSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMFSerializer.h; sourceTree = "<group>"; };
+		F9BB003A18785AB20076BC6D /* BinaryCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryCodec.h; sourceTree = "<group>"; };
+		F9BB003B18785AB20076BC6D /* BinaryStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryStream.h; sourceTree = "<group>"; };
+		F9BB003C18785AB20076BC6D /* DEBUG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEBUG.h; sourceTree = "<group>"; };
+		F9BB003D18785AB20076BC6D /* FlashorbBinaryReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashorbBinaryReader.h; sourceTree = "<group>"; };
+		F9BB003E18785AB20076BC6D /* FlashorbBinaryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashorbBinaryWriter.h; sourceTree = "<group>"; };
+		F9BB003F18785AB20076BC6D /* IAttributeStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAttributeStore.h; sourceTree = "<group>"; };
+		F9BB004018785AB20076BC6D /* IClientSharedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IClientSharedObject.h; sourceTree = "<group>"; };
+		F9BB004118785AB20076BC6D /* IClientSharedObjectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IClientSharedObjectDelegate.h; sourceTree = "<group>"; };
+		F9BB004218785AB20076BC6D /* IPendingServiceCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPendingServiceCallback.h; sourceTree = "<group>"; };
+		F9BB004318785AB20076BC6D /* IPersistable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPersistable.h; sourceTree = "<group>"; };
+		F9BB004418785AB20076BC6D /* IRTMProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRTMProtocol.h; sourceTree = "<group>"; };
+		F9BB004518785AB20076BC6D /* IServiceCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IServiceCall.h; sourceTree = "<group>"; };
+		F9BB004618785AB20076BC6D /* ISharedObjectListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISharedObjectListener.h; sourceTree = "<group>"; };
+		F9BB004718785AB20076BC6D /* MemoryTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryTicker.h; sourceTree = "<group>"; };
+		F9BB004818785AB20076BC6D /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
+		F9BB004918785AB20076BC6D /* RTMPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMPClient.h; sourceTree = "<group>"; };
+		F9BB004A18785AB20076BC6D /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		F9BB004B18785AB20076BC6D /* WeborbClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeborbClient.h; sourceTree = "<group>"; };
+		F9BB004C18785AB20076BC6D /* libCommLibMac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCommLibMac.a; sourceTree = "<group>"; };
+		F9BB005018785AB30076BC6D /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
+		F9BB005118785AB30076BC6D /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
+		F9BB005218785AB30076BC6D /* dxva2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dxva2.h; sourceTree = "<group>"; };
+		F9BB005318785AB30076BC6D /* vaapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaapi.h; sourceTree = "<group>"; };
+		F9BB005418785AB30076BC6D /* vda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vda.h; sourceTree = "<group>"; };
+		F9BB005518785AB30076BC6D /* vdpau.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vdpau.h; sourceTree = "<group>"; };
+		F9BB005618785AB30076BC6D /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		F9BB005718785AB30076BC6D /* xvmc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xvmc.h; sourceTree = "<group>"; };
+		F9BB005918785AB30076BC6D /* avdevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avdevice.h; sourceTree = "<group>"; };
+		F9BB005A18785AB30076BC6D /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		F9BB005C18785AB30076BC6D /* avfilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfilter.h; sourceTree = "<group>"; };
+		F9BB005D18785AB30076BC6D /* avfiltergraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfiltergraph.h; sourceTree = "<group>"; };
+		F9BB005E18785AB30076BC6D /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
+		F9BB005F18785AB30076BC6D /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
+		F9BB006018785AB30076BC6D /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		F9BB006218785AB30076BC6D /* avformat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avformat.h; sourceTree = "<group>"; };
+		F9BB006318785AB30076BC6D /* avio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avio.h; sourceTree = "<group>"; };
+		F9BB006418785AB30076BC6D /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
+		F9BB006518785AB30076BC6D /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		F9BB006718785AB30076BC6D /* avresample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avresample.h; sourceTree = "<group>"; };
+		F9BB006818785AB30076BC6D /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		F9BB006A18785AB30076BC6D /* adler32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adler32.h; sourceTree = "<group>"; };
+		F9BB006B18785AB30076BC6D /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		F9BB006C18785AB30076BC6D /* attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = attributes.h; sourceTree = "<group>"; };
+		F9BB006D18785AB30076BC6D /* audio_fifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio_fifo.h; sourceTree = "<group>"; };
+		F9BB006E18785AB30076BC6D /* audioconvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioconvert.h; sourceTree = "<group>"; };
+		F9BB006F18785AB30076BC6D /* avassert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avassert.h; sourceTree = "<group>"; };
+		F9BB007018785AB30076BC6D /* avconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avconfig.h; sourceTree = "<group>"; };
+		F9BB007118785AB30076BC6D /* avstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avstring.h; sourceTree = "<group>"; };
+		F9BB007218785AB30076BC6D /* avutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avutil.h; sourceTree = "<group>"; };
+		F9BB007318785AB30076BC6D /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		F9BB007418785AB30076BC6D /* blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
+		F9BB007518785AB30076BC6D /* bswap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bswap.h; sourceTree = "<group>"; };
+		F9BB007618785AB30076BC6D /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		F9BB007718785AB30076BC6D /* channel_layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = channel_layout.h; sourceTree = "<group>"; };
+		F9BB007818785AB30076BC6D /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		F9BB007918785AB30076BC6D /* cpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu.h; sourceTree = "<group>"; };
+		F9BB007A18785AB30076BC6D /* crc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crc.h; sourceTree = "<group>"; };
+		F9BB007B18785AB30076BC6D /* dict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dict.h; sourceTree = "<group>"; };
+		F9BB007C18785AB30076BC6D /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
+		F9BB007D18785AB30076BC6D /* eval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval.h; sourceTree = "<group>"; };
+		F9BB007E18785AB30076BC6D /* fifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fifo.h; sourceTree = "<group>"; };
+		F9BB007F18785AB30076BC6D /* file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file.h; sourceTree = "<group>"; };
+		F9BB008018785AB30076BC6D /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
+		F9BB008118785AB30076BC6D /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		F9BB008218785AB30076BC6D /* imgutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgutils.h; sourceTree = "<group>"; };
+		F9BB008318785AB30076BC6D /* intfloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intfloat.h; sourceTree = "<group>"; };
+		F9BB008418785AB30076BC6D /* intfloat_readwrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intfloat_readwrite.h; sourceTree = "<group>"; };
+		F9BB008518785AB30076BC6D /* intreadwrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intreadwrite.h; sourceTree = "<group>"; };
+		F9BB008618785AB30076BC6D /* lfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lfg.h; sourceTree = "<group>"; };
+		F9BB008718785AB30076BC6D /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		F9BB008818785AB30076BC6D /* lzo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzo.h; sourceTree = "<group>"; };
+		F9BB008918785AB30076BC6D /* mathematics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mathematics.h; sourceTree = "<group>"; };
+		F9BB008A18785AB30076BC6D /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		F9BB008B18785AB30076BC6D /* mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mem.h; sourceTree = "<group>"; };
+		F9BB008C18785AB30076BC6D /* old_pix_fmts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = old_pix_fmts.h; sourceTree = "<group>"; };
+		F9BB008D18785AB30076BC6D /* opt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opt.h; sourceTree = "<group>"; };
+		F9BB008E18785AB30076BC6D /* parseutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parseutils.h; sourceTree = "<group>"; };
+		F9BB008F18785AB30076BC6D /* pixdesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pixdesc.h; sourceTree = "<group>"; };
+		F9BB009018785AB30076BC6D /* pixfmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pixfmt.h; sourceTree = "<group>"; };
+		F9BB009118785AB30076BC6D /* random_seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = random_seed.h; sourceTree = "<group>"; };
+		F9BB009218785AB30076BC6D /* rational.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rational.h; sourceTree = "<group>"; };
+		F9BB009318785AB30076BC6D /* samplefmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = samplefmt.h; sourceTree = "<group>"; };
+		F9BB009418785AB30076BC6D /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
+		F9BB009518785AB30076BC6D /* time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time.h; sourceTree = "<group>"; };
+		F9BB009618785AB30076BC6D /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		F9BB009718785AB30076BC6D /* xtea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xtea.h; sourceTree = "<group>"; };
+		F9BB009918785AB30076BC6D /* swscale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swscale.h; sourceTree = "<group>"; };
+		F9BB009A18785AB30076BC6D /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		F9BB009C18785AB30076BC6D /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
+		F9BB009D18785AB30076BC6D /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
+		F9BB009E18785AB30076BC6D /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
+		F9BB009F18785AB30076BC6D /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavformat.a; sourceTree = "<group>"; };
+		F9BB00A018785AB30076BC6D /* libavresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavresample.a; sourceTree = "<group>"; };
+		F9BB00A118785AB30076BC6D /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
+		F9BB00A218785AB30076BC6D /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "make-libav-lgpl-ios61.sh"; sourceTree = "<group>"; };
+		F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Building Media Stream Apps.docx"; sourceTree = "<group>"; };
+		F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Media Library for iOS User Guide.docx"; sourceTree = "<group>"; };
+		F9BB00AA18785AB30076BC6D /* BroadcastStreamClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroadcastStreamClient.h; sourceTree = "<group>"; };
+		F9BB00AB18785AB30076BC6D /* MediaStreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaStreamPlayer.h; sourceTree = "<group>"; };
+		F9BB00AC18785AB30076BC6D /* MPMediaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaData.h; sourceTree = "<group>"; };
+		F9BB00AD18785AB30076BC6D /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
+		F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = MediaLibiOS.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -855,9 +944,9 @@
 				91011887180D34F4008102A7 /* CFNetwork.framework in Frameworks */,
 				91011888180D34F4008102A7 /* Security.framework in Frameworks */,
 				91011889180D34F4008102A7 /* Foundation.framework in Frameworks */,
-				9101188E180D352C008102A7 /* libbackendless-mac.a in Frameworks */,
-				9101188F180D352C008102A7 /* libCommLibMac.a in Frameworks */,
 				9101188A180D34F4008102A7 /* CoreData.framework in Frameworks */,
+				F9BB0166187AB7CC0076BC6D /* libCommLibMac.a in Frameworks */,
+				F9BB0165187AB7C80076BC6D /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,8 +965,8 @@
 				91628E8517FADC7E00ACC36F /* Foundation.framework in Frameworks */,
 				91628E8617FADC8200ACC36F /* CoreGraphics.framework in Frameworks */,
 				91628E8717FADC8900ACC36F /* CoreData.framework in Frameworks */,
-				91628E8B17FADD4400ACC36F /* libCommLibMac.a in Frameworks */,
-				91628E9017FAE13C00ACC36F /* libbackendless-mac.a in Frameworks */,
+				F9BB015A187AB71F0076BC6D /* libCommLibMac.a in Frameworks */,
+				F9BB0159187AB7150076BC6D /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,10 +983,10 @@
 				91628EB517FC14A800ACC36F /* CoreLocation.framework in Frameworks */,
 				91628EB617FC14AC00ACC36F /* Security.framework in Frameworks */,
 				91628EB717FC14B000ACC36F /* CoreData.framework in Frameworks */,
-				91628EB817FC14C700ACC36F /* libbackendless-mac.a in Frameworks */,
 				91628EBA17FC14E200ACC36F /* Foundation.framework in Frameworks */,
-				91628EB917FC14CF00ACC36F /* libCommLibMac.a in Frameworks */,
 				91628EB217FC149300ACC36F /* libz.dylib in Frameworks */,
+				F9BB015C187AB78A0076BC6D /* libCommLibMac.a in Frameworks */,
+				F9BB015B187AB7860076BC6D /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,14 +998,14 @@
 				9154F48C1869CDF800426C78 /* SystemConfiguration.framework in Frameworks */,
 				91628ED917FC38DE00ACC36F /* IOKit.framework in Frameworks */,
 				91628EDA17FC38E300ACC36F /* AppKit.framework in Frameworks */,
-				91628EE017FC391000ACC36F /* libCommLibMac.a in Frameworks */,
 				91628EDB17FC38EB00ACC36F /* libz.dylib in Frameworks */,
-				91628EE117FC391400ACC36F /* libbackendless-mac.a in Frameworks */,
 				91628EDC17FC38F000ACC36F /* CFNetwork.framework in Frameworks */,
 				91628EDD17FC38F700ACC36F /* Security.framework in Frameworks */,
 				91628EDF17FC38FB00ACC36F /* CoreData.framework in Frameworks */,
 				91628EDE17FC38FA00ACC36F /* Foundation.framework in Frameworks */,
 				91628EC017FC38D300ACC36F /* Cocoa.framework in Frameworks */,
+				F9BB015E187AB7970076BC6D /* libCommLibMac.a in Frameworks */,
+				F9BB015D187AB7930076BC6D /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,12 +1019,12 @@
 				91628F0017FC557E00ACC36F /* IOKit.framework in Frameworks */,
 				91628F0317FC559200ACC36F /* AppKit.framework in Frameworks */,
 				91628F0417FC559600ACC36F /* libz.dylib in Frameworks */,
-				91628F0217FC558A00ACC36F /* libCommLibMac.a in Frameworks */,
 				91628F0817FC55B100ACC36F /* CoreData.framework in Frameworks */,
 				91628F0517FC559D00ACC36F /* CFNetwork.framework in Frameworks */,
 				91628F0617FC55A200ACC36F /* Security.framework in Frameworks */,
 				91628F0717FC55A500ACC36F /* Foundation.framework in Frameworks */,
-				91628F0117FC558400ACC36F /* libbackendless-mac.a in Frameworks */,
+				F9BB0160187AB7A00076BC6D /* libCommLibMac.a in Frameworks */,
+				F9BB015F187AB79C0076BC6D /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -947,14 +1036,14 @@
 				9154F48E1869CE0200426C78 /* SystemConfiguration.framework in Frameworks */,
 				91628F3417FD9A5200ACC36F /* Cocoa.framework in Frameworks */,
 				91628F4D17FDA52500ACC36F /* IOKit.framework in Frameworks */,
-				91628F4E17FDA52B00ACC36F /* libbackendless-mac.a in Frameworks */,
-				91628F4F17FDA53100ACC36F /* libCommLibMac.a in Frameworks */,
 				91628F5017FDA53900ACC36F /* AppKit.framework in Frameworks */,
 				91628F5417FDA54D00ACC36F /* Foundation.framework in Frameworks */,
 				91628F5217FDA54300ACC36F /* CFNetwork.framework in Frameworks */,
 				91628F5317FDA54A00ACC36F /* Security.framework in Frameworks */,
 				91628F5517FDA55000ACC36F /* CoreData.framework in Frameworks */,
 				91628F8417FEFE7F00ACC36F /* CoreLocation.framework in Frameworks */,
+				F9BB0162187AB7B60076BC6D /* libCommLibMac.a in Frameworks */,
+				F9BB0161187AB7A70076BC6D /* libbackendless-mac.a in Frameworks */,
 				91628F5117FDA53D00ACC36F /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -972,10 +1061,10 @@
 				91628F7717FDA7BB00ACC36F /* CFNetwork.framework in Frameworks */,
 				91628F7817FDA7BB00ACC36F /* Security.framework in Frameworks */,
 				91628F7917FDA7BB00ACC36F /* Foundation.framework in Frameworks */,
-				91628F7F17FDA7C800ACC36F /* libCommLibMac.a in Frameworks */,
-				91628F7E17FDA7C300ACC36F /* libbackendless-mac.a in Frameworks */,
 				91628F7A17FDA7BB00ACC36F /* CoreData.framework in Frameworks */,
 				91628F8317FEFD0500ACC36F /* CoreLocation.framework in Frameworks */,
+				F9BB0164187AB7C20076BC6D /* libCommLibMac.a in Frameworks */,
+				F9BB0163187AB7BF0076BC6D /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,27 +1072,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BB010818785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				9154F4931869CE1900426C78 /* libsqlite3.dylib in Frameworks */,
+				F9BB013018785ABC0076BC6D /* libswscale.a in Frameworks */,
 				917C47491864889700FBB55D /* SystemConfiguration.framework in Frameworks */,
+				F9BB011218785ABC0076BC6D /* libavformat.a in Frameworks */,
+				F9BB015818785ABE0076BC6D /* MediaLibiOS.a in Frameworks */,
 				917C474A1864889700FBB55D /* MapKit.framework in Frameworks */,
 				9176510B1827CB3B00745497 /* CoreLocation.framework in Frameworks */,
 				917650D01827CA5D00745497 /* CoreGraphics.framework in Frameworks */,
 				917650D11827CA5D00745497 /* UIKit.framework in Frameworks */,
+				F9BB011C18785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB00F418785ABB0076BC6D /* libavcodec.a in Frameworks */,
 				917650CF1827CA5D00745497 /* Foundation.framework in Frameworks */,
-				917651001827CAF000745497 /* CommLibiOS.a in Frameworks */,
-				917651011827CAFD00745497 /* libavcodec.a in Frameworks */,
-				917651021827CAFD00745497 /* libavdevice.a in Frameworks */,
-				917651031827CAFD00745497 /* libavfilter.a in Frameworks */,
-				917651041827CAFD00745497 /* libavformat.a in Frameworks */,
-				917651051827CAFD00745497 /* libavutil.a in Frameworks */,
-				917651061827CAFD00745497 /* libswresample.a in Frameworks */,
-				917651071827CAFD00745497 /* libswscale.a in Frameworks */,
-				917651081827CAFD00745497 /* MediaLibiOS.a in Frameworks */,
-				917650FF1827CAEB00745497 /* backendless.a in Frameworks */,
+				F9BB00B818785AB50076BC6D /* backendless.a in Frameworks */,
 				917651091827CB3300745497 /* libz.dylib in Frameworks */,
 				9176510A1827CB3800745497 /* CFNetwork.framework in Frameworks */,
 				9176510D1827CB4600745497 /* CoreData.framework in Frameworks */,
 				9176510C1827CB3F00745497 /* Security.framework in Frameworks */,
+				F9BB012618785ABC0076BC6D /* libavutil.a in Frameworks */,
+				F9BB00CC18785AB80076BC6D /* CommLibiOS.a in Frameworks */,
+				F9BB00FE18785ABB0076BC6D /* libavdevice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,23 +1100,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BB012518785ABC0076BC6D /* libavutil.a in Frameworks */,
+				F9BB010718785ABB0076BC6D /* libavfilter.a in Frameworks */,
+				F9BB015718785ABE0076BC6D /* MediaLibiOS.a in Frameworks */,
 				91F1393A17C4E4D800D1AC4C /* CoreLocation.framework in Frameworks */,
+				F9BB00FD18785ABB0076BC6D /* libavdevice.a in Frameworks */,
 				9154F47F1869CD7300426C78 /* libsqlite3.dylib in Frameworks */,
-				91F1392817C4E39300D1AC4C /* backendless.a in Frameworks */,
-				91F1392917C4E47C00D1AC4C /* CommLibiOS.a in Frameworks */,
-				91F1392B17C4E48900D1AC4C /* libavdevice.a in Frameworks */,
-				91F1392A17C4E48600D1AC4C /* libavcodec.a in Frameworks */,
-				91F1392C17C4E48D00D1AC4C /* libavfilter.a in Frameworks */,
-				91F1392E17C4E49300D1AC4C /* libavutil.a in Frameworks */,
-				91F1393017C4E49700D1AC4C /* MediaLibiOS.a in Frameworks */,
-				91F1393117C4E49800D1AC4C /* libswscale.a in Frameworks */,
-				91F1392D17C4E48F00D1AC4C /* libavformat.a in Frameworks */,
-				91F1392F17C4E49500D1AC4C /* libswresample.a in Frameworks */,
 				91F1393317C4E4AE00D1AC4C /* AddressBook.framework in Frameworks */,
 				91F1393517C4E4B200D1AC4C /* libz.dylib in Frameworks */,
+				F9BB012F18785ABC0076BC6D /* libswscale.a in Frameworks */,
 				91F1393617C4E4B400D1AC4C /* MapKit.framework in Frameworks */,
+				F9BB011118785ABB0076BC6D /* libavformat.a in Frameworks */,
 				91F1393417C4E4B000D1AC4C /* AddressBookUI.framework in Frameworks */,
 				91F1393717C4E4B600D1AC4C /* AudioToolbox.framework in Frameworks */,
+				F9BB00B718785AB50076BC6D /* backendless.a in Frameworks */,
+				F9BB011B18785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB00CB18785AB80076BC6D /* CommLibiOS.a in Frameworks */,
 				91F1393817C4E4BA00D1AC4C /* AVFoundation.framework in Frameworks */,
 				91F1393917C4E4D800D1AC4C /* CFNetwork.framework in Frameworks */,
 				91F1393B17C4E4D800D1AC4C /* CoreMedia.framework in Frameworks */,
@@ -1036,6 +1124,7 @@
 				91F1390A17C4E37800D1AC4C /* UIKit.framework in Frameworks */,
 				91F1390B17C4E37800D1AC4C /* Foundation.framework in Frameworks */,
 				91F1390C17C4E37800D1AC4C /* CoreGraphics.framework in Frameworks */,
+				F9BB00F318785ABA0076BC6D /* libavcodec.a in Frameworks */,
 				91F1393E17C4E4D800D1AC4C /* CoreData.framework in Frameworks */,
 				9154F4861869CDB500426C78 /* SystemConfiguration.framework in Frameworks */,
 			);
@@ -1050,26 +1139,26 @@
 				917C47351864885300FBB55D /* MapKit.framework in Frameworks */,
 				917C47341864884A00FBB55D /* CoreLocation.framework in Frameworks */,
 				F91B665F16B18CD400668A06 /* UIKit.framework in Frameworks */,
+				F9BB011D18785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B666016B18CD400668A06 /* Foundation.framework in Frameworks */,
 				F91B666116B18CD400668A06 /* CoreGraphics.framework in Frameworks */,
+				F9BB00F518785ABB0076BC6D /* libavdevice.a in Frameworks */,
+				F9BB00EB18785AB90076BC6D /* libavcodec.a in Frameworks */,
+				F9BB012718785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B6AA216B1A22D00668A06 /* AudioToolbox.framework in Frameworks */,
 				F91B6AA616B1A26B00668A06 /* AVFoundation.framework in Frameworks */,
 				F91B677916B18FD700668A06 /* CFNetwork.framework in Frameworks */,
+				F9BB011318785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB010918785ABB0076BC6D /* libavformat.a in Frameworks */,
 				F91B6AA316B1A23600668A06 /* CoreMedia.framework in Frameworks */,
+				F9BB00AF18785AB30076BC6D /* backendless.a in Frameworks */,
 				F91B6AA416B1A23900668A06 /* CoreVideo.framework in Frameworks */,
 				F91B677A16B18FDB00668A06 /* Security.framework in Frameworks */,
+				F9BB00C318785AB60076BC6D /* CommLibiOS.a in Frameworks */,
 				91EF13A1174A4151009C7A38 /* CoreData.framework in Frameworks */,
+				F9BB014F18785ABC0076BC6D /* MediaLibiOS.a in Frameworks */,
+				F9BB00FF18785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6AA516B1A23E00668A06 /* libz.dylib in Frameworks */,
-				F91B67ED16B191B500668A06 /* backendless.a in Frameworks */,
-				F91B67FD16B191B600668A06 /* CommLibiOS.a in Frameworks */,
-				F91B6A9A16B1A11E00668A06 /* MediaLibiOS.a in Frameworks */,
-				F91B6A9B16B1A15100668A06 /* libavcodec.a in Frameworks */,
-				F91B6A9C16B1A15400668A06 /* libavdevice.a in Frameworks */,
-				F91B6A9D16B1A15800668A06 /* libavfilter.a in Frameworks */,
-				F91B6A9E16B1A15A00668A06 /* libavformat.a in Frameworks */,
-				F91B6A9F16B1A15C00668A06 /* libavutil.a in Frameworks */,
-				F91B6AA016B1A16000668A06 /* libswresample.a in Frameworks */,
-				F91B6AA116B1A16300668A06 /* libswscale.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1082,26 +1171,26 @@
 				917C47381864886800FBB55D /* MapKit.framework in Frameworks */,
 				917C47391864886800FBB55D /* CoreLocation.framework in Frameworks */,
 				91EF13A2174A41AF009C7A38 /* CoreData.framework in Frameworks */,
+				F9BB011E18785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B668316B18D2600668A06 /* UIKit.framework in Frameworks */,
 				F91B668416B18D2600668A06 /* Foundation.framework in Frameworks */,
+				F9BB00F618785ABB0076BC6D /* libavdevice.a in Frameworks */,
+				F9BB00EC18785AB90076BC6D /* libavcodec.a in Frameworks */,
+				F9BB012818785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B668516B18D2600668A06 /* CoreGraphics.framework in Frameworks */,
 				F91B6AA816B1A2F000668A06 /* AudioToolbox.framework in Frameworks */,
 				F91B678616B1903900668A06 /* CFNetwork.framework in Frameworks */,
+				F9BB011418785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB010A18785ABB0076BC6D /* libavformat.a in Frameworks */,
 				F91B6AA916B1A2F300668A06 /* AVFoundation.framework in Frameworks */,
+				F9BB00B018785AB30076BC6D /* backendless.a in Frameworks */,
 				F91B6AAA16B1A2F700668A06 /* CoreMedia.framework in Frameworks */,
 				F91B6AAB16B1A2FA00668A06 /* CoreVideo.framework in Frameworks */,
+				F9BB00C418785AB60076BC6D /* CommLibiOS.a in Frameworks */,
 				F91B678716B1903E00668A06 /* Security.framework in Frameworks */,
+				F9BB015018785ABC0076BC6D /* MediaLibiOS.a in Frameworks */,
+				F9BB010018785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6AA716B1A2EA00668A06 /* libz.dylib in Frameworks */,
-				F91B67EE16B191B500668A06 /* backendless.a in Frameworks */,
-				F91B67FE16B191B600668A06 /* CommLibiOS.a in Frameworks */,
-				F91B682616B191B700668A06 /* libavcodec.a in Frameworks */,
-				F91B682E16B191B700668A06 /* libavdevice.a in Frameworks */,
-				F91B683616B191B700668A06 /* libavfilter.a in Frameworks */,
-				F91B683E16B191B700668A06 /* libavformat.a in Frameworks */,
-				F91B684616B191B700668A06 /* libavutil.a in Frameworks */,
-				F91B684E16B191B700668A06 /* libswresample.a in Frameworks */,
-				F91B685616B191B800668A06 /* libswscale.a in Frameworks */,
-				F91B685E16B191B800668A06 /* MediaLibiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1114,25 +1203,25 @@
 				611275841861B7B500B6ACE6 /* libsqlite3.0.dylib in Frameworks */,
 				91CD6E9617143A6900389465 /* CoreData.framework in Frameworks */,
 				F91B66A716B18D8F00668A06 /* UIKit.framework in Frameworks */,
+				F9BB011F18785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B66A816B18D8F00668A06 /* Foundation.framework in Frameworks */,
 				F91B66A916B18D8F00668A06 /* CoreGraphics.framework in Frameworks */,
+				F9BB00F718785ABB0076BC6D /* libavdevice.a in Frameworks */,
+				F9BB00ED18785AB90076BC6D /* libavcodec.a in Frameworks */,
+				F9BB012918785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B6AAD16B1A31100668A06 /* AudioToolbox.framework in Frameworks */,
 				F91B6AAE16B1A31400668A06 /* AVFoundation.framework in Frameworks */,
 				F91B6AAF16B1A31B00668A06 /* CoreMedia.framework in Frameworks */,
+				F9BB011518785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB010B18785ABB0076BC6D /* libavformat.a in Frameworks */,
 				F91B6AB016B1A32200668A06 /* CoreVideo.framework in Frameworks */,
+				F9BB00B118785AB40076BC6D /* backendless.a in Frameworks */,
 				F91B678916B1904A00668A06 /* Security.framework in Frameworks */,
 				F91B6AAC16B1A30600668A06 /* libz.dylib in Frameworks */,
-				F91B67EF16B191B500668A06 /* backendless.a in Frameworks */,
-				F91B67FF16B191B600668A06 /* CommLibiOS.a in Frameworks */,
-				F91B682716B191B700668A06 /* libavcodec.a in Frameworks */,
-				F91B682F16B191B700668A06 /* libavdevice.a in Frameworks */,
-				F91B683716B191B700668A06 /* libavfilter.a in Frameworks */,
-				F91B683F16B191B700668A06 /* libavformat.a in Frameworks */,
-				F91B684716B191B700668A06 /* libavutil.a in Frameworks */,
-				F91B684F16B191B700668A06 /* libswresample.a in Frameworks */,
-				F91B685716B191B800668A06 /* libswscale.a in Frameworks */,
-				F91B685F16B191B800668A06 /* MediaLibiOS.a in Frameworks */,
+				F9BB00C518785AB60076BC6D /* CommLibiOS.a in Frameworks */,
 				914E7160182BCD38000F96CA /* CoreLocation.framework in Frameworks */,
+				F9BB015118785ABC0076BC6D /* MediaLibiOS.a in Frameworks */,
+				F9BB010118785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				914E715F182BCD21000F96CA /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1146,26 +1235,26 @@
 				917C473B1864886D00FBB55D /* MapKit.framework in Frameworks */,
 				917C473C1864886D00FBB55D /* CoreLocation.framework in Frameworks */,
 				918CF47817290CDC00088560 /* CoreData.framework in Frameworks */,
+				F9BB012018785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B66CB16B18DAC00668A06 /* UIKit.framework in Frameworks */,
 				F91B66CC16B18DAC00668A06 /* Foundation.framework in Frameworks */,
+				F9BB00F818785ABB0076BC6D /* libavdevice.a in Frameworks */,
+				F9BB00EE18785AB90076BC6D /* libavcodec.a in Frameworks */,
+				F9BB012A18785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B66CD16B18DAC00668A06 /* CoreGraphics.framework in Frameworks */,
 				F91B6AB216B1A33800668A06 /* AudioToolbox.framework in Frameworks */,
 				F91B6AB316B1A33A00668A06 /* AVFoundation.framework in Frameworks */,
+				F9BB011618785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB010C18785ABB0076BC6D /* libavformat.a in Frameworks */,
 				F91B678A16B1905000668A06 /* CFNetwork.framework in Frameworks */,
+				F9BB00B218785AB40076BC6D /* backendless.a in Frameworks */,
 				F91B6AB416B1A33F00668A06 /* CoreMedia.framework in Frameworks */,
 				F91B6AB516B1A34200668A06 /* CoreVideo.framework in Frameworks */,
+				F9BB00C618785AB60076BC6D /* CommLibiOS.a in Frameworks */,
 				F91B678B16B1905600668A06 /* Security.framework in Frameworks */,
+				F9BB015218785ABD0076BC6D /* MediaLibiOS.a in Frameworks */,
+				F9BB010218785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6AB116B1A33400668A06 /* libz.dylib in Frameworks */,
-				F91B67F016B191B500668A06 /* backendless.a in Frameworks */,
-				F91B680016B191B600668A06 /* CommLibiOS.a in Frameworks */,
-				F91B682816B191B700668A06 /* libavcodec.a in Frameworks */,
-				F91B683016B191B700668A06 /* libavdevice.a in Frameworks */,
-				F91B683816B191B700668A06 /* libavfilter.a in Frameworks */,
-				F91B684016B191B700668A06 /* libavformat.a in Frameworks */,
-				F91B684816B191B700668A06 /* libavutil.a in Frameworks */,
-				F91B685016B191B800668A06 /* libswresample.a in Frameworks */,
-				F91B685816B191B800668A06 /* libswscale.a in Frameworks */,
-				F91B686016B191B800668A06 /* MediaLibiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1178,26 +1267,26 @@
 				917C473E1864887100FBB55D /* MapKit.framework in Frameworks */,
 				917C473F1864887100FBB55D /* CoreLocation.framework in Frameworks */,
 				F91B66EF16B18DD800668A06 /* UIKit.framework in Frameworks */,
+				F9BB012118785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B66F016B18DD800668A06 /* Foundation.framework in Frameworks */,
 				F91B66F116B18DD800668A06 /* CoreGraphics.framework in Frameworks */,
+				F9BB00F918785ABB0076BC6D /* libavdevice.a in Frameworks */,
+				F9BB00EF18785AB90076BC6D /* libavcodec.a in Frameworks */,
+				F9BB012B18785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B6AB716B1A35B00668A06 /* AudioToolbox.framework in Frameworks */,
 				F91B6AB816B1A35E00668A06 /* AVFoundation.framework in Frameworks */,
 				F91B678C16B1905B00668A06 /* CFNetwork.framework in Frameworks */,
+				F9BB011718785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB010D18785ABB0076BC6D /* libavformat.a in Frameworks */,
 				F91B6AB916B1A36200668A06 /* CoreMedia.framework in Frameworks */,
+				F9BB00B318785AB40076BC6D /* backendless.a in Frameworks */,
 				F91B6ABA16B1A36400668A06 /* CoreVideo.framework in Frameworks */,
 				F91B678D16B1905E00668A06 /* Security.framework in Frameworks */,
+				F9BB00C718785AB70076BC6D /* CommLibiOS.a in Frameworks */,
 				91EF13A3174A41BC009C7A38 /* CoreData.framework in Frameworks */,
+				F9BB015318785ABD0076BC6D /* MediaLibiOS.a in Frameworks */,
+				F9BB010318785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6AB616B1A35600668A06 /* libz.dylib in Frameworks */,
-				F91B67F116B191B500668A06 /* backendless.a in Frameworks */,
-				F91B680116B191B600668A06 /* CommLibiOS.a in Frameworks */,
-				F91B682916B191B700668A06 /* libavcodec.a in Frameworks */,
-				F91B683116B191B700668A06 /* libavdevice.a in Frameworks */,
-				F91B683916B191B700668A06 /* libavfilter.a in Frameworks */,
-				F91B684116B191B700668A06 /* libavformat.a in Frameworks */,
-				F91B684916B191B700668A06 /* libavutil.a in Frameworks */,
-				F91B685116B191B800668A06 /* libswresample.a in Frameworks */,
-				F91B685916B191B800668A06 /* libswscale.a in Frameworks */,
-				F91B686116B191B800668A06 /* MediaLibiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,26 +1299,26 @@
 				F91B671316B18DF500668A06 /* UIKit.framework in Frameworks */,
 				917C47401864887400FBB55D /* SystemConfiguration.framework in Frameworks */,
 				F91B6ACA16B6EBF600668A06 /* MapKit.framework in Frameworks */,
+				F9BB012218785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B678F16B1907F00668A06 /* CoreLocation.framework in Frameworks */,
 				F91B671416B18DF500668A06 /* Foundation.framework in Frameworks */,
+				F9BB00FA18785ABB0076BC6D /* libavdevice.a in Frameworks */,
+				F9BB00F018785ABA0076BC6D /* libavcodec.a in Frameworks */,
+				F9BB012C18785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B671516B18DF500668A06 /* CoreGraphics.framework in Frameworks */,
 				F91B6ABC16B1A37100668A06 /* AudioToolbox.framework in Frameworks */,
 				F91B6ABD16B1A37500668A06 /* AVFoundation.framework in Frameworks */,
+				F9BB011818785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB010E18785ABB0076BC6D /* libavformat.a in Frameworks */,
 				F91B678E16B1907700668A06 /* CFNetwork.framework in Frameworks */,
+				F9BB00B418785AB40076BC6D /* backendless.a in Frameworks */,
 				F91B6ABE16B1A37D00668A06 /* CoreMedia.framework in Frameworks */,
 				F91B6ABF16B1A38000668A06 /* CoreVideo.framework in Frameworks */,
+				F9BB00C818785AB70076BC6D /* CommLibiOS.a in Frameworks */,
 				F91B679016B1908500668A06 /* Security.framework in Frameworks */,
+				F9BB015418785ABD0076BC6D /* MediaLibiOS.a in Frameworks */,
+				F9BB010418785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6ABB16B1A36C00668A06 /* libz.dylib in Frameworks */,
-				F91B67F216B191B600668A06 /* backendless.a in Frameworks */,
-				F91B680216B191B600668A06 /* CommLibiOS.a in Frameworks */,
-				F91B682A16B191B700668A06 /* libavcodec.a in Frameworks */,
-				F91B683216B191B700668A06 /* libavdevice.a in Frameworks */,
-				F91B683A16B191B700668A06 /* libavfilter.a in Frameworks */,
-				F91B684216B191B700668A06 /* libavformat.a in Frameworks */,
-				F91B684A16B191B700668A06 /* libavutil.a in Frameworks */,
-				F91B685216B191B800668A06 /* libswresample.a in Frameworks */,
-				F91B685A16B191B800668A06 /* libswscale.a in Frameworks */,
-				F91B686216B191B800668A06 /* MediaLibiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1242,26 +1331,26 @@
 				917C47421864887700FBB55D /* MapKit.framework in Frameworks */,
 				917C47431864887700FBB55D /* CoreLocation.framework in Frameworks */,
 				F91B673716B18E0A00668A06 /* UIKit.framework in Frameworks */,
+				F9BB012318785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B673816B18E0A00668A06 /* Foundation.framework in Frameworks */,
 				F91B673916B18E0A00668A06 /* CoreGraphics.framework in Frameworks */,
+				F9BB00FB18785ABB0076BC6D /* libavdevice.a in Frameworks */,
+				F9BB00F118785ABA0076BC6D /* libavcodec.a in Frameworks */,
+				F9BB012D18785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B6AC116B1A38A00668A06 /* AudioToolbox.framework in Frameworks */,
 				F91B6AC216B1A38D00668A06 /* AVFoundation.framework in Frameworks */,
 				F91B679116B1908B00668A06 /* CFNetwork.framework in Frameworks */,
+				F9BB011918785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB010F18785ABB0076BC6D /* libavformat.a in Frameworks */,
 				F91B6AC316B1A39100668A06 /* CoreMedia.framework in Frameworks */,
+				F9BB00B518785AB50076BC6D /* backendless.a in Frameworks */,
 				F91B6AC416B1A39400668A06 /* CoreVideo.framework in Frameworks */,
 				F91B679216B1909000668A06 /* Security.framework in Frameworks */,
+				F9BB00C918785AB70076BC6D /* CommLibiOS.a in Frameworks */,
 				F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */,
+				F9BB015518785ABE0076BC6D /* MediaLibiOS.a in Frameworks */,
+				F9BB010518785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6AC016B1A38400668A06 /* libz.dylib in Frameworks */,
-				F91B67F316B191B600668A06 /* backendless.a in Frameworks */,
-				F91B680316B191B600668A06 /* CommLibiOS.a in Frameworks */,
-				F91B682B16B191B700668A06 /* libavcodec.a in Frameworks */,
-				F91B683316B191B700668A06 /* libavdevice.a in Frameworks */,
-				F91B683B16B191B700668A06 /* libavfilter.a in Frameworks */,
-				F91B684316B191B700668A06 /* libavformat.a in Frameworks */,
-				F91B684B16B191B700668A06 /* libavutil.a in Frameworks */,
-				F91B685316B191B800668A06 /* libswresample.a in Frameworks */,
-				F91B685B16B191B800668A06 /* libswscale.a in Frameworks */,
-				F91B686316B191B800668A06 /* MediaLibiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1274,26 +1363,26 @@
 				61AC79F01851FB6A00E620E2 /* MapKit.framework in Frameworks */,
 				61AC79EF1851FB5500E620E2 /* CoreLocation.framework in Frameworks */,
 				918CF4791729142E00088560 /* CoreData.framework in Frameworks */,
+				F9BB012418785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B675B16B18EE000668A06 /* UIKit.framework in Frameworks */,
 				F91B675C16B18EE000668A06 /* Foundation.framework in Frameworks */,
+				F9BB00FC18785ABB0076BC6D /* libavdevice.a in Frameworks */,
+				F9BB00F218785ABA0076BC6D /* libavcodec.a in Frameworks */,
+				F9BB012E18785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B675D16B18EE000668A06 /* CoreGraphics.framework in Frameworks */,
 				F91B679316B1909B00668A06 /* AudioToolbox.framework in Frameworks */,
 				F91B679416B1909F00668A06 /* AVFoundation.framework in Frameworks */,
+				F9BB011A18785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB011018785ABB0076BC6D /* libavformat.a in Frameworks */,
 				F91B679516B190A500668A06 /* CFNetwork.framework in Frameworks */,
+				F9BB00B618785AB50076BC6D /* backendless.a in Frameworks */,
 				F91B679616B190AA00668A06 /* CoreMedia.framework in Frameworks */,
 				F91B679716B190AD00668A06 /* CoreVideo.framework in Frameworks */,
+				F9BB00CA18785AB70076BC6D /* CommLibiOS.a in Frameworks */,
 				F91B679816B190B100668A06 /* Security.framework in Frameworks */,
+				F9BB015618785ABE0076BC6D /* MediaLibiOS.a in Frameworks */,
+				F9BB010618785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B679916B190B700668A06 /* libz.dylib in Frameworks */,
-				F91B67F416B191B600668A06 /* backendless.a in Frameworks */,
-				F91B680416B191B600668A06 /* CommLibiOS.a in Frameworks */,
-				F91B682C16B191B700668A06 /* libavcodec.a in Frameworks */,
-				F91B683416B191B700668A06 /* libavdevice.a in Frameworks */,
-				F91B683C16B191B700668A06 /* libavfilter.a in Frameworks */,
-				F91B684416B191B700668A06 /* libavformat.a in Frameworks */,
-				F91B684C16B191B700668A06 /* libavutil.a in Frameworks */,
-				F91B685416B191B800668A06 /* libswresample.a in Frameworks */,
-				F91B685C16B191B800668A06 /* libswscale.a in Frameworks */,
-				F91B686416B191B800668A06 /* MediaLibiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1530,10 +1619,8 @@
 		F91B661716B1873B00668A06 = {
 			isa = PBXGroup;
 			children = (
-				9101186D180D343F008102A7 /* PushNotifyMac */,
-				91628E9117FAE16C00ACC36F /* IOKit.framework */,
+				F9BB000518785AB20076BC6D /* lib */,
 				F99EFF5916D51358001AE512 /* art */,
-				F91B679A16B191B500668A06 /* lib */,
 				F91B666216B18CD400668A06 /* UserService */,
 				F91B668616B18D2600668A06 /* UserSocial */,
 				F91B66AA16B18D8F00668A06 /* ToDoData */,
@@ -1549,6 +1636,7 @@
 				91628EE817FC557400ACC36F /* PubSubChatMac */,
 				91628F3517FD9A5200ACC36F /* GeoServiceMac */,
 				91628F5C17FDA79E00ACC36F /* FileServiceMac */,
+				9101186D180D343F008102A7 /* PushNotifyMac */,
 				917650D21827CA5D00745497 /* UIElementsSample */,
 				F91B662516B1873B00668A06 /* Frameworks */,
 				F91B662316B1873B00668A06 /* Products */,
@@ -1582,6 +1670,7 @@
 		F91B662516B1873B00668A06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91628E9117FAE16C00ACC36F /* IOKit.framework */,
 				9154F4771869CD4A00426C78 /* libsqlite3.dylib */,
 				611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */,
 				611275831861B7B500B6ACE6 /* libsqlite3.0.dylib */,
@@ -1842,164 +1931,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F91B679A16B191B500668A06 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				F91B679B16B191B500668A06 /* backendless */,
-				F91B67C716B191B500668A06 /* CommLibiOS */,
-				F91B67DC16B191B500668A06 /* MediaLibiOS */,
-			);
-			name = lib;
-			path = ../lib;
-			sourceTree = "<group>";
-		};
-		F91B679B16B191B500668A06 /* backendless */ = {
-			isa = PBXGroup;
-			children = (
-				91628E8F17FAE13C00ACC36F /* libbackendless-mac.a */,
-				F91B679C16B191B500668A06 /* backendless.a */,
-				F91B679D16B191B500668A06 /* doc */,
-				F91B679E16B191B500668A06 /* include */,
-			);
-			path = backendless;
-			sourceTree = "<group>";
-		};
-		F91B679D16B191B500668A06 /* doc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = doc;
-			sourceTree = "<group>";
-		};
-		F91B679E16B191B500668A06 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				9176510E1827CC1A00745497 /* BEAnnotation.h */,
-				9176510F1827CC1A00745497 /* BECollectionView.h */,
-				917651101827CC1A00745497 /* BEMapView.h */,
-				917651111827CC1A00745497 /* BETableView.h */,
-				91F138B717C37CE600D1AC4C /* BackendlessCachePolicy.h */,
-				91F138B617C37CAD00D1AC4C /* AbstractQuery.h */,
-				F91B679F16B191B500668A06 /* AbstractProperty.h */,
-				F91B67A016B191B500668A06 /* Backendless.h */,
-				F91B67A116B191B500668A06 /* BackendlessCollection.h */,
-				F91B67A216B191B500668A06 /* BackendlessDataQuery.h */,
-				F91B67A316B191B500668A06 /* BackendlessEntity.h */,
-				F91B67A416B191B500668A06 /* BackendlessFile.h */,
-				F91B67A516B191B500668A06 /* BackendlessGeoQuery.h */,
-				F91B67A616B191B500668A06 /* QueryOptions.h */,
-				F91B67A716B191B500668A06 /* BackendlessUser.h */,
-				F91B67A916B191B500668A06 /* DataStoreFactory.h */,
-				F91B67AA16B191B500668A06 /* DeliveryOptions.h */,
-				F91B67AB16B191B500668A06 /* DeviceRegistration.h */,
-				F91B67AC16B191B500668A06 /* FileService.h */,
-				F91B67AD16B191B500668A06 /* GeoCategory.h */,
-				F91B67AE16B191B500668A06 /* GeoPoint.h */,
-				F91B67AF16B191B500668A06 /* GeoService.h */,
-				F91B67B016B191B500668A06 /* HashMap.h */,
-				F91B67B116B191B500668A06 /* IDataStore.h */,
-				F91B67B216B191B500668A06 /* IMediaStreamer.h */,
-				F91B67B416B191B500668A06 /* MediaPlaybackOptions.h */,
-				F91B67B516B191B500668A06 /* MediaPlayer.h */,
-				F91B67B616B191B500668A06 /* MediaPublisher.h */,
-				F91B67B716B191B500668A06 /* MediaPublishOptions.h */,
-				F91B67B816B191B500668A06 /* MediaService.h */,
-				F91B67BA16B191B500668A06 /* Message.h */,
-				F91B67BB16B191B500668A06 /* MessageStatus.h */,
-				F91B67BC16B191B500668A06 /* MessagingService.h */,
-				F91B67BD16B191B500668A06 /* ObjectProperty.h */,
-				F91B67BE16B191B500668A06 /* PersistenceService.h */,
-				F91B67BF16B191B500668A06 /* PublishOptions.h */,
-				F91B67C016B191B500668A06 /* BESubscription.h */,
-				F91B67C116B191B500668A06 /* SubscriptionOptions.h */,
-				F91B67C216B191B500668A06 /* UserProperty.h */,
-				F91B67C316B191B500668A06 /* UserService.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		F91B67C716B191B500668A06 /* CommLibiOS */ = {
-			isa = PBXGroup;
-			children = (
-				91628E8A17FADD4400ACC36F /* libCommLibMac.a */,
-				F91B67C816B191B500668A06 /* CommLibiOS.a */,
-				F91B67C916B191B500668A06 /* doc */,
-				F91B67CC16B191B500668A06 /* include */,
-			);
-			path = CommLibiOS;
-			sourceTree = "<group>";
-		};
-		F91B67C916B191B500668A06 /* doc */ = {
-			isa = PBXGroup;
-			children = (
-				F91B67CA16B191B500668A06 /* Communication Library for iOS User Guide.pdf */,
-				F91B67CB16B191B500668A06 /* WeborbClient Class Reference.odt */,
-			);
-			path = doc;
-			sourceTree = "<group>";
-		};
-		F91B67CC16B191B500668A06 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				F91B67CD16B191B500668A06 /* BinaryCodec.h */,
-				F91B67CE16B191B500668A06 /* DEBUG.h */,
-				F91B67CF16B191B500668A06 /* IAttributeStore.h */,
-				F91B67D016B191B500668A06 /* IClientSharedObject.h */,
-				F91B67D116B191B500668A06 /* IClientSharedObjectDelegate.h */,
-				F91B67D216B191B500668A06 /* IPendingServiceCallback.h */,
-				F91B67D316B191B500668A06 /* IPersistable.h */,
-				F91B67D416B191B500668A06 /* IRTMProtocol.h */,
-				F91B67D516B191B500668A06 /* IServiceCall.h */,
-				F91B67D616B191B500668A06 /* ISharedObjectListener.h */,
-				F91B67D716B191B500668A06 /* MemoryTicker.h */,
-				F91B67D816B191B500668A06 /* Responder.h */,
-				F91B67D916B191B500668A06 /* RTMPClient.h */,
-				F91B67DA16B191B500668A06 /* Types.h */,
-				F91B67DB16B191B500668A06 /* WeborbClient.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		F91B67DC16B191B500668A06 /* MediaLibiOS */ = {
-			isa = PBXGroup;
-			children = (
-				F91B67DD16B191B500668A06 /* doc */,
-				F91B67E016B191B500668A06 /* include */,
-				F91B67E516B191B500668A06 /* libavcodec.a */,
-				F91B67E616B191B500668A06 /* libavdevice.a */,
-				F91B67E716B191B500668A06 /* libavfilter.a */,
-				F91B67E816B191B500668A06 /* libavformat.a */,
-				F91B67E916B191B500668A06 /* libavutil.a */,
-				F91B67EA16B191B500668A06 /* libswresample.a */,
-				F91B67EB16B191B500668A06 /* libswscale.a */,
-				F91B67EC16B191B500668A06 /* MediaLibiOS.a */,
-			);
-			path = MediaLibiOS;
-			sourceTree = "<group>";
-		};
-		F91B67DD16B191B500668A06 /* doc */ = {
-			isa = PBXGroup;
-			children = (
-				F91B67DE16B191B500668A06 /* Building Media Stream Apps.docx */,
-				F91B67DF16B191B500668A06 /* Media Library for iOS User Guide.docx */,
-			);
-			path = doc;
-			sourceTree = "<group>";
-		};
-		F91B67E016B191B500668A06 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				91934001182A2E5D005F3F8A /* MPMediaData.h */,
-				91934002182A2E5D005F3F8A /* MPMediaDecoder.h */,
-				91934003182A2E5D005F3F8A /* MPMediaEncoder.h */,
-				F91B67E116B191B500668A06 /* BroadcastStreamClient.h */,
-				F91B67E216B191B500668A06 /* MediaConstants.h */,
-				F91B67E316B191B500668A06 /* MediaStreamPlayer.h */,
-				F91B67E416B191B500668A06 /* VideoPlayer.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
 		F99EFF5916D51358001AE512 /* art */ = {
 			isa = PBXGroup;
 			children = (
@@ -2007,6 +1938,316 @@
 				F99EFF5B16D51358001AE512 /* radio_unchecked.png */,
 			);
 			path = art;
+			sourceTree = "<group>";
+		};
+		F9BB000518785AB20076BC6D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB000618785AB20076BC6D /* backendless */,
+				F9BB003318785AB20076BC6D /* CommLibiOS */,
+				F9BB004D18785AB30076BC6D /* libav-v9.1965 */,
+				F9BB00A518785AB30076BC6D /* MediaLibiOS */,
+			);
+			name = lib;
+			path = ../lib;
+			sourceTree = "<group>";
+		};
+		F9BB000618785AB20076BC6D /* backendless */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB000718785AB20076BC6D /* backendless.a */,
+				F9BB000818785AB20076BC6D /* include */,
+				F9BB003218785AB20076BC6D /* libbackendless-mac.a */,
+			);
+			path = backendless;
+			sourceTree = "<group>";
+		};
+		F9BB000818785AB20076BC6D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB000918785AB20076BC6D /* AbstractProperty.h */,
+				F9BB000A18785AB20076BC6D /* AbstractQuery.h */,
+				F9BB000B18785AB20076BC6D /* Backendless.h */,
+				F9BB000C18785AB20076BC6D /* BackendlessCachePolicy.h */,
+				F9BB000D18785AB20076BC6D /* BackendlessCacheProtocol.h */,
+				F9BB000E18785AB20076BC6D /* BackendlessCollection.h */,
+				F9BB000F18785AB20076BC6D /* BackendlessDataQuery.h */,
+				F9BB001018785AB20076BC6D /* BackendlessEntity.h */,
+				F9BB001118785AB20076BC6D /* BackendlessFile.h */,
+				F9BB001218785AB20076BC6D /* BackendlessGeoQuery.h */,
+				F9BB001318785AB20076BC6D /* BackendlessUser.h */,
+				F9BB001418785AB20076BC6D /* BEAnnotation.h */,
+				F9BB001518785AB20076BC6D /* BECollectionView.h */,
+				F9BB001618785AB20076BC6D /* BEMapView.h */,
+				F9BB001718785AB20076BC6D /* BESubscription.h */,
+				F9BB001818785AB20076BC6D /* BETableView.h */,
+				F9BB001918785AB20076BC6D /* DataStoreFactory.h */,
+				F9BB001A18785AB20076BC6D /* DeliveryOptions.h */,
+				F9BB001B18785AB20076BC6D /* DeviceRegistration.h */,
+				F9BB001C18785AB20076BC6D /* FileService.h */,
+				F9BB001D18785AB20076BC6D /* GeoCategory.h */,
+				F9BB001E18785AB20076BC6D /* GeoPoint.h */,
+				F9BB001F18785AB20076BC6D /* GeoService.h */,
+				F9BB002018785AB20076BC6D /* HashMap.h */,
+				F9BB002118785AB20076BC6D /* IDataStore.h */,
+				F9BB002218785AB20076BC6D /* IMediaStreamer.h */,
+				F9BB002318785AB20076BC6D /* MediaPlaybackOptions.h */,
+				F9BB002418785AB20076BC6D /* MediaPlayer.h */,
+				F9BB002518785AB20076BC6D /* MediaPublisher.h */,
+				F9BB002618785AB20076BC6D /* MediaPublishOptions.h */,
+				F9BB002718785AB20076BC6D /* MediaService.h */,
+				F9BB002818785AB20076BC6D /* Message.h */,
+				F9BB002918785AB20076BC6D /* MessageStatus.h */,
+				F9BB002A18785AB20076BC6D /* MessagingService.h */,
+				F9BB002B18785AB20076BC6D /* ObjectProperty.h */,
+				F9BB002C18785AB20076BC6D /* PersistenceService.h */,
+				F9BB002D18785AB20076BC6D /* PublishOptions.h */,
+				F9BB002E18785AB20076BC6D /* QueryOptions.h */,
+				F9BB002F18785AB20076BC6D /* SubscriptionOptions.h */,
+				F9BB003018785AB20076BC6D /* UserProperty.h */,
+				F9BB003118785AB20076BC6D /* UserService.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		F9BB003318785AB20076BC6D /* CommLibiOS */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB003418785AB20076BC6D /* CommLibiOS.a */,
+				F9BB003518785AB20076BC6D /* doc */,
+				F9BB003818785AB20076BC6D /* include */,
+				F9BB004C18785AB20076BC6D /* libCommLibMac.a */,
+			);
+			path = CommLibiOS;
+			sourceTree = "<group>";
+		};
+		F9BB003518785AB20076BC6D /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB003618785AB20076BC6D /* Communication Library for iOS User Guide.pdf */,
+				F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		F9BB003818785AB20076BC6D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB003918785AB20076BC6D /* AMFSerializer.h */,
+				F9BB003A18785AB20076BC6D /* BinaryCodec.h */,
+				F9BB003B18785AB20076BC6D /* BinaryStream.h */,
+				F9BB003C18785AB20076BC6D /* DEBUG.h */,
+				F9BB003D18785AB20076BC6D /* FlashorbBinaryReader.h */,
+				F9BB003E18785AB20076BC6D /* FlashorbBinaryWriter.h */,
+				F9BB003F18785AB20076BC6D /* IAttributeStore.h */,
+				F9BB004018785AB20076BC6D /* IClientSharedObject.h */,
+				F9BB004118785AB20076BC6D /* IClientSharedObjectDelegate.h */,
+				F9BB004218785AB20076BC6D /* IPendingServiceCallback.h */,
+				F9BB004318785AB20076BC6D /* IPersistable.h */,
+				F9BB004418785AB20076BC6D /* IRTMProtocol.h */,
+				F9BB004518785AB20076BC6D /* IServiceCall.h */,
+				F9BB004618785AB20076BC6D /* ISharedObjectListener.h */,
+				F9BB004718785AB20076BC6D /* MemoryTicker.h */,
+				F9BB004818785AB20076BC6D /* Responder.h */,
+				F9BB004918785AB20076BC6D /* RTMPClient.h */,
+				F9BB004A18785AB20076BC6D /* Types.h */,
+				F9BB004B18785AB20076BC6D /* WeborbClient.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		F9BB004D18785AB30076BC6D /* libav-v9.1965 */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB004E18785AB30076BC6D /* include */,
+				F9BB009B18785AB30076BC6D /* lib */,
+				F9BB00A318785AB30076BC6D /* make */,
+			);
+			path = "libav-v9.1965";
+			sourceTree = "<group>";
+		};
+		F9BB004E18785AB30076BC6D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB004F18785AB30076BC6D /* libavcodec */,
+				F9BB005818785AB30076BC6D /* libavdevice */,
+				F9BB005B18785AB30076BC6D /* libavfilter */,
+				F9BB006118785AB30076BC6D /* libavformat */,
+				F9BB006618785AB30076BC6D /* libavresample */,
+				F9BB006918785AB30076BC6D /* libavutil */,
+				F9BB009818785AB30076BC6D /* libswscale */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		F9BB004F18785AB30076BC6D /* libavcodec */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB005018785AB30076BC6D /* avcodec.h */,
+				F9BB005118785AB30076BC6D /* avfft.h */,
+				F9BB005218785AB30076BC6D /* dxva2.h */,
+				F9BB005318785AB30076BC6D /* vaapi.h */,
+				F9BB005418785AB30076BC6D /* vda.h */,
+				F9BB005518785AB30076BC6D /* vdpau.h */,
+				F9BB005618785AB30076BC6D /* version.h */,
+				F9BB005718785AB30076BC6D /* xvmc.h */,
+			);
+			path = libavcodec;
+			sourceTree = "<group>";
+		};
+		F9BB005818785AB30076BC6D /* libavdevice */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB005918785AB30076BC6D /* avdevice.h */,
+				F9BB005A18785AB30076BC6D /* version.h */,
+			);
+			path = libavdevice;
+			sourceTree = "<group>";
+		};
+		F9BB005B18785AB30076BC6D /* libavfilter */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB005C18785AB30076BC6D /* avfilter.h */,
+				F9BB005D18785AB30076BC6D /* avfiltergraph.h */,
+				F9BB005E18785AB30076BC6D /* buffersink.h */,
+				F9BB005F18785AB30076BC6D /* buffersrc.h */,
+				F9BB006018785AB30076BC6D /* version.h */,
+			);
+			path = libavfilter;
+			sourceTree = "<group>";
+		};
+		F9BB006118785AB30076BC6D /* libavformat */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB006218785AB30076BC6D /* avformat.h */,
+				F9BB006318785AB30076BC6D /* avio.h */,
+				F9BB006418785AB30076BC6D /* internal.h */,
+				F9BB006518785AB30076BC6D /* version.h */,
+			);
+			path = libavformat;
+			sourceTree = "<group>";
+		};
+		F9BB006618785AB30076BC6D /* libavresample */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB006718785AB30076BC6D /* avresample.h */,
+				F9BB006818785AB30076BC6D /* version.h */,
+			);
+			path = libavresample;
+			sourceTree = "<group>";
+		};
+		F9BB006918785AB30076BC6D /* libavutil */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB006A18785AB30076BC6D /* adler32.h */,
+				F9BB006B18785AB30076BC6D /* aes.h */,
+				F9BB006C18785AB30076BC6D /* attributes.h */,
+				F9BB006D18785AB30076BC6D /* audio_fifo.h */,
+				F9BB006E18785AB30076BC6D /* audioconvert.h */,
+				F9BB006F18785AB30076BC6D /* avassert.h */,
+				F9BB007018785AB30076BC6D /* avconfig.h */,
+				F9BB007118785AB30076BC6D /* avstring.h */,
+				F9BB007218785AB30076BC6D /* avutil.h */,
+				F9BB007318785AB30076BC6D /* base64.h */,
+				F9BB007418785AB30076BC6D /* blowfish.h */,
+				F9BB007518785AB30076BC6D /* bswap.h */,
+				F9BB007618785AB30076BC6D /* buffer.h */,
+				F9BB007718785AB30076BC6D /* channel_layout.h */,
+				F9BB007818785AB30076BC6D /* common.h */,
+				F9BB007918785AB30076BC6D /* cpu.h */,
+				F9BB007A18785AB30076BC6D /* crc.h */,
+				F9BB007B18785AB30076BC6D /* dict.h */,
+				F9BB007C18785AB30076BC6D /* error.h */,
+				F9BB007D18785AB30076BC6D /* eval.h */,
+				F9BB007E18785AB30076BC6D /* fifo.h */,
+				F9BB007F18785AB30076BC6D /* file.h */,
+				F9BB008018785AB30076BC6D /* frame.h */,
+				F9BB008118785AB30076BC6D /* hmac.h */,
+				F9BB008218785AB30076BC6D /* imgutils.h */,
+				F9BB008318785AB30076BC6D /* intfloat.h */,
+				F9BB008418785AB30076BC6D /* intfloat_readwrite.h */,
+				F9BB008518785AB30076BC6D /* intreadwrite.h */,
+				F9BB008618785AB30076BC6D /* lfg.h */,
+				F9BB008718785AB30076BC6D /* log.h */,
+				F9BB008818785AB30076BC6D /* lzo.h */,
+				F9BB008918785AB30076BC6D /* mathematics.h */,
+				F9BB008A18785AB30076BC6D /* md5.h */,
+				F9BB008B18785AB30076BC6D /* mem.h */,
+				F9BB008C18785AB30076BC6D /* old_pix_fmts.h */,
+				F9BB008D18785AB30076BC6D /* opt.h */,
+				F9BB008E18785AB30076BC6D /* parseutils.h */,
+				F9BB008F18785AB30076BC6D /* pixdesc.h */,
+				F9BB009018785AB30076BC6D /* pixfmt.h */,
+				F9BB009118785AB30076BC6D /* random_seed.h */,
+				F9BB009218785AB30076BC6D /* rational.h */,
+				F9BB009318785AB30076BC6D /* samplefmt.h */,
+				F9BB009418785AB30076BC6D /* sha.h */,
+				F9BB009518785AB30076BC6D /* time.h */,
+				F9BB009618785AB30076BC6D /* version.h */,
+				F9BB009718785AB30076BC6D /* xtea.h */,
+			);
+			path = libavutil;
+			sourceTree = "<group>";
+		};
+		F9BB009818785AB30076BC6D /* libswscale */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB009918785AB30076BC6D /* swscale.h */,
+				F9BB009A18785AB30076BC6D /* version.h */,
+			);
+			path = libswscale;
+			sourceTree = "<group>";
+		};
+		F9BB009B18785AB30076BC6D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB009C18785AB30076BC6D /* libavcodec.a */,
+				F9BB009D18785AB30076BC6D /* libavdevice.a */,
+				F9BB009E18785AB30076BC6D /* libavfilter.a */,
+				F9BB009F18785AB30076BC6D /* libavformat.a */,
+				F9BB00A018785AB30076BC6D /* libavresample.a */,
+				F9BB00A118785AB30076BC6D /* libavutil.a */,
+				F9BB00A218785AB30076BC6D /* libswscale.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		F9BB00A318785AB30076BC6D /* make */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */,
+			);
+			path = make;
+			sourceTree = "<group>";
+		};
+		F9BB00A518785AB30076BC6D /* MediaLibiOS */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB00A618785AB30076BC6D /* doc */,
+				F9BB00A918785AB30076BC6D /* include */,
+				F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */,
+			);
+			path = MediaLibiOS;
+			sourceTree = "<group>";
+		};
+		F9BB00A618785AB30076BC6D /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB00A718785AB30076BC6D /* Building Media Stream Apps.docx */,
+				F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		F9BB00A918785AB30076BC6D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB00AA18785AB30076BC6D /* BroadcastStreamClient.h */,
+				F9BB00AB18785AB30076BC6D /* MediaStreamPlayer.h */,
+				F9BB00AC18785AB30076BC6D /* MPMediaData.h */,
+				F9BB00AD18785AB30076BC6D /* VideoPlayer.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2307,8 +2548,16 @@
 		F91B661916B1873B00668A06 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = BACKENDLESS.COM;
+				TargetAttributes = {
+					9101183A180D33D3008102A7 = {
+						DevelopmentTeam = 73FSJC7BUF;
+					};
+					91F1390817C4E37800D1AC4C = {
+						DevelopmentTeam = 73FSJC7BUF;
+					};
+				};
 			};
 			buildConfigurationList = F91B661C16B1873B00668A06 /* Build configuration list for PBXProject "backendlessDemos" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2350,7 +2599,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9101187D180D3440008102A7 /* MainMenu.xib in Resources */,
-				91011882180D3440008102A7 /* PushNotifyMac-Info.plist in Resources */,
 				91011880180D3440008102A7 /* Images.xcassets in Resources */,
 				9101187F180D3440008102A7 /* InfoPlist.strings in Resources */,
 				9101187E180D3440008102A7 /* Credits.rtf in Resources */,
@@ -2428,8 +2676,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				917650E51827CA5E00745497 /* Images.xcassets in Resources */,
+				F9BB013A18785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 				917650D71827CA5E00745497 /* InfoPlist.strings in Resources */,
+				F9BB00E018785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
+				F9BB00D618785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
+				F9BB014E18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
 				917650E01827CA5E00745497 /* Main.storyboard in Resources */,
+				F9BB014418785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2437,11 +2690,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BB00D518785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 				91F1391217C4E37800D1AC4C /* InfoPlist.strings in Resources */,
 				91F1391A17C4E37800D1AC4C /* Default.png in Resources */,
 				91F1391C17C4E37800D1AC4C /* Default@2x.png in Resources */,
+				F9BB014318785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
+				F9BB00DF18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
+				F9BB013918785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 				91F1391E17C4E37800D1AC4C /* Default-568h@2x.png in Resources */,
 				91F1392117C4E37800D1AC4C /* MainStoryboard.storyboard in Resources */,
+				F9BB014D18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2449,17 +2707,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BB013B18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
 				F91B666716B18CD400668A06 /* InfoPlist.strings in Resources */,
 				F91B666F16B18CD400668A06 /* Default.png in Resources */,
 				F91B667116B18CD400668A06 /* Default@2x.png in Resources */,
 				F91B667316B18CD400668A06 /* Default-568h@2x.png in Resources */,
+				F9BB014518785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
 				F91B667616B18CD400668A06 /* MainStoryboard.storyboard in Resources */,
-				F91B680516B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */,
-				F91B680D16B191B600668A06 /* WeborbClient Class Reference.odt in Resources */,
-				F91B681516B191B600668A06 /* Building Media Stream Apps.docx in Resources */,
-				F91B681D16B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */,
 				F99EFF5C16D51358001AE512 /* radio_checked.png in Resources */,
+				F9BB00CD18785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 				F99EFF5D16D51358001AE512 /* radio_unchecked.png in Resources */,
+				F9BB00D718785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
+				F9BB013118785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2467,15 +2726,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BB00CE18785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 				F91B668B16B18D2600668A06 /* InfoPlist.strings in Resources */,
 				F91B669316B18D2600668A06 /* Default.png in Resources */,
 				F91B669516B18D2600668A06 /* Default@2x.png in Resources */,
+				F9BB013C18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
+				F9BB00D818785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
+				F9BB013218785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 				F91B669716B18D2600668A06 /* Default-568h@2x.png in Resources */,
 				F91B669A16B18D2600668A06 /* MainStoryboard.storyboard in Resources */,
-				F91B680616B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */,
-				F91B680E16B191B600668A06 /* WeborbClient Class Reference.odt in Resources */,
-				F91B681616B191B600668A06 /* Building Media Stream Apps.docx in Resources */,
-				F91B681E16B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */,
+				F9BB014618785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2484,15 +2744,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91B66AF16B18D8F00668A06 /* InfoPlist.strings in Resources */,
+				F9BB013D18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
+				F9BB014718785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
+				F9BB013318785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 				F91B66B716B18D8F00668A06 /* Default.png in Resources */,
 				F91B66B916B18D8F00668A06 /* Default@2x.png in Resources */,
 				F91B66BB16B18D9000668A06 /* Default-568h@2x.png in Resources */,
+				F9BB00D918785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
 				F91B66BE16B18D9000668A06 /* MainStoryboard.storyboard in Resources */,
-				F91B680716B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */,
-				F91B680F16B191B600668A06 /* WeborbClient Class Reference.odt in Resources */,
-				F91B681716B191B600668A06 /* Building Media Stream Apps.docx in Resources */,
-				F91B681F16B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */,
 				9147E76F16C0F7EA000A26F4 /* images-1.jpeg in Resources */,
+				F9BB00CF18785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2500,15 +2761,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BB00D018785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 				F91B66D316B18DAC00668A06 /* InfoPlist.strings in Resources */,
 				F91B66DB16B18DAC00668A06 /* Default.png in Resources */,
 				F91B66DD16B18DAC00668A06 /* Default@2x.png in Resources */,
+				F9BB013E18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
+				F9BB00DA18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
+				F9BB013418785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 				F91B66DF16B18DAC00668A06 /* Default-568h@2x.png in Resources */,
 				F91B66E216B18DAC00668A06 /* MainStoryboard.storyboard in Resources */,
-				F91B680816B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */,
-				F91B681016B191B600668A06 /* WeborbClient Class Reference.odt in Resources */,
-				F91B681816B191B600668A06 /* Building Media Stream Apps.docx in Resources */,
-				F91B682016B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */,
+				F9BB014818785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2516,15 +2778,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BB00D118785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 				F91B66F716B18DD800668A06 /* InfoPlist.strings in Resources */,
 				F91B66FF16B18DD900668A06 /* Default.png in Resources */,
 				F91B670116B18DD900668A06 /* Default@2x.png in Resources */,
+				F9BB013F18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
+				F9BB00DB18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
+				F9BB013518785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 				F91B670316B18DD900668A06 /* Default-568h@2x.png in Resources */,
 				F91B670616B18DD900668A06 /* MainStoryboard.storyboard in Resources */,
-				F91B680916B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */,
-				F91B681116B191B600668A06 /* WeborbClient Class Reference.odt in Resources */,
-				F91B681916B191B600668A06 /* Building Media Stream Apps.docx in Resources */,
-				F91B682116B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */,
+				F9BB014918785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2532,15 +2795,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BB00D218785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 				F91B671B16B18DF500668A06 /* InfoPlist.strings in Resources */,
 				F91B672316B18DF500668A06 /* Default.png in Resources */,
 				F91B672516B18DF500668A06 /* Default@2x.png in Resources */,
+				F9BB014018785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
+				F9BB00DC18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
+				F9BB013618785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 				F91B672716B18DF500668A06 /* Default-568h@2x.png in Resources */,
 				F91B672A16B18DF500668A06 /* MainStoryboard.storyboard in Resources */,
-				F91B680A16B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */,
-				F91B681216B191B600668A06 /* WeborbClient Class Reference.odt in Resources */,
-				F91B681A16B191B600668A06 /* Building Media Stream Apps.docx in Resources */,
-				F91B682216B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */,
+				F9BB014A18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2548,15 +2812,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BB00D318785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 				F91B673F16B18E0A00668A06 /* InfoPlist.strings in Resources */,
 				F91B674716B18E0A00668A06 /* Default.png in Resources */,
 				F91B674916B18E0A00668A06 /* Default@2x.png in Resources */,
+				F9BB014118785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
+				F9BB00DD18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
+				F9BB013718785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 				F91B674B16B18E0A00668A06 /* Default-568h@2x.png in Resources */,
 				F91B674E16B18E0A00668A06 /* MainStoryboard.storyboard in Resources */,
-				F91B680B16B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */,
-				F91B681316B191B600668A06 /* WeborbClient Class Reference.odt in Resources */,
-				F91B681B16B191B600668A06 /* Building Media Stream Apps.docx in Resources */,
-				F91B682316B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */,
+				F9BB014B18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2564,15 +2829,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BB00D418785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 				F91B676316B18EE000668A06 /* InfoPlist.strings in Resources */,
 				F91B676B16B18EE000668A06 /* Default.png in Resources */,
 				F91B676D16B18EE000668A06 /* Default@2x.png in Resources */,
+				F9BB014218785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
+				F9BB00DE18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
+				F9BB013818785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 				F91B676F16B18EE000668A06 /* Default-568h@2x.png in Resources */,
 				F91B677216B18EE000668A06 /* MainStoryboard.storyboard in Resources */,
-				F91B680C16B191B600668A06 /* Communication Library for iOS User Guide.pdf in Resources */,
-				F91B681416B191B600668A06 /* WeborbClient Class Reference.odt in Resources */,
-				F91B681C16B191B600668A06 /* Building Media Stream Apps.docx in Resources */,
-				F91B682416B191B600668A06 /* Media Library for iOS User Guide.docx in Resources */,
+				F9BB014C18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3146,7 +3412,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "Mac Developer: Юрий Ященко (TUCCRMCYLU)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3163,13 +3430,14 @@
 				INFOPLIST_FILE = "PushNotifyMac/PushNotifyMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/yuryyaschenko/Desktop/newProjects/backendless.git/src/client/sdk/ios/lib/backendless,
-					/Users/yuryyaschenko/Desktop/newProjects/backendless.git/src/client/sdk/ios/lib/CommLibiOS,
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7BCF7467-B10D-4AA5-9597-34F948A84BA7";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3184,7 +3452,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "Mac Developer: Юрий Ященко (TUCCRMCYLU)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -3199,13 +3468,14 @@
 				INFOPLIST_FILE = "PushNotifyMac/PushNotifyMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/yuryyaschenko/Desktop/newProjects/backendless.git/src/client/sdk/ios/lib/backendless,
-					/Users/yuryyaschenko/Desktop/newProjects/backendless.git/src/client/sdk/ios/lib/CommLibiOS,
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7BCF7467-B10D-4AA5-9597-34F948A84BA7";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3213,15 +3483,12 @@
 		91628E7917FADBDB00ACC36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/XcodeOld.app/Contents/Developer/Library/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToDoDataMac/ToDoDataMac-Prefix.pch";
@@ -3230,12 +3497,13 @@
 				INFOPLIST_FILE = "ToDoDataMac/ToDoDataMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/backendless\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3243,16 +3511,13 @@
 		91628E7A17FADBDB00ACC36F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/XcodeOld.app/Contents/Developer/Library/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToDoDataMac/ToDoDataMac-Prefix.pch";
@@ -3261,12 +3526,13 @@
 				INFOPLIST_FILE = "ToDoDataMac/ToDoDataMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/backendless\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3274,10 +3540,10 @@
 		91628EAF17FC147900ACC36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3287,12 +3553,13 @@
 				INFOPLIST_FILE = "UserServiceMac/UserServiceMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3300,10 +3567,10 @@
 		91628EB017FC147900ACC36F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -3314,12 +3581,13 @@
 				INFOPLIST_FILE = "UserServiceMac/UserServiceMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3327,10 +3595,10 @@
 		91628ED717FC38D400ACC36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3340,12 +3608,13 @@
 				INFOPLIST_FILE = "UserSocialMac/UserSocialMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/backendless\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3353,10 +3622,10 @@
 		91628ED817FC38D400ACC36F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -3367,12 +3636,13 @@
 				INFOPLIST_FILE = "UserSocialMac/UserSocialMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/backendless\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3380,10 +3650,10 @@
 		91628EFE17FC557500ACC36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -3394,12 +3664,13 @@
 				INFOPLIST_FILE = "PubSubChatMac/PubSubChatMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3407,10 +3678,10 @@
 		91628EFF17FC557500ACC36F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -3421,12 +3692,13 @@
 				INFOPLIST_FILE = "PubSubChatMac/PubSubChatMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3434,10 +3706,10 @@
 		91628F4B17FD9A5300ACC36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3447,12 +3719,13 @@
 				INFOPLIST_FILE = "GeoServiceMac/GeoServiceMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3460,10 +3733,10 @@
 		91628F4C17FD9A5300ACC36F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -3474,12 +3747,13 @@
 				INFOPLIST_FILE = "GeoServiceMac/GeoServiceMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3487,10 +3761,10 @@
 		91628F7217FDA79F00ACC36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3501,12 +3775,13 @@
 				INFOPLIST_FILE = "FileServiceMac/FileServiceMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3514,10 +3789,10 @@
 		91628F7317FDA79F00ACC36F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -3529,12 +3804,13 @@
 				INFOPLIST_FILE = "FileServiceMac/FileServiceMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3542,7 +3818,6 @@
 		917650FA1827CA5E00745497 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -3567,11 +3842,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/yuryyaschenko/Desktop/newProjects/backendless.git/src/client/sdk/ios/lib/backendless,
-					/Users/yuryyaschenko/Desktop/newProjects/backendless.git/src/client/sdk/ios/lib/CommLibiOS,
-					/Users/yuryyaschenko/Desktop/newProjects/backendless.git/src/client/sdk/ios/lib/MediaLibiOS,
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3579,7 +3856,6 @@
 		917650FB1827CA5E00745497 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -3601,11 +3877,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/yuryyaschenko/Desktop/newProjects/backendless.git/src/client/sdk/ios/lib/backendless,
-					/Users/yuryyaschenko/Desktop/newProjects/backendless.git/src/client/sdk/ios/lib/CommLibiOS,
-					/Users/yuryyaschenko/Desktop/newProjects/backendless.git/src/client/sdk/ios/lib/MediaLibiOS,
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3617,6 +3895,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3629,11 +3908,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3645,6 +3927,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3657,11 +3940,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3670,6 +3956,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -3689,8 +3976,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 			};
 			name = Debug;
 		};
@@ -3698,6 +3986,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -3710,28 +3999,34 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 			};
 			name = Release;
 		};
 		F91B667B16B18CD400668A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UserService/UserService-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				INFOPLIST_FILE = "UserService/UserService-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3739,19 +4034,23 @@
 		F91B667C16B18CD400668A06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UserService/UserService-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				INFOPLIST_FILE = "UserService/UserService-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3766,12 +4065,14 @@
 				INFOPLIST_FILE = "UserSocial/UserSocial-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3786,12 +4087,14 @@
 				INFOPLIST_FILE = "UserSocial/UserSocial-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3806,12 +4109,14 @@
 				INFOPLIST_FILE = "ToDoData/ToDoData-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3826,12 +4131,14 @@
 				INFOPLIST_FILE = "ToDoData/ToDoData-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3846,12 +4153,14 @@
 				INFOPLIST_FILE = "PubSubChat/PubSubChat-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3866,12 +4175,14 @@
 				INFOPLIST_FILE = "PubSubChat/PubSubChat-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3886,13 +4197,15 @@
 				INFOPLIST_FILE = "PushNotify/PushNotify-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E1CDC7FB-DE18-4A3F-A1B7-18AB4F98AA04";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E1CDC7FB-DE18-4A3F-A1B7-18AB4F98AA04";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3907,13 +4220,15 @@
 				INFOPLIST_FILE = "PushNotify/PushNotify-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E1CDC7FB-DE18-4A3F-A1B7-18AB4F98AA04";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E1CDC7FB-DE18-4A3F-A1B7-18AB4F98AA04";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3928,12 +4243,14 @@
 				INFOPLIST_FILE = "GeoService/GeoService-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3948,12 +4265,14 @@
 				INFOPLIST_FILE = "GeoService/GeoService-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3969,12 +4288,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3990,12 +4311,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -4003,6 +4326,7 @@
 		F91B677716B18EE000668A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4010,12 +4334,15 @@
 				INFOPLIST_FILE = "VideoService/VideoService-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -4023,6 +4350,7 @@
 		F91B677816B18EE000668A06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4030,12 +4358,15 @@
 				INFOPLIST_FILE = "VideoService/VideoService-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../lib/backendless\"",
-					"\"$(SRCROOT)/../lib/CommLibiOS\"",
-					"\"$(SRCROOT)/../lib/MediaLibiOS\"",
+					"$(SRCROOT)/../lib/backendless",
+					"$(SRCROOT)/../lib/CommLibiOS",
+					"$(SRCROOT)/../lib/MediaLibiOS",
+					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
