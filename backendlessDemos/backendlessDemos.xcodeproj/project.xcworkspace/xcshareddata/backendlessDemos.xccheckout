@@ -5,11 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A76E8895-7836-488B-88FF-B03A5F35CDD9</string>
+	<string>4BC51A02-EEA1-4323-AFA6-64FBB8D808E1</string>
 	<key>IDESourceControlProjectName</key>
 	<string>backendlessDemos</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>2A9338E3-08CD-453E-9CBC-6E97E68E420F</key>
+		<string>svn://www.themidnightcoders.com/mapable/trunk/ORB/IOS/WebORBiOS</string>
 		<key>5BEFDD9B-3F63-4A80-978E-480698FAFD74</key>
 		<string>https://github.com/Backendless/iOS-Samples</string>
 	</dict>
@@ -17,8 +19,15 @@
 	<string>backendlessDemos/backendlessDemos.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>2A9338E3-08CD-453E-9CBC-6E97E68E420F</key>
+		<string>../../../../../WebORBiOS</string>
 		<key>5BEFDD9B-3F63-4A80-978E-480698FAFD74</key>
 		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>2A9338E3-08CD-453E-9CBC-6E97E68E420F</key>
+		<string>svn://www.themidnightcoders.com</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Backendless/iOS-Samples</string>
@@ -35,6 +44,16 @@
 			<string>5BEFDD9B-3F63-4A80-978E-480698FAFD74</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOS-Samples</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>mapable/trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2A9338E3-08CD-453E-9CBC-6E97E68E420F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WebORBiOS</string>
 		</dict>
 	</array>
 </dict>
