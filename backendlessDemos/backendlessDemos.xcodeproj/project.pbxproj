@@ -361,23 +361,6 @@
 		F91B6AC416B1A39400668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
 		F91B6AC716B6883300668A06 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B6AC616B6883300668A06 /* ChatViewController.m */; };
 		F91B6ACA16B6EBF600668A06 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
-		F946031218841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031318841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031418841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031518841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031618841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031718841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031818841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031918841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031A18841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031B18841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031C18841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031D18841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031E18841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946031F18841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946032018841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946032118841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
-		F946032218841D8A00E422D7 /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946031118841D8A00E422D7 /* license.bin */; };
 		F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		F99EFF5C16D51358001AE512 /* radio_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5A16D51358001AE512 /* radio_checked.png */; };
 		F99EFF5D16D51358001AE512 /* radio_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5B16D51358001AE512 /* radio_unchecked.png */; };
@@ -793,7 +776,6 @@
 		F91B6AC516B6883200668A06 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		F91B6AC616B6883300668A06 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		F91B6AC816B6EBDC00668A06 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		F946031118841D8A00E422D7 /* license.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = license.bin; sourceTree = "<group>"; };
 		F99EFF5A16D51358001AE512 /* radio_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_checked.png; sourceTree = "<group>"; };
 		F99EFF5B16D51358001AE512 /* radio_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_unchecked.png; sourceTree = "<group>"; };
 		F9BB000718785AB20076BC6D /* backendless.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = backendless.a; sourceTree = "<group>"; };
@@ -1949,15 +1931,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F946031018841D8A00E422D7 /* com.themidnightcoders.license */ = {
-			isa = PBXGroup;
-			children = (
-				F946031118841D8A00E422D7 /* license.bin */,
-			);
-			name = com.themidnightcoders.license;
-			path = ../../../WebORBiOS/CommLibiOS/com.themidnightcoders.license;
-			sourceTree = "<group>";
-		};
 		F99EFF5916D51358001AE512 /* art */ = {
 			isa = PBXGroup;
 			children = (
@@ -1970,7 +1943,6 @@
 		F9BB000518785AB20076BC6D /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				F946031018841D8A00E422D7 /* com.themidnightcoders.license */,
 				F9BB000618785AB20076BC6D /* backendless */,
 				F9BB003318785AB20076BC6D /* CommLibiOS */,
 				F9BB004D18785AB30076BC6D /* libav-v9.1965 */,
@@ -2630,7 +2602,6 @@
 				91011880180D3440008102A7 /* Images.xcassets in Resources */,
 				9101187F180D3440008102A7 /* InfoPlist.strings in Resources */,
 				9101187E180D3440008102A7 /* Credits.rtf in Resources */,
-				F946032118841D8A00E422D7 /* license.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2642,7 +2613,6 @@
 				91628E6F17FADBDB00ACC36F /* Credits.rtf in Resources */,
 				91628E7517FADBDB00ACC36F /* Document.xib in Resources */,
 				91628E7817FADBDB00ACC36F /* MainMenu.xib in Resources */,
-				F946031B18841D8A00E422D7 /* license.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2654,7 +2624,6 @@
 				91628EA417FC147900ACC36F /* Credits.rtf in Resources */,
 				91628EAA17FC147900ACC36F /* Document.xib in Resources */,
 				91628EAD17FC147900ACC36F /* MainMenu.xib in Resources */,
-				F946031C18841D8A00E422D7 /* license.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2666,7 +2635,6 @@
 				91628ECC17FC38D300ACC36F /* Credits.rtf in Resources */,
 				91628ED217FC38D300ACC36F /* Document.xib in Resources */,
 				91628ED517FC38D400ACC36F /* MainMenu.xib in Resources */,
-				F946031D18841D8A00E422D7 /* license.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2678,7 +2646,6 @@
 				91628EF317FC557500ACC36F /* Credits.rtf in Resources */,
 				91628EF917FC557500ACC36F /* Document.xib in Resources */,
 				91628EFC17FC557500ACC36F /* MainMenu.xib in Resources */,
-				F946031E18841D8A00E422D7 /* license.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2690,7 +2657,6 @@
 				91628F4017FD9A5200ACC36F /* Credits.rtf in Resources */,
 				91628F4617FD9A5200ACC36F /* Document.xib in Resources */,
 				91628F4917FD9A5300ACC36F /* MainMenu.xib in Resources */,
-				F946031F18841D8A00E422D7 /* license.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2702,7 +2668,6 @@
 				91628F6717FDA79F00ACC36F /* Credits.rtf in Resources */,
 				91628F6D17FDA79F00ACC36F /* Document.xib in Resources */,
 				91628F7017FDA79F00ACC36F /* MainMenu.xib in Resources */,
-				F946032018841D8A00E422D7 /* license.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2713,7 +2678,6 @@
 				917650E51827CA5E00745497 /* Images.xcassets in Resources */,
 				F9BB013A18785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
 				917650D71827CA5E00745497 /* InfoPlist.strings in Resources */,
-				F946032218841D8A00E422D7 /* license.bin in Resources */,
 				F9BB00E018785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
 				F9BB00D618785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 				F9BB014E18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
@@ -2733,7 +2697,6 @@
 				F9BB014318785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
 				F9BB00DF18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
 				F9BB013918785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
-				F946031A18841D8A00E422D7 /* license.bin in Resources */,
 				91F1391E17C4E37800D1AC4C /* Default-568h@2x.png in Resources */,
 				91F1392117C4E37800D1AC4C /* MainStoryboard.storyboard in Resources */,
 				F9BB014D18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
@@ -2748,7 +2711,6 @@
 				F91B666716B18CD400668A06 /* InfoPlist.strings in Resources */,
 				F91B666F16B18CD400668A06 /* Default.png in Resources */,
 				F91B667116B18CD400668A06 /* Default@2x.png in Resources */,
-				F946031218841D8A00E422D7 /* license.bin in Resources */,
 				F91B667316B18CD400668A06 /* Default-568h@2x.png in Resources */,
 				F9BB014518785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
 				F91B667616B18CD400668A06 /* MainStoryboard.storyboard in Resources */,
@@ -2771,7 +2733,6 @@
 				F9BB013C18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
 				F9BB00D818785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
 				F9BB013218785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
-				F946031318841D8A00E422D7 /* license.bin in Resources */,
 				F91B669716B18D2600668A06 /* Default-568h@2x.png in Resources */,
 				F91B669A16B18D2600668A06 /* MainStoryboard.storyboard in Resources */,
 				F9BB014618785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
@@ -2791,7 +2752,6 @@
 				F91B66BB16B18D9000668A06 /* Default-568h@2x.png in Resources */,
 				F9BB00D918785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
 				F91B66BE16B18D9000668A06 /* MainStoryboard.storyboard in Resources */,
-				F946031418841D8A00E422D7 /* license.bin in Resources */,
 				9147E76F16C0F7EA000A26F4 /* images-1.jpeg in Resources */,
 				F9BB00CF18785AB80076BC6D /* Communication Library for iOS User Guide.pdf in Resources */,
 			);
@@ -2808,7 +2768,6 @@
 				F9BB013E18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
 				F9BB00DA18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
 				F9BB013418785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
-				F946031518841D8A00E422D7 /* license.bin in Resources */,
 				F91B66DF16B18DAC00668A06 /* Default-568h@2x.png in Resources */,
 				F91B66E216B18DAC00668A06 /* MainStoryboard.storyboard in Resources */,
 				F9BB014818785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
@@ -2826,7 +2785,6 @@
 				F9BB013F18785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
 				F9BB00DB18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
 				F9BB013518785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
-				F946031618841D8A00E422D7 /* license.bin in Resources */,
 				F91B670316B18DD900668A06 /* Default-568h@2x.png in Resources */,
 				F91B670616B18DD900668A06 /* MainStoryboard.storyboard in Resources */,
 				F9BB014918785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
@@ -2844,7 +2802,6 @@
 				F9BB014018785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
 				F9BB00DC18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
 				F9BB013618785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
-				F946031718841D8A00E422D7 /* license.bin in Resources */,
 				F91B672716B18DF500668A06 /* Default-568h@2x.png in Resources */,
 				F91B672A16B18DF500668A06 /* MainStoryboard.storyboard in Resources */,
 				F9BB014A18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
@@ -2862,7 +2819,6 @@
 				F9BB014118785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
 				F9BB00DD18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
 				F9BB013718785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
-				F946031818841D8A00E422D7 /* license.bin in Resources */,
 				F91B674B16B18E0A00668A06 /* Default-568h@2x.png in Resources */,
 				F91B674E16B18E0A00668A06 /* MainStoryboard.storyboard in Resources */,
 				F9BB014B18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,
@@ -2880,7 +2836,6 @@
 				F9BB014218785ABC0076BC6D /* Building Media Stream Apps.docx in Resources */,
 				F9BB00DE18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */,
 				F9BB013818785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */,
-				F946031918841D8A00E422D7 /* license.bin in Resources */,
 				F91B676F16B18EE000668A06 /* Default-568h@2x.png in Resources */,
 				F91B677216B18EE000668A06 /* MainStoryboard.storyboard in Resources */,
 				F9BB014C18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */,

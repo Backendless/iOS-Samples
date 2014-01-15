@@ -27,15 +27,8 @@
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
 
-//static NSString *APP_ID = @"";
-//static NSString *SECRET_KEY = @"";
-// on Katya's host
-static NSString *APP_ID = @"ED960137-05C6-6993-FFA5-70E1812AED00";
-static NSString *SECRET_KEY = @"58512A2F-5EBC-F5F0-FF26-11922952AE00";
-// on api.backendless com (Yura's app)
-//static NSString *APP_ID = @"3BCCD1BA-5785-62EB-FF85-FA5842F57500";
-//static NSString *SECRET_KEY = @"75E91629-5FD0-F96E-FFB2-555934844400";
-
+static NSString *APP_ID = @"";
+static NSString *SECRET_KEY = @"";
 static NSString *VERSION_NUM = @"v1";
 
 
@@ -44,7 +37,6 @@ static NSString *VERSION_NUM = @"v1";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
-    backendless.hostURL = @"http://10.0.1.28:9000"; // Katerina Maksymenko
 
     NSDictionary *remoteDict = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     
