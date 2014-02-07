@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Start View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="StartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i99-Jb-m9k"/>
+                        <viewControllerLayoutGuide type="bottom" id="b7E-r8-jfC"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td8-A0-cwb">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="87" y="155" width="146" height="30"/>
                                 <state key="normal" title="Login With Facebook">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="2" eventType="touchUpInside" id="tZs-uV-nsx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yU-Hr-ae1">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="99" y="221" width="123" height="30"/>
                                 <state key="normal" title="Login With Twitter">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="2" eventType="touchUpInside" id="Vkv-xB-Vhx"/>
@@ -41,10 +38,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0yU-Hr-ae1" firstAttribute="centerX" secondItem="td8-A0-cwb" secondAttribute="centerX" type="default" id="3DG-zz-brg"/>
-                            <constraint firstItem="td8-A0-cwb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="40" id="SNP-v3-zdP"/>
-                            <constraint firstItem="0yU-Hr-ae1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="106" id="s92-Wo-j2E"/>
-                            <constraint firstItem="0yU-Hr-ae1" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="w3G-Nm-SK6"/>
+                            <constraint firstItem="0yU-Hr-ae1" firstAttribute="centerX" secondItem="td8-A0-cwb" secondAttribute="centerX" id="3DG-zz-brg"/>
+                            <constraint firstItem="td8-A0-cwb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="155" id="SNP-v3-zdP"/>
+                            <constraint firstItem="0yU-Hr-ae1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="221" id="s92-Wo-j2E"/>
+                            <constraint firstItem="0yU-Hr-ae1" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="w3G-Nm-SK6"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -55,11 +52,16 @@
         <scene sceneID="fhM-6D-S4o">
             <objects>
                 <viewController storyboardIdentifier="SuccessView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vSz-ug-EyA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e6g-3l-Trf"/>
+                        <viewControllerLayoutGuide type="bottom" id="OcV-gn-reO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vmD-j0-p44">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-m1-Tmd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem id="1dk-WH-Wq6">
                                         <barButtonItem key="rightBarButtonItem" title="logout" id="F6Q-ao-KEB">
@@ -71,6 +73,7 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You are now successfully login. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="268" translatesAutoresizingMaskIntoConstraints="NO" id="eVQ-kO-tMN">
+                                <rect key="frame" x="26" y="223" width="268" height="122"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="122" id="8gX-v0-0xz"/>
                                     <constraint firstAttribute="width" constant="268" id="tfL-TV-jKy"/>
@@ -82,11 +85,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="t8L-m1-Tmd" firstAttribute="leading" secondItem="vmD-j0-p44" secondAttribute="leading" type="default" id="Ark-Jg-J3u"/>
-                            <constraint firstItem="t8L-m1-Tmd" firstAttribute="top" secondItem="vmD-j0-p44" secondAttribute="top" type="default" id="E2h-oQ-404"/>
-                            <constraint firstItem="eVQ-kO-tMN" firstAttribute="centerY" secondItem="vmD-j0-p44" secondAttribute="centerY" type="default" id="NTI-9g-1vi"/>
-                            <constraint firstItem="t8L-m1-Tmd" firstAttribute="trailing" secondItem="vmD-j0-p44" secondAttribute="trailing" type="default" id="TNp-Gf-Jrr"/>
-                            <constraint firstItem="eVQ-kO-tMN" firstAttribute="centerX" secondItem="t8L-m1-Tmd" secondAttribute="centerX" type="default" id="f7S-fj-VpC"/>
+                            <constraint firstItem="t8L-m1-Tmd" firstAttribute="leading" secondItem="vmD-j0-p44" secondAttribute="leading" id="Ark-Jg-J3u"/>
+                            <constraint firstItem="t8L-m1-Tmd" firstAttribute="top" secondItem="vmD-j0-p44" secondAttribute="top" id="E2h-oQ-404"/>
+                            <constraint firstItem="eVQ-kO-tMN" firstAttribute="centerY" secondItem="vmD-j0-p44" secondAttribute="centerY" id="NTI-9g-1vi"/>
+                            <constraint firstItem="t8L-m1-Tmd" firstAttribute="trailing" secondItem="vmD-j0-p44" secondAttribute="trailing" id="TNp-Gf-Jrr"/>
+                            <constraint firstItem="eVQ-kO-tMN" firstAttribute="centerX" secondItem="t8L-m1-Tmd" secondAttribute="centerX" id="f7S-fj-VpC"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -5,55 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>4BC51A02-EEA1-4323-AFA6-64FBB8D808E1</string>
+	<string>0191C714-FAE0-4515-B6E6-F05C2A2729AE</string>
 	<key>IDESourceControlProjectName</key>
 	<string>backendlessDemos</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2A9338E3-08CD-453E-9CBC-6E97E68E420F</key>
-		<string>svn://www.themidnightcoders.com/mapable/trunk/ORB/IOS/WebORBiOS</string>
-		<key>5BEFDD9B-3F63-4A80-978E-480698FAFD74</key>
-		<string>https://github.com/Backendless/iOS-Samples</string>
+		<key>016E965D-23E8-4560-8666-25A0A9CF76F6</key>
+		<string>https://github.com/Backendless/iOS-Samples.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>backendlessDemos/backendlessDemos.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2A9338E3-08CD-453E-9CBC-6E97E68E420F</key>
-		<string>../../../../../WebORBiOS</string>
-		<key>5BEFDD9B-3F63-4A80-978E-480698FAFD74</key>
+		<key>016E965D-23E8-4560-8666-25A0A9CF76F6</key>
 		<string>../../..</string>
 	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>2A9338E3-08CD-453E-9CBC-6E97E68E420F</key>
-		<string>svn://www.themidnightcoders.com</string>
-	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Backendless/iOS-Samples</string>
+	<string>https://github.com/Backendless/iOS-Samples.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5BEFDD9B-3F63-4A80-978E-480698FAFD74</string>
+	<string>016E965D-23E8-4560-8666-25A0A9CF76F6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5BEFDD9B-3F63-4A80-978E-480698FAFD74</string>
+			<string>016E965D-23E8-4560-8666-25A0A9CF76F6</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOS-Samples</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>mapable/trunk</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2A9338E3-08CD-453E-9CBC-6E97E68E420F</string>
-			<key>IDESourceControlWCCName</key>
-			<string>WebORBiOS</string>
 		</dict>
 	</array>
 </dict>
