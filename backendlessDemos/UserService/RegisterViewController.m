@@ -85,6 +85,10 @@ static NSString *FEMALE_GENDER_VAL = @"female";
     @try {
         user = [backendless.userService registering:user];
         result = YES;
+        
+        id birthdate = [user getProperty:BIRTHDATE_PROFILE_KEY];
+        NSLog(@"userRegister: ------> registered: <%@> birthdate = %@", [birthdate class], birthdate);
+        
     }
     
     @catch (Fault *fault) {
