@@ -107,6 +107,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     for (int i = 1; i<=4; i++)
     {
+        UIButton *button = (UIButton *)[cell viewWithTag:i];
+        button.hidden = YES;
+    }
+    for (int i = 1; i<=4; i++)
+    {
         if (indexPath.row * 4 + i > mainData.data.count)
             break;
         UIButton *button = (UIButton *)[cell viewWithTag:i];

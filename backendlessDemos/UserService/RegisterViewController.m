@@ -101,12 +101,9 @@ static NSString *FEMALE_GENDER_VAL = @"female";
 
 #pragma mark -
 #pragma mark Segue Methods
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    NSLog(@"RegisterViewController -> prepareForSegue: %@", [segue identifier]);
-    
-    if ([[segue identifier] isEqualToString:@"Register.RegisterViewController"]) {
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([identifier isEqualToString:@"Register.RegisterViewController"]) {
         
         self.registration = nil;
         
@@ -132,12 +129,17 @@ static NSString *FEMALE_GENDER_VAL = @"female";
             [user setProperty:GENDER_PROFILE_KEY object:self.registration.gender];
             
             if ([self userRegister:user]) {
-                
+                return YES;
             }
-         }
+        }
         
-        return;
+        return NO;
     }
+    return YES;
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    NSLog(@"RegisterViewController -> prepareForSegue: %@", [segue identifier]);
 }
 
 #pragma mark -
