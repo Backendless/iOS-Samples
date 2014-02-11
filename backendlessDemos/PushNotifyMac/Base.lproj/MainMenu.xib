@@ -658,9 +658,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="348"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tyJ-NL-rji">
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tyJ-NL-rji">
                         <rect key="frame" x="20" y="8" width="440" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="440" id="Fxf-sb-aJy"/>
+                            <constraint firstAttribute="height" constant="22" id="gSp-Re-3gp"/>
+                        </constraints>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="zU5-An-w6w">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -670,14 +674,14 @@
                             <action selector="sendNotification:" target="494" id="xWw-iK-wJH"/>
                         </connections>
                     </textField>
-                    <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ2-OE-CJd">
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ2-OE-CJd">
                         <rect key="frame" x="20" y="38" width="440" height="290"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <clipView key="contentView" ambiguous="YES" misplaced="YES" id="v0b-58-DGX">
+                        <clipView key="contentView" id="v0b-58-DGX">
                             <rect key="frame" x="1" y="1" width="438" height="288"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView ambiguous="YES" editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="bM3-2i-eRK">
+                                <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="bM3-2i-eRK">
                                     <rect key="frame" x="0.0" y="0.0" width="438" height="288"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -700,6 +704,14 @@
                         </scroller>
                     </scrollView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="qJ2-OE-CJd" firstAttribute="top" secondItem="372" secondAttribute="top" constant="20" id="869-KO-s7i"/>
+                    <constraint firstItem="qJ2-OE-CJd" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="20" id="CqB-tS-eXn"/>
+                    <constraint firstItem="tyJ-NL-rji" firstAttribute="top" secondItem="qJ2-OE-CJd" secondAttribute="bottom" constant="8" id="OY8-bk-pgi"/>
+                    <constraint firstAttribute="bottom" secondItem="tyJ-NL-rji" secondAttribute="bottom" constant="8" id="aCq-tR-Alw"/>
+                    <constraint firstAttribute="trailing" secondItem="qJ2-OE-CJd" secondAttribute="trailing" constant="20" id="deS-UZ-fgv"/>
+                    <constraint firstItem="tyJ-NL-rji" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="20" id="e5I-uN-uaU"/>
+                </constraints>
             </view>
         </window>
         <customObject id="494" customClass="AppDelegate">
