@@ -76,6 +76,7 @@
         self.passwordInput.hidden = YES;
         self.btnLogin.hidden = YES;
         self.btnRegister.hidden = YES;
+        [[self.view viewWithTag:1] setHidden:YES];
         
         self.messageLabel.hidden = NO;
         self.btnLogout.hidden = NO;
@@ -106,6 +107,7 @@
         self.passwordInput.hidden = NO;
         self.btnLogin.hidden = NO;
         self.btnRegister.hidden = NO;
+        [[self.view viewWithTag:1] setHidden:NO];
         
         self.messageLabel.hidden = YES;
         self.btnLogout.hidden = YES;
