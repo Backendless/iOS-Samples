@@ -99,7 +99,15 @@
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         
         [backendless.userService logout];
-        
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"StartViewController -> userLogout: FAULT = %@ <%@>", fault.message, fault.detail);
+        [self showAlert:fault.message];
+    }
+    
+    @finally {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         self.headerLabel.hidden = NO;
         self.loginLabel.hidden = NO;
         self.passwordLabel.hidden = NO;
@@ -111,15 +119,6 @@
         
         self.messageLabel.hidden = YES;
         self.btnLogout.hidden = YES;
-    }
-    
-    @catch (Fault *fault) {
-        NSLog(@"StartViewController -> userLogout: FAULT = %@ <%@>", fault.message, fault.detail);
-        [self showAlert:fault.message];
-    }
-    
-    @finally {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     }
 }
 
