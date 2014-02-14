@@ -170,6 +170,8 @@
 
 - (void)responseHandler:(id)response
 {
+    NSLog(@"responseHandler: class = %@", [response class]);
+    
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [_data addObjectsFromArray:[(BackendlessCollection *)response data]];
     
