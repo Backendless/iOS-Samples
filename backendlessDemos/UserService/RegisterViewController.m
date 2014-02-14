@@ -128,8 +128,8 @@ static NSString *FEMALE_GENDER_VAL = @"female";
             user.email = self.registration.email;
             user.password = self.registration.password;
             user.name = self.registration.name;
-            [user setProperty:LOGIN_PROFILE_KEY object:user.email];
-            [user setProperty:BIRTHDATE_PROFILE_KEY object:self.registration.birthday];
+//            [user setProperty:LOGIN_PROFILE_KEY object:user.email];
+//            [user setProperty:BIRTHDATE_PROFILE_KEY object:self.registration.birthday];
             [user setProperty:GENDER_PROFILE_KEY object:self.registration.gender];
             
             if ([self userRegister:user]) {
