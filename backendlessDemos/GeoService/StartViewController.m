@@ -106,7 +106,7 @@
         
         BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithRect:rect.nordWest southEast:rect.southEast categories:[NSArray arrayWithObject: @"geoservice_sample"]];
 //        query.whereClause = [NSString stringWithFormat:@"\'city\' = \'TBILISI\'"];
-        query.metadata = [NSMutableDictionary dictionary];
+//        query.metadata = [NSMutableDictionary dictionary];
         NSLog(@"StartViewController -> loadGeoPoints: query = %@", query);
         
         BackendlessCollection *bc = [backendless.geoService getPoints:query];
