@@ -43,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Unf-cJ-b8T">
-                                <rect key="frame" x="20" y="169" width="285" height="276"/>
+                                <rect key="frame" x="20" y="192" width="285" height="253"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CitiesTableCell" id="6Xu-1U-clX">
@@ -67,13 +67,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minValue="1" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="hTn-FR-kCI">
-                                <rect key="frame" x="18" y="124" width="284" height="34"/>
+                                <rect key="frame" x="18" y="127" width="284" height="34"/>
                                 <connections>
                                     <action selector="changeRadius:" destination="2" eventType="valueChanged" id="HvL-Lg-KnI"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPq-At-GFf">
-                                <rect key="frame" x="20" y="144" width="12" height="17"/>
+                                <rect key="frame" x="20" y="165" width="12" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="12" id="0hX-VN-lLY"/>
                                 </constraints>
@@ -82,7 +82,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa3-yr-eXe">
-                                <rect key="frame" x="252" y="144" width="48" height="17"/>
+                                <rect key="frame" x="252" y="165" width="48" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="uAD-Kz-yCI"/>
                                 </constraints>
@@ -91,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJZ-SB-TnA">
-                                <rect key="frame" x="129" y="144" width="62" height="21"/>
+                                <rect key="frame" x="129" y="163" width="62" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="62" id="gEh-v7-KH5"/>
                                 </constraints>
@@ -104,17 +104,17 @@
                         <constraints>
                             <constraint firstItem="yPq-At-GFf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="0qi-jB-YZu"/>
                             <constraint firstItem="LEn-FM-M5x" firstAttribute="leading" secondItem="ogh-RW-Tvj" secondAttribute="leading" id="3qc-Fg-upX"/>
-                            <constraint firstItem="Unf-cJ-b8T" firstAttribute="top" secondItem="OJZ-SB-TnA" secondAttribute="bottom" constant="4" id="5jg-m6-bLA"/>
+                            <constraint firstItem="Unf-cJ-b8T" firstAttribute="top" secondItem="OJZ-SB-TnA" secondAttribute="bottom" constant="8" id="5jg-m6-bLA"/>
                             <constraint firstItem="OJZ-SB-TnA" firstAttribute="centerX" secondItem="hTn-FR-kCI" secondAttribute="centerX" id="BCf-re-iwd"/>
                             <constraint firstAttribute="trailing" secondItem="ogh-RW-Tvj" secondAttribute="trailing" constant="20" symbolic="YES" id="ESy-ZY-4t6"/>
                             <constraint firstItem="yPq-At-GFf" firstAttribute="baseline" secondItem="sa3-yr-eXe" secondAttribute="baseline" id="EcO-rO-Lol"/>
-                            <constraint firstItem="yPq-At-GFf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="144" id="IVF-Ku-5sq"/>
+                            <constraint firstItem="yPq-At-GFf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="165" id="IVF-Ku-5sq"/>
                             <constraint firstItem="ogh-RW-Tvj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="73" id="P3O-oh-IZ7"/>
                             <constraint firstAttribute="trailing" secondItem="shh-X0-nW1" secondAttribute="trailing" constant="20" symbolic="YES" id="QlE-va-Ubo"/>
                             <constraint firstAttribute="trailing" secondItem="sa3-yr-eXe" secondAttribute="trailing" constant="20" symbolic="YES" id="SAs-x3-Fbv"/>
-                            <constraint firstItem="hTn-FR-kCI" firstAttribute="top" secondItem="3" secondAttribute="top" constant="124" id="UKB-gW-Ik1"/>
+                            <constraint firstItem="hTn-FR-kCI" firstAttribute="top" secondItem="3" secondAttribute="top" constant="127" id="UKB-gW-Ik1"/>
                             <constraint firstAttribute="trailing" secondItem="hTn-FR-kCI" secondAttribute="trailing" constant="20" symbolic="YES" id="Wr9-rh-fjn"/>
-                            <constraint firstItem="OJZ-SB-TnA" firstAttribute="top" secondItem="yPq-At-GFf" secondAttribute="top" id="aq8-lB-A2z"/>
+                            <constraint firstItem="OJZ-SB-TnA" firstAttribute="top" secondItem="yPq-At-GFf" secondAttribute="top" constant="-2" id="aq8-lB-A2z"/>
                             <constraint firstItem="shh-X0-nW1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" id="dug-qq-OuP"/>
                             <constraint firstAttribute="trailing" secondItem="Unf-cJ-b8T" secondAttribute="trailing" constant="15" id="h1Y-lP-YvO"/>
                             <constraint firstItem="LEn-FM-M5x" firstAttribute="top" secondItem="shh-X0-nW1" secondAttribute="bottom" constant="8" symbolic="YES" id="hoM-A7-kEp"/>

@@ -168,7 +168,7 @@
     NSLog(@"StartViewController -> cancel: seque = %@", [segue identifier]);
     
     if ([[segue identifier] isEqualToString:@"Cancel.RegisterViewController"]) {
-        [backendless.userService logout];
+//        [backendless.userService logout];
         return;
     }
 }
