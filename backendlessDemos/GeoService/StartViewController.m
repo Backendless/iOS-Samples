@@ -103,8 +103,11 @@
         GEO_RECT rect = [backendless.geoService geoRectangle:center length:2*region.span.longitudeDelta widht:2*region.span.latitudeDelta];
         
         NSLog(@"StartViewController -> loadGeoPoints: center = {%g, %g}, NW = {%g, %g}, SE = {%g, %g}", center.latitude, center.longitude, rect.nordWest.latitude, rect.nordWest.longitude, rect.southEast.latitude, rect.southEast.longitude);
-        
-        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithRect:rect.nordWest southEast:rect.southEast categories:[NSArray arrayWithObject: @"geoservice_sample"]];
+#if 1 // by rectangle
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithRect:rect.nordWest southEast:rect.southEast categories:@[@"geoservice_sample"]];
+#else // by radius
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithPoint:center radius:self.radiusSlider.value units:KILOMETERS categories:@[@"geoservice_sample"]];
+#endif
 //        query.whereClause = [NSString stringWithFormat:@"\'city\' = \'TBILISI\'"];
 //        query.metadata = [NSMutableDictionary dictionary];
         NSLog(@"StartViewController -> loadGeoPoints: query = %@", query);
