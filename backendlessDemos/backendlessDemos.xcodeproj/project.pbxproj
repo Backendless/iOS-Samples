@@ -658,6 +658,7 @@
 		91F1392317C4E37800D1AC4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		91F1393F17C4E77400D1AC4C /* CachingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachingObject.h; sourceTree = "<group>"; };
 		91F1394017C4E77400D1AC4C /* CachingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachingObject.m; sourceTree = "<group>"; };
+		F912091D18C62C8D0014195A /* getting-started.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "getting-started.pdf"; path = "../getting-started.pdf"; sourceTree = "<group>"; };
 		F91B662616B1873B00668A06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F91B662816B1873B00668A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F91B662A16B1873B00668A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1619,6 +1620,7 @@
 		F91B661716B1873B00668A06 = {
 			isa = PBXGroup;
 			children = (
+				F912091D18C62C8D0014195A /* getting-started.pdf */,
 				F9BB000518785AB20076BC6D /* lib */,
 				F99EFF5916D51358001AE512 /* art */,
 				F91B666216B18CD400668A06 /* UserService */,
