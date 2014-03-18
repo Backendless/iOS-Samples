@@ -1599,7 +1599,7 @@
 				91F1394017C4E77400D1AC4C /* CachingObject.m */,
 			);
 			name = "Caching-demo";
-			path = "Caching-damo";
+			path = "Caching-demo";
 			sourceTree = "<group>";
 		};
 		91F1390E17C4E37800D1AC4C /* Supporting Files */ = {
@@ -2402,7 +2402,7 @@
 			dependencies = (
 			);
 			name = "Caching-demo";
-			productName = "Caching-damo";
+			productName = "Caching-demo";
 			productReference = 91F1390917C4E37800D1AC4C /* Caching-demo.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -3902,9 +3902,9 @@
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Caching-damo/Caching-demo-Prefix.pch";
+				GCC_PREFIX_HEADER = "Caching-demo/Caching-demo-Prefix.pch";
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Caching-damo/Caching-demo-Info.plist";
+				INFOPLIST_FILE = "Caching-demo/Caching-demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3934,9 +3934,9 @@
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Caching-damo/Caching-demo-Prefix.pch";
+				GCC_PREFIX_HEADER = "Caching-demo/Caching-demo-Prefix.pch";
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Caching-damo/Caching-demo-Info.plist";
+				INFOPLIST_FILE = "Caching-demo/Caching-demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
