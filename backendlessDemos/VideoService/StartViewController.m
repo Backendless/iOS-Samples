@@ -21,6 +21,7 @@
 
 #import "StartViewController.h"
 #import "Backendless.h"
+#import "MediaService.h"
 
 #define VIDEO_TUBE @"videoTube"
 #define DEFAULT_STREAM_NAME @"defaultStreamName"
