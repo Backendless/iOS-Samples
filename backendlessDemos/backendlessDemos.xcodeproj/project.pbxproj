@@ -35,7 +35,6 @@
 		914E715F182BCD21000F96CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		914E7160182BCD38000F96CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
 		915144F416DFCDB2007F0E50 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915144F316DFCDB2007F0E50 /* StartViewController.m */; };
-		9154F4781869CD4A00426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
 		9154F4791869CD5200426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
 		9154F47A1869CD5B00426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
 		9154F47B1869CD6000426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
@@ -186,7 +185,6 @@
 		918CF47817290CDC00088560 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		918CF4791729142E00088560 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91CD6E9617143A6900389465 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
-		91EF13A1174A4151009C7A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91EF13A2174A41AF009C7A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91EF13A3174A41BC009C7A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91EF13A4174A41C6009C7A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
@@ -205,15 +203,13 @@
 		91F1393417C4E4B000D1AC4C /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91ACD520170DBEA1000A36E2 /* AddressBookUI.framework */; };
 		91F1393517C4E4B200D1AC4C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		91F1393617C4E4B400D1AC4C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
-		91F1393717C4E4B600D1AC4C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; };
-		91F1393817C4E4BA00D1AC4C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664A16B1893000668A06 /* AVFoundation.framework */; };
 		91F1393917C4E4D800D1AC4C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
 		91F1393A17C4E4D800D1AC4C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
-		91F1393B17C4E4D800D1AC4C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; };
-		91F1393C17C4E4D800D1AC4C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
 		91F1393D17C4E4D800D1AC4C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		91F1393E17C4E4D800D1AC4C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91F1394117C4E77400D1AC4C /* CachingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F1394017C4E77400D1AC4C /* CachingObject.m */; };
+		D36C533D18DE51F200B080D2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		D36C533E18DE522E00B080D2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		F91B665F16B18CD400668A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
 		F91B666016B18CD400668A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
 		F91B666116B18CD400668A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662A16B1873B00668A06 /* CoreGraphics.framework */; };
@@ -324,41 +320,13 @@
 		F91B679816B190B100668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		F91B679916B190B700668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91B6A9616B196E200668A06 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B6A9516B196E200668A06 /* RegisterViewController.m */; };
-		F91B6AA216B1A22D00668A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F91B6AA316B1A23600668A06 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F91B6AA416B1A23900668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F91B6AA516B1A23E00668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F91B6AA616B1A26B00668A06 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664A16B1893000668A06 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F91B6AA716B1A2EA00668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
-		F91B6AA816B1A2F000668A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; };
-		F91B6AA916B1A2F300668A06 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664A16B1893000668A06 /* AVFoundation.framework */; };
-		F91B6AAA16B1A2F700668A06 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; };
-		F91B6AAB16B1A2FA00668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
 		F91B6AAC16B1A30600668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
-		F91B6AAD16B1A31100668A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; };
-		F91B6AAE16B1A31400668A06 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664A16B1893000668A06 /* AVFoundation.framework */; };
-		F91B6AAF16B1A31B00668A06 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; };
-		F91B6AB016B1A32200668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
 		F91B6AB116B1A33400668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
-		F91B6AB216B1A33800668A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; };
-		F91B6AB316B1A33A00668A06 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664A16B1893000668A06 /* AVFoundation.framework */; };
-		F91B6AB416B1A33F00668A06 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; };
-		F91B6AB516B1A34200668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
 		F91B6AB616B1A35600668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
-		F91B6AB716B1A35B00668A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; };
-		F91B6AB816B1A35E00668A06 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664A16B1893000668A06 /* AVFoundation.framework */; };
-		F91B6AB916B1A36200668A06 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; };
-		F91B6ABA16B1A36400668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
 		F91B6ABB16B1A36C00668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
-		F91B6ABC16B1A37100668A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; };
-		F91B6ABD16B1A37500668A06 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664A16B1893000668A06 /* AVFoundation.framework */; };
-		F91B6ABE16B1A37D00668A06 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; };
-		F91B6ABF16B1A38000668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
 		F91B6AC016B1A38400668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
-		F91B6AC116B1A38A00668A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; };
-		F91B6AC216B1A38D00668A06 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664A16B1893000668A06 /* AVFoundation.framework */; };
-		F91B6AC316B1A39100668A06 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; };
-		F91B6AC416B1A39400668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
 		F91B6AC716B6883300668A06 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B6AC616B6883300668A06 /* ChatViewController.m */; };
 		F91B6ACA16B6EBF600668A06 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
@@ -404,76 +372,13 @@
 		F9BB00DE18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
 		F9BB00DF18785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
 		F9BB00E018785AB80076BC6D /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = F9BB003718785AB20076BC6D /* WeborbClient Class Reference.odt */; };
-		F9BB00EB18785AB90076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
-		F9BB00EC18785AB90076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
-		F9BB00ED18785AB90076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
-		F9BB00EE18785AB90076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
-		F9BB00EF18785AB90076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
-		F9BB00F018785ABA0076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
-		F9BB00F118785ABA0076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
 		F9BB00F218785ABA0076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
-		F9BB00F318785ABA0076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
-		F9BB00F418785ABB0076BC6D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009C18785AB30076BC6D /* libavcodec.a */; };
-		F9BB00F518785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
-		F9BB00F618785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
-		F9BB00F718785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
-		F9BB00F818785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
-		F9BB00F918785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
-		F9BB00FA18785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
-		F9BB00FB18785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
 		F9BB00FC18785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
-		F9BB00FD18785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
-		F9BB00FE18785ABB0076BC6D /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009D18785AB30076BC6D /* libavdevice.a */; };
-		F9BB00FF18785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
-		F9BB010018785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
-		F9BB010118785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
-		F9BB010218785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
-		F9BB010318785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
-		F9BB010418785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
-		F9BB010518785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
 		F9BB010618785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
-		F9BB010718785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
-		F9BB010818785ABB0076BC6D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009E18785AB30076BC6D /* libavfilter.a */; };
-		F9BB010918785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
-		F9BB010A18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
-		F9BB010B18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
-		F9BB010C18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
-		F9BB010D18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
-		F9BB010E18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
-		F9BB010F18785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
 		F9BB011018785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
-		F9BB011118785ABB0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
-		F9BB011218785ABC0076BC6D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB009F18785AB30076BC6D /* libavformat.a */; };
-		F9BB011318785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
-		F9BB011418785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
-		F9BB011518785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
-		F9BB011618785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
-		F9BB011718785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
-		F9BB011818785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
-		F9BB011918785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
 		F9BB011A18785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
-		F9BB011B18785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
-		F9BB011C18785ABC0076BC6D /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A018785AB30076BC6D /* libavresample.a */; };
-		F9BB011D18785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
-		F9BB011E18785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
-		F9BB011F18785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
-		F9BB012018785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
-		F9BB012118785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
-		F9BB012218785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
-		F9BB012318785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
 		F9BB012418785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
-		F9BB012518785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
-		F9BB012618785ABC0076BC6D /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A118785AB30076BC6D /* libavutil.a */; };
-		F9BB012718785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
-		F9BB012818785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
-		F9BB012918785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
-		F9BB012A18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
-		F9BB012B18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
-		F9BB012C18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
-		F9BB012D18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
 		F9BB012E18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
-		F9BB012F18785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
-		F9BB013018785ABC0076BC6D /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00A218785AB30076BC6D /* libswscale.a */; };
 		F9BB013118785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
 		F9BB013218785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
 		F9BB013318785ABC0076BC6D /* make-libav-lgpl-ios61.sh in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A418785AB30076BC6D /* make-libav-lgpl-ios61.sh */; };
@@ -504,16 +409,7 @@
 		F9BB014C18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
 		F9BB014D18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
 		F9BB014E18785ABC0076BC6D /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = F9BB00A818785AB30076BC6D /* Media Library for iOS User Guide.docx */; };
-		F9BB014F18785ABC0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
-		F9BB015018785ABC0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
-		F9BB015118785ABC0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
-		F9BB015218785ABD0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
-		F9BB015318785ABD0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
-		F9BB015418785ABD0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
-		F9BB015518785ABE0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
 		F9BB015618785ABE0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
-		F9BB015718785ABE0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
-		F9BB015818785ABE0076BC6D /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB00AE18785AB30076BC6D /* MediaLibiOS.a */; };
 		F9BB0159187AB7150076BC6D /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003218785AB20076BC6D /* libbackendless-mac.a */; };
 		F9BB015A187AB71F0076BC6D /* libCommLibMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB004C18785AB20076BC6D /* libCommLibMac.a */; };
 		F9BB015B187AB7860076BC6D /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003218785AB20076BC6D /* libbackendless-mac.a */; };
@@ -1073,27 +969,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BB010818785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				9154F4931869CE1900426C78 /* libsqlite3.dylib in Frameworks */,
-				F9BB013018785ABC0076BC6D /* libswscale.a in Frameworks */,
 				917C47491864889700FBB55D /* SystemConfiguration.framework in Frameworks */,
-				F9BB011218785ABC0076BC6D /* libavformat.a in Frameworks */,
-				F9BB015818785ABE0076BC6D /* MediaLibiOS.a in Frameworks */,
 				917C474A1864889700FBB55D /* MapKit.framework in Frameworks */,
 				9176510B1827CB3B00745497 /* CoreLocation.framework in Frameworks */,
 				917650D01827CA5D00745497 /* CoreGraphics.framework in Frameworks */,
 				917650D11827CA5D00745497 /* UIKit.framework in Frameworks */,
-				F9BB011C18785ABC0076BC6D /* libavresample.a in Frameworks */,
-				F9BB00F418785ABB0076BC6D /* libavcodec.a in Frameworks */,
 				917650CF1827CA5D00745497 /* Foundation.framework in Frameworks */,
 				F9BB00B818785AB50076BC6D /* backendless.a in Frameworks */,
 				917651091827CB3300745497 /* libz.dylib in Frameworks */,
 				9176510A1827CB3800745497 /* CFNetwork.framework in Frameworks */,
 				9176510D1827CB4600745497 /* CoreData.framework in Frameworks */,
 				9176510C1827CB3F00745497 /* Security.framework in Frameworks */,
-				F9BB012618785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F9BB00CC18785AB80076BC6D /* CommLibiOS.a in Frameworks */,
-				F9BB00FE18785ABB0076BC6D /* libavdevice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1101,31 +989,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BB012518785ABC0076BC6D /* libavutil.a in Frameworks */,
-				F9BB010718785ABB0076BC6D /* libavfilter.a in Frameworks */,
-				F9BB015718785ABE0076BC6D /* MediaLibiOS.a in Frameworks */,
 				91F1393A17C4E4D800D1AC4C /* CoreLocation.framework in Frameworks */,
-				F9BB00FD18785ABB0076BC6D /* libavdevice.a in Frameworks */,
 				9154F47F1869CD7300426C78 /* libsqlite3.dylib in Frameworks */,
 				91F1393317C4E4AE00D1AC4C /* AddressBook.framework in Frameworks */,
 				91F1393517C4E4B200D1AC4C /* libz.dylib in Frameworks */,
-				F9BB012F18785ABC0076BC6D /* libswscale.a in Frameworks */,
 				91F1393617C4E4B400D1AC4C /* MapKit.framework in Frameworks */,
-				F9BB011118785ABB0076BC6D /* libavformat.a in Frameworks */,
 				91F1393417C4E4B000D1AC4C /* AddressBookUI.framework in Frameworks */,
-				91F1393717C4E4B600D1AC4C /* AudioToolbox.framework in Frameworks */,
 				F9BB00B718785AB50076BC6D /* backendless.a in Frameworks */,
-				F9BB011B18785ABC0076BC6D /* libavresample.a in Frameworks */,
 				F9BB00CB18785AB80076BC6D /* CommLibiOS.a in Frameworks */,
-				91F1393817C4E4BA00D1AC4C /* AVFoundation.framework in Frameworks */,
 				91F1393917C4E4D800D1AC4C /* CFNetwork.framework in Frameworks */,
-				91F1393B17C4E4D800D1AC4C /* CoreMedia.framework in Frameworks */,
-				91F1393C17C4E4D800D1AC4C /* CoreVideo.framework in Frameworks */,
 				91F1393D17C4E4D800D1AC4C /* Security.framework in Frameworks */,
 				91F1390A17C4E37800D1AC4C /* UIKit.framework in Frameworks */,
 				91F1390B17C4E37800D1AC4C /* Foundation.framework in Frameworks */,
 				91F1390C17C4E37800D1AC4C /* CoreGraphics.framework in Frameworks */,
-				F9BB00F318785ABA0076BC6D /* libavcodec.a in Frameworks */,
 				91F1393E17C4E4D800D1AC4C /* CoreData.framework in Frameworks */,
 				9154F4861869CDB500426C78 /* SystemConfiguration.framework in Frameworks */,
 			);
@@ -1135,30 +1011,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9154F4781869CD4A00426C78 /* libsqlite3.dylib in Frameworks */,
+				D36C533E18DE522E00B080D2 /* CoreData.framework in Frameworks */,
+				D36C533D18DE51F200B080D2 /* libsqlite3.dylib in Frameworks */,
 				917C47361864885900FBB55D /* SystemConfiguration.framework in Frameworks */,
 				917C47351864885300FBB55D /* MapKit.framework in Frameworks */,
 				917C47341864884A00FBB55D /* CoreLocation.framework in Frameworks */,
 				F91B665F16B18CD400668A06 /* UIKit.framework in Frameworks */,
-				F9BB011D18785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B666016B18CD400668A06 /* Foundation.framework in Frameworks */,
 				F91B666116B18CD400668A06 /* CoreGraphics.framework in Frameworks */,
-				F9BB00F518785ABB0076BC6D /* libavdevice.a in Frameworks */,
-				F9BB00EB18785AB90076BC6D /* libavcodec.a in Frameworks */,
-				F9BB012718785ABC0076BC6D /* libswscale.a in Frameworks */,
-				F91B6AA216B1A22D00668A06 /* AudioToolbox.framework in Frameworks */,
-				F91B6AA616B1A26B00668A06 /* AVFoundation.framework in Frameworks */,
 				F91B677916B18FD700668A06 /* CFNetwork.framework in Frameworks */,
-				F9BB011318785ABC0076BC6D /* libavresample.a in Frameworks */,
-				F9BB010918785ABB0076BC6D /* libavformat.a in Frameworks */,
-				F91B6AA316B1A23600668A06 /* CoreMedia.framework in Frameworks */,
 				F9BB00AF18785AB30076BC6D /* backendless.a in Frameworks */,
-				F91B6AA416B1A23900668A06 /* CoreVideo.framework in Frameworks */,
 				F91B677A16B18FDB00668A06 /* Security.framework in Frameworks */,
 				F9BB00C318785AB60076BC6D /* CommLibiOS.a in Frameworks */,
-				91EF13A1174A4151009C7A38 /* CoreData.framework in Frameworks */,
-				F9BB014F18785ABC0076BC6D /* MediaLibiOS.a in Frameworks */,
-				F9BB00FF18785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6AA516B1A23E00668A06 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1172,25 +1036,13 @@
 				917C47381864886800FBB55D /* MapKit.framework in Frameworks */,
 				917C47391864886800FBB55D /* CoreLocation.framework in Frameworks */,
 				91EF13A2174A41AF009C7A38 /* CoreData.framework in Frameworks */,
-				F9BB011E18785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B668316B18D2600668A06 /* UIKit.framework in Frameworks */,
 				F91B668416B18D2600668A06 /* Foundation.framework in Frameworks */,
-				F9BB00F618785ABB0076BC6D /* libavdevice.a in Frameworks */,
-				F9BB00EC18785AB90076BC6D /* libavcodec.a in Frameworks */,
-				F9BB012818785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B668516B18D2600668A06 /* CoreGraphics.framework in Frameworks */,
-				F91B6AA816B1A2F000668A06 /* AudioToolbox.framework in Frameworks */,
 				F91B678616B1903900668A06 /* CFNetwork.framework in Frameworks */,
-				F9BB011418785ABC0076BC6D /* libavresample.a in Frameworks */,
-				F9BB010A18785ABB0076BC6D /* libavformat.a in Frameworks */,
-				F91B6AA916B1A2F300668A06 /* AVFoundation.framework in Frameworks */,
 				F9BB00B018785AB30076BC6D /* backendless.a in Frameworks */,
-				F91B6AAA16B1A2F700668A06 /* CoreMedia.framework in Frameworks */,
-				F91B6AAB16B1A2FA00668A06 /* CoreVideo.framework in Frameworks */,
 				F9BB00C418785AB60076BC6D /* CommLibiOS.a in Frameworks */,
 				F91B678716B1903E00668A06 /* Security.framework in Frameworks */,
-				F9BB015018785ABC0076BC6D /* MediaLibiOS.a in Frameworks */,
-				F9BB010018785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6AA716B1A2EA00668A06 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1204,25 +1056,13 @@
 				611275841861B7B500B6ACE6 /* libsqlite3.0.dylib in Frameworks */,
 				91CD6E9617143A6900389465 /* CoreData.framework in Frameworks */,
 				F91B66A716B18D8F00668A06 /* UIKit.framework in Frameworks */,
-				F9BB011F18785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B66A816B18D8F00668A06 /* Foundation.framework in Frameworks */,
 				F91B66A916B18D8F00668A06 /* CoreGraphics.framework in Frameworks */,
-				F9BB00F718785ABB0076BC6D /* libavdevice.a in Frameworks */,
-				F9BB00ED18785AB90076BC6D /* libavcodec.a in Frameworks */,
-				F9BB012918785ABC0076BC6D /* libswscale.a in Frameworks */,
-				F91B6AAD16B1A31100668A06 /* AudioToolbox.framework in Frameworks */,
-				F91B6AAE16B1A31400668A06 /* AVFoundation.framework in Frameworks */,
-				F91B6AAF16B1A31B00668A06 /* CoreMedia.framework in Frameworks */,
-				F9BB011518785ABC0076BC6D /* libavresample.a in Frameworks */,
-				F9BB010B18785ABB0076BC6D /* libavformat.a in Frameworks */,
-				F91B6AB016B1A32200668A06 /* CoreVideo.framework in Frameworks */,
 				F9BB00B118785AB40076BC6D /* backendless.a in Frameworks */,
 				F91B678916B1904A00668A06 /* Security.framework in Frameworks */,
 				F91B6AAC16B1A30600668A06 /* libz.dylib in Frameworks */,
 				F9BB00C518785AB60076BC6D /* CommLibiOS.a in Frameworks */,
 				914E7160182BCD38000F96CA /* CoreLocation.framework in Frameworks */,
-				F9BB015118785ABC0076BC6D /* MediaLibiOS.a in Frameworks */,
-				F9BB010118785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				914E715F182BCD21000F96CA /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1236,25 +1076,13 @@
 				917C473B1864886D00FBB55D /* MapKit.framework in Frameworks */,
 				917C473C1864886D00FBB55D /* CoreLocation.framework in Frameworks */,
 				918CF47817290CDC00088560 /* CoreData.framework in Frameworks */,
-				F9BB012018785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B66CB16B18DAC00668A06 /* UIKit.framework in Frameworks */,
 				F91B66CC16B18DAC00668A06 /* Foundation.framework in Frameworks */,
-				F9BB00F818785ABB0076BC6D /* libavdevice.a in Frameworks */,
-				F9BB00EE18785AB90076BC6D /* libavcodec.a in Frameworks */,
-				F9BB012A18785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B66CD16B18DAC00668A06 /* CoreGraphics.framework in Frameworks */,
-				F91B6AB216B1A33800668A06 /* AudioToolbox.framework in Frameworks */,
-				F91B6AB316B1A33A00668A06 /* AVFoundation.framework in Frameworks */,
-				F9BB011618785ABC0076BC6D /* libavresample.a in Frameworks */,
-				F9BB010C18785ABB0076BC6D /* libavformat.a in Frameworks */,
 				F91B678A16B1905000668A06 /* CFNetwork.framework in Frameworks */,
 				F9BB00B218785AB40076BC6D /* backendless.a in Frameworks */,
-				F91B6AB416B1A33F00668A06 /* CoreMedia.framework in Frameworks */,
-				F91B6AB516B1A34200668A06 /* CoreVideo.framework in Frameworks */,
 				F9BB00C618785AB60076BC6D /* CommLibiOS.a in Frameworks */,
 				F91B678B16B1905600668A06 /* Security.framework in Frameworks */,
-				F9BB015218785ABD0076BC6D /* MediaLibiOS.a in Frameworks */,
-				F9BB010218785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6AB116B1A33400668A06 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1268,25 +1096,13 @@
 				917C473E1864887100FBB55D /* MapKit.framework in Frameworks */,
 				917C473F1864887100FBB55D /* CoreLocation.framework in Frameworks */,
 				F91B66EF16B18DD800668A06 /* UIKit.framework in Frameworks */,
-				F9BB012118785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B66F016B18DD800668A06 /* Foundation.framework in Frameworks */,
 				F91B66F116B18DD800668A06 /* CoreGraphics.framework in Frameworks */,
-				F9BB00F918785ABB0076BC6D /* libavdevice.a in Frameworks */,
-				F9BB00EF18785AB90076BC6D /* libavcodec.a in Frameworks */,
-				F9BB012B18785ABC0076BC6D /* libswscale.a in Frameworks */,
-				F91B6AB716B1A35B00668A06 /* AudioToolbox.framework in Frameworks */,
-				F91B6AB816B1A35E00668A06 /* AVFoundation.framework in Frameworks */,
 				F91B678C16B1905B00668A06 /* CFNetwork.framework in Frameworks */,
-				F9BB011718785ABC0076BC6D /* libavresample.a in Frameworks */,
-				F9BB010D18785ABB0076BC6D /* libavformat.a in Frameworks */,
-				F91B6AB916B1A36200668A06 /* CoreMedia.framework in Frameworks */,
 				F9BB00B318785AB40076BC6D /* backendless.a in Frameworks */,
-				F91B6ABA16B1A36400668A06 /* CoreVideo.framework in Frameworks */,
 				F91B678D16B1905E00668A06 /* Security.framework in Frameworks */,
 				F9BB00C718785AB70076BC6D /* CommLibiOS.a in Frameworks */,
 				91EF13A3174A41BC009C7A38 /* CoreData.framework in Frameworks */,
-				F9BB015318785ABD0076BC6D /* MediaLibiOS.a in Frameworks */,
-				F9BB010318785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6AB616B1A35600668A06 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1300,25 +1116,13 @@
 				F91B671316B18DF500668A06 /* UIKit.framework in Frameworks */,
 				917C47401864887400FBB55D /* SystemConfiguration.framework in Frameworks */,
 				F91B6ACA16B6EBF600668A06 /* MapKit.framework in Frameworks */,
-				F9BB012218785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B678F16B1907F00668A06 /* CoreLocation.framework in Frameworks */,
 				F91B671416B18DF500668A06 /* Foundation.framework in Frameworks */,
-				F9BB00FA18785ABB0076BC6D /* libavdevice.a in Frameworks */,
-				F9BB00F018785ABA0076BC6D /* libavcodec.a in Frameworks */,
-				F9BB012C18785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B671516B18DF500668A06 /* CoreGraphics.framework in Frameworks */,
-				F91B6ABC16B1A37100668A06 /* AudioToolbox.framework in Frameworks */,
-				F91B6ABD16B1A37500668A06 /* AVFoundation.framework in Frameworks */,
-				F9BB011818785ABC0076BC6D /* libavresample.a in Frameworks */,
-				F9BB010E18785ABB0076BC6D /* libavformat.a in Frameworks */,
 				F91B678E16B1907700668A06 /* CFNetwork.framework in Frameworks */,
 				F9BB00B418785AB40076BC6D /* backendless.a in Frameworks */,
-				F91B6ABE16B1A37D00668A06 /* CoreMedia.framework in Frameworks */,
-				F91B6ABF16B1A38000668A06 /* CoreVideo.framework in Frameworks */,
 				F9BB00C818785AB70076BC6D /* CommLibiOS.a in Frameworks */,
 				F91B679016B1908500668A06 /* Security.framework in Frameworks */,
-				F9BB015418785ABD0076BC6D /* MediaLibiOS.a in Frameworks */,
-				F9BB010418785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6ABB16B1A36C00668A06 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1332,25 +1136,13 @@
 				917C47421864887700FBB55D /* MapKit.framework in Frameworks */,
 				917C47431864887700FBB55D /* CoreLocation.framework in Frameworks */,
 				F91B673716B18E0A00668A06 /* UIKit.framework in Frameworks */,
-				F9BB012318785ABC0076BC6D /* libavutil.a in Frameworks */,
 				F91B673816B18E0A00668A06 /* Foundation.framework in Frameworks */,
 				F91B673916B18E0A00668A06 /* CoreGraphics.framework in Frameworks */,
-				F9BB00FB18785ABB0076BC6D /* libavdevice.a in Frameworks */,
-				F9BB00F118785ABA0076BC6D /* libavcodec.a in Frameworks */,
-				F9BB012D18785ABC0076BC6D /* libswscale.a in Frameworks */,
-				F91B6AC116B1A38A00668A06 /* AudioToolbox.framework in Frameworks */,
-				F91B6AC216B1A38D00668A06 /* AVFoundation.framework in Frameworks */,
 				F91B679116B1908B00668A06 /* CFNetwork.framework in Frameworks */,
-				F9BB011918785ABC0076BC6D /* libavresample.a in Frameworks */,
-				F9BB010F18785ABB0076BC6D /* libavformat.a in Frameworks */,
-				F91B6AC316B1A39100668A06 /* CoreMedia.framework in Frameworks */,
 				F9BB00B518785AB50076BC6D /* backendless.a in Frameworks */,
-				F91B6AC416B1A39400668A06 /* CoreVideo.framework in Frameworks */,
 				F91B679216B1909000668A06 /* Security.framework in Frameworks */,
 				F9BB00C918785AB70076BC6D /* CommLibiOS.a in Frameworks */,
 				F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */,
-				F9BB015518785ABE0076BC6D /* MediaLibiOS.a in Frameworks */,
-				F9BB010518785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B6AC016B1A38400668A06 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1599,7 +1391,6 @@
 				91F1393F17C4E77400D1AC4C /* CachingObject.h */,
 				91F1394017C4E77400D1AC4C /* CachingObject.m */,
 			);
-			name = "Caching-demo";
 			path = "Caching-demo";
 			sourceTree = "<group>";
 		};
