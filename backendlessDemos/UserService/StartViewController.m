@@ -83,7 +83,7 @@
     }
     
     @catch (Fault *fault) {
-        NSLog(@"StartViewController -> userLogin: FAULT = %@ <%@>", fault.message, fault.detail);
+        NSLog(@"StartViewController -> userLogin: FAULT = %@ [%@] <%@>", fault.faultCode, fault.message, fault.detail);
         [self showAlert:fault.message];
     }
     
@@ -102,7 +102,7 @@
     }
     
     @catch (Fault *fault) {
-        NSLog(@"StartViewController -> userLogout: FAULT = %@ <%@>", fault.message, fault.detail);
+        NSLog(@"StartViewController -> userLogout: FAULT = %@ [%@] <%@>", fault.faultCode, fault.message, fault.detail);
         [self showAlert:fault.message];
     }
     
@@ -148,7 +148,7 @@
             
             Fault *fault = controller.registration.fault;
             if (fault) {
-                NSLog(@"StartViewController -> registration: FAULT = %@ <%@>", fault.message, fault.detail);
+                NSLog(@"StartViewController -> registration: FAULT = %@ [%@] <%@>", fault.faultCode, fault.message, fault.detail);
                 [self showAlert:fault.message];
             }
             else {

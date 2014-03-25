@@ -1011,19 +1011,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D36C533E18DE522E00B080D2 /* CoreData.framework in Frameworks */,
-				D36C533D18DE51F200B080D2 /* libsqlite3.dylib in Frameworks */,
-				917C47361864885900FBB55D /* SystemConfiguration.framework in Frameworks */,
-				917C47351864885300FBB55D /* MapKit.framework in Frameworks */,
-				917C47341864884A00FBB55D /* CoreLocation.framework in Frameworks */,
-				F91B665F16B18CD400668A06 /* UIKit.framework in Frameworks */,
 				F91B666016B18CD400668A06 /* Foundation.framework in Frameworks */,
-				F91B666116B18CD400668A06 /* CoreGraphics.framework in Frameworks */,
+				F91B665F16B18CD400668A06 /* UIKit.framework in Frameworks */,
+				917C47361864885900FBB55D /* SystemConfiguration.framework in Frameworks */,
 				F91B677916B18FD700668A06 /* CFNetwork.framework in Frameworks */,
-				F9BB00AF18785AB30076BC6D /* backendless.a in Frameworks */,
 				F91B677A16B18FDB00668A06 /* Security.framework in Frameworks */,
-				F9BB00C318785AB60076BC6D /* CommLibiOS.a in Frameworks */,
+				917C47341864884A00FBB55D /* CoreLocation.framework in Frameworks */,
+				F91B666116B18CD400668A06 /* CoreGraphics.framework in Frameworks */,
+				D36C533E18DE522E00B080D2 /* CoreData.framework in Frameworks */,
+				917C47351864885300FBB55D /* MapKit.framework in Frameworks */,
 				F91B6AA516B1A23E00668A06 /* libz.dylib in Frameworks */,
+				D36C533D18DE51F200B080D2 /* libsqlite3.dylib in Frameworks */,
+				F9BB00C318785AB60076BC6D /* CommLibiOS.a in Frameworks */,
+				F9BB00AF18785AB30076BC6D /* backendless.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1111,7 +1111,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9154F47C1869CD6500426C78 /* libsqlite3.dylib in Frameworks */,
 				91EF13A4174A41C6009C7A38 /* CoreData.framework in Frameworks */,
 				F91B671316B18DF500668A06 /* UIKit.framework in Frameworks */,
 				917C47401864887400FBB55D /* SystemConfiguration.framework in Frameworks */,
@@ -1120,9 +1119,10 @@
 				F91B671416B18DF500668A06 /* Foundation.framework in Frameworks */,
 				F91B671516B18DF500668A06 /* CoreGraphics.framework in Frameworks */,
 				F91B678E16B1907700668A06 /* CFNetwork.framework in Frameworks */,
+				F91B679016B1908500668A06 /* Security.framework in Frameworks */,
 				F9BB00B418785AB40076BC6D /* backendless.a in Frameworks */,
 				F9BB00C818785AB70076BC6D /* CommLibiOS.a in Frameworks */,
-				F91B679016B1908500668A06 /* Security.framework in Frameworks */,
+				9154F47C1869CD6500426C78 /* libsqlite3.dylib in Frameworks */,
 				F91B6ABB16B1A36C00668A06 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1151,31 +1151,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9154F47E1869CD6E00426C78 /* libsqlite3.dylib in Frameworks */,
+				F91B675C16B18EE000668A06 /* Foundation.framework in Frameworks */,
+				F91B675B16B18EE000668A06 /* UIKit.framework in Frameworks */,
 				917C47441864888300FBB55D /* SystemConfiguration.framework in Frameworks */,
+				F91B679516B190A500668A06 /* CFNetwork.framework in Frameworks */,
+				F91B679816B190B100668A06 /* Security.framework in Frameworks */,
 				61AC79F01851FB6A00E620E2 /* MapKit.framework in Frameworks */,
 				61AC79EF1851FB5500E620E2 /* CoreLocation.framework in Frameworks */,
 				918CF4791729142E00088560 /* CoreData.framework in Frameworks */,
-				F9BB012418785ABC0076BC6D /* libavutil.a in Frameworks */,
-				F91B675B16B18EE000668A06 /* UIKit.framework in Frameworks */,
-				F91B675C16B18EE000668A06 /* Foundation.framework in Frameworks */,
-				F9BB00FC18785ABB0076BC6D /* libavdevice.a in Frameworks */,
-				F9BB00F218785ABA0076BC6D /* libavcodec.a in Frameworks */,
-				F9BB012E18785ABC0076BC6D /* libswscale.a in Frameworks */,
 				F91B675D16B18EE000668A06 /* CoreGraphics.framework in Frameworks */,
 				F91B679316B1909B00668A06 /* AudioToolbox.framework in Frameworks */,
 				F91B679416B1909F00668A06 /* AVFoundation.framework in Frameworks */,
-				F9BB011A18785ABC0076BC6D /* libavresample.a in Frameworks */,
-				F9BB011018785ABB0076BC6D /* libavformat.a in Frameworks */,
-				F91B679516B190A500668A06 /* CFNetwork.framework in Frameworks */,
-				F9BB00B618785AB50076BC6D /* backendless.a in Frameworks */,
 				F91B679616B190AA00668A06 /* CoreMedia.framework in Frameworks */,
 				F91B679716B190AD00668A06 /* CoreVideo.framework in Frameworks */,
-				F9BB00CA18785AB70076BC6D /* CommLibiOS.a in Frameworks */,
-				F91B679816B190B100668A06 /* Security.framework in Frameworks */,
-				F9BB015618785ABE0076BC6D /* MediaLibiOS.a in Frameworks */,
-				F9BB010618785ABB0076BC6D /* libavfilter.a in Frameworks */,
 				F91B679916B190B700668A06 /* libz.dylib in Frameworks */,
+				9154F47E1869CD6E00426C78 /* libsqlite3.dylib in Frameworks */,
+				F9BB00FC18785ABB0076BC6D /* libavdevice.a in Frameworks */,
+				F9BB00F218785ABA0076BC6D /* libavcodec.a in Frameworks */,
+				F9BB011018785ABB0076BC6D /* libavformat.a in Frameworks */,
+				F9BB010618785ABB0076BC6D /* libavfilter.a in Frameworks */,
+				F9BB012E18785ABC0076BC6D /* libswscale.a in Frameworks */,
+				F9BB012418785ABC0076BC6D /* libavutil.a in Frameworks */,
+				F9BB011A18785ABC0076BC6D /* libavresample.a in Frameworks */,
+				F9BB00CA18785AB70076BC6D /* CommLibiOS.a in Frameworks */,
+				F9BB015618785ABE0076BC6D /* MediaLibiOS.a in Frameworks */,
+				F9BB00B618785AB50076BC6D /* backendless.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1702,10 +1702,10 @@
 				F91B676816B18EE000668A06 /* StartAppDelegate.m */,
 				915144F216DFCDB2007F0E50 /* StartViewController.h */,
 				915144F316DFCDB2007F0E50 /* StartViewController.m */,
-				F91B677016B18EE000668A06 /* MainStoryboard.storyboard */,
-				F91B675F16B18EE000668A06 /* Supporting Files */,
 				91660D33174F61FB00D956EE /* SettingsViewController.h */,
 				91660D34174F61FB00D956EE /* SettingsViewController.m */,
+				F91B677016B18EE000668A06 /* MainStoryboard.storyboard */,
+				F91B675F16B18EE000668A06 /* Supporting Files */,
 			);
 			path = VideoService;
 			sourceTree = "<group>";
@@ -3813,6 +3813,7 @@
 					"$(SRCROOT)/../lib/CommLibiOS",
 					"$(SRCROOT)/../lib/MediaLibiOS",
 					"$(SRCROOT)/../lib/libav-v9.1965/lib",
+					"/Users/slavav/Documents/Projects/backendless/iOS-Samples/lib/CommLibiOS",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3836,6 +3837,7 @@
 					"$(SRCROOT)/../lib/CommLibiOS",
 					"$(SRCROOT)/../lib/MediaLibiOS",
 					"$(SRCROOT)/../lib/libav-v9.1965/lib",
+					"/Users/slavav/Documents/Projects/backendless/iOS-Samples/lib/CommLibiOS",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -4126,6 +4128,9 @@
 					"$(SRCROOT)/../lib/CommLibiOS",
 					"$(SRCROOT)/../lib/MediaLibiOS",
 					"$(SRCROOT)/../lib/libav-v9.1965/lib",
+					"/Users/slavav/Documents/Projects/backendless/iOS-Samples/lib/libav-v9.1965/lib",
+					"/Users/slavav/Documents/Projects/backendless/iOS-Samples/lib/backendless",
+					"/Users/slavav/Documents/Projects/backendless/iOS-Samples/lib/MediaLibiOS",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4149,6 +4154,9 @@
 					"$(SRCROOT)/../lib/CommLibiOS",
 					"$(SRCROOT)/../lib/MediaLibiOS",
 					"$(SRCROOT)/../lib/libav-v9.1965/lib",
+					"/Users/slavav/Documents/Projects/backendless/iOS-Samples/lib/libav-v9.1965/lib",
+					"/Users/slavav/Documents/Projects/backendless/iOS-Samples/lib/backendless",
+					"/Users/slavav/Documents/Projects/backendless/iOS-Samples/lib/MediaLibiOS",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";

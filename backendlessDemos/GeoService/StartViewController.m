@@ -108,6 +108,7 @@
 #else // by radius
         BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithPoint:center radius:self.radiusSlider.value units:KILOMETERS categories:@[@"geoservice_sample"]];
 #endif
+        [query includeMeta:YES];
 //        query.whereClause = [NSString stringWithFormat:@"\'city\' = \'TBILISI\'"];
 //        query.metadata = [NSMutableDictionary dictionary];
         NSLog(@"StartViewController -> loadGeoPoints: query = %@", query);
