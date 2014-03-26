@@ -51,7 +51,6 @@
     @try {
         
         [backendless initAppFault];
-        backendless.mediaService = [MediaService new];
         
         [self initNetActivity];
     }
@@ -92,7 +91,6 @@
     
     MediaPublishOptions *options = (_switchView.on)?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions liveStream:self.preview];
     //options.content = ONLY_AUDIO;
-    backendless.mediaService = [MediaService new];
     _publisher =[backendless.mediaService publishStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     self.btnPublish.hidden = YES;
