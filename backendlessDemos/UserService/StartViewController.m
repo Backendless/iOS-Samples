@@ -23,6 +23,7 @@
 #import "RegisterViewController.h"
 #import "Backendless.h"
 
+#define _ASYNC_REQUEST 1
 
 @interface StartViewController ()
 -(void)showAlert:(NSString *)message;
@@ -63,12 +64,45 @@
 }
 
 -(void)userLogin {
-    NSLog(@"login---------------------");
+    
+    NSLog(@"login ---------------------");
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+#if _ASYNC_REQUEST
+    
+    [backendless.userService
+     login:self.loginInput.text
+     password:self.passwordInput.text
+     response:^(BackendlessUser *user) {
+         
+         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+         NSLog(@"RegisterViewController -> userLogin: %@ ", user);
+         
+         self.headerLabel.hidden = YES;
+         self.loginLabel.hidden = YES;
+         self.passwordLabel.hidden = YES;
+         self.loginInput.hidden = YES;
+         self.passwordInput.hidden = YES;
+         self.btnLogin.hidden = YES;
+         self.btnRegister.hidden = YES;
+         [[self.view viewWithTag:1] setHidden:YES];
+         
+         self.messageLabel.hidden = NO;
+         self.btnLogout.hidden = NO;
+     }
+     error:^(Fault *fault){
+         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+         NSLog(@"StartViewController -> userLogin: %@", fault);
+         [self showAlert:fault.detail];
+     }];
+    
+#else // sync request
+    
     @try {
         
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-        
         BackendlessUser *user = [backendless.userService login:self.loginInput.text password:self.passwordInput.text];
+        
         self.headerLabel.hidden = YES;
         self.loginLabel.hidden = YES;
         self.passwordLabel.hidden = YES;
@@ -83,31 +117,36 @@
     }
     
     @catch (Fault *fault) {
-        NSLog(@"StartViewController -> userLogin: FAULT = %@ [%@] <%@>", fault.faultCode, fault.message, fault.detail);
-        [self showAlert:fault.message];
+        NSLog(@"StartViewController -> userLogin: %@", fault);
+        [self showAlert:fault.detail];
     }
     
     @finally {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     }
+    
+#endif
 }
 
 -(void)userLogout {
     
+    NSLog(@"logout ---------------------");
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+
     @try {
-        
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-        
         [backendless.userService logout];
     }
     
     @catch (Fault *fault) {
-        NSLog(@"StartViewController -> userLogout: FAULT = %@ [%@] <%@>", fault.faultCode, fault.message, fault.detail);
+        NSLog(@"StartViewController -> userLogout: %@", fault);
         [self showAlert:fault.message];
     }
     
     @finally {
+        
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
         self.headerLabel.hidden = NO;
         self.loginLabel.hidden = NO;
         self.passwordLabel.hidden = NO;
@@ -148,7 +187,7 @@
             
             Fault *fault = controller.registration.fault;
             if (fault) {
-                NSLog(@"StartViewController -> registration: FAULT = %@ [%@] <%@>", fault.faultCode, fault.message, fault.detail);
+                NSLog(@"StartViewController -> registration: %@", fault);
                 [self showAlert:fault.message];
             }
             else {
@@ -168,7 +207,6 @@
     NSLog(@"StartViewController -> cancel: seque = %@", [segue identifier]);
     
     if ([[segue identifier] isEqualToString:@"Cancel.RegisterViewController"]) {
-//        [backendless.userService logout];
         return;
     }
 }
