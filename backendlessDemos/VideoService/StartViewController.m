@@ -90,6 +90,7 @@
     NSLog(@"publishControl: -> backendless.mediaService: %@ [%@]", backendless.mediaService, [Types classByName:@"MediaService"]);
     
     MediaPublishOptions *options = (_switchView.on)?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions liveStream:self.preview];
+    //options.videoBitrate = 2000;
     //options.content = ONLY_AUDIO;
     _publisher =[backendless.mediaService publishStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
