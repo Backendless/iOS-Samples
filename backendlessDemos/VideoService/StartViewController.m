@@ -55,7 +55,7 @@
         [self initNetActivity];
     }
     @catch (Fault *fault) {
-        NSLog(@"initAppFault -> FAULT = %@", fault.message);
+        NSLog(@"initAppFault -> %@", fault);
         [self showAlert:fault.message];
     }
 }
@@ -87,13 +87,10 @@
 
 -(IBAction)publishControl:(id)sender
 {
+    NSLog(@"publishControl: -> backendless.mediaService: %@ [%@]", backendless.mediaService, [Types classByName:@"MediaService"]);
     
-    MediaPublishOptions *options;
-    if (_switchView.on) {
-        options = [MediaPublishOptions liveStream:self.preview];
-    }
-    else
-        options = [MediaPublishOptions recordStream:self.preview];
+    MediaPublishOptions *options = (_switchView.on)?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions liveStream:self.preview];
+    //options.videoBitrate = 2000;
     //options.content = ONLY_AUDIO;
     _publisher =[backendless.mediaService publishStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
@@ -107,13 +104,9 @@
 
 -(IBAction)playbackControl:(id)sender
 {
-    MediaPlaybackOptions *options;
-    if (_switchView.on) {
-        options = [MediaPlaybackOptions liveStream:self.playbackView];
-    }
-    else
-        options = [MediaPlaybackOptions recordStream:self.playbackView];
+    NSLog(@"playbackControl: -> backendless.mediaService: %@", backendless.mediaService);
 
+    MediaPlaybackOptions *options = (_switchView.on)?[MediaPlaybackOptions liveStream:self.playbackView]:[MediaPlaybackOptions recordStream:self.playbackView];
     _player = [backendless.mediaService playbackStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     self.btnPublish.hidden = YES;

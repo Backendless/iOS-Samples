@@ -38,6 +38,8 @@
 @property (strong, nonatomic) NSString *streamName;
 
 -(void)switchCameras;
+-(void)setVideoBitrate:(uint)bitRate;
+-(void)setAudioBitrate:(uint)bitRate;
 -(AVCaptureSession *)getCaptureSession;
 -(BOOL)sendFrame:(CVPixelBufferRef)pixelBuffer timestamp:(int)timestamp;
 -(BOOL)sendSampleBuffer:(CMSampleBufferRef)sampleBuffer;

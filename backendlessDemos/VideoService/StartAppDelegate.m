@@ -21,7 +21,7 @@
 
 #import "StartAppDelegate.h"
 #import "Backendless.h"
-
+#import "MediaService.h"
 
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
@@ -35,11 +35,12 @@ static NSString *VERSION_NUM = @"v1";
 {
     // Override point for customization after application launch.
     
-    [DebLog setIsActive:YES];
+    //[DebLog setIsActive:YES];
     
-    //echoCancellationOn;
+    echoCancellationOn;
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
+    backendless.mediaService = [MediaService new];
 
     return YES;
 }

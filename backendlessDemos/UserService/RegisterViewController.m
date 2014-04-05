@@ -77,9 +77,15 @@ static NSString *FEMALE_GENDER_VAL = @"female";
 #pragma mark -
 #pragma mark Private Methods
 
+-(void)showAlert:(NSString *)message {
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Fault:" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [av show];
+}
+
 -(BOOL)userRegister:(BackendlessUser *)user {
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
     BOOL result = NO;
     
     @try {
@@ -87,12 +93,14 @@ static NSString *FEMALE_GENDER_VAL = @"female";
         result = YES;
         
         id birthdate = [user getProperty:BIRTHDATE_PROFILE_KEY];
-        NSLog(@"userRegister: ------> registered: <%@> birthdate = %@", [birthdate class], birthdate);
+        NSLog(@"RegisterViewController -> userRegister: registered birthdate = %@ <%@>", birthdate, [birthdate class]);
         
     }
     
     @catch (Fault *fault) {
         self.registration.fault = fault;
+        NSLog(@"RegisterViewController -> userRegister: %@", fault);
+        [self showAlert:fault.detail];
     }
     
     @finally {
@@ -105,6 +113,7 @@ static NSString *FEMALE_GENDER_VAL = @"female";
 
 #pragma mark -
 #pragma mark Segue Methods
+
 -(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     if ([identifier isEqualToString:@"Register.RegisterViewController"]) {
@@ -113,8 +122,8 @@ static NSString *FEMALE_GENDER_VAL = @"female";
         
         NSLog(@"SEND ------> registering: name = %@, password = %@, verify = %@", self.nameInput.text, self.passwordInput.text, self.verifyPasswordInput.text);
         
-        if ([self.nameInput.text length] && [self.passwordInput.text length] && [self.passwordInput.text isEqualToString:self.verifyPasswordInput.text]) {
-            
+        if ([self.nameInput.text length] && [self.passwordInput.text length] && [self.passwordInput.text isEqualToString:self.verifyPasswordInput.text])
+        {
             self.registration = [Registration new];
             self.registration.name = self.nameInput.text;
             self.registration.password = self.passwordInput.text;
@@ -141,8 +150,8 @@ static NSString *FEMALE_GENDER_VAL = @"female";
     }
     return YES;
 }
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
     NSLog(@"RegisterViewController -> prepareForSegue: %@", [segue identifier]);
 }
 
