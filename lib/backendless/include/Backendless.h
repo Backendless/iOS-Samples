@@ -25,16 +25,6 @@
 #import "DEBUG.h"
 #import "Types.h"
 #import "Responder.h"
-// MediaLibiOS
-//#ifndef __arm64__
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-
-//#import "BroadcastStreamClient.h"
-//#import "MediaStreamPlayer.h"
-//#import "VideoPlayer.h"
-
-#endif
-//#endif
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 //UI
@@ -71,16 +61,6 @@
 #import "MessagingService.h"
 #import "FileService.h"
 #import "BackendlessFile.h"
-
-//#import "MediaService.h"
-//#import "IMediaStreamer.h"
-//#import "MediaPublisher.h"
-//#import "MediaPlayer.h"
-//#import "MediaPublishOptions.h"
-//#import "MediaPlaybackOptions.h"
-//#import "BroadcastStreamClient.h"
-//#import "MediaStreamPlayer.h"
-//#import "VideoPlayer.h"
 
 //Cache
 #import "BackendlessCachePolicy.h"
