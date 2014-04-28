@@ -76,8 +76,22 @@
      password:self.passwordInput.text
      response:^(BackendlessUser *user) {
          
+         NSLog(@"StartViewController -> userLogin: (LOGIN) %@ ", user);
+ 
+         /*/ test \n in property on update ---------------
+         @try {
+             [user setProperty:@"titanic" object:@"TEST\nline1\nline2\n"];
+             [backendless.userService update:user];
+             NSLog(@"StartViewController -> userLogin: (UPDATED) %@ ", user);
+         }
+         @catch (Fault *fault) {
+             NSLog(@"StartViewController -> userLogin: <test> %@", fault);
+             [self showAlert:fault.detail];
+         }
+
+         /*///--------------------------------------------------------
+         
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-         NSLog(@"RegisterViewController -> userLogin: %@ ", user);
          
          self.headerLabel.hidden = YES;
          self.loginLabel.hidden = YES;
