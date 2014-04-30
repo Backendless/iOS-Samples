@@ -3981,8 +3981,8 @@
 		F91B670B16B18DD900668A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Юрий Ященко (TUCCRMCYLU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Юрий Ященко (TUCCRMCYLU)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vyacheslav Vdovichenko (7ZR8MVB488)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vyacheslav Vdovichenko (7ZR8MVB488)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushNotify/PushNotify-Prefix.pch";
 				INFOPLIST_FILE = "PushNotify/PushNotify-Info.plist";
@@ -3994,8 +3994,8 @@
 					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "806C2BD9-7073-4311-BAE3-FD49559B865D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "806C2BD9-7073-4311-BAE3-FD49559B865D";
+				PROVISIONING_PROFILE = "6CAF81CA-3970-4B68-8319-B3F181E8D61C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6CAF81CA-3970-4B68-8319-B3F181E8D61C";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4004,8 +4004,8 @@
 		F91B670C16B18DD900668A06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Юрий Ященко (TUCCRMCYLU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Юрий Ященко (TUCCRMCYLU)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vyacheslav Vdovichenko (7ZR8MVB488)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vyacheslav Vdovichenko (7ZR8MVB488)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushNotify/PushNotify-Prefix.pch";
 				INFOPLIST_FILE = "PushNotify/PushNotify-Info.plist";
@@ -4017,8 +4017,8 @@
 					"$(SRCROOT)/../lib/libav-v9.1965/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "806C2BD9-7073-4311-BAE3-FD49559B865D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "806C2BD9-7073-4311-BAE3-FD49559B865D";
+				PROVISIONING_PROFILE = "6CAF81CA-3970-4B68-8319-B3F181E8D61C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6CAF81CA-3970-4B68-8319-B3F181E8D61C";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
