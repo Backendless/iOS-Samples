@@ -35,6 +35,8 @@ static NSString *VERSION_NUM = @"v1";
     // Override point for customization after application launch.
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
+    //backendless.hostURL = @"http://api.backendless.com";
+
     if ([CLLocationManager locationServicesEnabled]) {
         
         _locationManager = [CLLocationManager new];

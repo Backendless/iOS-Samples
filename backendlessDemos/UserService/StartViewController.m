@@ -80,9 +80,12 @@
  
          /*/ test \n in property on update ---------------
          @try {
-             [user setProperty:@"titanic" object:@"TEST\nline1\nline2\n"];
-             [backendless.userService update:user];
-             NSLog(@"StartViewController -> userLogin: (UPDATED) %@ ", user);
+             //[user setProperty:@"titanic" object:@"TEST222\nline1\nline2\n"];
+             //[user setProperty:@"music" object:@"TEST\nline1\nline2\nline3\n"];
+             //[backendless.userService update:user];
+             [backendless.userService.currentUser setProperty:@"music" object:@"TEST\nline1\nline2\nline3\n"];
+             [backendless.userService update:backendless.userService.currentUser];
+             NSLog(@"StartViewController -> userLogin: (UPDATED) %@ ", backendless.userService.currentUser);
          }
          @catch (Fault *fault) {
              NSLog(@"StartViewController -> userLogin: <test> %@", fault);
