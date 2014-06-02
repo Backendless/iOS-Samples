@@ -39,6 +39,9 @@
     
     @try {
         [backendless initAppFault];
+#if 1
+        [backendless.userService setStayLoggedIn:YES];
+#endif
     }
     @catch (Fault *fault) {
         [self showAlert:fault.message];
@@ -71,29 +74,42 @@
     
 #if _ASYNC_REQUEST
     
-    [backendless.userService
-     login:self.loginInput.text
-     password:self.passwordInput.text
+    [backendless.userService login:self.loginInput.text password:self.passwordInput.text
      response:^(BackendlessUser *user) {
          
-         NSLog(@"StartViewController -> userLogin: (LOGIN) %@ ", user);
+         NSLog(@"StartViewController -> userLogin: (ASYNC LOGIN) user -> %@\n currentUser -> %@", user, backendless.userService.currentUser);
  
-         /*/ test \n in property on update ---------------
+#if 1 // test: \n in property on update ---------------
+         
+    #if 1 // as an async call
+         
+         [user setProperty:@"titanic" object:@"TEST555\nline1\nline2\n"];
+         [user setProperty:@"music" object:@"TEST333\nline1\nline2\nline3\n"];
+         
+         [backendless.userService update:user
+          response:^(BackendlessUser *user) {
+              NSLog(@"StartViewController -> userLogin: (ASYNC UPDATED) %@ ", user);
+          }
+          error:^(Fault *fault) {
+              NSLog(@"StartViewController -> userLogin: <ASYNC FAULT> %@", fault);
+              [self showAlert:fault.detail];
+          }];
+    
+    #else // as a sync call
+         
          @try {
-             //[user setProperty:@"titanic" object:@"TEST222\nline1\nline2\n"];
-             //[user setProperty:@"music" object:@"TEST\nline1\nline2\nline3\n"];
-             //[backendless.userService update:user];
-             [backendless.userService.currentUser setProperty:@"music" object:@"TEST\nline1\nline2\nline3\n"];
-             [backendless.userService update:backendless.userService.currentUser];
-             NSLog(@"StartViewController -> userLogin: (UPDATED) %@ ", backendless.userService.currentUser);
+             [backendless.userService update:user];
+             NSLog(@"StartViewController -> userLogin: (SYNC UPDATED) %@ ", backendless.userService.currentUser);
          }
          @catch (Fault *fault) {
-             NSLog(@"StartViewController -> userLogin: <test> %@", fault);
+             NSLog(@"StartViewController -> userLogin: <SYNC FAULT> %@", fault);
              [self showAlert:fault.detail];
          }
-
-         /*///--------------------------------------------------------
          
+    #endif
+
+#endif
+
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
          
          self.headerLabel.hidden = YES;
@@ -108,9 +124,9 @@
          self.messageLabel.hidden = NO;
          self.btnLogout.hidden = NO;
      }
-     error:^(Fault *fault){
+     error:^(Fault *fault) {
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-         NSLog(@"StartViewController -> userLogin: %@", fault);
+         NSLog(@"StartViewController -> userLogin: <ASYNC FAULT> %@", fault);
          [self showAlert:fault.detail];
      }];
     
@@ -119,6 +135,8 @@
     @try {
         
         BackendlessUser *user = [backendless.userService login:self.loginInput.text password:self.passwordInput.text];
+        
+        NSLog(@"StartViewController -> userLogin: (SYNC LOGIN) user -> %@\n currentUser -> %@", user, backendless.userService.currentUser);
         
         self.headerLabel.hidden = YES;
         self.loginLabel.hidden = YES;
@@ -134,7 +152,7 @@
     }
     
     @catch (Fault *fault) {
-        NSLog(@"StartViewController -> userLogin: %@", fault);
+        NSLog(@"StartViewController -> userLogin: <SYNC FAULT> %@", fault);
         [self showAlert:fault.detail];
     }
     
@@ -156,7 +174,7 @@
     }
     
     @catch (Fault *fault) {
-        NSLog(@"StartViewController -> userLogout: %@", fault);
+        NSLog(@"StartViewController -> userLogout: <FAULT> %@", fault);
         [self showAlert:fault.message];
     }
     

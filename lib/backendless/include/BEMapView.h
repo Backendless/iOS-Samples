@@ -21,12 +21,20 @@
 
 #import <MapKit/MapKit.h>
 
-@class BackendlessCollection, Fault, BackendlessGeoQuery, GeoPoint;
+@class BackendlessCollection, Fault, BackendlessGeoQuery, GeoPoint, BEMapView;
+
+@protocol BEMapViewDelegate <NSObject>
+
+-(void)mapView:(BEMapView *)mapView didFinishLoadData:(NSArray *)data;
+-(void)mapView:(BEMapView *)mapView didFinishWithFault:(Fault *)fault;
+
+@end
+
 
 @interface BEMapView : MKMapView
 @property (nonatomic, strong) NSDictionary *metadata;
 @property (nonatomic, copy) NSString *whereClause;
-
+@property (nonatomic) BOOL includeMetadata;
 -(BOOL)addCategory:(NSString *)category;
 -(BOOL)removeCategory:(NSString *)category;
 
@@ -35,14 +43,10 @@
 
 -(void)update;
 
-//-(void)getPoints:(BackendlessGeoQuery *)query;
-//-(void)relativeFind:(BackendlessGeoQuery *)query;
-//-(void)getPoints:(BackendlessGeoQuery *)query responder:(id)responder;
-//-(void)relativeFind:(BackendlessGeoQuery *)query responder:(id)responder;
-//-(void)getPoints:(BackendlessGeoQuery *)query response:(void(^)(BackendlessCollection *))responseBlock error:(void(^)(Fault *))errorBlock;
-//-(void)relativeFind:(BackendlessGeoQuery *)query response:(void(^)(BackendlessCollection *))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)setUnits:(int)units;
 -(void)removeAllObjects;
+-(void)removeGeoPointAnnotation:(NSString *)geopointId;
+
 -(NSArray *)responseData;
 
 -(void)setSearchWithRadius:(float)radius;

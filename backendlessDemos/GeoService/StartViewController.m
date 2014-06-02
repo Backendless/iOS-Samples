@@ -37,6 +37,7 @@
 -(void)getLocation;
 -(NSArray *)loadGeoPoints;
 -(void)invokeGeo;
+-(void)saveCurrentPosition;
 @end
 
 @implementation StartViewController
@@ -50,7 +51,11 @@
         [backendless initAppFault];
         
         _locationManager = ((StartAppDelegate *)[[UIApplication sharedApplication] delegate]).locationManager;
+#if 1
+        [self saveCurrentPosition];
+#else
         [self performSelector:@selector(invokeGeo) withObject:nil afterDelay:.2f];
+#endif
     }
     @catch (Fault *fault) {
         [self showAlert:fault.message];
@@ -146,6 +151,46 @@
     [self.citiesTableView reloadData];
 }
 
+-(void)saveCurrentPosition {
+    
+    if (!_locationManager)
+        return;
+    
+    @try {
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        
+        [self getLocation];
+        
+        GEO_POINT center;
+        center.latitude = _currentLocation.latitude;
+        center.longitude = _currentLocation.longitude;
+        
+        GeoPoint *currentPoint = [GeoPoint geoPoint:center
+                                         categories:@[@"fixedcurrent0"]
+                                           metadata:@{@"enterpriceName":[NSString stringWithUTF8String:"Twins house \xf0\x9f\x91\xad"], @"enterpriseType":@"0", @"foursquareCategoryID":@"4bf58dd8d48988d103941735", @"foursquareCategoryName":@"Проём подъезда этажа"}];
+        
+        NSLog(@"StartViewController -> saveCurrentPosition: %@", currentPoint);
+        
+        GeoPoint *result = [backendless.geoService savePoint:currentPoint];
+        
+        NSLog(@"StartViewController -> saveCurrentPosition: %@", result);
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    }
+    
+    @catch (Fault *fault) {
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
+        NSLog(@"StartViewController -> saveCurrentPosition: FAULT = [%@] %@ <%@>", fault.faultCode, fault.message, fault.detail);
+        
+        [self showAlert:fault.message];
+        
+        return;
+    }
+    
+}
 
 #pragma mark - IBAction
 
