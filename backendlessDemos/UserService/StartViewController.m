@@ -40,7 +40,7 @@
     @try {
         [backendless initAppFault];
 #if 1
-        [backendless.userService setStayLoggedIn:YES];
+        [backendless.userService setStayLoggedIn:NO];
 #endif
     }
     @catch (Fault *fault) {
@@ -79,7 +79,7 @@
          
          NSLog(@"StartViewController -> userLogin: (ASYNC LOGIN) user -> %@\n currentUser -> %@", user, backendless.userService.currentUser);
  
-#if 1 // test: \n in property on update ---------------
+#if 0 // test: \n in property on update ---------------
          
     #if 1 // as an async call
          

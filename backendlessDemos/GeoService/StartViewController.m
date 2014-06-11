@@ -51,7 +51,7 @@
         [backendless initAppFault];
         
         _locationManager = ((StartAppDelegate *)[[UIApplication sharedApplication] delegate]).locationManager;
-#if 1
+#if 0
         [self saveCurrentPosition];
 #else
         [self performSelector:@selector(invokeGeo) withObject:nil afterDelay:.2f];

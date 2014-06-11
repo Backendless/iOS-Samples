@@ -3813,7 +3813,6 @@
 					"$(SRCROOT)/../lib/CommLibiOS",
 					"$(SRCROOT)/../lib/MediaLibiOS",
 					"$(SRCROOT)/../lib/libav-v9.1965/lib",
-					"/Users/slavav/Documents/Projects/backendless/iOS-Samples/lib/CommLibiOS",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3837,7 +3836,6 @@
 					"$(SRCROOT)/../lib/CommLibiOS",
 					"$(SRCROOT)/../lib/MediaLibiOS",
 					"$(SRCROOT)/../lib/libav-v9.1965/lib",
-					"/Users/slavav/Documents/Projects/backendless/iOS-Samples/lib/CommLibiOS",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
