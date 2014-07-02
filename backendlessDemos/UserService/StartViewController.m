@@ -40,7 +40,7 @@
     @try {
         [backendless initAppFault];
 #if 1
-        [backendless.userService setStayLoggedIn:NO];
+        [backendless.userService setStayLoggedIn:YES];
 #endif
     }
     @catch (Fault *fault) {
