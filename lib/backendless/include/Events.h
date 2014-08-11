@@ -1,5 +1,5 @@
 //
-//  IMediaStreamer.h
+//  Events.h
 //  backendlessAPI
 /*
  * *********************************************************************************************************************
@@ -21,25 +21,14 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum  {
-    MEDIASTREAM_DISCONNECTED,
-    MEDIASTREAM_CONNECTED,
-    MEDIASTREAM_CREATED,
-    MEDIASTREAM_PLAYING,
-    MEDIASTREAM_PAUSED
-} StateMediaStream;
+@protocol IResponder;
+@class Fault;
 
-@protocol IMediaStreamer <NSObject>
--(StateMediaStream)currentState;
--(void)connect;
--(void)start;
--(void)pause;
--(void)resume;
--(void)stop;
--(void)disconnect;
-@end
-
-@protocol IMediaStreamerDelegate <NSObject>
--(void)streamStateChanged:(id)sender state:(StateMediaStream)state description:(NSString *)description;
--(void)streamConnectFailed:(id)sender code:(int)code description:(NSString *)description;
+@interface Events : NSObject
+// sync methods with fault option
+-(NSDictionary *)dispatch:(NSString *)name args:(NSDictionary *)eventArgs fault:(Fault **)fault;
+// async methods with responder
+-(void)dispatch:(NSString *)name args:(NSDictionary *)eventArgs responder:(id <IResponder>)responder;
+// async methods with block-based callback
+-(void)dispatch:(NSString *)name args:(NSDictionary *)eventArgs response:(void(^)(NSDictionary *data))responseBlock error:(void(^)(Fault *fault))errorBlock;
 @end

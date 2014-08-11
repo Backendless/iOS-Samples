@@ -19,6 +19,10 @@
  *  ********************************************************************************************************************
  */
 
+// applications & services deploiment
+#define OLD_MEDIA_APP 1
+#define NEW_API_ON 0
+
 #import <Foundation/Foundation.h>
 
 // CommLibiOS
@@ -62,6 +66,15 @@
 #import "MessagingService.h"
 #import "FileService.h"
 #import "BackendlessFile.h"
+#if NEW_API_ON
+#import "Events.h"
+#import "CacheService.h"
+#import "AtomicCounters.h"
+#else
+@class Events;
+@class CacheService;
+@class AtomicCounters;
+#endif
 
 //Cache
 #import "BackendlessCachePolicy.h"
@@ -84,28 +97,30 @@
 
 @protocol ReachabilityDelegate <NSObject>
 -(void)changeNetworkStatus:(NSInteger)status connectionRequired:(BOOL)connectionRequired;
-
 @end
 
 @interface Backendless : NSObject
-//
+// context
 @property (strong, nonatomic, getter = getHostUrl, setter = setHostUrl:) NSString *hostURL;
 @property (strong, nonatomic, getter = getAppId, setter = setAppId:) NSString *appID;
 @property (strong, nonatomic, getter = getSecretKey, setter = setSecretKey:) NSString *secretKey;
 @property (strong, nonatomic, getter = getVersionNum, setter = setVersionNum:) NSString *versionNum;
 @property (strong, nonatomic, getter = getApiVersion, setter = setApiVersion:) NSString *apiVersion;
-//
+// options
 @property (strong, nonatomic) NSMutableDictionary *headers;
 @property (strong, nonatomic, readonly) NSDictionary *appConf;
-//
+// services
 @property (strong, nonatomic, readonly) UserService *userService;
 @property (strong, nonatomic, readonly) PersistenceService *persistenceService;
 @property (strong, nonatomic, readonly) GeoService *geoService;
 @property (strong, nonatomic, readonly) MessagingService *messagingService;
 @property (strong, nonatomic, readonly) FileService *fileService;
-@property (strong, nonatomic) MediaService *mediaService;
-
-@property (strong, nonatomic) id<ReachabilityDelegate> reachabilityDelegate;
+@property (strong, nonatomic, readwrite) MediaService *mediaService;
+@property (strong, nonatomic, readonly) Events *events;
+@property (strong, nonatomic, readonly) CacheService *cache;
+@property (strong, nonatomic, readonly) AtomicCounters *counters;
+// delegates
+@property (strong, nonatomic) id <ReachabilityDelegate> reachabilityDelegate;
 
 // Singleton accessor:  this is how you should ALWAYS get a reference to the class instance.  Never init your own.
 +(Backendless *)sharedInstance;
@@ -130,17 +145,15 @@
 -(NSString *)applicationType;
 -(void)setUIState:(NSString *)uiState;
 -(NSString *)getUIState;
-#pragma mark - cache methodth
+#pragma mark - cache methods
 -(void)clearAllCache;
 -(void)clearCacheForClassName:(NSString *)className query:(id) query;
 -(BOOL)hasResultForClassName:(NSString *)className query:(id) query;
 -(void)setCachePolicy:(BackendlessCachePolicy *)policy;
 -(void)setCacheStoredType:(BackendlessCacheStoredEnum)storedType;
 -(void)saveCache;
-
 #pragma mark - connection
 -(NSInteger)getConnectionStatus;
-
 #pragma mark - offline mode
 -(void)setOfflineMode:(BOOL)offlineMode;
 
