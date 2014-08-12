@@ -554,6 +554,13 @@
 		91F1392317C4E37800D1AC4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		91F1393F17C4E77400D1AC4C /* CachingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachingObject.h; sourceTree = "<group>"; };
 		91F1394017C4E77400D1AC4C /* CachingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachingObject.m; sourceTree = "<group>"; };
+		D339EF20199AADC500AA4974 /* AtomicCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCounters.h; sourceTree = "<group>"; };
+		D339EF21199AADC500AA4974 /* AtomicCountersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCountersFactory.h; sourceTree = "<group>"; };
+		D339EF22199AADC500AA4974 /* CacheFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFactory.h; sourceTree = "<group>"; };
+		D339EF23199AADC500AA4974 /* CacheService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheService.h; sourceTree = "<group>"; };
+		D339EF24199AADC500AA4974 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
+		D339EF25199AADC500AA4974 /* IAtomicCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAtomicCounters.h; sourceTree = "<group>"; };
+		D339EF26199AADC500AA4974 /* ICacheService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICacheService.h; sourceTree = "<group>"; };
 		F912091D18C62C8D0014195A /* getting-started.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "getting-started.pdf"; path = "../getting-started.pdf"; sourceTree = "<group>"; };
 		F91B662616B1873B00668A06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F91B662816B1873B00668A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1758,6 +1765,13 @@
 		F9BB000818785AB20076BC6D /* include */ = {
 			isa = PBXGroup;
 			children = (
+				D339EF20199AADC500AA4974 /* AtomicCounters.h */,
+				D339EF21199AADC500AA4974 /* AtomicCountersFactory.h */,
+				D339EF22199AADC500AA4974 /* CacheFactory.h */,
+				D339EF23199AADC500AA4974 /* CacheService.h */,
+				D339EF24199AADC500AA4974 /* Events.h */,
+				D339EF25199AADC500AA4974 /* IAtomicCounters.h */,
+				D339EF26199AADC500AA4974 /* ICacheService.h */,
 				F9BB000918785AB20076BC6D /* AbstractProperty.h */,
 				F9BB000A18785AB20076BC6D /* AbstractQuery.h */,
 				F9BB000B18785AB20076BC6D /* Backendless.h */,

@@ -27,6 +27,7 @@
 
 @interface StartViewController ()
 -(void)showAlert:(NSString *)message;
+-(void)switchToLogout;
 -(void)userLogin;
 -(void)userLogout;
 @end
@@ -38,9 +39,19 @@
     [super viewDidLoad];
     
     @try {
+        
         [backendless initAppFault];
-#if 1
-        [backendless.userService setStayLoggedIn:YES];
+
+#if 1 // stay logged in
+        if (backendless.userService.isStayLoggedIn) {
+            
+            NSNumber *result = [backendless.userService isValidUserToken];
+            NSLog(@"viewDidLoad -> isValidUserToken: %@", [result boolValue]?@"YES":@"NO");
+            [result boolValue] ? [self switchToLogout] : [backendless.userService setStayLoggedIn:NO];
+        }
+        else {
+            [backendless.userService setStayLoggedIn:YES];
+        }
 #endif
     }
     @catch (Fault *fault) {
@@ -66,6 +77,21 @@
     [av show];
 }
 
+-(void)switchToLogout {
+    
+    self.headerLabel.hidden = YES;
+    self.loginLabel.hidden = YES;
+    self.passwordLabel.hidden = YES;
+    self.loginInput.hidden = YES;
+    self.passwordInput.hidden = YES;
+    self.btnLogin.hidden = YES;
+    self.btnRegister.hidden = YES;
+    [[self.view viewWithTag:1] setHidden:YES];
+    
+    self.messageLabel.hidden = NO;
+    self.btnLogout.hidden = NO;
+}
+
 -(void)userLogin {
     
     NSLog(@"login ---------------------");
@@ -81,10 +107,10 @@
  
 #if 0 // test: \n in property on update ---------------
          
-    #if 1 // as an async call
-         
          [user setProperty:@"titanic" object:@"TEST555\nline1\nline2\n"];
          [user setProperty:@"music" object:@"TEST333\nline1\nline2\nline3\n"];
+    
+    #if 1 // as an async call
          
          [backendless.userService update:user
           response:^(BackendlessUser *user) {
@@ -111,18 +137,7 @@
 #endif
 
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-         
-         self.headerLabel.hidden = YES;
-         self.loginLabel.hidden = YES;
-         self.passwordLabel.hidden = YES;
-         self.loginInput.hidden = YES;
-         self.passwordInput.hidden = YES;
-         self.btnLogin.hidden = YES;
-         self.btnRegister.hidden = YES;
-         [[self.view viewWithTag:1] setHidden:YES];
-         
-         self.messageLabel.hidden = NO;
-         self.btnLogout.hidden = NO;
+         [self switchToLogout];
      }
      error:^(Fault *fault) {
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -138,17 +153,7 @@
         
         NSLog(@"StartViewController -> userLogin: (SYNC LOGIN) user -> %@\n currentUser -> %@", user, backendless.userService.currentUser);
         
-        self.headerLabel.hidden = YES;
-        self.loginLabel.hidden = YES;
-        self.passwordLabel.hidden = YES;
-        self.loginInput.hidden = YES;
-        self.passwordInput.hidden = YES;
-        self.btnLogin.hidden = YES;
-        self.btnRegister.hidden = YES;
-        [[self.view viewWithTag:1] setHidden:YES];
-        
-        self.messageLabel.hidden = NO;
-        self.btnLogout.hidden = NO;
+        [self switchToLogout];
     }
     
     @catch (Fault *fault) {
@@ -169,31 +174,44 @@
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 
+#if 0 // async
+    
+    [backendless.userService logout:
+        ^(BackendlessUser *user) {
+            NSLog(@"StartViewController -> userLogout: (ASYNC LOGOUT) %@ ", user);
+        }
+        error:^(Fault *fault) {
+            NSLog(@"StartViewController -> userLogout: <ASYNC FAULT> %@, currentUser = %@", fault, backendless.userService.currentUser);
+            [self showAlert:fault.detail];
+        }];
+    
+#else // sync
+    
     @try {
         [backendless.userService logout];
+        NSLog(@"StartViewController -> userLogout: (SYNC LOGOUT) currentUser = %@", backendless.userService.currentUser);
     }
     
     @catch (Fault *fault) {
-        NSLog(@"StartViewController -> userLogout: <FAULT> %@", fault);
+        NSLog(@"StartViewController -> userLogout: <SYNC FAULT> %@, currentUser = %@", fault, backendless.userService.currentUser);
         [self showAlert:fault.message];
     }
     
-    @finally {
-        
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        
-        self.headerLabel.hidden = NO;
-        self.loginLabel.hidden = NO;
-        self.passwordLabel.hidden = NO;
-        self.loginInput.hidden = NO;
-        self.passwordInput.hidden = NO;
-        self.btnLogin.hidden = NO;
-        self.btnRegister.hidden = NO;
-        [[self.view viewWithTag:1] setHidden:NO];
-        
-        self.messageLabel.hidden = YES;
-        self.btnLogout.hidden = YES;
-    }
+#endif
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    
+    self.headerLabel.hidden = NO;
+    self.loginLabel.hidden = NO;
+    self.passwordLabel.hidden = NO;
+    self.loginInput.hidden = NO;
+    self.passwordInput.hidden = NO;
+    self.btnLogin.hidden = NO;
+    self.btnRegister.hidden = NO;
+    [[self.view viewWithTag:1] setHidden:NO];
+    
+    self.messageLabel.hidden = YES;
+    self.btnLogout.hidden = YES;
 }
 
 #pragma mark -
