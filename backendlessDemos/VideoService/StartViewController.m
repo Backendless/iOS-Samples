@@ -89,9 +89,8 @@
 {
     NSLog(@"publishControl: -> backendless.mediaService: %@ [%@]", backendless.mediaService, [Types classByName:@"MediaService"]);
     
-    MediaPublishOptions *options = (_switchView.on)?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions liveStream:self.preview];
-    //options.videoBitrate = 2000;
-    //options.content = ONLY_AUDIO;
+    MediaPublishOptions *options = (_switchView.on)?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions recordStream:self.preview];
+    options.orientation = AVCaptureVideoOrientationPortrait;
     _publisher =[backendless.mediaService publishStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     self.btnPublish.hidden = YES;
@@ -105,8 +104,9 @@
 -(IBAction)playbackControl:(id)sender
 {
     NSLog(@"playbackControl: -> backendless.mediaService: %@", backendless.mediaService);
-
+    
     MediaPlaybackOptions *options = (_switchView.on)?[MediaPlaybackOptions liveStream:self.playbackView]:[MediaPlaybackOptions recordStream:self.playbackView];
+    options.orientation = UIImageOrientationLeft;
     _player = [backendless.mediaService playbackStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     self.btnPublish.hidden = YES;
