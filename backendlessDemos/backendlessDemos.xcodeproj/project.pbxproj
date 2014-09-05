@@ -554,6 +554,8 @@
 		91F1392317C4E37800D1AC4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		91F1393F17C4E77400D1AC4C /* CachingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachingObject.h; sourceTree = "<group>"; };
 		91F1394017C4E77400D1AC4C /* CachingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachingObject.m; sourceTree = "<group>"; };
+		D30A5D7719B9CD8A00C0BA44 /* Backendless-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Backendless-Bridging-Header.h"; sourceTree = "<group>"; };
+		D30A5D7919B9D05100C0BA44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D339EF20199AADC500AA4974 /* AtomicCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCounters.h; sourceTree = "<group>"; };
 		D339EF21199AADC500AA4974 /* AtomicCountersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCountersFactory.h; sourceTree = "<group>"; };
 		D339EF22199AADC500AA4974 /* CacheFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFactory.h; sourceTree = "<group>"; };
@@ -1418,6 +1420,7 @@
 		F91B661716B1873B00668A06 = {
 			isa = PBXGroup;
 			children = (
+				D30A5D7919B9D05100C0BA44 /* README.md */,
 				F912091D18C62C8D0014195A /* getting-started.pdf */,
 				F9BB000518785AB20076BC6D /* lib */,
 				F99EFF5916D51358001AE512 /* art */,
@@ -1765,6 +1768,7 @@
 		F9BB000818785AB20076BC6D /* include */ = {
 			isa = PBXGroup;
 			children = (
+				D30A5D7719B9CD8A00C0BA44 /* Backendless-Bridging-Header.h */,
 				D339EF20199AADC500AA4974 /* AtomicCounters.h */,
 				D339EF21199AADC500AA4974 /* AtomicCountersFactory.h */,
 				D339EF22199AADC500AA4974 /* CacheFactory.h */,
