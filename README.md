@@ -5,7 +5,7 @@ Contains sample projects demonstrating the usage of various Backendless API and 
 
 ======= ADDITIONAL SWIFT PROJECT SETTINGS:
 
-Set Target's Bilding Settings -> "Swift Compiller - Code Generation" -> "Objective-C Briging Header" option in:
+Set target's Build Settings -> "Swift Compiller - Code Generation" -> "Objective-C Bridging Header" option in:
 $(PROJECT_DIR)/../lib/backendless/include/Backendless-Bridging-Header.h
 
 ======= SWIFT DEMO CODE:
