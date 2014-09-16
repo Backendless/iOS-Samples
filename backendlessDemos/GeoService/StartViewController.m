@@ -166,10 +166,15 @@
         center.latitude = _currentLocation.latitude;
         center.longitude = _currentLocation.longitude;
         
+#if 1
         GeoPoint *currentPoint = [GeoPoint geoPoint:center
-                                         categories:@[@"fixedcurrent0"]
+                                         categories:@[@"fixedcurrent1"]
+                                           metadata:@{@"enterpriceName":[NSString stringWithUTF8String:"Twins house"], @"enterpriseType":@"0", @"foursquareCategoryID":@"4bf58dd8d48988d103941735", @"foursquareCategoryName":@"Проём подъезда этажа"}];
+#else // FAULT 7007 for Unicode in metadata
+        GeoPoint *currentPoint = [GeoPoint geoPoint:center
+                                         categories:@[@"fixedcurrent1"]
                                            metadata:@{@"enterpriceName":[NSString stringWithUTF8String:"Twins house \xf0\x9f\x91\xad"], @"enterpriseType":@"0", @"foursquareCategoryID":@"4bf58dd8d48988d103941735", @"foursquareCategoryName":@"Проём подъезда этажа"}];
-        
+#endif
         NSLog(@"StartViewController -> saveCurrentPosition: %@", currentPoint);
         
         GeoPoint *result = [backendless.geoService savePoint:currentPoint];
