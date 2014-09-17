@@ -26,26 +26,29 @@ static NSString *MESSAGING_CHANNEL = @"default";
 static NSString *PUBLISHER_ANONYMOUS = @"Anonymous";
 static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
-@interface StartViewController ()
+@interface StartViewController () {
+    UIActivityIndicatorView *_netActivity;
+}
 -(void)showAlert:(NSString *)message;
+-(void)initNetActivity;
 @end
 
 @implementation StartViewController
 
-- (void)viewDidLoad
-{
+-(void)viewDidLoad {
+    
     [super viewDidLoad];
     
     @try {
         [backendless initAppFault];
+        [self initNetActivity];
     }
     @catch (Fault *fault) {
         [self showAlert:fault.message];
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -55,29 +58,65 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [av show];
 }
 
-- (void)showNotification:(NSString *)notification
-{
+-(void)initNetActivity {
+    // Create and add the activity indicator
+    _netActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _netActivity.center = CGPointMake(160.0f, 400.0f);
+    [self.view addSubview:_netActivity];
+}
+
+-(void)showNotification:(NSString *)notification {
     _textView.hidden = NO;
     _textView.text = [_textView.text stringByAppendingFormat:@"APNS: %@\n", notification];
 }
 
-- (void)sendMessage:(id)sender
-{
+-(void)sendMessage:(id)sender {
+    
+    [(UILabel *)[self.view viewWithTag:100] setText:@""];
+    [_netActivity startAnimating];
+    
     PublishOptions *p = [PublishOptions new];
     NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:PUBLISHER_ANONYMOUS, PUBLISHER_NAME_HEADER, @"1", @"ios-badge", @"Sound12.aif",@"ios-sound", nil];
     p.headers = headers;
+
+#if 1 //async
+    
+    [backendless.messagingService
+     publish:MESSAGING_CHANNEL
+     message:_textField.text
+     publishOptions:p
+     deliveryOptions:[DeliveryOptions deliveryOptionsForNotification:PUSHONLY]
+     response:^(MessageStatus *res) {
+         [_netActivity stopAnimating];
+         NSLog(@"sendMessage: res = %@", res);
+         [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:%@", res.messageId, res.status, res.errorMessage]];
+         _textField.text = @"";
+     }
+     error:^(Fault *fault) {
+         [_netActivity stopAnimating];
+         [self showAlert:fault.message];
+         NSLog(@"sendMessage: fault = %@", fault.detail);         
+         _textField.text = @"";
+     }];
+
+#else //sync
+    
     @try {
         MessageStatus *res = [backendless.messagingService publish:MESSAGING_CHANNEL message:_textField.text publishOptions:p deliveryOptions:[DeliveryOptions deliveryOptionsForNotification:PUSHONLY]];
         NSLog(@"sendMessage: res = %@", res);
         [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:%@", res.messageId, res.status, res.errorMessage]];
     }
+    
     @catch (Fault *fault) {
         [self showAlert:fault.message];
         NSLog(@"sendMessage: fault = %@", fault.detail);
     }
+    
     @finally {
+        [_netActivity stopAnimating];
         _textField.text = @"";
     }
+#endif
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

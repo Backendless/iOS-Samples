@@ -3,13 +3,12 @@ iOS-Samples
 
 Contains sample projects demonstrating the usage of various Backendless API and functionality
 
-======= ADDITIONAL SWIFT PROJECT SETTINGS:
+======= ADDITIONAL SWIFT PROJECT SETTINGS: ===================================================================
 
 Set target's Build Settings -> "Swift Compiller - Code Generation" -> "Objective-C Bridging Header" option in:
 $(PROJECT_DIR)/../lib/backendless/include/Backendless-Bridging-Header.h
 
-======= SWIFT DEMO CODE:
-
+======= SWIFT DEMO CODE: =====================================================================================
 
 class Weather : BackendlessEntity {
     
