@@ -219,6 +219,7 @@
 		D30E65EF19CB0E9300AE3949 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		D30E65F019CB0EA200AE3949 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB000718785AB20076BC6D /* backendless.a */; };
 		D30E65F119CB0EA800AE3949 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB003418785AB20076BC6D /* CommLibiOS.a */; };
+		D30E65F419CC1C2C00AE3949 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D30E65F319CC1C2C00AE3949 /* Person.m */; };
 		D36C533D18DE51F200B080D2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
 		D36C533E18DE522E00B080D2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		D37F5ED419CB0AFC0077F0C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
@@ -578,6 +579,8 @@
 		D30A5D7919B9D05100C0BA44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D30E65E519CB0C5000AE3949 /* SampleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleService.h; sourceTree = "<group>"; };
 		D30E65E619CB0C5000AE3949 /* SampleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleService.m; sourceTree = "<group>"; };
+		D30E65F219CC1C2C00AE3949 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D30E65F319CC1C2C00AE3949 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		D339EF20199AADC500AA4974 /* AtomicCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCounters.h; sourceTree = "<group>"; };
 		D339EF21199AADC500AA4974 /* AtomicCountersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCountersFactory.h; sourceTree = "<group>"; };
 		D339EF22199AADC500AA4974 /* CacheFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFactory.h; sourceTree = "<group>"; };
@@ -1474,6 +1477,8 @@
 		D37F5ED719CB0AFC0077F0C5 /* CustomService */ = {
 			isa = PBXGroup;
 			children = (
+				D30E65F219CC1C2C00AE3949 /* Person.h */,
+				D30E65F319CC1C2C00AE3949 /* Person.m */,
 				D30E65E519CB0C5000AE3949 /* SampleService.h */,
 				D30E65E619CB0C5000AE3949 /* SampleService.m */,
 				D37F5EE019CB0AFC0077F0C5 /* AppDelegate.h */,
@@ -2864,6 +2869,7 @@
 			files = (
 				D37F5EE819CB0AFC0077F0C5 /* ViewController.m in Sources */,
 				D30E65E719CB0C5000AE3949 /* SampleService.m in Sources */,
+				D30E65F419CC1C2C00AE3949 /* Person.m in Sources */,
 				D37F5EE219CB0AFC0077F0C5 /* AppDelegate.m in Sources */,
 				D37F5EDE19CB0AFC0077F0C5 /* main.m in Sources */,
 			);

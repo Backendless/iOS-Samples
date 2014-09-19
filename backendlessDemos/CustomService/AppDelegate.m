@@ -41,8 +41,21 @@ static NSString *VERSION_NUM = @"v1";
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     //backendless.hostURL = @"http://api.backendless.com";
     [backendless setThrowException:NO];
-    
+
 #if 0
+    NSNumber *dataBool = [NSNumber numberWithBool:YES];
+    NSNumber *dataChar = [NSNumber numberWithChar:'a'];
+    NSNumber *dataByte = [NSNumber numberWithUnsignedChar:0xFF];
+    NSNumber *dataShort = [NSNumber numberWithShort:1];
+    NSNumber *dataInt = [NSNumber numberWithInt:1];
+    NSNumber *dataLong = [NSNumber numberWithLong:1];
+    NSNumber *dataFloat = [NSNumber numberWithFloat:2.7];
+    NSNumber *dataDouble = [NSNumber numberWithDouble:2.7];
+    
+    NSLog(@"NSNumber dataBool:'%c', dataChar:'%c', dataByte:'%c', dataShort:'%c', dataInt:'%c', dataLong:'%c', dataFloat:'%c', dataDouble:'%c'", [dataBool objCType][0], [dataChar objCType][0], [dataByte objCType][0], [dataShort objCType][0], [dataInt objCType][0], [dataLong objCType][0], [dataFloat objCType][0], [dataDouble objCType][0]);
+#endif
+    
+#if 1
     
     SampleService *sampleService = [SampleService new];
     sampleService.serviceVersion = @"v1";

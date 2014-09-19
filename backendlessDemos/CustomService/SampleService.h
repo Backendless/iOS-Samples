@@ -21,6 +21,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Backendless.h"
+#import "Person.h"
 
 @interface SampleService : NSObject
 
@@ -75,5 +76,24 @@
 -(void)echoEmptyArray:(int[])a length:(uint)length response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock;
 -(NSArray *)echoNullArray:(int[])a length:(uint)length error:(Fault **)fault;
 -(void)echoNullArray:(int[])a length:(uint)length response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock;
+// strings array
+-(NSArray *)echoStringArray:(NSArray *)a error:(Fault **)fault;
+-(void)echoStringArray:(NSArray *)a response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(NSArray *)echoNullStringArray:(NSArray *)a error:(Fault **)fault;
+-(void)echoNullStringArray:(NSArray *)a response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(NSArray *)echoEmptyStringArray:(NSArray *)a error:(Fault **)fault;
+-(void)echoEmptyStringArray:(NSArray *)a response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock;
+// collections
+-(NSArray *)echoSortedList:(NSArray *)a error:(Fault **)fault;
+-(void)echoSortedList:(NSArray *)a response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(NSSet *)echoArrayList:(NSSet *)a error:(Fault **)fault;
+-(void)echoArrayList:(NSSet *)a response:(void(^)(NSSet *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(NSDictionary *)echoHashtable:(NSDictionary *)a error:(Fault **)fault;
+-(void)echoHashtable:(NSDictionary *)a response:(void(^)(NSDictionary *))responseBlock error:(void(^)(Fault *))errorBlock;
+// complex type
+-(Person *)echoPerson:(Person *)p error:(Fault **)fault;
+-(void)echoPerson:(Person *)p response:(void(^)(Person *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(NSArray *)echoPersonArray:(NSArray *)a error:(Fault **)fault;
+-(void)echoPersonArray:(NSArray *)a response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock;
 
 @end

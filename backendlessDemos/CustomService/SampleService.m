@@ -25,6 +25,28 @@ static NSString *SERVICE_NAME = @"SampleService";
 
 @implementation SampleService
 
+#pragma mark -
+#pragma mark Private Methods
+
+-(NSString *)wrapperMethod:(NSNumber *)number {
+    
+    switch ([number objCType][0]) {
+        case 'c':
+        return @"echoBoolWrapper";
+        case 's':
+        return @"echoByteWrapper";
+        case 'f':
+        return @"echoFloatWrapper";
+        case 'd':
+        return @"echoDoubleWrapper";
+        default:
+        return @"echoIntWrapper";
+    }
+}
+
+#pragma mark -
+#pragma mark Public Methods
+
 -(void)noArgMethod:(Fault **)fault {
     [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"noArgMethod" args:@[] fault:fault];
 }
@@ -34,6 +56,7 @@ static NSString *SERVICE_NAME = @"SampleService";
 }
 
 // primitive args
+
 -(BOOL)echoBoolean:(BOOL)b error:(Fault **)fault {
     NSNumber *result = [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoBoolean" args:@[@(b)] fault:fault];
     return result ? [result boolValue] : NO;
@@ -107,15 +130,19 @@ static NSString *SERVICE_NAME = @"SampleService";
 }
 
 // numbers
+
 -(NSNumber *)echoNumber:(NSNumber *)d error:(Fault **)fault {
-    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoIntWrapper" args:@[d] fault:fault];
+    NSString *method = [self wrapperMethod:d];
+    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:method args:@[d] fault:fault];
 }
 
 -(void)echoNumber:(NSNumber *)d response:(void(^)(NSNumber *))responseBlock error:(void(^)(Fault *))errorBlock {
-    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoIntWrapperAsync" args:@[d] response:responseBlock error:errorBlock];
+    NSString *method = [[self wrapperMethod:d] stringByAppendingString:@"Async"];
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:method args:@[d] response:responseBlock error:errorBlock];
 }
 
 // strings
+
 -(NSString *)echoString:(NSString *)s error:(Fault **)fault {
     return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoString" args:@[s] fault:fault];
 }
@@ -136,6 +163,7 @@ static NSString *SERVICE_NAME = @"SampleService";
 }
 
 // date
+
 -(NSDate *)echoDate:(NSDate *)d error:(Fault **)fault {
     return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoDate" args:@[d] fault:fault];
 }
@@ -145,6 +173,7 @@ static NSString *SERVICE_NAME = @"SampleService";
 }
 
 // primitive arrays
+
 -(NSArray *)echoBooleanArray:(BOOL[])a length:(uint)length error:(Fault **)fault {
     NSMutableArray *data = [NSMutableArray array];
     for (int i = 0; i < length; i++) {
@@ -158,7 +187,7 @@ static NSString *SERVICE_NAME = @"SampleService";
     for (int i = 0; i < length; i++) {
         data[i] = @(a[i]);
     }
-    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoBooleanArrayAsync" args:@[data] response:responseBlock error:errorBlock];
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoBooleanArrayAsync" args:@[data] response:responseBlock error:errorBlock];
 }
 
 -(NSArray *)echoByteArray:(int8_t[])a length:(uint)length error:(Fault **)fault {
@@ -174,7 +203,7 @@ static NSString *SERVICE_NAME = @"SampleService";
     for (int i = 0; i < length; i++) {
         data[i] = @(a[i]);
     }
-    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoByteArrayAsync" args:@[data] response:responseBlock error:errorBlock];
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoByteArrayAsync" args:@[data] response:responseBlock error:errorBlock];
 }
 
 -(NSArray *)echoShortArray:(short[])a length:(uint)length error:(Fault **)fault {
@@ -190,7 +219,7 @@ static NSString *SERVICE_NAME = @"SampleService";
     for (int i = 0; i < length; i++) {
         data[i] = @(a[i]);
     }
-    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoShortArrayAsync" args:@[data] response:responseBlock error:errorBlock];
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoShortArrayAsync" args:@[data] response:responseBlock error:errorBlock];
 }
 
 -(NSArray *)echoIntArray:(int[])a length:(uint)length error:(Fault **)fault {
@@ -206,7 +235,7 @@ static NSString *SERVICE_NAME = @"SampleService";
     for (int i = 0; i < length; i++) {
         data[i] = @(a[i]);
     }
-    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoIntArrayAsync" args:@[data] response:responseBlock error:errorBlock];
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoIntArrayAsync" args:@[data] response:responseBlock error:errorBlock];
 }
 
 -(NSArray *)echoLongArray:(long[])a length:(uint)length error:(Fault **)fault {
@@ -222,7 +251,7 @@ static NSString *SERVICE_NAME = @"SampleService";
     for (int i = 0; i < length; i++) {
         data[i] = @(a[i]);
     }
-    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoLongArrayAsync" args:@[data] response:responseBlock error:errorBlock];
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoLongArrayAsync" args:@[data] response:responseBlock error:errorBlock];
 }
 
 -(NSArray *)echoFloatArray:(float[])a length:(uint)length error:(Fault **)fault {
@@ -238,7 +267,7 @@ static NSString *SERVICE_NAME = @"SampleService";
     for (int i = 0; i < length; i++) {
         data[i] = @(a[i]);
     }
-    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoFloatArrayAsync" args:@[data] response:responseBlock error:errorBlock];
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoFloatArrayAsync" args:@[data] response:responseBlock error:errorBlock];
 }
 
 -(NSArray *)echoDoubleArray:(double[])a length:(uint)length error:(Fault **)fault {
@@ -254,7 +283,7 @@ static NSString *SERVICE_NAME = @"SampleService";
     for (int i = 0; i < length; i++) {
         data[i] = @(a[i]);
     }
-    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoDoubleArrayAsync" args:@[data] response:responseBlock error:errorBlock];
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoDoubleArrayAsync" args:@[data] response:responseBlock error:errorBlock];
 }
 
 -(NSArray *)echoEmptyArray:(int[])a length:(uint)length error:(Fault **)fault {
@@ -270,7 +299,7 @@ static NSString *SERVICE_NAME = @"SampleService";
     for (int i = 0; i < length; i++) {
         data[i] = @(a[i]);
     }
-    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoEmptyArrayAsync" args:@[data] response:responseBlock error:errorBlock];
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoEmptyArrayAsync" args:@[data] response:responseBlock error:errorBlock];
 }
 
 -(NSArray *)echoNullArray:(int[])a length:(uint)length error:(Fault **)fault {
@@ -286,7 +315,78 @@ static NSString *SERVICE_NAME = @"SampleService";
     for (int i = 0; i < length; i++) {
         data[i] = @(a[i]);
     }
-    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoNullArrayAsync" args:@[data] response:responseBlock error:errorBlock];
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoNullArrayAsync" args:@[data] response:responseBlock error:errorBlock];
+}
+
+// strings array
+
+-(NSArray *)echoStringArray:(NSArray *)a error:(Fault **)fault {
+    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoStringArray" args:@[a] fault:fault];
+}
+
+-(void)echoStringArray:(NSArray *)a response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock {
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoStringArrayAsync" args:@[a] response:responseBlock error:errorBlock];
+}
+
+-(NSArray *)echoNullStringArray:(NSArray *)a error:(Fault **)fault {
+    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoNullStringArray" args:@[a] fault:fault];
+}
+
+-(void)echoNullStringArray:(NSArray *)a response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock {
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoNullStringArrayAsync" args:@[a] response:responseBlock error:errorBlock];
+}
+
+-(NSArray *)echoEmptyStringArray:(NSArray *)a error:(Fault **)fault {
+    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoEmptyStringArray" args:@[a] fault:fault];
+}
+
+-(void)echoEmptyStringArray:(NSArray *)a response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock {
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoEmptyStringArrayAsync" args:@[a] response:responseBlock error:errorBlock];
+}
+
+// collections
+
+-(NSArray *)echoSortedList:(NSArray *)a error:(Fault **)fault {
+    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoSortedList" args:@[a] fault:fault];
+}
+
+-(void)echoSortedList:(NSArray *)a response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock {
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoSortedListAsync" args:@[a] response:responseBlock error:errorBlock];
+}
+
+-(NSSet *)echoArrayList:(NSSet *)a error:(Fault **)fault {
+    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoArrayList" args:@[a] fault:fault];
+}
+
+-(void)echoArrayList:(NSSet *)a response:(void(^)(NSSet *))responseBlock error:(void(^)(Fault *))errorBlock {
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoArrayListAsync" args:@[a] response:responseBlock error:errorBlock];
+}
+
+-(NSDictionary *)echoHashtable:(NSDictionary *)a error:(Fault **)fault {
+    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoHashtable" args:@[a] fault:fault];
+}
+
+-(void)echoHashtable:(NSDictionary *)a response:(void(^)(NSDictionary *))responseBlock error:(void(^)(Fault *))errorBlock {
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoHashtableAsync" args:@[a] response:responseBlock error:errorBlock];
+}
+
+// complex type
+
+-(Person *)echoPerson:(Person *)p error:(Fault **)fault {
+    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoPerson" args:@[p] fault:fault];
+    
+}
+
+-(void)echoPerson:(Person *)p response:(void(^)(Person *))responseBlock error:(void(^)(Fault *))errorBlock {
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoPersonAsync" args:@[p] response:responseBlock error:errorBlock];
+}
+
+-(NSArray *)echoPersonArray:(NSArray *)a error:(Fault **)fault {
+    return [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoPersonArray" args:@[a] fault:fault];
+}
+
+-(void)echoPersonArray:(NSArray *)a response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock {
+    [backendless.customService invoke:SERVICE_NAME serviceVersion:_serviceVersion method:@"echoPersonArrayAsync" args:@[a] response:responseBlock error:errorBlock];
 }
 
 @end
