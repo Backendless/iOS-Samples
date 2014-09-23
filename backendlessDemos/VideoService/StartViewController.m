@@ -106,7 +106,7 @@
     NSLog(@"playbackControl: -> backendless.mediaService: %@", backendless.mediaService);
     
     MediaPlaybackOptions *options = (_switchView.on)?[MediaPlaybackOptions liveStream:self.playbackView]:[MediaPlaybackOptions recordStream:self.playbackView];
-    options.orientation = UIImageOrientationLeft;
+    options.orientation = UIImageOrientationUp;
     _player = [backendless.mediaService playbackStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     self.btnPublish.hidden = YES;
