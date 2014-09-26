@@ -26,7 +26,7 @@
 
 @protocol IDataStore <NSObject>
 
-// sync
+// sync methods with fault return (as exception)
 -(id)save:(id)entity;
 -(NSNumber *)remove:(id)entity;
 -(NSNumber *)removeID:(NSString *)objectID;
@@ -36,10 +36,25 @@
 -(id)findLast;
 -(NSArray *)describe;
 -(id)load:(id)object relations:(NSArray *)relations;
+-(id)findFirst:(int)relationsDepth;
+-(id)findLast:(int)relationsDepth;
+-(id)findID:(id)objectID;
+-(id)findID:(id)objectID relationsDepth:(int)relationsDepth;
+
+// sync methods with fault option
+-(id)save:(id)entity fault:(Fault **)fault;
+-(BOOL)remove:(id)entity fault:(Fault **)fault;
+-(BOOL)removeID:(NSString *)objectID fault:(Fault **)fault;
+-(void)removeAll:(BackendlessDataQuery *)dataQuery fault:(Fault **)fault;
+-(BackendlessCollection *)find:(BackendlessDataQuery *)dataQuery fault:(Fault **)fault;
+-(id)findFirstFault:(Fault **)fault;
+-(id)findLastFault:(Fault **)fault;
+-(NSArray *)describe:(Fault **)fault;
+-(id)load:(id)object relations:(NSArray *)relations fault:(Fault **)fault;
 -(id)findFirst:(int)relationsDepth fault:(Fault **)fault;
 -(id)findLast:(int)relationsDepth fault:(Fault **)fault;
--(id)findID:(NSString *)objectID;
--(id)findID:(NSString *)objectID relationsDepth:(int)relationsDepth fault:(Fault **)fault;
+-(id)findID:(id)objectID fault:(Fault **)fault;
+-(id)findID:(id)objectID relationsDepth:(int)relationsDepth fault:(Fault **)fault;
 
 // async methods with responder
 -(void)save:(id)entity responder:(id <IResponder>)responder;
@@ -47,14 +62,14 @@
 -(void)removeID:(NSString *)objectID responder:(id <IResponder>)responder;
 -(void)removeAll:(BackendlessDataQuery *)dataQuery responder:(id <IResponder>)responder;
 -(void)find:(BackendlessDataQuery *)dataQuery responder:(id <IResponder>)responder;
--(void)findFirst:(id <IResponder>)responder;
--(void)findLast:(id <IResponder>)responder;
+-(void)findFirstResponder:(id <IResponder>)responder;
+-(void)findLastResponder:(id <IResponder>)responder;
 -(void)describeResponder:(id <IResponder>)responder;
 -(void)load:(id)object relations:(NSArray *)relations responder:(id <IResponder>)responder;
 -(void)findFirst:(int)relationsDepth responder:(id <IResponder>)responder;
 -(void)findLast:(int)relationsDepth responder:(id <IResponder>)responder;
--(void)findID:(NSString *)objectID responder:(id <IResponder>)responder;
--(void)findID:(NSString *)objectID relationsDepth:(int)relationsDepth responder:(id <IResponder>)responder;
+-(void)findID:(id)objectID responder:(id <IResponder>)responder;
+-(void)findID:(id)objectID relationsDepth:(int)relationsDepth responder:(id <IResponder>)responder;
 
 // async methods with block-base callbacks
 -(void)save:(id)entity response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
@@ -68,7 +83,7 @@
 -(void)load:(id)object relations:(NSArray *)relations response:(void(^)(BackendlessCollection *))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)findFirst:(int)relationsDepth response:(void(^)(id result))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)findLast:(int)relationsDepth response:(void(^)(id result))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)findID:(NSString *)objectID response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)findID:(NSString *)objectID relationsDepth:(int)relationsDepth response:(void(^)(id result))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)findID:(id)objectID response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)findID:(id)objectID relationsDepth:(int)relationsDepth response:(void(^)(id result))responseBlock error:(void(^)(Fault *))errorBlock;
 
 @end

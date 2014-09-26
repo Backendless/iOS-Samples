@@ -38,6 +38,7 @@
 -(NSArray *)loadGeoPoints;
 -(void)invokeGeo;
 -(void)saveCurrentPosition;
+-(void)updateGeoPoint;
 @end
 
 @implementation StartViewController
@@ -53,6 +54,7 @@
         _locationManager = ((StartAppDelegate *)[[UIApplication sharedApplication] delegate]).locationManager;
 #if 0
         [self saveCurrentPosition];
+        [self updateGeoPoint];
 #else
         [self performSelector:@selector(invokeGeo) withObject:nil afterDelay:.2f];
 #endif
@@ -167,19 +169,19 @@
         center.longitude = _currentLocation.longitude;
         
 #if 1
-        GeoPoint *currentPoint = [GeoPoint geoPoint:center
-                                         categories:@[@"fixedcurrent1"]
-                                           metadata:@{@"enterpriceName":[NSString stringWithUTF8String:"Twins house"], @"enterpriseType":@"0", @"foursquareCategoryID":@"4bf58dd8d48988d103941735", @"foursquareCategoryName":@"Проём подъезда этажа"}];
+        GeoPoint *currentPoint = [GeoPoint geoPoint:(GEO_POINT){.latitude=12.9, .longitude=-56.3}
+                                         categories:@[@"Test0"]
+                                           metadata:@{@"enterpriceName":@"House", @"enterpriseType":@"0"}];
 #else // FAULT 7007 for Unicode in metadata
         GeoPoint *currentPoint = [GeoPoint geoPoint:center
                                          categories:@[@"fixedcurrent1"]
                                            metadata:@{@"enterpriceName":[NSString stringWithUTF8String:"Twins house \xf0\x9f\x91\xad"], @"enterpriseType":@"0", @"foursquareCategoryID":@"4bf58dd8d48988d103941735", @"foursquareCategoryName":@"Проём подъезда этажа"}];
 #endif
-        NSLog(@"StartViewController -> saveCurrentPosition: %@", currentPoint);
+        NSLog(@"StartViewController -> saveCurrentPosition (NEW): %@", currentPoint);
         
-        GeoPoint *result = [backendless.geoService savePoint:currentPoint];
+        GeoPoint *saved = [backendless.geoService savePoint:currentPoint];
         
-        NSLog(@"StartViewController -> saveCurrentPosition: %@", result);
+        NSLog(@"StartViewController -> saveCurrentPosition (SAVED): %@\n\n", saved);
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     }
@@ -188,13 +190,39 @@
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
-        NSLog(@"StartViewController -> saveCurrentPosition: FAULT = [%@] %@ <%@>", fault.faultCode, fault.message, fault.detail);
+        NSLog(@"StartViewController -> saveCurrentPosition: FAULT = %@ ", fault);
         
         [self showAlert:fault.message];
         
         return;
     }
     
+}
+
+-(void)updateGeoPoint {
+    
+    @try {
+        
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithCategories:@[@"Test0"]];
+        BackendlessCollection *bc = [backendless.geoService getPoints:query];
+        
+        NSLog(@"\nupdateGeoPoint GETPOINTS: %@", bc);
+        
+        if (!bc.data.count)
+            return;
+        
+        GeoPoint *updating = bc.data[0];
+        [updating latitude:60.1];
+        [updating longitude:40.4];
+        
+        GeoPoint *updated = [backendless.geoService savePoint:updating];
+        
+        NSLog(@"\nupdateGeoPoint UDDATED: %@", updated);
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"\nupdateGeoPoint FAULT: %@ ", fault);
+    }
 }
 
 #pragma mark - IBAction
