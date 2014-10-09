@@ -19,13 +19,15 @@
  *  ********************************************************************************************************************
  */
 
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 @interface MediaPlaybackOptions : NSObject
 
 @property BOOL isLive;
+@property BOOL isRealTime;
+@property uint clientBufferMs;
 @property UIImageOrientation orientation;
 @property (assign, nonatomic) UIImageView *previewPanel;
 

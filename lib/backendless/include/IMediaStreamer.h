@@ -21,16 +21,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum  {
-    MEDIASTREAM_DISCONNECTED,
-    MEDIASTREAM_CONNECTED,
-    MEDIASTREAM_CREATED,
-    MEDIASTREAM_PLAYING,
-    MEDIASTREAM_PAUSED
-} StateMediaStream;
+#if TARGET_OS_IPHONE
+#import "MPMediaData.h"
 
 @protocol IMediaStreamer <NSObject>
--(StateMediaStream)currentState;
+-(MPMediaStreamState)currentState;
 -(void)connect;
 -(void)start;
 -(void)pause;
@@ -40,6 +35,7 @@ typedef enum  {
 @end
 
 @protocol IMediaStreamerDelegate <NSObject>
--(void)streamStateChanged:(id)sender state:(StateMediaStream)state description:(NSString *)description;
+-(void)streamStateChanged:(id)sender state:(MPMediaStreamState)state description:(NSString *)description;
 -(void)streamConnectFailed:(id)sender code:(int)code description:(NSString *)description;
 @end
+#endif

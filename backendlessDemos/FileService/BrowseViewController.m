@@ -98,7 +98,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"%lu %lu %i", (unsigned long)mainData.data.count, mainData.data.count / 4, (mainData.data.count % 4) ? 1 : 0);
+    NSLog(@"%lu %u %i", (unsigned long)mainData.data.count, mainData.data.count / 4, (mainData.data.count % 4) ? 1 : 0);
     return (mainData.data.count / 4) + ((mainData.data.count % 4) ? 1 : 0);
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -26,12 +26,14 @@
 #define VIDEO_TUBE @"videoTube"
 #define DEFAULT_STREAM_NAME @"defaultStreamName"
 
-@interface StartViewController () <IMediaStreamerDelegate>
-{
+@interface StartViewController () <IMediaStreamerDelegate> {
+    
     MediaPublisher *_publisher;
     MediaPlayer *_player;
+    
     NSString *_streamName;
     BOOL _canShow;
+    
     UIActivityIndicatorView *_netActivity;
 }
 
@@ -42,12 +44,14 @@
 
 @implementation StartViewController
 
-- (void)viewDidLoad
-{
+-(void)viewDidLoad {
+    
     [super viewDidLoad];
+    
     _canShow = YES;
     _textField.inputAccessoryView = _accessoryView;
     _streamName = DEFAULT_STREAM_NAME;
+    
     @try {
         
         [backendless initAppFault];
@@ -60,12 +64,11 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//
+
 #pragma mark -
 #pragma mark Private Methods
 
@@ -85,12 +88,13 @@
 #pragma mark -
 #pragma mark IBAction
 
--(IBAction)publishControl:(id)sender
-{
+-(IBAction)publishControl:(id)sender {
+    
     NSLog(@"publishControl: -> backendless.mediaService: %@ [%@]", backendless.mediaService, [Types classByName:@"MediaService"]);
     
-    MediaPublishOptions *options = (_switchView.on)?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions recordStream:self.preview];
+    MediaPublishOptions *options = _switchView.on?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions recordStream:self.preview];
     options.orientation = AVCaptureVideoOrientationPortrait;
+    options.resolution = RESOLUTION_VGA;
     _publisher =[backendless.mediaService publishStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     self.btnPublish.hidden = YES;
@@ -98,15 +102,17 @@
     self.textField.hidden = YES;
     _switchView.hidden = YES;
     _lable.hidden = YES;
+    
     [_netActivity startAnimating];
 }
 
--(IBAction)playbackControl:(id)sender
-{
+-(IBAction)playbackControl:(id)sender {
+    
     NSLog(@"playbackControl: -> backendless.mediaService: %@", backendless.mediaService);
     
-    MediaPlaybackOptions *options = (_switchView.on)?[MediaPlaybackOptions liveStream:self.playbackView]:[MediaPlaybackOptions recordStream:self.playbackView];
+    MediaPlaybackOptions *options = _switchView.on?[MediaPlaybackOptions liveStream:self.playbackView]:[MediaPlaybackOptions recordStream:self.playbackView];
     options.orientation = UIImageOrientationUp;
+    options.isRealTime = _switchView.on;
     _player = [backendless.mediaService playbackStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     self.btnPublish.hidden = YES;
@@ -114,11 +120,12 @@
     self.textField.hidden = YES;
     _switchView.hidden = YES;
     _lable.hidden = YES;
+    
     [_netActivity startAnimating];
 }
 
--(IBAction)stopMediaControl:(id)sender
-{
+-(IBAction)stopMediaControl:(id)sender {
+    
     if (_publisher)
     {
         [_publisher disconnect];
@@ -142,41 +149,40 @@
     self.textField.hidden = NO;
     _switchView.hidden = NO;
     _lable.hidden = NO;
+    
     [_netActivity stopAnimating];
 }
 
--(IBAction)switchCamerasControl:(id)sender
-{
+-(IBAction)switchCamerasControl:(id)sender {
     
     if (_publisher)
         [_publisher switchCameras];
-    
 }
 
 #pragma mark -
 #pragma mark IMediaStreamerDelegate Methods
 
--(void)streamStateChanged:(id)sender state:(StateMediaStream)state description:(NSString *)description {
+-(void)streamStateChanged:(id)sender state:(MPMediaStreamState)state description:(NSString *)description {
     
     NSLog(@"<IMediaStreamerDelegate> streamStateChanged: %d = %@", (int)state, description);
     
     switch (state) {
             
-        case MEDIASTREAM_DISCONNECTED: {
+        case CONN_DISCONNECTED: {
             
             [self stopMediaControl:sender];
             break;
         }
             
-        case MEDIASTREAM_CONNECTED: {
+        case CONN_CONNECTED: {
             break;
         }
             
-        case MEDIASTREAM_CREATED: {
+        case STREAM_CREATED: {
             break;
         }
             
-        case MEDIASTREAM_PAUSED: {
+        case STREAM_PAUSED: {
             
             if ([description isEqualToString:@"NetStream.Play.StreamNotFound"]) {
                 [self showAlert:[NSString stringWithString:description]];
@@ -186,7 +192,7 @@
             break;
         }
             
-        case MEDIASTREAM_PLAYING: {
+        case STREAM_PLAYING: {
             
             // PUBLISHER
             if (_publisher) {
@@ -204,6 +210,12 @@
            
             // PLAYER
             if (_player) {
+                
+                if ([description isEqualToString:@"NetStream.Play.StreamNotFound"]) {
+                    [self showAlert:[NSString stringWithString:description]];
+                    [self stopMediaControl:sender];
+                    break;
+                }
             
                 if (![description isEqualToString:@"NetStream.Play.Start"]) {
                     [self showAlert:[NSString stringWithString:description]];

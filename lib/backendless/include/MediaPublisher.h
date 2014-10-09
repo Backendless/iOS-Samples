@@ -20,13 +20,14 @@
  */
 
 #import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
 #import <CoreVideo/CoreVideo.h>
 #import "IMediaStreamer.h"
 
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 @class MediaPublishOptions;
 
 @interface MediaPublisher : NSObject <IMediaStreamer>
@@ -39,15 +40,16 @@
 
 -(void)switchCameras;
 -(void)setVideoBitrate:(uint)bitRate;
--(void)setAudioBitrate:(uint)bitRate;
 -(AVCaptureSession *)getCaptureSession;
 -(BOOL)sendFrame:(CVPixelBufferRef)pixelBuffer timestamp:(int)timestamp;
 -(BOOL)sendSampleBuffer:(CMSampleBufferRef)sampleBuffer;
 -(void)sendMetadata:(NSDictionary *)data;
 -(void)sendMetadata:(NSDictionary *)data event:(NSString *)event;
-#else
-@interface MediaPublisher : NSObject
-#endif
-
 @end
+
+#else
+
+@interface MediaPublisher : NSObject
+@end
+#endif
 
