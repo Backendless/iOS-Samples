@@ -79,10 +79,13 @@
 
 -(void)initNetActivity {
     
-    // Create and add the activity indicator
-    _netActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    _netActivity.center = CGPointMake(160.0f, 300.0f);
-    [self.view addSubview:_netActivity];
+    // isPad fixes kind of device: iPad (YES) or iPhone (NO)
+    BOOL isPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
+    
+	// Create and add the activity indicator
+	_netActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:isPad?UIActivityIndicatorViewStyleGray:UIActivityIndicatorViewStyleWhiteLarge];
+	_netActivity.center = isPad? CGPointMake(400.0f, 480.0f) : CGPointMake(160.0f, 240.0f);
+	[self.view addSubview:_netActivity];
 }
 
 #pragma mark -
