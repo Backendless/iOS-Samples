@@ -19,6 +19,8 @@
  *  ********************************************************************************************************************
  */
 
+#define IS_INDEPENDENCE_VERSION 0
+
 #import "ImagePreviewViewController.h"
 #import "BEFile.h"
 #import "Backendless.h"
@@ -111,12 +113,12 @@
             
 #if 1 // image file
             NSString *fileName = [NSString stringWithFormat:@"img/%0.0f.jpeg",[[NSDate date] timeIntervalSince1970] ];
-#if 1 // use saveFile method
+#if IS_INDEPENDENCE_VERSION // use saveFile method
             BackendlessFile *uploadFile = [backendless.fileService saveFile:fileName content:UIImageJPEGRepresentation(mainImage, 0.1)];
 #else // use upload method
             BackendlessFile *uploadFile = [backendless.fileService upload:fileName content:UIImageJPEGRepresentation(mainImage, 0.1)];
 #endif
-#else // binary array file
+#else // binary array file (test)
             const char myByteArray[] = {0x12,0x23,0x34,0x45,0x56,0x67,0x78,0x89,0x12,0x23,0x34,0x45,0x56,0x67,0x78,0x89};
             NSData *data = [NSData dataWithBytes:myByteArray length:sizeof(myByteArray)];
             BackendlessFile *uploadFile = [backendless.fileService saveFile:@"binary101.bin" content:data overwriteIfExist:YES];

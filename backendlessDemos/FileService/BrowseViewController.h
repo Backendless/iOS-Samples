@@ -21,14 +21,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class BackendlessCollection;
-
 @interface BrowseViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
-{
-    BackendlessCollection *mainData;
-}
-
 @property(nonatomic, strong) IBOutlet UITableView *mainTableView;
-
 - (IBAction)removeAll:(id)sender;
 @end
