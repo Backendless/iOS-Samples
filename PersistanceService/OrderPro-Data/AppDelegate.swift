@@ -11,8 +11,8 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let APP_ID = "88977ABC-84C1-7892-FF31-FE65E43DBB00"
-    let SECRET_KEY = "33C75331-6DAE-EAFB-FFEF-3D6D1F52D600"
+    let APP_ID = "F7E12D2B-9C73-B667-FF6E-D45453462E00"
+    let SECRET_KEY = "8AE02A1D-DB9E-A21A-FF80-F41374983700"
     let VERSION_NUM = "v1"
     
     var backendless = Backendless.sharedInstance()
@@ -44,27 +44,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         */
+        var orders = backendless.persistenceService.of(Order().ofClass())
+        var result : AnyObject?
 
         // - sorting for the selected columns (ascending and descending)
         
-        NSLog(" ------------------ TEST: sorting for the selected columns ---------------------------------")
+        println("\n ------------------ TEST (1): sorting for the selected columns ------------")
         
         var query1 : QueryOptions = QueryOptions()
         query1.sortBy = ["name", "objectId"]
         var dataQuery1 : BackendlessDataQuery = BackendlessDataQuery()
         dataQuery1.queryOptions = query1
         
-        var c : AnyClass = Types.classByName(Types.objectClassName(Order()))
-        //var result : AnyObject = backendless.persistenceService.find(NSClassFromString("OrderPro_Data.Order"), dataQuery:dataQuery1)
-        var result : AnyObject = backendless.persistenceService.find(c, dataQuery:dataQuery1)
+        result = orders.find(dataQuery1)
         if (result is BackendlessCollection) {
-            var bc1 : BackendlessCollection = result as BackendlessCollection
-            for order : Order in bc1.data as [Order] {
-                println("OrderItem: \(order.name) <\(order.objectId)>")
+            var bc : BackendlessCollection = result as BackendlessCollection
+            for order : Order in bc.data as [Order] {
+                println("\(order.description)")
             }
         }
         if (result is Fault) {
-            println("FAULT: \(result.faultCode) <\(result.detail)>")
+            println("\nFAULT (1): \(fault!.description)")
         }
 
         //

@@ -73,9 +73,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         */
         
+        var result : AnyObject
         var fault : Fault?
         
-        /*
+        //
         // - sync method with fault as reference
         var item : OrderItem = backendless.persistenceService.save(OrderItem(), error: &fault) as OrderItem
         if (fault == nil) {
@@ -85,13 +86,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 println("OrderItem: \(item.itemName) <\(item.objectId)>")
             }
             else {
-                println("FAULT: \(fault!.faultCode) <\(fault!.detail)>")
-            }
+                println("\nFAULT (0): \(fault!.description)")
+           }
         }
         else {
-            println("FAULT: \(fault!.faultCode) <\(fault!.detail)>")
+            println("\nFAULT (0): \(fault!.description)")
         }
-        */
+        //
         
         // - sorting for the selected columns (ascending and descending)
         
@@ -104,7 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var c : AnyClass = Types.classByName(Types.objectClassName(Order()))
         //var result : AnyObject = backendless.persistenceService.find(NSClassFromString("PersistanceService.Order"), dataQuery:dataQuery1)
-        var result : AnyObject = backendless.persistenceService.find(c, dataQuery:dataQuery1)
+        result = backendless.persistenceService.find(c, dataQuery:dataQuery1)
         if (result is BackendlessCollection) {
             var bc1 : BackendlessCollection = result as BackendlessCollection
             for order : Order in bc1.data as [Order] {
@@ -112,18 +113,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         if (result is Fault) {
-            println("FAULT: \(result.faultCode) <\(result.detail)>")
+            println("\nFAULT (0): \(fault!.description)")
         }
         
         
-        /*
+        //
         // - sync method with class instance/fault as return
-        var result : AnyObject = backendless.persistenceService.save(Weather())
+        result = backendless.persistenceService.save(Weather())
         if (result is Weather) {
             var obj : AnyObject = backendless.persistenceService.findById("Weather", sid:(result as Weather).objectId)
         }
         if (result is Fault) {
-            println("FAULT: \(result.faultCode) <\(result.detail)>")
+            println("\nFAULT (0): \(fault!.description)")
         }
         //
         
@@ -134,7 +135,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var obj : AnyObject = backendless.persistenceService.findById("Weather", sid: weather.objectId)
         }
         else {
-            println("FAULT: \(fault!.faultCode) <\(fault!.detail)>")
+            println("\nFAULT (0): \(fault!.description)")
         }
         //
         
@@ -146,18 +147,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 var obj : AnyObject = self.backendless.persistenceService.findById("Weather", sid: (result as Weather).objectId)
             },
             error: { (var fault : Fault!) -> () in
-                println("FAULT: \(fault!.faultCode) <\(fault!.detail)>")
+                println("\nFAULT (0): \(fault!.description)")
             }
         )
         //
         
         // - dictionary
         var os = ["iOS":"Apple", "android":"Google"]
-        var result1 : AnyObject = backendless.persistenceService.save("MobileOS", entity:os, error: &fault)
+        result = backendless.persistenceService.save("MobileOS", entity:os, error: &fault)
         if (fault != nil) {
-            println("FAULT: \(fault!.faultCode) <\(fault!.detail)>")
+            println("\nFAULT (0): \(fault!.description)")
         }
-        */
+        //
 
         return true
     }

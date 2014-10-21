@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  OrderProData
+//  OrderProcessingSData
 //
-//  Created by Vyacheslav Vdovichenko on 10/20/14.
+//  Created by Vyacheslav Vdovichenko on 10/21/14.
 //  Copyright (c) 2014 BACKENDLESS.COM. All rights reserved.
 //
 
@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         println("!!! APP IS LAUNCHED !!!")
         
         //DebLog.setIsActive(true)
@@ -79,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     order = result as Order
                     println("\n(findID): \(order.description)")
-
+                    
                     result = orders.load(order, relations:["customer", "orderItems"], fault:&fault)
                     if (fault == nil) {
                         
@@ -90,13 +89,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                 }
             }
-
+            
         }
         
         if (fault != nil) {
             println("\nFAULT (0): \(fault!.description)")
         }
-
+        
         //
         
         // - sorting for the selected columns (ascending and descending)
@@ -128,7 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         query2.addRelated("orderItems")
         var dataQuery2 : BackendlessDataQuery = BackendlessDataQuery()
         dataQuery2.queryOptions = query2
-
+        
         result = orders.find(dataQuery2)
         if (result is BackendlessCollection) {
             var bc : BackendlessCollection = result as BackendlessCollection
@@ -202,7 +201,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         //
-    
         return true
     }
 
