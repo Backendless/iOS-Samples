@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:OrderProcessingSData/OrderProcessingSData.xcodeproj">
+      location = "group:OrderProcessingData/OrderProcessingData.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:OrderProcessingData/OrderProcessingData.xcodeproj">
+      location = "group:OrderProcessingSData/OrderProcessingSData.xcodeproj">
    </FileRef>
 </Workspace>

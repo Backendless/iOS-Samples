@@ -34,18 +34,19 @@ static NSString *VERSION_NUM = @"v1";
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    Customer *customer = [Customer new];
+    //
+    // create customers datastore
+    id <IDataStore> customers = [backendless.persistenceService of:[Customer class]];
+    Customer *customer = nil;
     
-#if 1 // test save Customer instance with User instance as relation
+#if 0 // test save Customer instance with User instance as relation
     
     @try {
-
-        // create customers datastore
-        id <IDataStore> customers = [backendless.persistenceService of:[Customer class]];
 
         BackendlessUser *user = [backendless.userService login:@"bob@foo.com" password:@"bob"];
         NSLog(@"User LOGIN: %@ ", user);
         
+        customer = [Customer new];
         customer.name = @"Bob";
         customer.user = user;
         //[customer addFriend:[Customer new]];
@@ -58,6 +59,15 @@ static NSString *VERSION_NUM = @"v1";
     }
     @catch (Fault *fault) {
         NSLog(@"ERROR SAVE: fault = %@", fault);
+    }
+#else
+    
+    @try {
+        customer = [customers findLast:1];
+        NSLog(@"Customer FINDLAST: %@ ", customer);
+    }
+    @catch (Fault *fault) {
+        NSLog(@"ERROR FINDLAST: fault = %@", fault);
     }
 #endif
     
