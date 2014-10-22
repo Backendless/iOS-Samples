@@ -11,8 +11,8 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let APP_ID = "88977ABC-84C1-7892-FF31-FE65E43DBB00"
-    let SECRET_KEY = "33C75331-6DAE-EAFB-FFEF-3D6D1F52D600"
+    let APP_ID = ""
+    let SECRET_KEY = ""
     let VERSION_NUM = "v1"
     
     var backendless = Backendless.sharedInstance()
@@ -26,18 +26,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         
-        DebLog.setIsActive(true)
+        //DebLog.setIsActive(true)
         
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
-        backendless.hostURL = "http://api.backendless.com"
+        //backendless.hostURL = "http://api.backendless.com"
         backendless.setThrowException(false)
         
         // --------------- UserService -------------------------------------
         
-        /* - user login
+        // - user login
         var user = backendless.userService.login("bob3@foo.com", password:"bob3")
         NSLog("LOGGINED USER: %@", user.description)
-        */
+        //
         
         /* - array
         //var firm = ["Apple", "Google"]
@@ -46,17 +46,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         
         /* - dictionary
-        var os = ["iOS":"Apple", "Android":"Google"]
-        user.setProperty("os", object: os)
+        var oss = ["iOS":"Apple", "Android":"Google"]
+        user.setProperty("os", object: oss)
         */
         
-        /* - user update
+        // - user update
         var counter: AnyObject! = user.getProperty("counter")
         user.setProperty("counter", object: counter)
         
         user = backendless.userService.update(user)
         NSLog("UPDATED USER: %@", user.description)
-        */
+        //
         
         // -------------- PersistenceService -------------------------------
         
@@ -76,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var result : AnyObject
         var fault : Fault?
         
-        //
+        /*
         // - sync method with fault as reference
         var item : OrderItem = backendless.persistenceService.save(OrderItem(), error: &fault) as OrderItem
         if (fault == nil) {
@@ -92,9 +92,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             println("\nFAULT (0): \(fault!.description)")
         }
-        //
+        */
         
-        // - sorting for the selected columns (ascending and descending)
+        /* - sorting for the selected columns (ascending and descending)
         
         NSLog(" ------------------ TEST: sorting for the selected columns ---------------------------------")
         
@@ -103,9 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var dataQuery1 : BackendlessDataQuery = BackendlessDataQuery()
         dataQuery1.queryOptions = query1
         
-        var c : AnyClass = Types.classByName(Types.objectClassName(Order()))
-        //var result : AnyObject = backendless.persistenceService.find(NSClassFromString("PersistanceService.Order"), dataQuery:dataQuery1)
-        result = backendless.persistenceService.find(c, dataQuery:dataQuery1)
+        result = backendless.persistenceService.find(Order().ofClass(), dataQuery:dataQuery1)
         if (result is BackendlessCollection) {
             var bc1 : BackendlessCollection = result as BackendlessCollection
             for order : Order in bc1.data as [Order] {
@@ -116,15 +114,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             println("\nFAULT (0): \(fault!.description)")
         }
         
-        
-        //
+        */
         // - sync method with class instance/fault as return
         result = backendless.persistenceService.save(Weather())
         if (result is Weather) {
             var obj : AnyObject = backendless.persistenceService.findById("Weather", sid:(result as Weather).objectId)
+            if (obj is Weather) {
+                var obj1 = obj as Weather
+                println("\nWeather (1): \(obj1.description)")
+            }
         }
         if (result is Fault) {
-            println("\nFAULT (0): \(fault!.description)")
+            println("\nFAULT (1): \(fault!.description)")
         }
         //
         
@@ -133,9 +134,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var weather : Weather = backendless.persistenceService.save(Weather(), error: &fault) as Weather
         if (fault == nil) {
             var obj : AnyObject = backendless.persistenceService.findById("Weather", sid: weather.objectId)
+            if (obj is Weather) {
+                var obj1 = obj as Weather
+                println("\nWeather (2): \(obj1.description)")
+            }
         }
         else {
-            println("\nFAULT (0): \(fault!.description)")
+            println("\nFAULT (2): \(fault!.description)")
         }
         //
         
@@ -145,9 +150,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Weather(),
             response: { (var result : AnyObject!) -> () in
                 var obj : AnyObject = self.backendless.persistenceService.findById("Weather", sid: (result as Weather).objectId)
+                if (obj is Weather) {
+                    var obj1 = obj as Weather
+                    println("\nWeather (3): \(obj1.description)")
+                }
             },
             error: { (var fault : Fault!) -> () in
-                println("\nFAULT (0): \(fault!.description)")
+                println("\nFAULT (3): \(fault!.description)")
             }
         )
         //
@@ -156,7 +165,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var os = ["iOS":"Apple", "android":"Google"]
         result = backendless.persistenceService.save("MobileOS", entity:os, error: &fault)
         if (fault != nil) {
-            println("\nFAULT (0): \(fault!.description)")
+            println("\nFAULT (4): \(fault!.description)")
         }
         //
 

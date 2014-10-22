@@ -30,7 +30,7 @@ class PersistentObjectQB : NSObject {
     var nik = "la-la-la-la"
     var count = 70
     var part = 17.7
-    var today : NSDate = NSDate.date()
+    var today : NSDate = NSDate()
     
     // one-to-one relationship
     var weather : Weather = Weather()
@@ -39,7 +39,7 @@ class PersistentObjectQB : NSObject {
     
     // description func
     func description() -> NSString {
-        return  "<PersistentObjectQB> " + title + "/" + nik + " count = " + count.description + " part = " + part.description + " date = " + today.description
+        return  "<PersistentObjectQB> \(title)/\(nik) count = \(count) part = \(part) date = \(today)"
     }
 }
 

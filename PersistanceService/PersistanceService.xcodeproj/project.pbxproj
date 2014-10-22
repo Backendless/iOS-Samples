@@ -7,24 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D38575E719F7F60400B68561 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D7419F1284C0044DBFE /* backendless.a */; };
+		D38575E819F7F61100B68561 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D7619F1285E0044DBFE /* CommLibiOS.a */; };
+		D38575E919F7F68B00B68561 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6319F1282B0044DBFE /* libsqlite3.dylib */; };
+		D38575EA19F7F6BF00B68561 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6719F1282B0044DBFE /* SystemConfiguration.framework */; };
 		D3AC1D3F19F0170A0044DBFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC1D3E19F0170A0044DBFE /* AppDelegate.swift */; };
 		D3AC1D4119F0170A0044DBFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC1D4019F0170A0044DBFE /* ViewController.swift */; };
 		D3AC1D4419F0170B0044DBFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4219F0170B0044DBFE /* Main.storyboard */; };
 		D3AC1D4619F0170B0044DBFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4519F0170B0044DBFE /* Images.xcassets */; };
 		D3AC1D4919F0170B0044DBFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4719F0170B0044DBFE /* LaunchScreen.xib */; };
-		D3AC1D6919F1282B0044DBFE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D5E19F1282B0044DBFE /* CFNetwork.framework */; };
-		D3AC1D6A19F1282B0044DBFE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D5F19F1282B0044DBFE /* CoreData.framework */; };
-		D3AC1D6B19F1282B0044DBFE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6019F1282B0044DBFE /* CoreGraphics.framework */; };
-		D3AC1D6C19F1282B0044DBFE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6119F1282B0044DBFE /* CoreLocation.framework */; };
-		D3AC1D6D19F1282B0044DBFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6219F1282B0044DBFE /* Foundation.framework */; };
-		D3AC1D6E19F1282B0044DBFE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6319F1282B0044DBFE /* libsqlite3.dylib */; };
-		D3AC1D6F19F1282B0044DBFE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6419F1282B0044DBFE /* libz.dylib */; };
-		D3AC1D7019F1282B0044DBFE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6519F1282B0044DBFE /* MapKit.framework */; };
-		D3AC1D7119F1282B0044DBFE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6619F1282B0044DBFE /* Security.framework */; };
-		D3AC1D7219F1282B0044DBFE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6719F1282B0044DBFE /* SystemConfiguration.framework */; };
-		D3AC1D7319F1282B0044DBFE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6819F1282B0044DBFE /* UIKit.framework */; };
-		D3AC1D7519F1284C0044DBFE /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D7419F1284C0044DBFE /* backendless.a */; };
-		D3AC1D7719F1285E0044DBFE /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D7619F1285E0044DBFE /* CommLibiOS.a */; };
 		D3AC1D7919F128B30044DBFE /* PersistentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC1D7819F128B30044DBFE /* PersistentObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,17 +27,8 @@
 		D3AC1D4319F0170B0044DBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3AC1D4519F0170B0044DBFE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D3AC1D4819F0170B0044DBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D3AC1D5E19F1282B0044DBFE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		D3AC1D5F19F1282B0044DBFE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D3AC1D6019F1282B0044DBFE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D3AC1D6119F1282B0044DBFE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		D3AC1D6219F1282B0044DBFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D3AC1D6319F1282B0044DBFE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		D3AC1D6419F1282B0044DBFE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		D3AC1D6519F1282B0044DBFE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		D3AC1D6619F1282B0044DBFE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D3AC1D6719F1282B0044DBFE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D3AC1D6819F1282B0044DBFE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D3AC1D7419F1284C0044DBFE /* backendless.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = backendless.a; path = ../lib/backendless/backendless.a; sourceTree = "<group>"; };
 		D3AC1D7619F1285E0044DBFE /* CommLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = CommLibiOS.a; path = ../lib/CommLibiOS/CommLibiOS.a; sourceTree = "<group>"; };
 		D3AC1D7819F128B30044DBFE /* PersistentObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentObject.swift; sourceTree = "<group>"; };
@@ -57,19 +39,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3AC1D7719F1285E0044DBFE /* CommLibiOS.a in Frameworks */,
-				D3AC1D7519F1284C0044DBFE /* backendless.a in Frameworks */,
-				D3AC1D6919F1282B0044DBFE /* CFNetwork.framework in Frameworks */,
-				D3AC1D6A19F1282B0044DBFE /* CoreData.framework in Frameworks */,
-				D3AC1D6B19F1282B0044DBFE /* CoreGraphics.framework in Frameworks */,
-				D3AC1D6C19F1282B0044DBFE /* CoreLocation.framework in Frameworks */,
-				D3AC1D6D19F1282B0044DBFE /* Foundation.framework in Frameworks */,
-				D3AC1D6E19F1282B0044DBFE /* libsqlite3.dylib in Frameworks */,
-				D3AC1D6F19F1282B0044DBFE /* libz.dylib in Frameworks */,
-				D3AC1D7019F1282B0044DBFE /* MapKit.framework in Frameworks */,
-				D3AC1D7119F1282B0044DBFE /* Security.framework in Frameworks */,
-				D3AC1D7219F1282B0044DBFE /* SystemConfiguration.framework in Frameworks */,
-				D3AC1D7319F1282B0044DBFE /* UIKit.framework in Frameworks */,
+				D38575EA19F7F6BF00B68561 /* SystemConfiguration.framework in Frameworks */,
+				D38575E919F7F68B00B68561 /* libsqlite3.dylib in Frameworks */,
+				D38575E819F7F61100B68561 /* CommLibiOS.a in Frameworks */,
+				D38575E719F7F60400B68561 /* backendless.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,17 +55,8 @@
 				D3AC1D3B19F0170A0044DBFE /* PersistanceService */,
 				D3AC1D7619F1285E0044DBFE /* CommLibiOS.a */,
 				D3AC1D7419F1284C0044DBFE /* backendless.a */,
-				D3AC1D5E19F1282B0044DBFE /* CFNetwork.framework */,
-				D3AC1D5F19F1282B0044DBFE /* CoreData.framework */,
-				D3AC1D6019F1282B0044DBFE /* CoreGraphics.framework */,
-				D3AC1D6119F1282B0044DBFE /* CoreLocation.framework */,
-				D3AC1D6219F1282B0044DBFE /* Foundation.framework */,
 				D3AC1D6319F1282B0044DBFE /* libsqlite3.dylib */,
-				D3AC1D6419F1282B0044DBFE /* libz.dylib */,
-				D3AC1D6519F1282B0044DBFE /* MapKit.framework */,
-				D3AC1D6619F1282B0044DBFE /* Security.framework */,
 				D3AC1D6719F1282B0044DBFE /* SystemConfiguration.framework */,
-				D3AC1D6819F1282B0044DBFE /* UIKit.framework */,
 				D3AC1D3A19F0170A0044DBFE /* Products */,
 			);
 			sourceTree = "<group>";
