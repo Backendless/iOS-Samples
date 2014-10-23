@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D38575EC19F8F09E00B68561 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38575EB19F8F09E00B68561 /* Address.swift */; };
 		D3EEAD4019F671CF00733570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EEAD3F19F671CF00733570 /* AppDelegate.swift */; };
 		D3EEAD4219F671CF00733570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EEAD4119F671CF00733570 /* ViewController.swift */; };
 		D3EEAD4519F671CF00733570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EEAD4319F671CF00733570 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D38575EB19F8F09E00B68561 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		D3EEAD3A19F671CF00733570 /* OrderProcessingSData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderProcessingSData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EEAD3E19F671CF00733570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3EEAD3F19F671CF00733570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,8 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				D3EEAD7519F6737A00733570 /* Customer.swift */,
-				D3EEAD7619F6737A00733570 /* Order.swift */,
+				D38575EB19F8F09E00B68561 /* Address.swift */,
 				D3EEAD7719F6737A00733570 /* OrderItem.swift */,
+				D3EEAD7619F6737A00733570 /* Order.swift */,
 				D3EEAD3F19F671CF00733570 /* AppDelegate.swift */,
 				D3EEAD4119F671CF00733570 /* ViewController.swift */,
 				D3EEAD4319F671CF00733570 /* Main.storyboard */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38575EC19F8F09E00B68561 /* Address.swift in Sources */,
 				D3EEAD7819F6737A00733570 /* Customer.swift in Sources */,
 				D3EEAD4219F671CF00733570 /* ViewController.swift in Sources */,
 				D3EEAD7A19F6737A00733570 /* OrderItem.swift in Sources */,
@@ -395,6 +399,7 @@
 				D3EEAD5B19F671D000733570 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,8 +11,8 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let APP_ID = ""
-    let SECRET_KEY = ""
+    let APP_ID = "88977ABC-84C1-7892-FF31-FE65E43DBB00"
+    let SECRET_KEY = "33C75331-6DAE-EAFB-FFEF-3D6D1F52D600"
     let VERSION_NUM = "v1"
     
     var backendless = Backendless.sharedInstance()
@@ -115,6 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         */
+        
         // - sync method with class instance/fault as return
         result = backendless.persistenceService.save(Weather())
         if (result is Weather) {

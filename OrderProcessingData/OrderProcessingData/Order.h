@@ -13,4 +13,5 @@
 -(void)addOrderItem:(OrderItem *)item;
 -(void)removeOrderItem:(OrderItem *)item;
 -(NSMutableArray *)loadOrderItems;
+-(void)freeOrderItems;
 @end

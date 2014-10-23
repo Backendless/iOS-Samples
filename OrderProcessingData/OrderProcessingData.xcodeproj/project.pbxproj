@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D38575EF19F910FA00B68561 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = D38575EE19F910FA00B68561 /* Address.m */; };
 		D3EEACEF19F6535100733570 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EEACEE19F6535100733570 /* main.m */; };
 		D3EEACF219F6535100733570 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EEACF119F6535100733570 /* AppDelegate.m */; };
 		D3EEACF519F6535100733570 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EEACF419F6535100733570 /* ViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D38575ED19F910FA00B68561 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		D38575EE19F910FA00B68561 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 		D3EEACE919F6535100733570 /* OrderProcessingData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderProcessingData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EEACED19F6535100733570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3EEACEE19F6535100733570 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 			children = (
 				D3EEAD2819F656F100733570 /* Customer.h */,
 				D3EEAD2919F656F100733570 /* Customer.m */,
+				D38575ED19F910FA00B68561 /* Address.h */,
+				D38575EE19F910FA00B68561 /* Address.m */,
 				D3EEAD2A19F656F100733570 /* Order.h */,
 				D3EEAD2B19F656F100733570 /* Order.m */,
 				D3EEAD2C19F656F100733570 /* OrderItem.h */,
@@ -232,6 +237,7 @@
 				D3EEAD2F19F656F100733570 /* Order.m in Sources */,
 				D3EEACF219F6535100733570 /* AppDelegate.m in Sources */,
 				D3EEAD3019F656F100733570 /* OrderItem.m in Sources */,
+				D38575EF19F910FA00B68561 /* Address.m in Sources */,
 				D3EEACEF19F6535100733570 /* main.m in Sources */,
 				D3EEAD2E19F656F100733570 /* Customer.m in Sources */,
 			);
@@ -418,6 +424,7 @@
 				D3EEAD0E19F6535200733570 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

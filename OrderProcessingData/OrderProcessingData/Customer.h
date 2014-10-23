@@ -10,4 +10,5 @@
 @property (nonatomic, strong) NSMutableArray *friends;
 
 -(void)addFriend:(Customer *)user;
+-(void)deleteFriend:(Customer *)user;
 @end

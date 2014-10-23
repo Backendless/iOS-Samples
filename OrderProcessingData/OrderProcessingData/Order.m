@@ -13,7 +13,12 @@
 }
 
 -(void)removeOrderItem:(OrderItem *)item {
+    
     [self.orderItems removeObject:item];
+    
+    if (!self.orderItems.count) {
+        self.orderItems = nil;
+    }
 }
 
 -(NSMutableArray *)loadOrderItems {
@@ -22,6 +27,15 @@
         [backendless.persistenceService load:self relations:@[@"orderItems"]];
     
     return self.orderItems;
+}
+
+-(void)freeOrderItems {
+    
+    if (!self.orderItems)
+        return;
+    
+    [self.orderItems removeAllObjects];
+    self.orderItems = nil;
 }
 
 -(NSString *)description {

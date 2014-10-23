@@ -25,34 +25,98 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //DebLog.setIsActive(true)
         
+        // backendless initialization
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
-        backendless.hostURL = "http://api.backendless.com"
+        //backendless.hostURL = "http://api.backendless.com"
         backendless.setThrowException(false)
         
-        //
-        var orders = backendless.persistenceService.of(Order().ofClass())
+        
         var result : AnyObject?
         var fault : Fault?
+        
+        // backendless user
+        var user : AnyObject! = backendless.userService.login("bob@foo.com", password:"bob", error:&fault)
+        if (fault == nil) {
+            println("\n(User login): \((user as BackendlessUser).description)")
+        }
+        if (fault != nil) {
+            println("\nFAULT (0): \(fault!.description)")
+        }
+        //
+        
+        // create data stores
+        var customers = backendless.persistenceService.of(Customer().ofClass())
+        var addresses = backendless.persistenceService.of(Address().ofClass())
+        var items = backendless.persistenceService.of(OrderItem().ofClass())
+        var orders = backendless.persistenceService.of(Order().ofClass())
         
         // test save - update - remove
         
         println("\n ---------------- TEST (0): save - update - remove --------------------")
         
+        // customer
         var customer = Customer()
         customer.name = "Stiven"
-        //customer.friends = [Customer]()
-        //customer.friends?.append(Customer())
+        customer.user = user as? BackendlessUser
+        customer.addFriend(Customer())
         
-        var order = Order()
-        order.name = "Testing..."
-        order.customer = customer
+        /* save the customer
+        result = customers.save(customer, fault:&fault)
+        if (fault == nil) {
+            println("\n(Customer save): \((result as Customer).description)")
+        }
+        if (fault != nil) {
+            println("\nFAULT (0): \(fault!.description)")
+        }
+        */
         
+        // address
+        var address = Address()
+        address.family["boss"] = customer;
+        
+        // save the address
+        result = addresses.save(address, fault:&fault)
+        if (fault == nil) {
+            println("\n(Address save): \((result as Address).description)")
+        }
+        if (fault != nil) {
+            println("\nFAULT (0): \(fault!.description)")
+        }
+        //
+        
+        // item
         var item1 = OrderItem()
         item1.itemName = "item1"
         item1.unitPrice = "$"
         item1.quantity = 10
+        
+        /* save the item
+        result = items.save(item1, fault:&fault)
+        if (fault == nil) {
+            println("\n(OrderItem save): \((result as OrderItem).description)")
+        }
+        if (fault != nil) {
+            println("\nFAULT (0): \(fault!.description)")
+        }
+        */
+        
+        // order
+        var order = Order()
+        order.name = "Testing..."
+        order.customer = customer
         order.orderItems.append(item1)
         
+        /* save the order
+        result = orders.save(order, fault:&fault)
+        if (fault == nil) {
+            println("\n(Order save): \((result as Order).description)")
+        }
+        if (fault != nil) {
+            println("\nFAULT (0): \(fault!.description)")
+        }
+        */
+        
+        // order: save -> update -> findID -> load relations -> remove
         result = orders.save(order, fault:&fault)
         if (fault == nil) {
             
@@ -201,6 +265,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         //
+        
         return true
     }
 

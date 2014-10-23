@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Backendless.h"
 #import "Customer.h"
+#import "Address.h"
 #import "OrderItem.h"
 #import "Order.h"
 
@@ -69,6 +70,26 @@ static NSString *VERSION_NUM = @"v1";
     @catch (Fault *fault) {
         NSLog(@"ERROR FINDLAST: fault = %@", fault);
     }
+#endif
+
+
+#if 1 // test save Address instance with dictionary property
+    
+    id <IDataStore> adresses = [backendless.persistenceService of:[Address class]];
+    
+    Address *address = [Address new];
+    address.text = @"Hello,word!";
+    address.family[@"boss"] = customer? customer: @"nobody";
+    
+    @try {
+        address = [adresses save:address];
+        NSLog(@"ADDRESS SAVE: %@", address);
+        
+    }
+    @catch (Fault *fault) {
+        NSLog(@"ERROR SAVE: fault = %@", fault);
+    }
+    
 #endif
     
     // create orders datastore
