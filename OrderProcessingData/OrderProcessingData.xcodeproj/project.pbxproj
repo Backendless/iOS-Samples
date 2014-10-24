@@ -14,15 +14,8 @@
 		D3EEACF819F6535100733570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EEACF619F6535100733570 /* Main.storyboard */; };
 		D3EEACFA19F6535100733570 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3EEACF919F6535100733570 /* Images.xcassets */; };
 		D3EEACFD19F6535100733570 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3EEACFB19F6535100733570 /* LaunchScreen.xib */; };
-		D3EEAD1B19F655C100733570 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD1219F655C100733570 /* CFNetwork.framework */; };
-		D3EEAD1C19F655C100733570 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD1319F655C100733570 /* CoreData.framework */; };
-		D3EEAD1D19F655C100733570 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD1419F655C100733570 /* CoreGraphics.framework */; };
-		D3EEAD1E19F655C100733570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD1519F655C100733570 /* Foundation.framework */; };
 		D3EEAD1F19F655C100733570 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD1619F655C100733570 /* libsqlite3.dylib */; };
-		D3EEAD2019F655C100733570 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD1719F655C100733570 /* libz.dylib */; };
-		D3EEAD2119F655C100733570 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD1819F655C100733570 /* Security.framework */; };
 		D3EEAD2219F655C100733570 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD1919F655C100733570 /* SystemConfiguration.framework */; };
-		D3EEAD2319F655C100733570 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD1A19F655C100733570 /* UIKit.framework */; };
 		D3EEAD2519F655E900733570 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD2419F655E900733570 /* CommLibiOS.a */; };
 		D3EEAD2719F655F600733570 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD2619F655F600733570 /* backendless.a */; };
 		D3EEAD2E19F656F100733570 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EEAD2919F656F100733570 /* Customer.m */; };
@@ -45,15 +38,8 @@
 		D3EEACFC19F6535100733570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D3EEAD0719F6535200733570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3EEAD0819F6535200733570 /* OrderProcessingDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderProcessingDataTests.m; sourceTree = "<group>"; };
-		D3EEAD1219F655C100733570 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		D3EEAD1319F655C100733570 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D3EEAD1419F655C100733570 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D3EEAD1519F655C100733570 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D3EEAD1619F655C100733570 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		D3EEAD1719F655C100733570 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		D3EEAD1819F655C100733570 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D3EEAD1919F655C100733570 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D3EEAD1A19F655C100733570 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D3EEAD2419F655E900733570 /* CommLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = CommLibiOS.a; path = ../lib/CommLibiOS/CommLibiOS.a; sourceTree = "<group>"; };
 		D3EEAD2619F655F600733570 /* backendless.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = backendless.a; path = ../lib/backendless/backendless.a; sourceTree = "<group>"; };
 		D3EEAD2819F656F100733570 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
@@ -69,17 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3EEAD2719F655F600733570 /* backendless.a in Frameworks */,
-				D3EEAD2519F655E900733570 /* CommLibiOS.a in Frameworks */,
-				D3EEAD1B19F655C100733570 /* CFNetwork.framework in Frameworks */,
-				D3EEAD1C19F655C100733570 /* CoreData.framework in Frameworks */,
-				D3EEAD1D19F655C100733570 /* CoreGraphics.framework in Frameworks */,
-				D3EEAD1E19F655C100733570 /* Foundation.framework in Frameworks */,
-				D3EEAD1F19F655C100733570 /* libsqlite3.dylib in Frameworks */,
-				D3EEAD2019F655C100733570 /* libz.dylib in Frameworks */,
-				D3EEAD2119F655C100733570 /* Security.framework in Frameworks */,
 				D3EEAD2219F655C100733570 /* SystemConfiguration.framework in Frameworks */,
-				D3EEAD2319F655C100733570 /* UIKit.framework in Frameworks */,
+				D3EEAD1F19F655C100733570 /* libsqlite3.dylib in Frameworks */,
+				D3EEAD2519F655E900733570 /* CommLibiOS.a in Frameworks */,
+				D3EEAD2719F655F600733570 /* backendless.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,15 +71,8 @@
 				D3EEACEB19F6535100733570 /* OrderProcessingData */,
 				D3EEAD2619F655F600733570 /* backendless.a */,
 				D3EEAD2419F655E900733570 /* CommLibiOS.a */,
-				D3EEAD1219F655C100733570 /* CFNetwork.framework */,
-				D3EEAD1319F655C100733570 /* CoreData.framework */,
-				D3EEAD1419F655C100733570 /* CoreGraphics.framework */,
-				D3EEAD1519F655C100733570 /* Foundation.framework */,
 				D3EEAD1619F655C100733570 /* libsqlite3.dylib */,
-				D3EEAD1719F655C100733570 /* libz.dylib */,
-				D3EEAD1819F655C100733570 /* Security.framework */,
 				D3EEAD1919F655C100733570 /* SystemConfiguration.framework */,
-				D3EEAD1A19F655C100733570 /* UIKit.framework */,
 				D3EEAD0519F6535200733570 /* OrderProcessingDataTests */,
 				D3EEACEA19F6535100733570 /* Products */,
 			);

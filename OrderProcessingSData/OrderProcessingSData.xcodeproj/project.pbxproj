@@ -8,22 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D38575EC19F8F09E00B68561 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38575EB19F8F09E00B68561 /* Address.swift */; };
+		D38575F019FA4B1B00B68561 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD6319F672F000733570 /* libsqlite3.dylib */; };
+		D38575F119FA4C2000B68561 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD6619F672F000733570 /* SystemConfiguration.framework */; };
+		D38575F219FA4C4700B68561 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD7119F672FE00733570 /* CommLibiOS.a */; };
+		D38575F319FA4C5E00B68561 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD7319F6730800733570 /* backendless.a */; };
 		D3EEAD4019F671CF00733570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EEAD3F19F671CF00733570 /* AppDelegate.swift */; };
 		D3EEAD4219F671CF00733570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EEAD4119F671CF00733570 /* ViewController.swift */; };
 		D3EEAD4519F671CF00733570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EEAD4319F671CF00733570 /* Main.storyboard */; };
 		D3EEAD4719F671CF00733570 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3EEAD4619F671CF00733570 /* Images.xcassets */; };
 		D3EEAD4A19F671CF00733570 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3EEAD4819F671CF00733570 /* LaunchScreen.xib */; };
-		D3EEAD6819F672F000733570 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD5F19F672F000733570 /* CFNetwork.framework */; };
-		D3EEAD6919F672F000733570 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD6019F672F000733570 /* CoreData.framework */; };
-		D3EEAD6A19F672F000733570 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD6119F672F000733570 /* CoreGraphics.framework */; };
-		D3EEAD6B19F672F000733570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD6219F672F000733570 /* Foundation.framework */; };
-		D3EEAD6C19F672F000733570 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD6319F672F000733570 /* libsqlite3.dylib */; };
-		D3EEAD6D19F672F000733570 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD6419F672F000733570 /* libz.dylib */; };
-		D3EEAD6E19F672F000733570 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD6519F672F000733570 /* Security.framework */; };
-		D3EEAD6F19F672F000733570 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD6619F672F000733570 /* SystemConfiguration.framework */; };
-		D3EEAD7019F672F000733570 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD6719F672F000733570 /* UIKit.framework */; };
-		D3EEAD7219F672FE00733570 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD7119F672FE00733570 /* CommLibiOS.a */; };
-		D3EEAD7419F6730800733570 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EEAD7319F6730800733570 /* backendless.a */; };
 		D3EEAD7819F6737A00733570 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EEAD7519F6737A00733570 /* Customer.swift */; };
 		D3EEAD7919F6737A00733570 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EEAD7619F6737A00733570 /* Order.swift */; };
 		D3EEAD7A19F6737A00733570 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EEAD7719F6737A00733570 /* OrderItem.swift */; };
@@ -40,15 +33,8 @@
 		D3EEAD4919F671CF00733570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D3EEAD5419F671D000733570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3EEAD5519F671D000733570 /* OrderProcessingSDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderProcessingSDataTests.swift; sourceTree = "<group>"; };
-		D3EEAD5F19F672F000733570 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		D3EEAD6019F672F000733570 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D3EEAD6119F672F000733570 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D3EEAD6219F672F000733570 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D3EEAD6319F672F000733570 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		D3EEAD6419F672F000733570 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		D3EEAD6519F672F000733570 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D3EEAD6619F672F000733570 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D3EEAD6719F672F000733570 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D3EEAD7119F672FE00733570 /* CommLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = CommLibiOS.a; path = ../lib/CommLibiOS/CommLibiOS.a; sourceTree = "<group>"; };
 		D3EEAD7319F6730800733570 /* backendless.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = backendless.a; path = ../lib/backendless/backendless.a; sourceTree = "<group>"; };
 		D3EEAD7519F6737A00733570 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
@@ -61,17 +47,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3EEAD7419F6730800733570 /* backendless.a in Frameworks */,
-				D3EEAD7219F672FE00733570 /* CommLibiOS.a in Frameworks */,
-				D3EEAD6819F672F000733570 /* CFNetwork.framework in Frameworks */,
-				D3EEAD6919F672F000733570 /* CoreData.framework in Frameworks */,
-				D3EEAD6A19F672F000733570 /* CoreGraphics.framework in Frameworks */,
-				D3EEAD6B19F672F000733570 /* Foundation.framework in Frameworks */,
-				D3EEAD6C19F672F000733570 /* libsqlite3.dylib in Frameworks */,
-				D3EEAD6D19F672F000733570 /* libz.dylib in Frameworks */,
-				D3EEAD6E19F672F000733570 /* Security.framework in Frameworks */,
-				D3EEAD6F19F672F000733570 /* SystemConfiguration.framework in Frameworks */,
-				D3EEAD7019F672F000733570 /* UIKit.framework in Frameworks */,
+				D38575F119FA4C2000B68561 /* SystemConfiguration.framework in Frameworks */,
+				D38575F019FA4B1B00B68561 /* libsqlite3.dylib in Frameworks */,
+				D38575F219FA4C4700B68561 /* CommLibiOS.a in Frameworks */,
+				D38575F319FA4C5E00B68561 /* backendless.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,15 +63,8 @@
 				D3EEAD3C19F671CF00733570 /* OrderProcessingSData */,
 				D3EEAD7319F6730800733570 /* backendless.a */,
 				D3EEAD7119F672FE00733570 /* CommLibiOS.a */,
-				D3EEAD5F19F672F000733570 /* CFNetwork.framework */,
-				D3EEAD6019F672F000733570 /* CoreData.framework */,
-				D3EEAD6119F672F000733570 /* CoreGraphics.framework */,
-				D3EEAD6219F672F000733570 /* Foundation.framework */,
 				D3EEAD6319F672F000733570 /* libsqlite3.dylib */,
-				D3EEAD6419F672F000733570 /* libz.dylib */,
-				D3EEAD6519F672F000733570 /* Security.framework */,
 				D3EEAD6619F672F000733570 /* SystemConfiguration.framework */,
-				D3EEAD6719F672F000733570 /* UIKit.framework */,
 				D3EEAD5219F671CF00733570 /* OrderProcessingSDataTests */,
 				D3EEAD3B19F671CF00733570 /* Products */,
 			);
