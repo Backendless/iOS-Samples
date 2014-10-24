@@ -40,7 +40,7 @@ static NSString *VERSION_NUM = @"v1";
     id <IDataStore> customers = [backendless.persistenceService of:[Customer class]];
     Customer *customer = nil;
     
-#if 0 // test save Customer instance with User instance as relation
+#if 0 // TEST: save Customer instance with User instance as relation
     
     @try {
 
@@ -50,7 +50,7 @@ static NSString *VERSION_NUM = @"v1";
         customer = [Customer new];
         customer.name = @"Bob";
         customer.user = user;
-        //[customer addFriend:[Customer new]];
+        [customer addFriend:[Customer new]];
         
         customer = [customers save:customer];
         NSLog(@"Customer SAVE: %@", customer);
@@ -73,8 +73,9 @@ static NSString *VERSION_NUM = @"v1";
 #endif
 
 
-#if 1 // test save Address instance with dictionary property
+#if 1 // TEST: save Address instance with dictionary property
     
+    // create addresses datastore
     id <IDataStore> adresses = [backendless.persistenceService of:[Address class]];
     
     Address *address = [Address new];
@@ -95,9 +96,9 @@ static NSString *VERSION_NUM = @"v1";
     // create orders datastore
     id <IDataStore> orders = [backendless.persistenceService of:[Order class]];
     
-#if 1 // test save - update - remove
+#if 1 // TEST: save - update - remove
     
-    NSLog(@"TEST BEGIN: save - update - remove");
+    NSLog(@"TEST (0) BEGIN: save -> update -> findID -> remove");
     
     @try {
         
@@ -137,81 +138,69 @@ static NSString *VERSION_NUM = @"v1";
         NSLog(@"ERROR SAVE: fault = %@", fault);
     }
     
-    NSLog(@"TEST END");
-    
 #endif
     
     
-#if 1 // TEST: sorting for the selected columns
+#if 1 // TEST: finding with different options
     
     @try {
         
         // - sorting for the selected columns (ascending and descending)
         
-        NSLog(@" ------------------ TEST: sorting for the selected columns ---------------------------------");
+        NSLog(@" ------------------ TEST (1): sorting for the selected columns ------------------- ");
         
-        QueryOptions *query1 = [QueryOptions query];
-        query1.sortBy = @[@"name", @"objectId"];
+        BackendlessDataQuery *dataQuery1 = [BackendlessDataQuery query];
+        dataQuery1.queryOptions.sortBy = @[@"name", @"objectId"];
         
-        BackendlessDataQuery *dataQuery1 = [BackendlessDataQuery query:nil where:nil query:query1];
         BackendlessCollection *bc1 = [orders find:dataQuery1];
-        
         for (Order *order in bc1.data) {
             NSLog(@"ORDER find: %@", order);
         }
         
         // - loading selected relations
         
-        NSLog(@" ------------------ TEST: loading selected relations ----------------------------------------");
+        NSLog(@" ------------------ TEST (2): loading selected relations --------------------------");
         
-        QueryOptions *query2 = [QueryOptions query];
-        [query2 addRelated:@"orderItems"];
+        BackendlessDataQuery *dataQuery2 = [BackendlessDataQuery query];
+        [dataQuery2.queryOptions related:@[@"customer", @"orderItems"]];
         
-        BackendlessDataQuery *dataQuery2 = [BackendlessDataQuery query:nil where:nil query:query2];
         BackendlessCollection *bc2 = [orders find:dataQuery2];
-        
         for (Order *order in bc2.data) {
             NSLog(@"ORDER find: %@", order);
         }
         
         // - page size & orrset
         
-        NSLog(@" ------------------ TEST: page size & orrset -------------------------------------------------");
+        NSLog(@" ------------------ TEST (3): page size & orrset -----------------------------------");
         
-        QueryOptions *query3 = [QueryOptions query];
-        query3.pageSize = @(10);
-        query3.offset = @(5);
+        BackendlessDataQuery *dataQuery3 = [BackendlessDataQuery query];
+        dataQuery3.queryOptions = [QueryOptions query:10 offset:7];
         
-        BackendlessDataQuery *dataQuery3 = [BackendlessDataQuery query:nil where:nil query:query3];
         BackendlessCollection *bc3 = [orders find:dataQuery3];
-        
         for (Order *order in bc3.data) {
             NSLog(@"ORDER find: %@", order);
         }
         
         // - where clause
         
-        NSLog(@" ------------------ TEST: where clause --------------------------------------------------------");
-        
-        QueryOptions *query4 = [QueryOptions query];
-        BackendlessDataQuery *dataQuery4 = [BackendlessDataQuery query:nil where:nil query:query4];
+        NSLog(@" ------------------ TEST (4): where clause -----------------------------------------");
+
+        BackendlessDataQuery *dataQuery4 = [BackendlessDataQuery query];
         dataQuery4.whereClause = @"name = \'Testing...\'";
-        BackendlessCollection *bc4 = [orders find:dataQuery4];
         
+        BackendlessCollection *bc4 = [orders find:dataQuery4];
         for (Order *order in bc4.data) {
             NSLog(@"ORDER find: %@", order);
         }
         
         // - relations depth
         
-        NSLog(@" ------------------ TEST: relations depth ----------------------------------------");
+        NSLog(@" ------------------ TEST (5): relations depth --------------------------------------");
         
-        QueryOptions *query5 = [QueryOptions query];
-        query5.relationsDepth = @(1);
+        BackendlessDataQuery *dataQuery5 = [BackendlessDataQuery query];
+        dataQuery5.queryOptions.relationsDepth = @(1);
         
-        BackendlessDataQuery *dataQuery5 = [BackendlessDataQuery query:nil where:nil query:query5];
         BackendlessCollection *bc5 = [orders find:dataQuery5];
-        
         for (Order *order in bc5.data) {
             NSLog(@"ORDER find: %@", order);
         }

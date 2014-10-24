@@ -76,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var result : AnyObject
         var fault : Fault?
         
-        /*
+        //
         // - sync method with fault as reference
         var item : OrderItem = backendless.persistenceService.save(OrderItem(), error: &fault) as OrderItem
         if (fault == nil) {
@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             println("\nFAULT (0): \(fault!.description)")
         }
-        */
+        //
         
         /* - sorting for the selected columns (ascending and descending)
         

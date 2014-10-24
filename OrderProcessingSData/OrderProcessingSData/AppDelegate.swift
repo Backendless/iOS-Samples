@@ -34,12 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var result : AnyObject?
         var fault : Fault?
         
-        // backendless user
+        // backendless user login
+        fault = nil
         var user : AnyObject! = backendless.userService.login("bob@foo.com", password:"bob", error:&fault)
         if (fault == nil) {
             println("\n(User login): \((user as BackendlessUser).description)")
         }
-        if (fault != nil) {
+        else {
             println("\nFAULT (0): \(fault!.description)")
         }
         //
@@ -61,11 +62,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         customer.addFriend(Customer())
         
         /* save the customer
+        fault = nil
         result = customers.save(customer, fault:&fault)
         if (fault == nil) {
             println("\n(Customer save): \((result as Customer).description)")
         }
-        if (fault != nil) {
+        else {
             println("\nFAULT (0): \(fault!.description)")
         }
         */
@@ -75,11 +77,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         address.family["boss"] = customer;
         
         // save the address
+        fault = nil
         result = addresses.save(address, fault:&fault)
         if (fault == nil) {
             println("\n(Address save): \((result as Address).description)")
         }
-        if (fault != nil) {
+        else {
             println("\nFAULT (0): \(fault!.description)")
         }
         //
@@ -91,11 +94,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         item1.quantity = 10
         
         /* save the item
+        fault = nil
         result = items.save(item1, fault:&fault)
         if (fault == nil) {
             println("\n(OrderItem save): \((result as OrderItem).description)")
         }
-        if (fault != nil) {
+        else {
             println("\nFAULT (0): \(fault!.description)")
         }
         */
@@ -107,16 +111,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         order.orderItems.append(item1)
         
         /* save the order
+        fault = nil
         result = orders.save(order, fault:&fault)
         if (fault == nil) {
             println("\n(Order save): \((result as Order).description)")
         }
-        if (fault != nil) {
+        else {
             println("\nFAULT (0): \(fault!.description)")
         }
         */
         
         // order: save -> update -> findID -> load relations -> remove
+        fault = nil
         result = orders.save(order, fault:&fault)
         if (fault == nil) {
             
@@ -129,6 +135,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             item2.itemName = "item2"
             item2.unitPrice = "%"
             item2.quantity = 100
+            
             order.orderItems.append(item2)
             
             result = orders.save(order, fault:&fault)
@@ -166,11 +173,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         println("\n ------------------ TEST (1): sorting for the selected columns ------------")
         
-        var query1 : QueryOptions = QueryOptions()
-        query1.sortBy = ["name", "objectId"]
-        var dataQuery1 : BackendlessDataQuery = BackendlessDataQuery()
-        dataQuery1.queryOptions = query1
-        
+        var dataQuery1 = BackendlessDataQuery()
+        dataQuery1.queryOptions.sortBy = ["name", "objectId"]
+            
         result = orders.find(dataQuery1)
         if (result is BackendlessCollection) {
             var bc : BackendlessCollection = result as BackendlessCollection
@@ -186,11 +191,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         println("\n ------------------ TEST (2): loading selected relations -------------------");
         
-        var query2 : QueryOptions = QueryOptions()
-        query2.addRelated("customer")
-        query2.addRelated("orderItems")
-        var dataQuery2 : BackendlessDataQuery = BackendlessDataQuery()
-        dataQuery2.queryOptions = query2
+        var dataQuery2 = BackendlessDataQuery()
+        dataQuery2.queryOptions.related(["customer", "orderItems"])
         
         result = orders.find(dataQuery2)
         if (result is BackendlessCollection) {
@@ -207,11 +209,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         println("\n ------------------ TEST (3): page size & offset ----------------------------");
         
-        var query3 : QueryOptions = QueryOptions()
-        query3.pageSize = 10
-        query3.offset = 7
-        var dataQuery3 : BackendlessDataQuery = BackendlessDataQuery()
-        dataQuery3.queryOptions = query3
+        var dataQuery3 = BackendlessDataQuery()
+        dataQuery3.queryOptions = QueryOptions.query(10, offset:7)
         
         result = orders.find(dataQuery3)
         if (result is BackendlessCollection) {
@@ -228,9 +227,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         println("\n ------------------ TEST (4): where clause ------------------------------------");
         
-        var query4 : QueryOptions = QueryOptions()
-        var dataQuery4 : BackendlessDataQuery = BackendlessDataQuery()
-        dataQuery4.queryOptions = query4
+        var dataQuery4 = BackendlessDataQuery()
         dataQuery4.whereClause = "name = \'Testing...\'"
         
         result = orders.find(dataQuery4)
@@ -248,10 +245,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         println("\n ------------------ TEST (5): relations depth ----------------------------------");
         
-        var query5 : QueryOptions = QueryOptions()
-        query5.relationsDepth = 1
-        var dataQuery5 : BackendlessDataQuery = BackendlessDataQuery()
-        dataQuery5.queryOptions = query5
+        var dataQuery5 = BackendlessDataQuery()
+        dataQuery5.queryOptions.relationsDepth = 1
         
         result = orders.find(dataQuery5)
         if (result is BackendlessCollection) {
