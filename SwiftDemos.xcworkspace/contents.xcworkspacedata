@@ -4,4 +4,7 @@
    <FileRef
       location = "group:PersistanceService/PersistanceService.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:VideoService/VideoService.xcodeproj">
+   </FileRef>
 </Workspace>
