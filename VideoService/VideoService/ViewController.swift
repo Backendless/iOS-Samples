@@ -1,15 +1,27 @@
 //
 //  ViewController.swift
 //  VideoService
-//
-//  Created by Vyacheslav Vdovichenko on 10/24/14.
-//  Copyright (c) 2014 BACKENDLESS.COM. All rights reserved.
-//
+/*
+* *********************************************************************************************************************
+*
+*  BACKENDLESS.COM CONFIDENTIAL
+*
+*  ********************************************************************************************************************
+*
+*  Copyright 2014 BACKENDLESS.COM. All Rights Reserved.
+*
+*  NOTICE: All information contained herein is, and remains the property of Backendless.com and its suppliers,
+*  if any. The intellectual and technical concepts contained herein are proprietary to Backendless.com and its
+*  suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret
+*  or copyright law. Dissemination of this information or reproduction of this material is strictly forbidden
+*  unless prior written permission is obtained from Backendless.com.
+*
+*  ********************************************************************************************************************
+*/
 
 import UIKit
-//import AVFoundation
 
-class ViewController: UIViewController, UITextFieldDelegate/*, IMediaStreamerDelegate*/ {
+class ViewController: UIViewController, UITextFieldDelegate, IMediaStreamerDelegate {
 
     @IBOutlet var btnPublish : UIButton!
     @IBOutlet var btnPlayback : UIButton!
@@ -22,12 +34,12 @@ class ViewController: UIViewController, UITextFieldDelegate/*, IMediaStreamerDel
     @IBOutlet var switchView : UISwitch!
     @IBOutlet var netActivity : UIActivityIndicatorView!
     
-    let VIDEO_TUBE = "videoTube"
-    
     var backendless = Backendless.sharedInstance()
     
     var _publisher: MediaPublisher?
     var _player: MediaPlayer?
+    
+    let VIDEO_TUBE = "videoTube"
 
     
     override func viewDidLoad() {
@@ -39,6 +51,8 @@ class ViewController: UIViewController, UITextFieldDelegate/*, IMediaStreamerDel
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // IBActions
     
     @IBAction func switchCamerasControl(sender: AnyObject) {
         
@@ -71,9 +85,8 @@ class ViewController: UIViewController, UITextFieldDelegate/*, IMediaStreamerDel
         
         self.btnPublish.hidden = false
         self.btnPlayback.hidden = false
-        self.textField.hidden = false
-        self.switchView.hidden = false
-        self.lblLive.hidden = false
+        self.textField.enabled = true
+        self.switchView.enabled = true
         
         self.netActivity.stopAnimating()
     }
@@ -90,24 +103,17 @@ class ViewController: UIViewController, UITextFieldDelegate/*, IMediaStreamerDel
             options = MediaPlaybackOptions.recordStream(self.playbackView) as MediaPlaybackOptions
         }
         
-        options.orientation = UIImageOrientation(rawValue: 0)! //UIImageOrientationUp
+        options.orientation = .Up
         options.isRealTime = switchView.on
         
-        _player = backendless.mediaService.playbackStream(textField.text, tube:VIDEO_TUBE, options:options, responder:nil)
+        _player = backendless.mediaService.playbackStream(textField.text, tube:VIDEO_TUBE, options:options, responder:self)
         
         self.btnPublish.hidden = true
         self.btnPlayback.hidden = true
-        self.textField.hidden = true
-        self.switchView.hidden = true
-        self.lblLive.hidden = true
+        self.textField.enabled = false
+        self.switchView.enabled = false
         
-        //netActivity.startAnimating()
-        
-        // -- TEMPOPARY !!!
-        self.playbackView.hidden = false
-        self.btnStopMedia.hidden = false
-        //
-    
+        self.netActivity.startAnimating()
     }
     
     @IBAction func publishControl(sender: AnyObject) {
@@ -122,25 +128,17 @@ class ViewController: UIViewController, UITextFieldDelegate/*, IMediaStreamerDel
             options = MediaPublishOptions.recordStream(self.preView) as MediaPublishOptions
         }
         
-        options.orientation = AVCaptureVideoOrientation(rawValue: 1)! //AVCaptureVideoOrientationPortrait
+        options.orientation = .Portrait
         options.resolution = RESOLUTION_CIF
         
-        _publisher = backendless.mediaService.publishStream(textField.text, tube:VIDEO_TUBE, options:options, responder:nil)
+        _publisher = backendless.mediaService.publishStream(textField.text, tube:VIDEO_TUBE, options:options, responder:self)
         
         self.btnPublish.hidden = true
         self.btnPlayback.hidden = true
-        self.textField.hidden = true
-        self.switchView.hidden = true
-        self.lblLive.hidden = true
+        self.textField.enabled = false
+        self.switchView.enabled = false
         
-        //netActivity.startAnimating()
-        
-        // -- TEMPOPARY !!!
-        self.preView.hidden = false
-        self.btnStopMedia.hidden = false
-        self.btnSwapCamera.hidden = false
-        //
-
+        self.netActivity.startAnimating()
     }
     
     @IBAction func viewTapped(sender: AnyObject) {
@@ -153,12 +151,81 @@ class ViewController: UIViewController, UITextFieldDelegate/*, IMediaStreamerDel
         textField.resignFirstResponder()
     }
     
-    // MediaStreamerDelegate  protocol methods
+    // MediaStreamerDelegate protocol methods
     
-    func streamStateChanged(sender: AnyObject, state: MPMediaStreamState, description: NSString) {
+    func streamStateChanged(sender: AnyObject!, state: Int32, description: String!) {
+        
+        println("<IMediaStreamerDelegate> streamStateChanged: \(state) = \(description)");
+        
+        switch state {
+        
+        case 0: //CONN_DISCONNECTED
+            
+            stopMediaControl(sender)
+            return
+        
+        case 1: //CONN_CONNECTED
+            return
+        
+        case 2: //STREAM_CREATED
+
+            self.btnStopMedia.hidden = false
+            return
+        
+        case 3: //STREAM_PLAYING
+            
+            // PUBLISHER
+            if (_publisher != nil) {
+                
+                if (description != "NetStream.Publish.Start") {
+                    stopMediaControl(sender)
+                    return
+                }
+                
+                self.preView.hidden = false
+                self.btnSwapCamera.hidden = false
+                
+                netActivity.stopAnimating()
+            }
+            
+            // PLAYER
+            if (_player != nil) {
+                
+                if (description == "NetStream.Play.StreamNotFound") {
+                    stopMediaControl(sender)
+                    return
+                }
+                
+                if (description != "NetStream.Play.Start") {
+                    return
+                }
+                
+                self.playbackView.hidden = false
+                
+                netActivity.stopAnimating()
+            }
+            
+            return
+        
+        case 4: //STREAM_PAUSED
+            
+            if (description == "NetStream.Play.StreamNotFound") {
+            }
+            
+            stopMediaControl(sender)
+            return
+        
+        default:
+            return
+        }
     }
     
-    func streamConnectFailed(sender: AnyObject, code: Int, description: NSString) {
+    func streamConnectFailed(sender: AnyObject!, code: Int32, description: String!) {
+        
+        println("<IMediaStreamerDelegate> streamConnectFailed: \(code) = \(description)");
+        
+        stopMediaControl(sender)
     }
+
 }
 

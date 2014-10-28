@@ -165,7 +165,11 @@
 #pragma mark -
 #pragma mark IMediaStreamerDelegate Methods
 
+#if SWIFT_ENUM_OFF
 -(void)streamStateChanged:(id)sender state:(MPMediaStreamState)state description:(NSString *)description {
+#else
+-(void)streamStateChanged:(id)sender state:(int)state description:(NSString *)description {
+#endif
     
     NSLog(@"<IMediaStreamerDelegate> streamStateChanged: %d = %@", (int)state, description);
     
