@@ -109,6 +109,7 @@
          
          [user setProperty:@"titanic" object:@"TEST555\nline1\nline2\n"];
          [user setProperty:@"music" object:@"TEST333\nline1\nline2\nline3\n"];
+         [user setProperty:@"boool" object:@(NO)]; //[NSNumber numberWithBool:YES]];
     
     #if 1 // as an async call
          

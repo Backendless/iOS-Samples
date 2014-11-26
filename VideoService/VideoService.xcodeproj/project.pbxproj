@@ -270,8 +270,8 @@
 				D385760319FA5E2D00B68561 /* VideoService */,
 				D385762619FA62BE00B68561 /* lib */,
 				D385771219FA8D8000B68561 /* libz.dylib */,
-				D385771019FA8D2500B68561 /* SystemConfiguration.framework */,
 				D385770E19FA8CFC00B68561 /* libsqlite3.dylib */,
+				D385771019FA8D2500B68561 /* SystemConfiguration.framework */,
 				D385761919FA5E2E00B68561 /* VideoServiceTests */,
 				D385760219FA5E2D00B68561 /* Products */,
 			);

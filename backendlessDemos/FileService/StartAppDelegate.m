@@ -37,7 +37,6 @@ static NSString *VERSION_NUM = @"v1";
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     //backendless.hostURL = @"http://api.backendless.com";
-    //backendless.hostURL = @"http://192.168.1.101:9000";
     
     return YES;
 }

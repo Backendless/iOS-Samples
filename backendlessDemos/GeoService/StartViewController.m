@@ -31,6 +31,7 @@
     CLLocationManager *_locationManager;
     CLLocationCoordinate2D _currentLocation;
     NSArray *_list;
+    GeoPoint *_geoPoint;
 }
 
 -(void)showAlert:(NSString *)message;
@@ -118,6 +119,8 @@
         [query includeMeta:YES];
 //        query.whereClause = [NSString stringWithFormat:@"\'city\' = \'TBILISI\'"];
 //        query.metadata = [NSMutableDictionary dictionary];
+//        query.metadata = [NSMutableDictionary dictionaryWithDictionary:@{@"city":@"TBILISI"}];
+        
         NSLog(@"StartViewController -> loadGeoPoints: query = %@", query);
         
         BackendlessCollection *bc = [backendless.geoService getPoints:query];
@@ -169,20 +172,34 @@
         center.longitude = _currentLocation.longitude;
         
 #if 1
-        GeoPoint *currentPoint = [GeoPoint geoPoint:(GEO_POINT){.latitude=12.9, .longitude=-56.3}
-                                         categories:@[@"Test0"]
-                                           metadata:@{@"enterpriceName":@"House", @"enterpriseType":@"0"}];
+        GeoPoint *currentPoint = [GeoPoint geoPoint:(GEO_POINT){.latitude=12.9, .longitude=26.3}
+                                         categories:@[@"Test5"]
+                                           metadata:@{@"enterpriceName":@"House0", @"enterpriseType":@"0"}
+                                  ];
 #else // FAULT 7007 for Unicode in metadata
         GeoPoint *currentPoint = [GeoPoint geoPoint:center
                                          categories:@[@"fixedcurrent1"]
                                            metadata:@{@"enterpriceName":[NSString stringWithUTF8String:"Twins house \xf0\x9f\x91\xad"], @"enterpriseType":@"0", @"foursquareCategoryID":@"4bf58dd8d48988d103941735", @"foursquareCategoryName":@"Проём подъезда этажа"}];
 #endif
-        NSLog(@"StartViewController -> saveCurrentPosition (NEW): %@", currentPoint);
+        NSLog(@"StartViewController -> saveCurrentPosition (NEW): %@\n%@\n", currentPoint, [Types propertyDictionary:currentPoint]);
         
         GeoPoint *saved = [backendless.geoService savePoint:currentPoint];
         
-        NSLog(@"StartViewController -> saveCurrentPosition (SAVED): %@\n\n", saved);
+        NSLog(@"StartViewController -> saveCurrentPosition (SAVED): %@\n%@\n", saved, [Types propertyDictionary:saved]);
         
+        _geoPoint = saved;
+#if 0
+        currentPoint.objectId = saved.objectId;
+        [currentPoint metadata:@{@"username":@"375297777777", @"objectId":saved.objectId}];
+        [currentPoint setValue:currentPoint.metadata forKey:@"objectMetadata"]; // !!!!! ??????
+        
+        NSLog(@"\nupdateGeoPoint UPDATING: %@\n%@\n", currentPoint, [Types propertyDictionary:currentPoint]);
+        
+        GeoPoint *updated = [backendless.geoService savePoint:currentPoint];
+        
+        NSLog(@"\nupdateGeoPoint UPDATED: %@\n%@\n", updated, [Types propertyDictionary:updated]);
+#endif
+
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     }
     
@@ -203,7 +220,8 @@
     
     @try {
         
-        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithCategories:@[@"Test0"]];
+#if 0
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithCategories:@[@"Test5"]];
         BackendlessCollection *bc = [backendless.geoService getPoints:query];
         
         NSLog(@"\nupdateGeoPoint GETPOINTS: %@", bc);
@@ -212,16 +230,28 @@
             return;
         
         GeoPoint *updating = bc.data[0];
-        [updating latitude:60.1];
-        [updating longitude:40.4];
+        [updating latitude:50.1];
+        [updating longitude:30.4];
+#else
+        GEO_POINT point;
+        point.latitude = 53.77;
+        point.longitude = 28.77;
+        GeoPoint *updating = [[GeoPoint alloc] initWithPoint:point categories:@[@"Test5"]];
+        updating.objectId = _geoPoint.objectId;
+        [updating metadata:@{@"username":@"375297777777", @"objectId":updating.objectId}];
+        //[updating setValue:updating.metadata forKey:@"objectMetadata"]; // !!!!! ??????
+        
+        NSLog(@"\nupdateGeoPoint UPDATING: %@\n%@\n", updating, [Types propertyDictionary:updating]);
+
+#endif
         
         GeoPoint *updated = [backendless.geoService savePoint:updating];
         
-        NSLog(@"\nupdateGeoPoint UDDATED: %@", updated);
+        NSLog(@"\nupdateGeoPoint UPDATED: %@\n%@\n", updated, [Types propertyDictionary:updated]);
     }
     
     @catch (Fault *fault) {
-        NSLog(@"\nupdateGeoPoint FAULT: %@ ", fault);
+        NSLog(@"\nupdateGeoPoint FAULT: %@\n%@\n", fault, [Types propertyDictionary:fault]);
     }
 }
 
