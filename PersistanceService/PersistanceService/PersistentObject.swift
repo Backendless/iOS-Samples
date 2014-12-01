@@ -32,7 +32,7 @@ class Weather : BackendlessEntity {
     
     // description func
     func description() -> NSString {
-        return "<Weather> " + condition + ":" + temperature.description
+        return "<Weather> \(condition):\(temperature)"
     }
     
 }

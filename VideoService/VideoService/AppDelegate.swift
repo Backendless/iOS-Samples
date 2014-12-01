@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //DebLog.setIsActive(true)
         
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+        backendless.setThrowException(false)
         backendless.mediaService = MediaService()
         
         return true

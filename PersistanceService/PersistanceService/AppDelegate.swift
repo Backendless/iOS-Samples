@@ -35,68 +35,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        NSLog("!!! APP IS LAUNCHED !!!")
-        
         // Override point for customization after application launch.
         
         //DebLog.setIsActive(true)
         
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
-        //backendless.hostURL = "http://api.backendless.com"
-        backendless.setThrowException(false)
+        
         
         // --------------- UserService -------------------------------------
         
-        // - user login
-        var user = backendless.userService.login("bob3@foo.com", password:"bob3")
-        NSLog("LOGGINED USER: %@", user.description)
-        //
+        // - sync methods with fault as exception (full "try/catch/finally" version)
+        Types.try({ () -> Void in
+            
+            // - user login
+            var user = self.backendless.userService.login("bob3@foo.com", password:"bob3")
+            NSLog("LOGINED USER: %@", user.description)
+            
+            // - user update
+            var counter: AnyObject! = user.getProperty("counter")
+            user.setProperty("counter", object: counter)
+            user = self.backendless.userService.update(user)
+            NSLog("UPDATED USER: %@", user.description)
         
-        /* - array
-        //var firm = ["Apple", "Google"]
-        var firm : NSArray = ["Apple", "Google"]
-        user.setProperty("firms", object:firm)
-        */
+            },
+            
+            catch: { (exception) -> Void in
+                NSLog("FAULT: %@", exception as Fault)
+            },
+            
+            finally: { () -> Void in
+                NSLog("USER OPERATIONS ARE FINISHED")
+           })
         
-        /* - dictionary
-        var oss = ["iOS":"Apple", "Android":"Google"]
-        user.setProperty("os", object: oss)
-        */
-        
-        // - user update
-        var counter: AnyObject! = user.getProperty("counter")
-        user.setProperty("counter", object: counter)
-        
-        user = backendless.userService.update(user)
-        NSLog("UPDATED USER: %@", user.description)
-        //
         
         // -------------- PersistenceService -------------------------------
         
-        /*
-        var obj = PersistentObjectQB()
-        var result : AnyObject = backendless.persistenceService.save(obj)
+        // - sync methods with fault as exception (short "try/catch" version)
+        Types.try({ () -> Void in
+            
+            var obj = PersistentObjectQB()
+            var result : AnyObject? = self.backendless.persistenceService.save(obj)
+            NSLog("PersistentObjectQB: %@", (result as PersistentObjectQB).description)
+            
+            },
+            
+            catch: { (exception) -> Void in
+                NSLog("FAULT: %@", exception as Fault)
+            })
         
-        if (result is PersistentObjectQB) {
-        var res : PersistentObjectQB = result as PersistentObjectQB
-        }
         
-        if (result is Fault) {
-        var fault : Fault = result as Fault
-        }
-        */
+        // - shut off the fault as exception
+        backendless.setThrowException(false)
         
         var result : AnyObject
         var fault : Fault?
         
-        //
-        // - sync method with fault as reference
-        var item : OrderItem = backendless.persistenceService.save(OrderItem(), error: &fault) as OrderItem
+        // - sync method with fault as reference (fault as exception should be shutted off !)
+        var item : AnyObject? = backendless.persistenceService.save(OrderItem(), error: &fault)
         if (fault == nil) {
-            var obj : AnyObject = backendless.persistenceService.findById("OrderItem", sid: item.objectId)
+            var obj : AnyObject = backendless.persistenceService.findById("OrderItem", sid: (item as OrderItem).objectId)
             if (obj is OrderItem) {
-                item = obj as OrderItem
-                println("OrderItem: \(item.itemName) <\(item.objectId)>")
+                println("OrderItem: \((obj as OrderItem).itemName) <\((obj as OrderItem).objectId)>")
             }
             else {
                 println("\nFAULT (0): \(fault!.description)")
@@ -105,7 +104,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             println("\nFAULT (0): \(fault!.description)")
         }
-        //
         
         /* - sorting for the selected columns (ascending and descending)
         
@@ -129,7 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         */
         
-        // - sync method with class instance/fault as return
+        // - sync method with class instance/fault as return (fault as exception should be shutted off !)
         result = backendless.persistenceService.save(Weather())
         if (result is Weather) {
             var obj : AnyObject = backendless.persistenceService.findById("Weather", sid:(result as Weather).objectId)
@@ -141,23 +139,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (result is Fault) {
             println("\nFAULT (1): \(fault!.description)")
         }
-        //
         
-        //
-        // - sync method with fault as reference
-        var weather : Weather = backendless.persistenceService.save(Weather(), error: &fault) as Weather
+        // - sync method with fault as reference (fault as exception should be shutted off !)
+        var weather : AnyObject? = backendless.persistenceService.save(Weather(), error: &fault)
         if (fault == nil) {
-            var obj : AnyObject = backendless.persistenceService.findById("Weather", sid: weather.objectId)
+            var obj : AnyObject = backendless.persistenceService.findById("Weather", sid: (weather as Weather).objectId)
             if (obj is Weather) {
-                var obj1 = obj as Weather
-                println("\nWeather (2): \(obj1.description)")
+                println("\nWeather (2): \((obj as Weather).description)")
             }
         }
         else {
             println("\nFAULT (2): \(fault!.description)")
         }
-        //
-        
         
         // - async method with block-based callbacks
         backendless.persistenceService.save(
@@ -165,23 +158,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             response: { (var result : AnyObject!) -> () in
                 var obj : AnyObject = self.backendless.persistenceService.findById("Weather", sid: (result as Weather).objectId)
                 if (obj is Weather) {
-                    var obj1 = obj as Weather
-                    println("\nWeather (3): \(obj1.description)")
+                    println("\nWeather (3): \((obj as Weather).description)")
                 }
             },
             error: { (var fault : Fault!) -> () in
                 println("\nFAULT (3): \(fault!.description)")
             }
         )
-        //
         
-        // - dictionary
+        // - object as dictionary of properties
         var os = ["iOS":"Apple", "android":"Google"]
-        result = backendless.persistenceService.save("MobileOS", entity:os, error: &fault)
+        var mobileOs : AnyObject? = backendless.persistenceService.save("MobileOS", entity:os, error: &fault)
         if (fault != nil) {
             println("\nFAULT (4): \(fault!.description)")
         }
-        //
 
         return true
     }
