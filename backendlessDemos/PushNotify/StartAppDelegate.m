@@ -42,10 +42,18 @@ static NSString *VERSION_NUM = @"v1";
     if (remoteDict)
         [self application:application didReceiveRemoteNotification:remoteDict];
     
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-     UIRemoteNotificationTypeAlert
-     | UIRemoteNotificationTypeBadge
-     | UIRemoteNotificationTypeSound];
+    // check if iOS8
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        
+        UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    }
+    else {
+        UIRemoteNotificationType types = UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound;
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:types];
+    }
     
     return YES;
 }
