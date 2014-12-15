@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PersistanceService/PersistanceService.xcodeproj">
+      location = "group:VideoService/VideoService.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:VideoService/VideoService.xcodeproj">
+      location = "group:PersistanceService/PersistanceService.xcodeproj">
    </FileRef>
 </Workspace>

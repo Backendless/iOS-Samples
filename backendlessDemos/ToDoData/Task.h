@@ -22,7 +22,12 @@
 #import "Backendless.h"
 
 @interface Task : NSObject
+@property (nonatomic, strong) NSString *objectId;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSNumber *status;
 @end
 
+@interface Person : BackendlessEntity
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSNumber *age;
+@end

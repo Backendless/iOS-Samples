@@ -52,8 +52,19 @@
     @catch (Fault *fault) {
         [self showAlert:fault.message];
     }
+    
+#if 0 // description
+    //[self personDescriptionSync];
+    [self personDescriptionAsync];
+#endif
+    
+#if 1 // permission
+    [self personPermissionSync];
+#endif
+    
     [self getAllEntitysAsync];
     editedIndexPath = nil;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,6 +72,99 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark -
+#pragma mark Private Methods
+
+// --------------------- SAMPLES -------------------------------------------------------
+
+-(void)personDescriptionSync {
+    
+    Person *person = [Person new];
+    person.name = @"bob";
+    person.age = @(20);
+    
+    id <IDataStore> persons = [backendless.persistenceService of:[Person class]];
+    
+    @try {
+        
+        Person *saved = [persons save:person];
+        NSLog(@"SAVED: %@->%@", saved.name, saved.age);
+        
+        NSArray *props = [persons describe];
+        NSLog(@"DESCRIPTION: %@", props);
+    }
+    @catch (Fault *fault) {
+        NSLog(@"FAULT: %@", fault);
+    }
+}
+
+-(void)personDescriptionAsync {
+    
+    Person *person = [Person new];
+    person.name = @"alice";
+    person.age = @(18);
+    
+    id <IDataStore> persons = [backendless.persistenceService of:[Person class]];
+    
+    [persons save:person
+         response:^(id data) {
+             Person *saved = data;
+             NSLog(@"SAVED: %@->%@", saved.name, saved.age);
+             [persons describeResponse:^(id props) {
+                 NSLog(@"DESCRIPTION: %@", props);
+             }
+                error:^(Fault *fault) {
+                    NSLog(@"SAVE FAULT: %@", fault);
+                }];
+         }
+            error:^(Fault *fault) {
+                NSLog(@"SAVE FAULT: %@", fault);
+                
+            }];
+}
+
+-(void)personPermissionSync {
+    
+    
+    @try {
+        
+        BackendlessUser *user = [backendless.userService login:@"bob@foo.com" password:@"bob"];
+        NSLog(@" USER: %@", user);
+        
+        NSArray *roles = [backendless.userService getUserRoles];
+        NSLog(@"ROLES: %@ ", roles);
+        
+        Person *person = [Person new];
+        person.name = @"bob";
+        person.age = @(20);
+        
+        id <IDataStore> persons = [backendless.persistenceService of:[Person class]];
+        
+        Person *saved = [persons save:person];
+        NSLog(@"SAVED: %@->%@", saved.name, saved.age);
+        
+        //[backendless.persistenceService.permissions denyForUser:user.objectId entity:saved operation:DATA_UPDATE];
+        //[backendless.persistenceService.permissions denyForAllUsers:saved operation:DATA_UPDATE];
+        [backendless.persistenceService.permissions denyForRole:roles[0] entity:saved operation:DATA_UPDATE];
+        //[backendless.persistenceService.permissions denyForAllRoles:saved operation:DATA_UPDATE];
+        
+        [backendless.persistenceService.permissions grantForUser:user.objectId entity:saved operation:DATA_UPDATE];
+        //[backendless.persistenceService.permissions grantForAllUsers:saved operation:DATA_UPDATE];
+        //[backendless.persistenceService.permissions grantForRole:roles[0] entity:saved operation:DATA_UPDATE];
+        //[backendless.persistenceService.permissions grantForAllRoles:saved operation:DATA_UPDATE];
+       
+        saved.age = @(30);
+        Person *upated = [persons save:saved];
+        NSLog(@"UPDATED: %@->%@", saved.name, saved.age);
+
+    }
+    @catch (Fault *fault) {
+        NSLog(@"FAULT: %@", fault);
+    }
+}
+
+// -------------------------------------------------------------------------------------------------------------------
 
 - (void)addNewEntityWithName:(NSString *)name
 {
@@ -73,7 +177,7 @@
         [_data insertObject:response atIndex:0];
         NSLog(@"%@", [response valueForKey:@"objectId"]);
         [mainTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-        countLable.text = [NSString stringWithFormat:@"%i items left", _data.count];
+        countLable.text = [NSString stringWithFormat:@"%lu items left", (unsigned long)_data.count];
     } error:^(Fault *fault) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         NSLog(@"StartViewController -> removeObjectWithIndex: FAULT = %@ <%@>", fault.message, fault.detail);
@@ -103,7 +207,7 @@
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         [_data removeObjectAtIndex:indexPath.row];
         [mainTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        countLable.text = [NSString stringWithFormat:@"%i items left", _data.count];
+        countLable.text = [NSString stringWithFormat:@"%lu items left", (unsigned long)_data.count];
     } error:^(Fault *fault) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         NSLog(@"StartViewController -> removeObjectWithIndex: FAULT = %@ <%@>", fault.message, fault.detail);
@@ -146,7 +250,7 @@
 
     Task *task = [_data objectAtIndex:indexPath.row];
 
-    NSLog(@"%@", [[task valueForKey:@"___class"] class]);
+    //NSLog(@"%@", [[task valueForKey:@"___class"] class]);
     NSNumber *status = [NSNumber numberWithBool:[task.status boolValue]];
     [task setStatus:[NSNumber numberWithBool:sender.selected]];
     [mainTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -176,7 +280,7 @@
     [_data addObjectsFromArray:[(BackendlessCollection *)response data]];
     
     [mainTableView reloadData];
-    countLable.text = [NSString stringWithFormat:@"%i items left", _data.count];
+    countLable.text = [NSString stringWithFormat:@"%lu items left", (unsigned long)_data.count];
 }
 
 - (void)errorHandler:(Fault *)fault

@@ -32,8 +32,6 @@
 		912E137616C2A29A00AD58C8 /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 912E137516C2A29A00AD58C8 /* SuccessViewController.m */; };
 		9147E76D16C01DEC000A26F4 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147E76C16C01DEC000A26F4 /* Task.m */; };
 		9147E76F16C0F7EA000A26F4 /* images-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9147E76E16C0F7EA000A26F4 /* images-1.jpeg */; };
-		914E715F182BCD21000F96CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
-		914E7160182BCD38000F96CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
 		915144F416DFCDB2007F0E50 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915144F316DFCDB2007F0E50 /* StartViewController.m */; };
 		9154F4791869CD5200426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
 		9154F47A1869CD5B00426C78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
@@ -184,7 +182,6 @@
 		917C474A1864889700FBB55D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		918CF47817290CDC00088560 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		918CF4791729142E00088560 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
-		91CD6E9617143A6900389465 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91EF13A2174A41AF009C7A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91EF13A3174A41BC009C7A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91EF13A4174A41C6009C7A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
@@ -242,6 +239,15 @@
 		D37F5EE519CB0AFC0077F0C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37F5EE319CB0AFC0077F0C5 /* Main.storyboard */; };
 		D37F5EE819CB0AFC0077F0C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37F5EE719CB0AFC0077F0C5 /* ViewController.m */; };
 		D37F5EEA19CB0AFC0077F0C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37F5EE919CB0AFC0077F0C5 /* Images.xcassets */; };
+		D3CF37E91A38B0F10070B746 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
+		D3CF37EA1A38B0F70070B746 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
+		D3CF37EB1A38B1000070B746 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
+		D3CF37EC1A38B1030070B746 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
+		D3CF37ED1A38B1140070B746 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
+		D3CF37EE1A38B11E0070B746 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662A16B1873B00668A06 /* CoreGraphics.framework */; };
+		D3CF37EF1A38B1220070B746 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
+		D3CF37F01A38B1260070B746 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
+		D3CF37F11A38B12A0070B746 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91B665F16B18CD400668A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
 		F91B666016B18CD400668A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
 		F91B666116B18CD400668A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662A16B1873B00668A06 /* CoreGraphics.framework */; };
@@ -264,9 +270,6 @@
 		F91B669716B18D2600668A06 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91B669616B18D2600668A06 /* Default-568h@2x.png */; };
 		F91B669A16B18D2600668A06 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91B669816B18D2600668A06 /* MainStoryboard.storyboard */; };
 		F91B669D16B18D2600668A06 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B669C16B18D2600668A06 /* StartViewController.m */; };
-		F91B66A716B18D8F00668A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
-		F91B66A816B18D8F00668A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
-		F91B66A916B18D8F00668A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662A16B1873B00668A06 /* CoreGraphics.framework */; };
 		F91B66AF16B18D8F00668A06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F91B66AD16B18D8F00668A06 /* InfoPlist.strings */; };
 		F91B66B116B18D8F00668A06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B66B016B18D8F00668A06 /* main.m */; };
 		F91B66B516B18D8F00668A06 /* StartAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B66B416B18D8F00668A06 /* StartAppDelegate.m */; };
@@ -333,8 +336,6 @@
 		F91B677A16B18FDB00668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		F91B678616B1903900668A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
 		F91B678716B1903E00668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
-		F91B678816B1904800668A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
-		F91B678916B1904A00668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		F91B678A16B1905000668A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
 		F91B678B16B1905600668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		F91B678C16B1905B00668A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
@@ -354,7 +355,6 @@
 		F91B6A9616B196E200668A06 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B6A9516B196E200668A06 /* RegisterViewController.m */; };
 		F91B6AA516B1A23E00668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F91B6AA716B1A2EA00668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
-		F91B6AAC16B1A30600668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91B6AB116B1A33400668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91B6AB616B1A35600668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91B6ABB16B1A36C00668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
@@ -688,6 +688,8 @@
 		D37F5EE619CB0AFC0077F0C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D37F5EE719CB0AFC0077F0C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D37F5EE919CB0AFC0077F0C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D3EA53071A30A1B4009C5FE0 /* DataPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPermission.h; sourceTree = "<group>"; };
+		D3EA53081A30A1B4009C5FE0 /* FilePermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePermission.h; sourceTree = "<group>"; };
 		F912091D18C62C8D0014195A /* getting-started.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "getting-started.pdf"; path = "../getting-started.pdf"; sourceTree = "<group>"; };
 		F91B662616B1873B00668A06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F91B662816B1873B00668A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1121,19 +1123,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CF37E91A38B0F10070B746 /* Foundation.framework in Frameworks */,
+				D3CF37EA1A38B0F70070B746 /* UIKit.framework in Frameworks */,
 				611275861861B8BB00B6ACE6 /* SystemConfiguration.framework in Frameworks */,
-				F91B678816B1904800668A06 /* CFNetwork.framework in Frameworks */,
+				D3CF37EB1A38B1000070B746 /* CFNetwork.framework in Frameworks */,
+				D3CF37EC1A38B1030070B746 /* Security.framework in Frameworks */,
+				D3CF37ED1A38B1140070B746 /* CoreLocation.framework in Frameworks */,
+				D3CF37EE1A38B11E0070B746 /* CoreGraphics.framework in Frameworks */,
+				D3CF37EF1A38B1220070B746 /* CoreData.framework in Frameworks */,
+				D3CF37F01A38B1260070B746 /* MapKit.framework in Frameworks */,
+				D3CF37F11A38B12A0070B746 /* libz.dylib in Frameworks */,
 				611275841861B7B500B6ACE6 /* libsqlite3.0.dylib in Frameworks */,
-				91CD6E9617143A6900389465 /* CoreData.framework in Frameworks */,
-				F91B66A716B18D8F00668A06 /* UIKit.framework in Frameworks */,
-				F91B66A816B18D8F00668A06 /* Foundation.framework in Frameworks */,
-				F91B66A916B18D8F00668A06 /* CoreGraphics.framework in Frameworks */,
 				F9BB00B118785AB40076BC6D /* backendless.a in Frameworks */,
-				F91B678916B1904A00668A06 /* Security.framework in Frameworks */,
-				F91B6AAC16B1A30600668A06 /* libz.dylib in Frameworks */,
 				F9BB00C518785AB60076BC6D /* CommLibiOS.a in Frameworks */,
-				914E7160182BCD38000F96CA /* CoreLocation.framework in Frameworks */,
-				914E715F182BCD21000F96CA /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2128,6 +2130,8 @@
 		F9BB000818785AB20076BC6D /* include */ = {
 			isa = PBXGroup;
 			children = (
+				D3EA53071A30A1B4009C5FE0 /* DataPermission.h */,
+				D3EA53081A30A1B4009C5FE0 /* FilePermission.h */,
 				D37F5ECE19CB0A520077F0C5 /* CustomService.h */,
 				D30A5D7719B9CD8A00C0BA44 /* Backendless-Bridging-Header.h */,
 				D339EF20199AADC500AA4974 /* AtomicCounters.h */,
@@ -2549,6 +2553,9 @@
 					9101183A180D33D3008102A7 = {
 						DevelopmentTeam = 73FSJC7BUF;
 					};
+					91628E5C17FADBDB00ACC36F = {
+						DevelopmentTeam = 73FSJC7BUF;
+					};
 					91F1390817C4E37800D1AC4C = {
 						DevelopmentTeam = 73FSJC7BUF;
 					};
@@ -2579,6 +2586,7 @@
 				F91B673416B18E0A00668A06 /* FileService */,
 				F91B675816B18EE000668A06 /* VideoService */,
 				D37F5ED219CB0AFC0077F0C5 /* CustomService */,
+				917650CD1827CA5D00745497 /* UIElementsSample */,
 				91F1390817C4E37800D1AC4C /* Caching-demo */,
 				91628E5C17FADBDB00ACC36F /* ToDoDataMac */,
 				91628E9617FC147800ACC36F /* UserServiceMac */,
@@ -2587,7 +2595,6 @@
 				91628F3217FD9A5200ACC36F /* GeoServiceMac */,
 				91628F5917FDA79E00ACC36F /* FileServiceMac */,
 				9101183A180D33D3008102A7 /* PushNotifyMac */,
-				917650CD1827CA5D00745497 /* UIElementsSample */,
 			);
 		};
 /* End PBXProject section */

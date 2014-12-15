@@ -42,21 +42,17 @@
         
         [backendless initAppFault];
 
-#if 1 // stay logged in
-        if (backendless.userService.isStayLoggedIn) {
-            
-            NSNumber *result = [backendless.userService isValidUserToken];
-            NSLog(@"viewDidLoad -> isValidUserToken: %@", [result boolValue]?@"YES":@"NO");
-            [result boolValue] ? [self switchToLogout] : [backendless.userService setStayLoggedIn:NO];
-        }
-        else {
-            [backendless.userService setStayLoggedIn:YES];
-        }
+#if 1
+        [self stayLoggedIn ];
 #endif
     }
     @catch (Fault *fault) {
         [self showAlert:fault.message];
     }
+    
+#if 0
+    [self getUserRolesSync];
+#endif
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,6 +63,53 @@
 
 -(NSUInteger)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+-(void)stayLoggedIn {
+    
+    if (backendless.userService.isStayLoggedIn) {
+        
+        NSNumber *result = [backendless.userService isValidUserToken];
+        NSLog(@"viewDidLoad -> isValidUserToken: %@", [result boolValue]?@"YES":@"NO");
+        [result boolValue] ? [self switchToLogout] : [backendless.userService setStayLoggedIn:NO];
+    }
+    else {
+        [backendless.userService setStayLoggedIn:YES];
+    }
+}
+
+-(void)getUserRolesSync {
+    
+    @try {
+        
+        BackendlessUser *user = [backendless.userService login:@"bob@foo.com" password:@"bob"];
+        NSLog(@" USER: %@", user);
+        
+        NSArray *roles = [backendless.userService getUserRoles];
+        NSLog(@"ROLES: %@ ", roles);
+    }
+    @catch (Fault *fault) {
+        NSLog(@"FAULT: %@", fault);
+    }
+}
+
+-(void)getUserRolesAsync {
+    
+    [backendless.userService login:@"bob@foo.com" password:@"bob"
+        response:^(BackendlessUser *user) {
+                              
+            NSLog(@"login USER: %@", user);
+            [backendless.userService
+                getUserRoles:^(NSArray *roles) {
+                    NSLog(@"getUserRoles ROLES: %@ ", roles);
+                }
+                error:^(Fault *fault) {
+                    NSLog(@"getUserRoles FAULT: %@", fault);
+                }];
+        }
+        error:^(Fault *fault) {
+            NSLog(@"login FAULT: %@", fault);
+        }];
 }
 
 #pragma mark -

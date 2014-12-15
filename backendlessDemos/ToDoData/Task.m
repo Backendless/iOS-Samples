@@ -22,6 +22,7 @@
 #import "Task.h"
 
 @implementation Task
-@synthesize title, status;
 @end
 
+@implementation Person
+@end
