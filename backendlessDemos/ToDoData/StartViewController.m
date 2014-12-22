@@ -53,17 +53,26 @@
         [self showAlert:fault.message];
     }
     
+    [self getAllEntitysAsync];
+    editedIndexPath = nil;
+    
+    // ----------------------------------------------------------------------------
+    
 #if 0 // description
-    //[self personDescriptionSync];
-    [self personDescriptionAsync];
+    [self personDescriptionSync];
+    //[self personDescriptionAsync];
 #endif
     
-#if 1 // permission
+#if 0 // permission
     [self personPermissionSync];
 #endif
     
-    [self getAllEntitysAsync];
-    editedIndexPath = nil;
+#if 0 // sendEmail
+    [self sendEmailSync];
+    [self sendEmailAsync];
+#endif
+    
+    // ----------------------------------------------------------------------------
     
 }
 
@@ -77,6 +86,32 @@
 #pragma mark Private Methods
 
 // --------------------- SAMPLES -------------------------------------------------------
+
+-(void)sendEmailSync {
+    
+    @try {
+
+        id result = [backendless.messagingService sendTextEmail:@"Reminder" body:@"Hey JB! Your car will be ready by 5pm" to:@[@"james.bond@langley.co.uk"]];
+        NSLog(@"EMAIL HAS BEEN SENT (SYNC): %@", result);
+    }
+    @catch (Fault *fault) {
+        NSLog(@"FAULT (SYNC): %@", fault);
+    }
+}
+
+-(void)sendEmailAsync {
+
+    NSArray *recipients = @[@"mom@gmail.com", @"dad@gmail.com", @"cat@gmail.com"];
+    NSString *htmlBody = @"Guys, the dinner last night was <b>awesome</b>";
+    
+    [backendless.messagingService sendHTMLEmail:@"Dinner" body:htmlBody to:recipients
+         response:^(id result) {
+             NSLog(@"EMAIL HAS BEEN SENT (ASYNC): %@", result);
+             }
+            error:^(Fault *fault) {
+                NSLog(@"FAULT (ASYNC): %@", fault);
+        }];
+}
 
 -(void)personDescriptionSync {
     

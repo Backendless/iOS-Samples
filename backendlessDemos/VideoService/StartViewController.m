@@ -165,17 +165,17 @@
 #pragma mark -
 #pragma mark IMediaStreamerDelegate Methods
 
-#if SWIFT_ENUM_OFF
--(void)streamStateChanged:(id)sender state:(MPMediaStreamState)state description:(NSString *)description {
-#else
 -(void)streamStateChanged:(id)sender state:(int)state description:(NSString *)description {
-#endif
     
     NSLog(@"<IMediaStreamerDelegate> streamStateChanged: %d = %@", (int)state, description);
     
     switch (state) {
             
         case CONN_DISCONNECTED: {
+            
+            if ([description isEqualToString:@"streamIsBusy"]) {
+                [self showAlert:[NSString stringWithString:description]];
+            }
             
             [self stopMediaControl:sender];
             break;
@@ -252,6 +252,7 @@
      [NSString stringWithFormat:@"Unable to connect to the server. Make sure the hostname/IP address and port number are valid\n"] :
      [NSString stringWithFormat:@"connectFailedEvent: %@ \n", description]];
 }
+
 #pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField

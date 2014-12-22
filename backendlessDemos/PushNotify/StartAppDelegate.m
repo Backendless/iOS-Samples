@@ -83,6 +83,8 @@ static NSString *VERSION_NUM = @"v1";
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    NSLog(@"APN Unregistration");
+    [[UIApplication sharedApplication] unregisterForRemoteNotifications];
 }
 
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
