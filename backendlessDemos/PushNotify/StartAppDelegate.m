@@ -38,7 +38,6 @@ static NSString *VERSION_NUM = @"v1";
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
 
     NSDictionary *remoteDict = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-    
     if (remoteDict)
         [self application:application didReceiveRemoteNotification:remoteDict];
     

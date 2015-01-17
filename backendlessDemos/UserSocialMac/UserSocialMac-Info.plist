@@ -54,7 +54,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>backendless61084CD8-B06B-E818-FFA5-730A1C6DF300</string>
+				<string>backendless</string>
 			</array>
 		</dict>
 	</array>

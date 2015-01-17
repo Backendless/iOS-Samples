@@ -1,43 +1,41 @@
 //
 //  CachingObject.m
 //  backendlessDemos
-//
-//  Created by Yury Yaschenko on 8/21/13.
-//  Copyright (c) 2013 BACKENDLESS.COM. All rights reserved.
-//
+/*
+ * *********************************************************************************************************************
+ *
+ *  BACKENDLESS.COM CONFIDENTIAL
+ *
+ *  ********************************************************************************************************************
+ *
+ *  Copyright 2013 BACKENDLESS.COM. All Rights Reserved.
+ *
+ *  NOTICE: All information contained herein is, and remains the property of Backendless.com and its suppliers,
+ *  if any. The intellectual and technical concepts contained herein are proprietary to Backendless.com and its
+ *  suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret
+ *  or copyright law. Dissemination of this information or reproduction of this material is strictly forbidden
+ *  unless prior written permission is obtained from Backendless.com.
+ *
+ *  ********************************************************************************************************************
+ */
 
 #import "CachingObject.h"
+#import "Backendless.h"
 #include <stdlib.h>
-@interface CachingObject()
--(NSString *)genRandStringLength:(int)len;
-@end
+
 @implementation CachingObject
 
-
--(NSString *)genRandStringLength: (int) len
-{
-    NSString *lowLetters = @"abcdefghijklmnopqrstuvwxyz";
-    NSString *highLetters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
-    [randomString appendFormat: @"%C", [highLetters characterAtIndex: arc4random() % [highLetters length]]];
-    for (int i=1; i<len; i++) {
-        [randomString appendFormat: @"%C", [lowLetters characterAtIndex: arc4random() % [lowLetters length]]];
-    }
-    return randomString;
-}
-
-+(CachingObject *)generateRandomObject
-{
++(CachingObject *)generateRandomObject {
+    
     CachingObject *object = [CachingObject new];
-    object.name = [object genRandStringLength:10];
-    object.nickname = [object genRandStringLength:10];
-    int age = arc4random()%50;
-    object.age = [NSNumber numberWithInt:age];
+    object.name = [backendless randomString:10];
+    object.nickname = [backendless randomString:10];
+    object.age = @(arc4random()%50);
     return object;
 }
--(NSString *)description
-{
-    return [NSString stringWithFormat:
-            @"Name: %@ \nNickname: %@ \nAge: %@", self.name, self.nickname, self.age ];
+
+-(NSString *)description {
+    return [NSString stringWithFormat:@"Name: %@\nNickname: %@\nAge: %@", self.name, self.nickname, self.age];
 }
+
 @end

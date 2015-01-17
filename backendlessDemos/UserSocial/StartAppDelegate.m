@@ -26,11 +26,14 @@
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
 
-static NSString *APP_ID = @"";  //It is important to make a change in UserSocial-Info.plist. You need to modify the following element:
-                                //"URL types" -> "Item 0" -> "URL Schemes"
-                                //The new value must be "backendless{APP_ID}" where {APP_ID} is replaced with the actual application ID. For example
-                                //if the ID of your application is AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA, the value of the element will be
-                                //"backendlessAAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
+static NSString *APP_ID = @"";
+        /**********************************************************************************************************************
+        * It is important to make a change in UserSocial-Info.plist. You need to modify the following element:
+        * "URL types" -> "Item 0" -> "URL Schemes"
+        * The new value must be "backendless{APP_ID}" where {APP_ID} is replaced with the actual application ID. For example
+        * if the ID of your application is AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA, the value of the element will be
+        * "backendlessAAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
+        **********************************************************************************************************************/
 static NSString *SECRET_KEY = @"";
 static NSString *VERSION_NUM = @"v1";
 
@@ -38,6 +41,9 @@ static NSString *VERSION_NUM = @"v1";
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+    
+    [DebLog log:@"[BackendlessDemos.UserSosial] AppDelegate -> application:openURL: url.scheme = '%@'[%@]", url.scheme, sourceApplication];
+    
     BackendlessUser *user = [backendless.userService handleOpenURL:url];
     if (user) {
         [(StartViewController *)self.window.rootViewController showSuccessView];

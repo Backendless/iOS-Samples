@@ -1,10 +1,23 @@
 //
 //  ViewController.m
 //  Caching-damo
-//
-//  Created by Yury Yaschenko on 8/21/13.
-//  Copyright (c) 2013 BACKENDLESS.COM. All rights reserved.
-//
+/*
+ * *********************************************************************************************************************
+ *
+ *  BACKENDLESS.COM CONFIDENTIAL
+ *
+ *  ********************************************************************************************************************
+ *
+ *  Copyright 2013 BACKENDLESS.COM. All Rights Reserved.
+ *
+ *  NOTICE: All information contained herein is, and remains the property of Backendless.com and its suppliers,
+ *  if any. The intellectual and technical concepts contained herein are proprietary to Backendless.com and its
+ *  suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret
+ *  or copyright law. Dissemination of this information or reproduction of this material is strictly forbidden
+ *  unless prior written permission is obtained from Backendless.com.
+ *
+ *  ********************************************************************************************************************
+ */
 
 #import "ViewController.h"
 #import "CachingObject.h"
@@ -29,9 +42,10 @@
     [av show];
 }
 
-- (void)viewDidLoad
-{
+-(void)viewDidLoad {
+    
     [super viewDidLoad];
+
     @try {
         [backendless initAppFault];
     }
@@ -48,18 +62,17 @@
     _data = [NSMutableArray array];
     _policy = [BackendlessCachePolicy new];
     [_policyButton setTitle:[self cachePolicyName:_policy] forState:UIControlStateNormal];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Private Methods
--(void)showPickerView:(UIView *)view
-{
+
+-(void)showPickerView:(UIView *)view {
+    
     view.hidden = NO;
     CGRect frame = view.frame;
     frame.origin.y = self.view.frame.size.height - frame.size.height;
@@ -68,8 +81,9 @@
     } completion:^(BOOL finished) {
     }];
 }
--(void)hidePickerView:(UIView *)view
-{
+
+-(void)hidePickerView:(UIView *)view {
+    
     CGRect frame = view.frame;
     frame.origin.y = self.view.frame.size.height;
     [UIView animateWithDuration:0.2 animations:^{
@@ -78,8 +92,9 @@
         view.hidden = YES;
     }];
 }
--(NSString *)cachePolicyName:(BackendlessCachePolicy *)policy
-{
+
+-(NSString *)cachePolicyName:(BackendlessCachePolicy *)policy {
+    
     switch (policy.valCachePolicy) {
         case BackendlessCachePolicyCacheOnly:
             return [_policyData objectAtIndex:BackendlessCachePolicyCacheOnly];
@@ -99,96 +114,99 @@
 }
 
 #pragma mark - IBAction
--(void)clearCache:(id)sender
-{
+
+-(void)clearCache:(id)sender {
     [backendless clearAllCache];
 }
--(void)addNewObject:(id)sender
-{
-    CachingObject *object = [CachingObject generateRandomObject];
-    [backendless.persistenceService save:object response:^(id response) {
-        [[[UIAlertView alloc] initWithTitle:@"Add New Object" message:[object description] delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil] show];
-        [_data insertObject:object atIndex:0];
-        [_tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-        
-    } error:^(Fault *fault) {
-        [[[UIAlertView alloc] initWithTitle:@"Error" message:[fault detail] delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil] show];
-    }];
+
+-(void)addNewObject:(id)sender {
+    
+    [backendless.persistenceService
+     save:[CachingObject generateRandomObject]
+     response:^(id response) {
+         [[[UIAlertView alloc] initWithTitle:@"Add New Object:" message:[(CachingObject *)response description] delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil] show];
+         [_data insertObject:response atIndex:0];
+         [_tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+     }
+     error:^(Fault *fault) {
+         [[[UIAlertView alloc] initWithTitle:@"Error" message:[fault detail] delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil] show];
+     }];
 }
--(void)clearTableViewData:(id)sender
-{
+
+-(void)clearTableViewData:(id)sender {
     [_data removeAllObjects];
     [_tableView reloadData];
 }
--(void)loadData:(id)sender
-{
+
+-(void)loadData:(id)sender {
+    
     BackendlessDataQuery *query = [BackendlessDataQuery query];
     query.cachePolicy = _policy;
-    [backendless.persistenceService find:[CachingObject class] dataQuery:query response:^(BackendlessCollection *collection) {
-        _data = [NSMutableArray arrayWithArray:collection.data];
-        [_tableView reloadData];
-    } error:^(Fault *fault) {
-        [[[UIAlertView alloc] initWithTitle:@"Error" message:[fault detail] delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil] show];
-    }];
+    
+    [backendless.persistenceService
+     find:[CachingObject class]
+     dataQuery:query
+     response:^(BackendlessCollection *collection) {
+         _data = [NSMutableArray arrayWithArray:collection.data];
+         [_tableView reloadData];
+     }
+     error:^(Fault *fault) {
+         [[[UIAlertView alloc] initWithTitle:@"Error" message:[fault detail] delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil] show];
+     }];
 }
--(void)selectCachePolicy:(id)sender
-{
+
+-(void)selectCachePolicy:(id)sender {
     [self showPickerView:_policyView];
 }
--(void)selectStorage:(UISwitch *)sender
-{
-    if (sender.on)
-    {
-        [backendless setCacheStoredType:BackendlessCacheStoredDisc];
-    }
-    else
-    {
-        [backendless setCacheStoredType:BackendlessCacheStoredMemory];
-    }
+
+-(void)selectStorage:(UISwitch *)sender {
+    [backendless setCacheStoredType:sender.on?BackendlessCacheStoredDisc:BackendlessCacheStoredMemory];
 }
--(void)hidePolicyPicker:(id)sender
-{
+
+-(void)hidePolicyPicker:(id)sender {
     [self hidePickerView:_policyView];
 }
+
 #pragma mark - PickerViewDelegate/DataSource
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return _policyData.count;
 }
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [_policyData objectAtIndex:row];
 }
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    [_policy cachePolicy:row];
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    [_policy cachePolicy:(BackendlessCachePolicyEnum)row];
     [_policyButton setTitle:[self cachePolicyName:_policy] forState:UIControlStateNormal];
 }
 
 #pragma mark - TableViewDelegate/DatasSource
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _data.count;
 }
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cachingDataCell" forIndexPath:indexPath];
     UILabel *lable = (UILabel *)[cell viewWithTag:1];
     CachingObject *object = [_data objectAtIndex:indexPath.row];
     lable.text = [NSString stringWithFormat:@"%@ (%@) %@", object.name, object.nickname, object.age];
     return cell;
 }
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44;
 }
+
 @end

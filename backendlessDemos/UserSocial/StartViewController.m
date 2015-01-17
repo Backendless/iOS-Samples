@@ -53,34 +53,47 @@
 
 - (void)login:(id)sender
 {
+    NSLog(@"StartViewController -> login: (START)");
+    
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     if ([sender tag] == 1)
     {
-        
-        [backendless.userService easyLoginWithFacebookFieldsMapping:@{@"email":@"email", @"username":@"username", @"user_location":@"user_location"} permissions:@[@"email"] response:^(id response) {
-            //response - NSNumber with bool Yes
-            NSLog(@"%@", response);
-        } error:^(Fault *fault) {
-            NSLog(@"%@", fault.detail);
-        }];
+        [backendless.userService
+         easyLoginWithFacebookFieldsMapping:@{@"email":@"email", @"username":@"username", @"user_location":@"user_location"}
+         permissions:@[@"email"]
+         response:^(id response) {
+             //response - NSNumber with bool Yes
+             NSLog(@"StartViewController -> login: (Facebook) result = %@", response);
+         } error:^(Fault *fault) {
+             NSLog(@"StartViewController -> login: (FAULT) %@", fault.detail);
+         }];
     }
     else
     {
-        [backendless.userService easyLoginWithTwitterFieldsMapping:@{@"email":@"email"} response:^(id response) {
-            NSLog(@"%@", response);
-        } error:^(Fault *fault) {
-            NSLog(@"%@", fault.detail);
-        }];
+        [backendless.userService
+         easyLoginWithTwitterFieldsMapping:@{@"email":@"email"}
+         response:^(id response) {
+             NSLog(@"StartViewController -> login: (Twitter) result = %@", response);
+         } error:^(Fault *fault) {
+             NSLog(@"StartViewController -> login: (FAULT) %@", fault.detail);
+         }];
     }
 }
+
 -(void)back:(UIStoryboardSegue *)segue
 {
+    NSLog(@"[BackendlessDemos.UserSosial] StartViewController -> back: (START)");
+    
     [backendless.userService logout:nil];
 }
+
 -(void)showSuccessView
 {
+    NSLog(@"[BackendlessDemos.UserSosial] StartViewController -> showSuccessView");
+    
     UIViewController *successView = [self.storyboard instantiateViewControllerWithIdentifier:@"SuccessView"];
     [self presentViewController:successView animated:YES completion:^{
     }];
 }
+
 @end

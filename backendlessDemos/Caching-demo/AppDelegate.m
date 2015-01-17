@@ -1,10 +1,23 @@
 //
 //  AppDelegate.m
 //  Caching-damo
-//
-//  Created by Yury Yaschenko on 8/21/13.
-//  Copyright (c) 2013 BACKENDLESS.COM. All rights reserved.
-//
+/*
+ * *********************************************************************************************************************
+ *
+ *  BACKENDLESS.COM CONFIDENTIAL
+ *
+ *  ********************************************************************************************************************
+ *
+ *  Copyright 2013 BACKENDLESS.COM. All Rights Reserved.
+ *
+ *  NOTICE: All information contained herein is, and remains the property of Backendless.com and its suppliers,
+ *  if any. The intellectual and technical concepts contained herein are proprietary to Backendless.com and its
+ *  suppliers and may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret
+ *  or copyright law. Dissemination of this information or reproduction of this material is strictly forbidden
+ *  unless prior written permission is obtained from Backendless.com.
+ *
+ *  ********************************************************************************************************************
+ */
 
 #import "AppDelegate.h"
 #import "Backendless.h"
@@ -20,7 +33,8 @@ static NSString *VERSION_NUM = @"v1";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [DebLog setIsActive:YES];
+    
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     return YES;
 }

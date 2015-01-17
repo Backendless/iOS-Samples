@@ -97,7 +97,7 @@
     
     MediaPublishOptions *options = _switchView.on?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions recordStream:self.preview];
     options.orientation = AVCaptureVideoOrientationPortrait;
-    options.resolution = RESOLUTION_VGA;
+    options.resolution = RESOLUTION_CIF;
     _publisher =[backendless.mediaService publishStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     self.btnPublish.hidden = YES;
