@@ -53,7 +53,7 @@
         
         _locationManager = ((StartAppDelegate *)[[UIApplication sharedApplication] delegate]).locationManager;
 
-#if 0 // loading default geopoints
+#if 1 // loading default geopoints
         [self performSelector:@selector(invokeGeo) withObject:nil afterDelay:.2f];
 #endif
         
@@ -62,7 +62,7 @@
         [self updateGeoPoint];
 #endif
         
-#if 0
+#if 0 // samples: delete geo point
         [self deleteGeoPoint];
 #endif
         
@@ -84,16 +84,6 @@
         [self linkingDataObjectWithGeoPoints];
         [self linkingGeoPointWithDataObject];
         [self linkingGeoPointWithSeveralDataObjects];
-#endif
-        
-#if 0
-        ProtectedBackendlessGeoQuery *query = [ProtectedBackendlessGeoQuery protectedQuery:[BackendlessGeoQuery new]];
-        NSLog(@"QUERY: %@ -> %@ [LAT: %@, LONG: %@]", query, query.geoQuery, query.latitude, query.longitude);
-        query.radius = @10.7;
-#endif
-        
-#if 1
-        [self testGeoServiceGetPointsByMetadata];
 #endif
 
     }
@@ -148,13 +138,13 @@
         
         NSLog(@"StartViewController -> loadGeoPoints: center = {%g, %g}, NW = {%g, %g}, SE = {%g, %g}", center.latitude, center.longitude, rect.nordWest.latitude, rect.nordWest.longitude, rect.southEast.latitude, rect.southEast.longitude);
 #if 1 // by rectangle
-        //BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithRect:rect.nordWest southEast:rect.southEast categories:@[@"geoservice_sample"]];
-        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithCategories:@[@"geoservice_sample"]];
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithRect:rect.nordWest southEast:rect.southEast categories:@[@"geoservice_sample"]];
 #else // by radius
         BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithPoint:center radius:self.radiusSlider.value units:KILOMETERS categories:@[@"geoservice_sample"]];
 #endif
+        query.includeMeta = @YES;
         //query.whereClause = [NSString stringWithFormat:@"city = \'DAKAR\'"];
-        [query metadata:@{@"city":@"DAKAR"}];
+        //[query metadata:@{@"city":@"DAKAR"}];
         
         NSLog(@"StartViewController -> loadGeoPoints: query = %@", query);
         
@@ -680,68 +670,6 @@
     @catch (Fault *fault) {
         NSLog(@"linkingGeoPointWithSeveralDataObjects FAULT = %@ ", fault);
     }
-}
-
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
--(GEO_POINT)randomGeoPoint {
-    
-    GEO_POINT geoPoint;
-    geoPoint.longitude = (double)(rand() % 180000)/1000.0;
-    geoPoint.latitude = (double)(rand() % 90000)/1000.0;
-    return geoPoint;
-}
-
--(void)onGetPoints:(id)response {
-    
-    BackendlessCollection *bc = (BackendlessCollection *)response;
-    NSLog(@"onGetPoints: %@", bc);
-}
-
--(void)onAddPoint:(id)response {
-    
-    GeoPoint *gp = (GeoPoint *)response;
-    NSLog(@"onAddPoint: geoPoint -> %@", gp);
-}
-
--(void)testGeoServiceGetPointsByMetadata {
-    
-    NSLog(@"##################################################  UNIT TEST testGeoServiceGetPointsByMetadata");
-    
-    GeoPoint *gp = [GeoPoint geoPoint:[self randomGeoPoint]];
-    [gp categories:@[@"TEST000"]];
-    //[gp metadata:@{@"FIRST":@"ONE", @"SECOND":@"TWO", @"THIRTH":@"THREE"}];
-    [gp metadata:@{@"1":@"FIRST", @"SECOND":@"TWO", @"THIRTH":@"THREE"}];
-    id result = [backendless.geoService savePoint:gp];
-    if ([result isKindOfClass:[Fault class]]) {
-        Fault *fault = (Fault *)result;
-        NSLog(@"UNIT TEST testGeoServiceGetPointsByMetadata -> FAULT (A): %@", fault);
-        return;
-    }
-    
-    [self onAddPoint:result];
-    
-    BackendlessGeoQuery *query = [BackendlessGeoQuery query];
-    [query categories:@[@"TEST000"]];
-    //[query metadata:@{@"FIRST":@"ONE"}];
-    //[query metadata:@{@"1":@"FIRST"}];
-    [query metadata:@{@"SECOND":@"TWO"}];
-    
-    NSLog(@"UNIT TEST testGeoServiceGetPointsByMetadata -> QUERY: %@", query);
-    
-    result = [backendless.geoService getPoints:query];
-    if ([result isKindOfClass:[Fault class]]) {
-        Fault *fault = (Fault *)result;
-        NSLog(@"UNIT TEST testGeoServiceGetPointsByMetadata -> QUERY: %@\n FAULT (B): %@", query, fault);
-        return;
-    }
-    
-    // analyse of result
-    [self onGetPoints:result];
-    
-    BackendlessCollection *bc = (BackendlessCollection *)result;
-    if (![bc valTotalObjects])
-    NSLog(@"UNIT TEST testGeoServiceGetPointsByMetadata -> QUERY: %@\n FAULT (C): ANY POINTS ARE NOT FOUND", query);
 }
 
 
