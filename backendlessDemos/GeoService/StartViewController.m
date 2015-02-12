@@ -24,6 +24,7 @@
 #import "StartViewController.h"
 #import "StartAppDelegate.h"
 #import "Backendless.h"
+#import "Infos.h"
 
 #define COORDINATE_STR @"lat: %g  long: %g"
 
@@ -65,7 +66,7 @@
         [self deleteGeoPoint];
 #endif
         
-#if 1 // samples: search by date
+#if 0 // samples: search by date
         [self searchByDateInCategory];
         [self searchByDateInRadius];
         [self searchByDateInRectangularArea];
@@ -77,6 +78,22 @@
         [self partialMatchSearchInRadius];
         [self partialMatchSearchInRectangularArea];
         [self partialMatchSearchInWhereClause];
+#endif
+        
+#if 0 // samples: Linking a data object with a geo point and vice versa
+        [self linkingDataObjectWithGeoPoints];
+        [self linkingGeoPointWithDataObject];
+        [self linkingGeoPointWithSeveralDataObjects];
+#endif
+        
+#if 0
+        ProtectedBackendlessGeoQuery *query = [ProtectedBackendlessGeoQuery protectedQuery:[BackendlessGeoQuery new]];
+        NSLog(@"QUERY: %@ -> %@ [LAT: %@, LONG: %@]", query, query.geoQuery, query.latitude, query.longitude);
+        query.radius = @10.7;
+#endif
+        
+#if 1
+        [self testGeoServiceGetPointsByMetadata];
 #endif
 
     }
@@ -131,14 +148,13 @@
         
         NSLog(@"StartViewController -> loadGeoPoints: center = {%g, %g}, NW = {%g, %g}, SE = {%g, %g}", center.latitude, center.longitude, rect.nordWest.latitude, rect.nordWest.longitude, rect.southEast.latitude, rect.southEast.longitude);
 #if 1 // by rectangle
-        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithRect:rect.nordWest southEast:rect.southEast categories:@[@"geoservice_sample"]];
+        //BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithRect:rect.nordWest southEast:rect.southEast categories:@[@"geoservice_sample"]];
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithCategories:@[@"geoservice_sample"]];
 #else // by radius
         BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithPoint:center radius:self.radiusSlider.value units:KILOMETERS categories:@[@"geoservice_sample"]];
 #endif
-        [query includeMeta:YES];
-//        query.whereClause = [NSString stringWithFormat:@"\'city\' = \'TBILISI\'"];
-//        query.metadata = [NSMutableDictionary dictionary];
-//        query.metadata = [NSMutableDictionary dictionaryWithDictionary:@{@"city":@"TBILISI"}];
+        //query.whereClause = [NSString stringWithFormat:@"city = \'DAKAR\'"];
+        [query metadata:@{@"city":@"DAKAR"}];
         
         NSLog(@"StartViewController -> loadGeoPoints: query = %@", query);
         
@@ -348,7 +364,7 @@
         NSLog(@"deleteGeoPoint -> point: %@\n[id: %@]", point, point.objectId);
 
         // delete
-        [backendless.geoService deleteGeoPoint:point.objectId];
+        [backendless.geoService removePoint:point];
         NSLog(@"deleteGeoPoint -> point id: %@ has been deleted", point.objectId);
     }
     @catch (Fault *fault) {
@@ -581,5 +597,152 @@
         return;
     }
 }
+
+// samples: Linking a data object with a geo point and vice versa - http://bugs.backendless.com/browse/BKNDLSS-7826
+
+-(void)linkingDataObjectWithGeoPoints {
+    
+    @try {
+        
+        TaxiCab *taxi = [TaxiCab new];
+        taxi.carMake = @"Toyota";
+        taxi.carModel = @"Prius";
+        
+        // one-to-one relation between a data object and a geo point
+        taxi.location = [GeoPoint geoPoint:(GEO_POINT){.latitude=40.7148, .longitude=-74.0059}
+                                  categories:@[@"taxi"]
+                                    metadata:@{@"service-area":@"NYC"}
+                           ];
+        
+        // one-to-many relation between a data object and geo points
+        GeoPoint *droppOff1 = [GeoPoint geoPoint:(GEO_POINT){.latitude=40.757977, .longitude=-73.98557}
+                                     categories:@[@"DropOffs"]
+                                       metadata:@{@"name":@"Times Square"}
+                              ];
+        GeoPoint *droppOff2 = [GeoPoint geoPoint:(GEO_POINT){.latitude=40.748379, .longitude=-73.985565}
+                                      categories:@[@"DropOffs"]
+                                        metadata:@{@"name":@"Empire State Building"}
+                               ];
+        taxi.previousDropOffs = [NSMutableArray arrayWithArray:@[droppOff1, droppOff2]];
+        
+        taxi = [backendless.persistenceService save:taxi];
+        NSLog(@"linkingDataObjectWithGeoPoints: %@", taxi);
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"linkingDataObjectWithGeoPoints FAULT = %@ ", fault);
+    }
+}
+
+-(void)linkingGeoPointWithDataObject {
+    
+    @try {
+        
+        TaxiCab *cab = [TaxiCab new];
+        cab.carMake = @"Ford";
+        cab.carModel = @"Crown Victoria";
+        
+        GeoPoint *pickupLocation = [GeoPoint geoPoint:(GEO_POINT){.latitude=40.750549, .longitude=-73.994232}
+                                  categories:@[@"Pickups"]
+                                    metadata:@{@"TaxiCab":cab}
+                           ];
+        
+        pickupLocation = [backendless.geoService savePoint:pickupLocation];
+        NSLog(@"linkingGeoPointWithDataObject: %@", pickupLocation);
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"linkingGeoPointWithDataObject FAULT = %@ ", fault);
+    }
+}
+
+-(void)linkingGeoPointWithSeveralDataObjects {
+    
+    @try {
+
+        TaxiCab *cab1 = [TaxiCab new];
+        cab1.carMake = @"Ford";
+        cab1.carModel = @"Crown Victoria";
+        
+        TaxiCab *cab2 = [TaxiCab new];
+        cab1.carMake = @"Toyota";
+        cab1.carModel = @"Prius";
+        
+        GeoPoint *pickupLocation = [GeoPoint geoPoint:(GEO_POINT){.latitude=40.750549, .longitude=-73.994232}
+                                           categories:@[@"Pickups"]
+                                             metadata:@{@"AvailableCabs":@[cab1, cab2]}
+                                    ];
+        
+        pickupLocation = [backendless.geoService savePoint:pickupLocation];
+        NSLog(@"linkingGeoPointWithSeveralDataObjectst: %@", pickupLocation);
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"linkingGeoPointWithSeveralDataObjects FAULT = %@ ", fault);
+    }
+}
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-(GEO_POINT)randomGeoPoint {
+    
+    GEO_POINT geoPoint;
+    geoPoint.longitude = (double)(rand() % 180000)/1000.0;
+    geoPoint.latitude = (double)(rand() % 90000)/1000.0;
+    return geoPoint;
+}
+
+-(void)onGetPoints:(id)response {
+    
+    BackendlessCollection *bc = (BackendlessCollection *)response;
+    NSLog(@"onGetPoints: %@", bc);
+}
+
+-(void)onAddPoint:(id)response {
+    
+    GeoPoint *gp = (GeoPoint *)response;
+    NSLog(@"onAddPoint: geoPoint -> %@", gp);
+}
+
+-(void)testGeoServiceGetPointsByMetadata {
+    
+    NSLog(@"##################################################  UNIT TEST testGeoServiceGetPointsByMetadata");
+    
+    GeoPoint *gp = [GeoPoint geoPoint:[self randomGeoPoint]];
+    [gp categories:@[@"TEST000"]];
+    //[gp metadata:@{@"FIRST":@"ONE", @"SECOND":@"TWO", @"THIRTH":@"THREE"}];
+    [gp metadata:@{@"1":@"FIRST", @"SECOND":@"TWO", @"THIRTH":@"THREE"}];
+    id result = [backendless.geoService savePoint:gp];
+    if ([result isKindOfClass:[Fault class]]) {
+        Fault *fault = (Fault *)result;
+        NSLog(@"UNIT TEST testGeoServiceGetPointsByMetadata -> FAULT (A): %@", fault);
+        return;
+    }
+    
+    [self onAddPoint:result];
+    
+    BackendlessGeoQuery *query = [BackendlessGeoQuery query];
+    [query categories:@[@"TEST000"]];
+    //[query metadata:@{@"FIRST":@"ONE"}];
+    //[query metadata:@{@"1":@"FIRST"}];
+    [query metadata:@{@"SECOND":@"TWO"}];
+    
+    NSLog(@"UNIT TEST testGeoServiceGetPointsByMetadata -> QUERY: %@", query);
+    
+    result = [backendless.geoService getPoints:query];
+    if ([result isKindOfClass:[Fault class]]) {
+        Fault *fault = (Fault *)result;
+        NSLog(@"UNIT TEST testGeoServiceGetPointsByMetadata -> QUERY: %@\n FAULT (B): %@", query, fault);
+        return;
+    }
+    
+    // analyse of result
+    [self onGetPoints:result];
+    
+    BackendlessCollection *bc = (BackendlessCollection *)result;
+    if (![bc valTotalObjects])
+    NSLog(@"UNIT TEST testGeoServiceGetPointsByMetadata -> QUERY: %@\n FAULT (C): ANY POINTS ARE NOT FOUND", query);
+}
+
 
 @end

@@ -22,17 +22,298 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let APP_ID = ""
+    let SECRET_KEY = ""
+    let VERSION_NUM = "v1"
+    
+    var backendless = Backendless.sharedInstance()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //DebLog.setIsActive(true)
+        
+        backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+        
+        // -------------- PersistenceService -------------------------------
+        //testPersistenceService()
+        
+        // --------------- UserService -------------------------------------
+        //userLoginSync()
+        //validUserTokenSync()
+        //validUserTokenAsync()
+        
+        // ------------ Data & Geo -----------------------------------------
+        linkingDataObjectWithGeoPoints()
+        linkingGeoPointWithDataObject()
+        linkingGeoPointWithSeveralDataObjects()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func userLoginSync() {
+        
+        // - sync methods with fault as exception (full "try/catch/finally" version)
+        Types.try({ () -> Void in
+            
+            // - user login
+            var user = self.backendless.userService.login("bob@foo.com", password:"bob")
+            NSLog("LOGINED USER: %@", user.description)
+            
+            /*
+            // - user update
+            var counter: AnyObject! = user.getProperty("counter")
+            user.setProperty("counter", object: counter)
+            user = self.backendless.userService.update(user)
+            NSLog("UPDATED USER: %@", user.description)
+            */
+            
+            },
+            
+            catch: { (exception) -> Void in
+                NSLog("FAULT: %@", exception as Fault)
+            },
+            
+            finally: { () -> Void in
+                NSLog("USER OPERATIONS ARE FINISHED")
+            }
+        )
+    }
+    
+    func validUserTokenSync() {
+        
+        Types.try({ () -> Void in
+            
+            var result = self.backendless.userService.isValidUserToken() //as NSNumber
+            println("isValidUserToken (SYNC): \(result.boolValue)")
+            },
+            
+            catch: { (exception) -> Void in
+                println("Server reported an error (SYNC): \(exception as Fault)")
+            }
+        )
+    }
+    
+    func validUserTokenAsync() {
+        
+        backendless.userService.isValidUserToken(
+            { (var result : AnyObject!) -> () in
+                println("isValidUserToken (ASYNC): \(result.boolValue)")
+            },
+            error: { (var fault : Fault!) -> () in
+                println("Server reported an error (ASYNC): \(fault)")
+            }
+        )
+    }
+    
+    func testPersistenceService() {
+        
+        // - sync methods with fault as exception (short "try/catch" version)
+        Types.try({ () -> Void in
+            
+            var obj = PersistentObjectQB()
+            var result : AnyObject? = self.backendless.persistenceService.save(obj)
+            NSLog("PersistentObjectQB: %@", (result as PersistentObjectQB).description)
+            
+            },
+            
+            catch: { (exception) -> Void in
+                NSLog("FAULT: %@", exception as Fault)
+            }
+        )
+        
+        
+        // - shut off the fault as exception
+        backendless.setThrowException(false)
+        
+        var result : AnyObject
+        var fault : Fault?
+        
+        // - sync method with fault as reference (fault as exception should be shutted off !)
+        var item : AnyObject? = backendless.persistenceService.save(OrderItem(), error: &fault)
+        if (fault == nil) {
+            var obj : AnyObject = backendless.persistenceService.findById("OrderItem", sid: (item as OrderItem).objectId)
+            if (obj is OrderItem) {
+                println("OrderItem: \((obj as OrderItem).itemName) <\((obj as OrderItem).objectId)>")
+            }
+            else {
+                println("\nFAULT (0): \(fault!.description)")
+            }
+        }
+        else {
+            println("\nFAULT (0): \(fault!.description)")
+        }
+        
+        /* - sorting for the selected columns (ascending and descending)
+        
+        NSLog(" ------------------ TEST: sorting for the selected columns ---------------------------------")
+        
+        var query1 : QueryOptions = QueryOptions()
+        query1.sortBy = ["name", "objectId"]
+        var dataQuery1 : BackendlessDataQuery = BackendlessDataQuery()
+        dataQuery1.queryOptions = query1
+        
+        result = backendless.persistenceService.find(Order().ofClass(), dataQuery:dataQuery1)
+        if (result is BackendlessCollection) {
+        var bc1 : BackendlessCollection = result as BackendlessCollection
+        for order : Order in bc1.data as [Order] {
+        println("OrderItem: \(order.name) <\(order.objectId)>")
+        }
+        }
+        if (result is Fault) {
+        println("\nFAULT (0): \(fault!.description)")
+        }
+        
+        */
+        
+        // - sync method with class instance/fault as return (fault as exception should be shutted off !)
+        result = backendless.persistenceService.save(Weather())
+        if (result is Weather) {
+            var obj : AnyObject = backendless.persistenceService.findById("Weather", sid:(result as Weather).objectId)
+            if (obj is Weather) {
+                var obj1 = obj as Weather
+                println("\nWeather (1): \(obj1.description)")
+            }
+        }
+        if (result is Fault) {
+            println("\nFAULT (1): \(fault!.description)")
+        }
+        
+        // - sync method with fault as reference (fault as exception should be shutted off !)
+        var weather : AnyObject? = backendless.persistenceService.save(Weather(), error: &fault)
+        if (fault == nil) {
+            var obj : AnyObject = backendless.persistenceService.findById("Weather", sid: (weather as Weather).objectId)
+            if (obj is Weather) {
+                println("\nWeather (2): \((obj as Weather).description)")
+            }
+        }
+        else {
+            println("\nFAULT (2): \(fault!.description)")
+        }
+        
+        // - async method with block-based callbacks
+        backendless.persistenceService.save(
+            Weather(),
+            response: { (var result : AnyObject!) -> () in
+                var obj : AnyObject = self.backendless.persistenceService.findById("Weather", sid: (result as Weather).objectId)
+                if (obj is Weather) {
+                    println("\nWeather (3): \((obj as Weather).description)")
+                }
+            },
+            error: { (var fault : Fault!) -> () in
+                println("\nFAULT (3): \(fault!.description)")
+            }
+        )
+        
+        // - object as dictionary of properties
+        var os = ["iOS":"Apple", "android":"Google"]
+        var mobileOs : AnyObject? = backendless.persistenceService.save("MobileOS", entity:os, error: &fault)
+        if (fault != nil) {
+            println("\nFAULT (4): \(fault!.description)")
+        }
+        
+        var q = BackendlessDataQuery.query() as BackendlessDataQuery;
+        
+    }
+    
+    // samples: Linking a data object with a geo point and vice versa - http://bugs.backendless.com/browse/BKNDLSS-7826
+    
+    func linkingDataObjectWithGeoPoints() {
+        
+        Types.try({ () -> Void in
+            
+            var taxi = TaxiCab()
+            taxi.carMake = "Toyota"
+            taxi.carModel = "Prius"
+            
+            // one-to-one relation between a data object and a geo point
+            taxi.location = GeoPoint.geoPoint(
+                GEO_POINT(latitude: 40.7148, longitude: -74.0059),
+                categories: ["taxi"],
+                metadata: ["service-area":"NYC"]
+                ) as? GeoPoint
+            
+            // one-to-many relation between a data object and geo points
+            var droppOff1 = GeoPoint.geoPoint(
+                GEO_POINT(latitude: 40.757977, longitude: -73.98557),
+                categories: ["DropOffs"],
+                metadata: ["name":"Times Square"]
+                ) as GeoPoint
+            
+            var droppOff2 = GeoPoint.geoPoint(
+                GEO_POINT(latitude: 40.748379, longitude: -73.985565),
+                categories: ["DropOffs"],
+                metadata: ["name":"Empire State Building"]
+                ) as GeoPoint
+            
+            taxi.previousDropOffs = [droppOff1, droppOff2]
+            
+            taxi = self.backendless.persistenceService.save(taxi) as TaxiCab
+            println("linkingDataObjectWithGeoPoints: \(taxi)")
+            },
+            
+            catch: { (exception) -> Void in
+                println("linkingDataObjectWithGeoPoints (FAULT): \(exception as Fault)")
+            }
+        )
+    }
+    
+    func linkingGeoPointWithDataObject() {
+        
+        Types.try({ () -> Void in
+            
+            var cab = TaxiCab()
+            cab.carMake = "Toyota"
+            cab.carModel = "Prius"
+            
+            var pickupLocation = GeoPoint.geoPoint(
+                GEO_POINT(latitude: 40.750549, longitude: -73.994232),
+                categories: ["Pickups"],
+                metadata: ["TaxiCab":cab]
+                ) as GeoPoint
+            
+            pickupLocation = self.backendless.geoService.savePoint(pickupLocation)
+            println("linkingGeoPointWithDataObject: \(pickupLocation)")
+            },
+            
+            catch: { (exception) -> Void in
+                println("linkingGeoPointWithDataObject (FAULT): \(exception as Fault)")
+            }
+        )
+    }
+    
+    func linkingGeoPointWithSeveralDataObjects() {
+        
+        Types.try({ () -> Void in
+            
+            var cab1 = TaxiCab()
+            cab1.carMake = "Ford"
+            cab1.carModel = "Crown Victoria"
+            
+            var cab2 = TaxiCab()
+            cab2.carMake = "Toyota"
+            cab2.carModel = "Prius"
+            
+            var pickupLocation = GeoPoint.geoPoint(
+                GEO_POINT(latitude: 40.750549, longitude: -73.994232),
+                categories: ["Pickups"],
+                metadata: ["AvailableCabs":[cab1, cab2]]
+                ) as GeoPoint
+            
+            pickupLocation = self.backendless.geoService.savePoint(pickupLocation)
+            println("linkingGeoPointWithSeveralDataObjects: \(pickupLocation)")
+            },
+            
+            catch: { (exception) -> Void in
+                println("linkingGeoPointWithSeveralDataObjects (FAULT): \(exception as Fault)")
+            }
+        )
+    }
 
 }
 

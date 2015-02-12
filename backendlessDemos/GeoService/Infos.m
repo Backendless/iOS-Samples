@@ -1,6 +1,6 @@
 //
-//  BackendlessEntity.h
-//  backendlessAPI
+//  Infos.m
+//  backendlessDemos
 /*
  * *********************************************************************************************************************
  *
@@ -19,17 +19,7 @@
  *  ********************************************************************************************************************
  */
 
-#import <Foundation/Foundation.h>
+#import "Infos.h"
 
-@interface BackendlessEntity : NSObject {
-    NSString    *objectId;
-    NSString    *__meta;
-    NSDate      *created;
-    NSDate      *updated;
-}
-@property (strong, nonatomic) NSString *objectId;
-@property (strong, nonatomic) NSString *__meta;
-@property (strong, nonatomic) NSDate *created;
-@property (strong, nonatomic) NSDate *updated;
-+(id)entity;
+@implementation TaxiCab
 @end

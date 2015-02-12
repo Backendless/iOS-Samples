@@ -83,4 +83,11 @@ class Order : BackendlessEntity {
     var customer : Customer?
 }
 
+class TaxiCab : NSObject {
+    
+    var carMake : String?
+    var carModel : String?
+    var location : GeoPoint?
+    var previousDropOffs : [GeoPoint]?
+}
 

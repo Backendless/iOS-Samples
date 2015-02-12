@@ -51,6 +51,11 @@
     }
     
 #if 0
+    [self validUserTokenSync];
+    [self validUserTokenAsync];
+#endif
+    
+#if 0
     [self getUserRolesSync];
 #endif
 }
@@ -65,6 +70,9 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
+#pragma mark -
+#pragma mark Test Methods
+
 -(void)stayLoggedIn {
     
     if (backendless.userService.isStayLoggedIn) {
@@ -76,6 +84,29 @@
     else {
         [backendless.userService setStayLoggedIn:YES];
     }
+}
+
+-(void)validUserTokenSync {
+    
+    @try {
+        
+        NSNumber *result = [backendless.userService isValidUserToken];
+        NSLog(@"isValidUserToken (SYNC): %@", [result boolValue]?@"YES":@"NO");
+    }
+    @catch (Fault *fault) {
+        NSLog(@"FAULT (SYNC): %@", fault);
+    }
+}
+
+-(void)validUserTokenAsync {
+    
+    [backendless.userService isValidUserToken:
+     ^(NSNumber *result) {
+         NSLog(@"isValidUserToken (ASYNC): %@", [result boolValue]?@"YES":@"NO");
+     }
+     error:^(Fault *fault) {
+         NSLog(@"login FAULT (ASYNC): %@", fault);
+     }];
 }
 
 -(void)getUserRolesSync {

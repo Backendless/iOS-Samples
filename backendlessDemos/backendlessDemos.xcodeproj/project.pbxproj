@@ -228,6 +228,7 @@
 		D35CA5401A66905000F500B0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5271A66881600F500B0 /* AppKit.framework */; };
 		D35CA5411A66905000F500B0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5281A66881600F500B0 /* Cocoa.framework */; };
 		D35CA5421A66905000F500B0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5291A66881600F500B0 /* IOKit.framework */; };
+		D35CA60F1A7BA5AE00F500B0 /* Infos.m in Sources */ = {isa = PBXBuildFile; fileRef = D35CA60E1A7BA5AE00F500B0 /* Infos.m */; };
 		D36C533D18DE51F200B080D2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
 		D36C533E18DE522E00B080D2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		D37F5ED419CB0AFC0077F0C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
@@ -665,6 +666,8 @@
 		D30E684F19E28E9C00AE3949 /* MPMediaEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaEncoder.h; sourceTree = "<group>"; };
 		D30E685019E28E9C00AE3949 /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
 		D30E685119E28E9C00AE3949 /* MediaLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = MediaLibiOS.a; sourceTree = "<group>"; };
+		D31700D81A84F16C00772766 /* GeoCluster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoCluster.h; sourceTree = "<group>"; };
+		D31700D91A84F16C00772766 /* ProtectedBackendlessGeoQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtectedBackendlessGeoQuery.h; sourceTree = "<group>"; };
 		D339EF20199AADC500AA4974 /* AtomicCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCounters.h; sourceTree = "<group>"; };
 		D339EF21199AADC500AA4974 /* AtomicCountersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCountersFactory.h; sourceTree = "<group>"; };
 		D339EF22199AADC500AA4974 /* CacheFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFactory.h; sourceTree = "<group>"; };
@@ -675,6 +678,8 @@
 		D35CA5271A66881600F500B0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		D35CA5281A66881600F500B0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D35CA5291A66881600F500B0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		D35CA60D1A7BA5AE00F500B0 /* Infos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Infos.h; sourceTree = "<group>"; };
+		D35CA60E1A7BA5AE00F500B0 /* Infos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Infos.m; sourceTree = "<group>"; };
 		D37F5ECE19CB0A520077F0C5 /* CustomService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomService.h; sourceTree = "<group>"; };
 		D37F5ED319CB0AFC0077F0C5 /* CustomService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37F5ED919CB0AFC0077F0C5 /* CustomService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomService-Info.plist"; sourceTree = "<group>"; };
@@ -2004,6 +2009,8 @@
 		F91B671616B18DF500668A06 /* GeoService */ = {
 			isa = PBXGroup;
 			children = (
+				D35CA60D1A7BA5AE00F500B0 /* Infos.h */,
+				D35CA60E1A7BA5AE00F500B0 /* Infos.m */,
 				F91B671F16B18DF500668A06 /* StartAppDelegate.h */,
 				F91B672016B18DF500668A06 /* StartAppDelegate.m */,
 				F91B672B16B18DF500668A06 /* StartViewController.h */,
@@ -2128,6 +2135,8 @@
 		F9BB000818785AB20076BC6D /* include */ = {
 			isa = PBXGroup;
 			children = (
+				D31700D81A84F16C00772766 /* GeoCluster.h */,
+				D31700D91A84F16C00772766 /* ProtectedBackendlessGeoQuery.h */,
 				D3EA53071A30A1B4009C5FE0 /* DataPermission.h */,
 				D3EA53081A30A1B4009C5FE0 /* FilePermission.h */,
 				D37F5ECE19CB0A520077F0C5 /* CustomService.h */,
@@ -2989,6 +2998,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91B671D16B18DF500668A06 /* main.m in Sources */,
+				D35CA60F1A7BA5AE00F500B0 /* Infos.m in Sources */,
 				F91B672116B18DF500668A06 /* StartAppDelegate.m in Sources */,
 				F91B672D16B18DF500668A06 /* StartViewController.m in Sources */,
 			);

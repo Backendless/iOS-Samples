@@ -1,5 +1,5 @@
 //
-//  BackendlessEntity.h
+//  GeoCluster.h
 //  backendlessAPI
 /*
  * *********************************************************************************************************************
@@ -8,7 +8,7 @@
  *
  *  ********************************************************************************************************************
  *
- *  Copyright 2012 BACKENDLESS.COM. All Rights Reserved.
+ *  Copyright 2015 BACKENDLESS.COM. All Rights Reserved.
  *
  *  NOTICE: All information contained herein is, and remains the property of Backendless.com and its suppliers,
  *  if any. The intellectual and technical concepts contained herein are proprietary to Backendless.com and its
@@ -20,16 +20,13 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "GeoPoint.h"
 
-@interface BackendlessEntity : NSObject {
-    NSString    *objectId;
-    NSString    *__meta;
-    NSDate      *created;
-    NSDate      *updated;
-}
-@property (strong, nonatomic) NSString *objectId;
-@property (strong, nonatomic) NSString *__meta;
-@property (strong, nonatomic) NSDate *created;
-@property (strong, nonatomic) NSDate *updated;
-+(id)entity;
+@class BackendlessGeoQuery;
+
+@interface GeoCluster : GeoPoint
+@property (nonatomic, strong) NSNumber *totalPoints;
+@property (nonatomic, strong) BackendlessGeoQuery *geoQuery;
+-(int)valTotalPoints;
+-(void)totalPoints:(int)totalPoints;
 @end
