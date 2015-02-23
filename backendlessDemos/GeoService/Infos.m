@@ -23,3 +23,6 @@
 
 @implementation TaxiCab
 @end
+
+@implementation Friend
+@end

@@ -27,3 +27,9 @@
 @property (nonatomic, strong) GeoPoint *location;
 @property (nonatomic, strong) NSMutableArray *previousDropOffs;
 @end
+
+@interface Friend : NSObject
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *phoneNumber;
+@property (nonatomic, strong) GeoPoint *coordinates;
+@end

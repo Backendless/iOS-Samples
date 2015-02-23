@@ -23,8 +23,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let APP_ID = ""
-    let SECRET_KEY = ""
+    let APP_ID = "7B92560B-91F0-E94D-FFEB-77451B0F9700"
+    let SECRET_KEY = "B9D27BA8-3964-F3AE-FF26-E71FFF487300"
+    //let APP_ID = "2C159E62-C300-25C3-FFDD-67BB9497F800"
+    //let SECRET_KEY = "C7348714-A5E0-6F91-FF97-6DDDA8297400"
     let VERSION_NUM = "v1"
     
     var backendless = Backendless.sharedInstance()
@@ -36,6 +38,7 @@ class ViewController: UIViewController {
         //DebLog.setIsActive(true)
         
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+        //backendless.hostURL = "http://10.0.1.66:9000"
         
         // -------------- PersistenceService -------------------------------
         //testPersistenceService()
@@ -46,9 +49,19 @@ class ViewController: UIViewController {
         //validUserTokenAsync()
         
         // ------------ Data & Geo -----------------------------------------
-        linkingDataObjectWithGeoPoints()
-        linkingGeoPointWithDataObject()
-        linkingGeoPointWithSeveralDataObjects()
+        //linkingDataObjectWithGeoPoints()
+        //linkingGeoPointWithDataObject()
+        //linkingGeoPointWithSeveralDataObjects()
+        
+        // ------------ Geo -----------------------------------------
+        //clusteringSearchInCategory()
+        //clusteringSearchInRadius()
+        //clusteringSearchInRectangularArea()
+        
+        //loadingGeoPointMetadata()
+        //loadingGeoClusterMetadata()
+        
+        searchingDataObjectByDistance()
     }
 
     override func didReceiveMemoryWarning() {
@@ -311,6 +324,162 @@ class ViewController: UIViewController {
             
             catch: { (exception) -> Void in
                 println("linkingGeoPointWithSeveralDataObjects (FAULT): \(exception as Fault)")
+            }
+        )
+    }
+    
+    
+    // samples : geo clustering - http://bugs.backendless.com/browse/BKNDLSS-7866
+    
+    func clusteringSearchInCategory() {
+        
+        Types.try({ () -> Void in
+            
+            var query = BackendlessGeoQuery.queryWithCategories(["City"]) as BackendlessGeoQuery
+            query.setClusteringParams(-157.9 , eastLongitude: -157.8, mapWidth: 480)
+            var points = self.backendless.geoService.getPoints(query)
+            println("Loaded geo points and clusters: \(points)")
+            },
+            
+            catch: { (exception) -> Void in
+                println("Server reported an error: \(exception as Fault)")
+            }
+        )
+    }
+    
+    func clusteringSearchInRadius() {
+        
+        Types.try({ () -> Void in
+            
+            var query = BackendlessGeoQuery.queryWithPoint(
+                GEO_POINT(latitude: 21.306944, longitude: -157.858333), radius: 50.0, units: KILOMETERS, categories: ["City"]) as BackendlessGeoQuery
+            query.setClusteringParams(157.9 , eastLongitude: 157.8, mapWidth: 480)
+            var points = self.backendless.geoService.getPoints(query)
+            println("Loaded geo points and clusters: \(points)")
+            },
+            
+            catch: { (exception) -> Void in
+                println("Server reported an error: \(exception as Fault)")
+            }
+        )
+    }
+
+    func clusteringSearchInRectangularArea() {
+        
+        Types.try({ () -> Void in
+            
+            var rect = self.backendless.geoService.geoRectangle(GEO_POINT(latitude: 21.306944, longitude: -157.858333), length: 0.5, widht: 0.5)
+            var query = BackendlessGeoQuery.queryWithRect(rect.nordWest, southEast: rect.southEast, categories: ["City"]) as BackendlessGeoQuery
+            query.setClusteringParams(157.9 , eastLongitude: 157.8, mapWidth: 480)
+            var points = self.backendless.geoService.getPoints(query)
+            println("Loaded geo points and clusters: \(points)")
+            },
+            
+            catch: { (exception) -> Void in
+                println("Server reported an error: \(exception as Fault)")
+            }
+        )
+    }
+    
+    // sample: load geo point metadata - http://bugs.backendless.com/browse/BKNDLSS-8098
+    
+    func loadingGeoPointMetadata() {
+        
+        Types.try({ () -> Void in
+            
+            var query = BackendlessGeoQuery.queryWithCategories(["City"]) as BackendlessGeoQuery
+            var points = self.backendless.geoService.getPoints(query)
+            println("Loaded geo points with metadata:")
+            
+            for point in points.data {
+                var geoPoint = self.backendless.geoService.loadMetadata(point as GeoPoint)
+                println("\(geoPoint)")
+            }
+            },
+            
+            catch: { (exception) -> Void in
+                println("Server reported an error: \(exception as Fault)")
+            }
+        )
+    }
+    
+    func loadingGeoClusterMetadata() {
+        
+        Types.try({ () -> Void in
+            
+            var query = BackendlessGeoQuery.queryWithCategories(["City"]) as BackendlessGeoQuery
+            query.setClusteringParams(-157.9 , eastLongitude: -157.8, mapWidth: 480)
+            var points = self.backendless.geoService.getPoints(query)
+            println("Loaded geo points and clusters with metadata:")
+            
+            for point in points.data {
+                var geoPoint = self.backendless.geoService.loadMetadata(point as GeoPoint)
+                println("\(geoPoint)")
+            }
+            },
+            
+            catch: { (exception) -> Void in
+                println("Server reported an error: \(exception as Fault)")
+            }
+        )
+    }
+    
+    // sample: searching for data objects by distance - http://bugs.backendless.com/browse/BKNDLSS-8020
+    
+    func searchingDataObjectByDistance() {
+        
+        Types.try({ () -> Void in
+            
+            // create the friends
+            
+            var bob = Friend()
+            bob.name = "Bob"
+            bob.phoneNumber = "512-555-1212";
+            bob.coordinates = GeoPoint.geoPoint(
+            GEO_POINT(latitude: 30.26715, longitude: -97.74306),
+            categories: ["Home"],
+            metadata: ["description":"Bob's home"]
+            ) as? GeoPoint
+            self.backendless.persistenceService.save(bob)
+            
+            var jane = Friend()
+            jane.name = "Jane"
+            jane.phoneNumber = "512-555-1212";
+            jane.coordinates = GeoPoint.geoPoint(
+            GEO_POINT(latitude: 30.26715, longitude: -97.74306),
+            categories: ["Home"],
+            metadata: ["description":"Jane's home"]
+            ) as? GeoPoint
+            self.backendless.persistenceService.save(jane)
+            
+            var fred = Friend()
+            fred.name = "Fred"
+            fred.phoneNumber = "512-555-1212";
+            fred.coordinates = GeoPoint.geoPoint(
+            GEO_POINT(latitude: 30.26715, longitude: -97.74306),
+            categories: ["Home"],
+            metadata: ["description":"Fred's home"]
+            ) as? GeoPoint
+            self.backendless.persistenceService.save(fred)
+            
+            // search the friends by distance
+            
+            var queryOptions = QueryOptions()
+            queryOptions.relationsDepth = 1;
+            
+            var dataQuery = BackendlessDataQuery()
+            dataQuery.queryOptions = queryOptions;
+            dataQuery.whereClause = "distance( 30.26715, -97.74306, Coordinates.latitude, Coordinates.longitude ) < mi(200)"
+            
+            var friends = self.backendless.persistenceService.find(Friend.ofClass(), dataQuery:dataQuery) as BackendlessCollection
+            for friend in friends.data as [Friend] {
+                var info = friend.coordinates!.metadata["description"] as String
+                println("\(friend.name) lives at \(friend.coordinates!.latitude), \(friend.coordinates!.longitude) tagged as '\(info)'")
+            }
+            },
+            
+            catch: { (exception) -> Void in
+                println("searchingDataObjectByDistance (FAULT): \(exception as Fault)")
             }
         )
     }

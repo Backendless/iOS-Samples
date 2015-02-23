@@ -26,8 +26,8 @@
 #import "OrderItem.h"
 #import "Order.h"
 
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+static NSString *APP_ID = @"F7E12D2B-9C73-B667-FF6E-D45453462E00";
+static NSString *SECRET_KEY = @"8AE02A1D-DB9E-A21A-FF80-F41374983700";
 static NSString *VERSION_NUM = @"v1";
 
 @interface AppDelegate ()

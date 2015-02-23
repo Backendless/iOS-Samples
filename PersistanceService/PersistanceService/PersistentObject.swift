@@ -91,3 +91,11 @@ class TaxiCab : NSObject {
     var previousDropOffs : [GeoPoint]?
 }
 
+class Friend : NSObject {
+    
+    var name : String?
+    var phoneNumber : String?
+    var coordinates : GeoPoint?
+}
+
+

@@ -53,7 +53,7 @@
         
         _locationManager = ((StartAppDelegate *)[[UIApplication sharedApplication] delegate]).locationManager;
 
-#if 1 // loading default geopoints
+#if 0 // loading default geopoints
         [self performSelector:@selector(invokeGeo) withObject:nil afterDelay:.2f];
 #endif
         
@@ -84,6 +84,22 @@
         [self linkingDataObjectWithGeoPoints];
         [self linkingGeoPointWithDataObject];
         [self linkingGeoPointWithSeveralDataObjects];
+#endif
+        
+#if 0 // samples: clustering search
+        //[self partialMatchCreateGeoPoints];
+        [self clusteringSearchInCategory];
+        [self clusteringSearchInRadius];
+        [self clusteringSearchInRectangularArea];
+#endif
+        
+#if 0 // sample: load geo point metadata
+        [self loadingGeoPointMetadata];
+        [self loadingGeoClusterMetadata];
+#endif
+
+#if 1 // sample: searching for data objects by distance
+        [self searchingDataObjectByDistance];
 #endif
 
     }
@@ -672,5 +688,154 @@
     }
 }
 
+// samples : geo clustering - http://bugs.backendless.com/browse/BKNDLSS-7866
+
+-(void)clusteringSearchInCategory {
+    
+    @try {
+        
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithCategories:@[@"City"]];
+        [query setClusteringParams:-157.9 eastLongitude:-157.8 mapWidth:480];
+        BackendlessCollection *bc = [backendless.geoService getPoints:query];
+        
+        NSLog(@"clusteringSearchInCategory GETPOINTS: %@", bc);
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"clusteringSearchInCategory FAULT = %@ ", fault);
+        return;
+    }
+}
+
+-(void)clusteringSearchInRadius {
+    
+    @try {
+        
+        GEO_POINT center = (GEO_POINT){.latitude=21.306944, .longitude=-157.858333};
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithPoint:center radius:50 units:KILOMETERS categories:@[@"City"]];
+        [query setClusteringParams:-157.9 eastLongitude:-157.8 mapWidth:480];
+        BackendlessCollection *bc = [backendless.geoService getPoints:query];
+        
+        NSLog(@"clusteringSearchInRadius GETPOINTS: %@", bc);
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"clusteringSearchInRadius FAULT = %@ ", fault);
+        return;
+    }
+}
+
+-(void)clusteringSearchInRectangularArea {
+    
+    @try {
+        
+        GEO_POINT center = (GEO_POINT){.latitude=21.306944, .longitude=-157.858333};
+        GEO_RECT rect = [backendless.geoService geoRectangle:center length:0.5 widht:0.5];
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithRect:rect.nordWest southEast:rect.southEast categories:@[@"City"]];
+        [query setClusteringParams:-157.9 eastLongitude:-157.8 mapWidth:480];
+        BackendlessCollection *bc = [backendless.geoService getPoints:query];
+        
+        NSLog(@"clusteringSearchInRectangularArea GETPOINTS: %@", bc);
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"clusteringSearchInRectangularArea FAULT = %@ ", fault);
+        return;
+    }
+}
+
+// sample: load geo point metadata - http://bugs.backendless.com/browse/BKNDLSS-8098
+
+-(void)loadingGeoPointMetadata {
+    
+    @try {
+        
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithCategories:@[@"City"]];
+        BackendlessCollection *bc = [backendless.geoService getPoints:query];
+        
+        for (GeoPoint *point in bc.data) {
+            GeoPoint * geoPoint = [backendless.geoService loadMetadata:point];
+            NSLog(@"%@", geoPoint);
+        }
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"loadingGeoPointMetadata FAULT = %@ ", fault);
+        return;
+    }
+}
+
+
+-(void)loadingGeoClusterMetadata {
+    
+    @try {
+        
+        BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithCategories:@[@"City"]];
+        [query setClusteringParams:-157.9 eastLongitude:-157.8 mapWidth:480];
+        BackendlessCollection *bc = [backendless.geoService getPoints:query];
+        
+        for (GeoPoint *point in bc.data) {
+            GeoPoint * geoPoint = [backendless.geoService loadMetadata:point];
+            NSLog(@"%@", geoPoint);
+        }
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"oadingGeoClusterMetadata FAULT = %@ ", fault);
+        return;
+    }
+}
+
+// sample: searching for data objects by distance - http://bugs.backendless.com/browse/BKNDLSS-8020
+
+-(void)searchingDataObjectByDistance {
+    
+    @try {
+        
+        Friend *bob = [Friend new];
+        bob.name = @"Bob";
+        bob.phoneNumber = @"512-555-1212";
+        bob.coordinates = [GeoPoint geoPoint:(GEO_POINT){.latitude=30.26715, .longitude=-97.74306}
+                                  categories:@[@"Home"]
+                                    metadata:@{@"description":@"Bob's home"}
+                           ];
+        [backendless.persistenceService save:bob];
+        
+        Friend *jane = [Friend new];
+        jane.name = @"Jane";
+        jane.phoneNumber = @"281-555-1212";
+        jane.coordinates = [GeoPoint geoPoint:(GEO_POINT){.latitude=29.76328, .longitude=-95.36327}
+                                   categories:@[@"Home"]
+                                     metadata:@{@"description":@"Jane's home"}
+                            ];
+        [backendless.persistenceService save:jane];
+        
+        Friend *fred = [Friend new];
+        fred.name = @"Fred";
+        fred.phoneNumber = @"210-555-1212";
+        fred.coordinates = [GeoPoint geoPoint:(GEO_POINT){.latitude=29.42412, .longitude=-98.49363}
+                                   categories:@[@"Home"]
+                                     metadata:@{@"description":@"Fred's home"}
+                            ];
+        [backendless.persistenceService save:fred];
+        
+        QueryOptions *queryOptions = [QueryOptions query];
+        queryOptions.relationsDepth = @1;
+        
+        BackendlessDataQuery *dataQuery = [BackendlessDataQuery query];
+        dataQuery.queryOptions = queryOptions;
+        dataQuery.whereClause = @"distance( 30.26715, -97.74306, Coordinates.latitude, Coordinates.longitude ) < mi(200)";
+        
+        BackendlessCollection *friends = [[backendless.persistenceService of:[Friend class]] find:dataQuery];
+        for (Friend *friend in friends.data) {
+            NSLog(@"%@ lives at %@, %@ tagged as '%@'", friend.name, friend.coordinates.latitude, friend.coordinates.longitude, friend.coordinates.metadata[@"description"]);
+            
+        }
+    }
+    
+    @catch (Fault *fault) {
+        NSLog(@"searchingDataObjectByDistance FAULT = %@ ", fault);
+    } 
+} 
 
 @end
