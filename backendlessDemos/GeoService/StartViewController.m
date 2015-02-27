@@ -93,12 +93,12 @@
         [self clusteringSearchInRectangularArea];
 #endif
         
-#if 0 // sample: load geo point metadata
+#if 1 // sample: load geo point metadata
         [self loadingGeoPointMetadata];
         [self loadingGeoClusterMetadata];
 #endif
 
-#if 1 // sample: searching for data objects by distance
+#if 0 // sample: searching for data objects by distance
         [self searchingDataObjectByDistance];
 #endif
 
@@ -753,6 +753,7 @@
         BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithCategories:@[@"City"]];
         BackendlessCollection *bc = [backendless.geoService getPoints:query];
         
+        NSLog(@"Loaded geo points with metadata:");
         for (GeoPoint *point in bc.data) {
             GeoPoint * geoPoint = [backendless.geoService loadMetadata:point];
             NSLog(@"%@", geoPoint);
@@ -760,7 +761,7 @@
     }
     
     @catch (Fault *fault) {
-        NSLog(@"loadingGeoPointMetadata FAULT = %@ ", fault);
+        NSLog(@"Server reported an error: %@ ", fault);
         return;
     }
 }
@@ -774,16 +775,41 @@
         [query setClusteringParams:-157.9 eastLongitude:-157.8 mapWidth:480];
         BackendlessCollection *bc = [backendless.geoService getPoints:query];
         
-        for (GeoPoint *point in bc.data) {
-            GeoPoint * geoPoint = [backendless.geoService loadMetadata:point];
+        NSLog(@"Loaded geo points and clusters with metadata:");
+        for (id point in bc.data) {
+            GeoPoint *geoPoint = [backendless.geoService loadMetadata:point];
             NSLog(@"%@", geoPoint);
         }
     }
     
     @catch (Fault *fault) {
-        NSLog(@"oadingGeoClusterMetadata FAULT = %@ ", fault);
+        NSLog(@"Server reported an error: %@ ", fault);
         return;
     }
+}
+
+-(void)loadingGeoClusterMetadataAsync {
+    
+    BackendlessGeoQuery *query = [BackendlessGeoQuery queryWithCategories:@[@"City"]];
+    [query setClusteringParams:-157.9 eastLongitude:-157.8 mapWidth:480];
+    [backendless.geoService
+     getPoints:query
+     response:^(BackendlessCollection *bc) {
+         
+         for (id point in bc.data) {
+             [backendless.geoService
+              loadMetadata:point
+              response:^(GeoPoint *geoPoint) {
+                  NSLog(@"(ASYNC) %@", geoPoint);
+              }
+              error:^(Fault *fault) {
+                  NSLog(@"loadingGeoClusterMetadata FAULT (ASYNC) = %@ ", fault);
+              }];
+         }
+     }
+     error:^(Fault *fault) {
+         NSLog(@"loadingGeoClusterMetadata FAULT (ASYNC) = %@ ", fault);
+     }];
 }
 
 // sample: searching for data objects by distance - http://bugs.backendless.com/browse/BKNDLSS-8020

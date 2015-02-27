@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		611275841861B7B500B6ACE6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275831861B7B500B6ACE6 /* libsqlite3.0.dylib */; };
 		611275861861B8BB00B6ACE6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
-		61AC79EF1851FB5500E620E2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
-		61AC79F01851FB6A00E620E2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		9101187C180D3440008102A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9101186F180D343F008102A7 /* AppDelegate.m */; };
 		9101187D180D3440008102A7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91011870180D343F008102A7 /* MainMenu.xib */; };
 		9101187E180D3440008102A7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 91011872180D343F008102A7 /* Credits.rtf */; };
@@ -140,8 +138,6 @@
 		9176510B1827CB3B00745497 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
 		9176510C1827CB3F00745497 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		9176510D1827CB4600745497 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
-		917C47341864884A00FBB55D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
-		917C47351864885300FBB55D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		917C47361864885900FBB55D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
 		917C47371864886800FBB55D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
 		917C47381864886800FBB55D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
@@ -160,7 +156,6 @@
 		917C47491864889700FBB55D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
 		917C474A1864889700FBB55D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		918CF47817290CDC00088560 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
-		918CF4791729142E00088560 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91EF13A2174A41AF009C7A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91EF13A3174A41BC009C7A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		91EF13A4174A41C6009C7A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
@@ -230,7 +225,6 @@
 		D35CA5421A66905000F500B0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5291A66881600F500B0 /* IOKit.framework */; };
 		D35CA60F1A7BA5AE00F500B0 /* Infos.m in Sources */ = {isa = PBXBuildFile; fileRef = D35CA60E1A7BA5AE00F500B0 /* Infos.m */; };
 		D36C533D18DE51F200B080D2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
-		D36C533E18DE522E00B080D2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		D37F5ED419CB0AFC0077F0C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
 		D37F5ED519CB0AFC0077F0C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662A16B1873B00668A06 /* CoreGraphics.framework */; };
 		D37F5ED619CB0AFC0077F0C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
@@ -240,6 +234,23 @@
 		D37F5EE519CB0AFC0077F0C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37F5EE319CB0AFC0077F0C5 /* Main.storyboard */; };
 		D37F5EE819CB0AFC0077F0C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37F5EE719CB0AFC0077F0C5 /* ViewController.m */; };
 		D37F5EEA19CB0AFC0077F0C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37F5EE919CB0AFC0077F0C5 /* Images.xcassets */; };
+		D3A927FD1A9DFC9000D0059F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
+		D3A927FF1A9DFCD700D0059F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
+		D3A928001A9DFD2400D0059F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; };
+		D3A928011A9DFD3500D0059F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
+		D3A928021A9DFD4A00D0059F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662A16B1873B00668A06 /* CoreGraphics.framework */; };
+		D3A928031A9DFD6D00D0059F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
+		D3A928041A9DFD8000D0059F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
+		D3A928051A9DFD9400D0059F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
+		D3A928061A9DFDA400D0059F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
+		D3A928071A9DFDBA00D0059F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664A16B1893000668A06 /* AVFoundation.framework */; };
+		D3A928081A9DFDCF00D0059F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; };
+		D3A928091A9DFE4000D0059F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
+		D3A9280A1A9DFE6900D0059F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
+		D3A9280B1A9DFE8900D0059F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664C16B1893000668A06 /* CoreLocation.framework */; };
+		D3A9280C1A9DFE9800D0059F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
+		D3A9280D1A9DFEA600D0059F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
+		D3A9280E1A9DFEE100D0059F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
 		D3CF37E91A38B0F10070B746 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
 		D3CF37EA1A38B0F70070B746 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
 		D3CF37EB1A38B1000070B746 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
@@ -249,9 +260,6 @@
 		D3CF37EF1A38B1220070B746 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		D3CF37F01A38B1260070B746 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		D3CF37F11A38B12A0070B746 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
-		F91B665F16B18CD400668A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
-		F91B666016B18CD400668A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
-		F91B666116B18CD400668A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662A16B1873B00668A06 /* CoreGraphics.framework */; };
 		F91B666716B18CD400668A06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F91B666516B18CD400668A06 /* InfoPlist.strings */; };
 		F91B666916B18CD400668A06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B666816B18CD400668A06 /* main.m */; };
 		F91B666D16B18CD400668A06 /* StartAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B666C16B18CD400668A06 /* StartAppDelegate.m */; };
@@ -302,8 +310,6 @@
 		F91B670616B18DD900668A06 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91B670416B18DD900668A06 /* MainStoryboard.storyboard */; };
 		F91B670916B18DD900668A06 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B670816B18DD900668A06 /* StartViewController.m */; };
 		F91B671316B18DF500668A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
-		F91B671416B18DF500668A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
-		F91B671516B18DF500668A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662A16B1873B00668A06 /* CoreGraphics.framework */; };
 		F91B671B16B18DF500668A06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F91B671916B18DF500668A06 /* InfoPlist.strings */; };
 		F91B671D16B18DF500668A06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B671C16B18DF500668A06 /* main.m */; };
 		F91B672116B18DF500668A06 /* StartAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B672016B18DF500668A06 /* StartAppDelegate.m */; };
@@ -323,9 +329,6 @@
 		F91B674B16B18E0A00668A06 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91B674A16B18E0A00668A06 /* Default-568h@2x.png */; };
 		F91B674E16B18E0A00668A06 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91B674C16B18E0A00668A06 /* MainStoryboard.storyboard */; };
 		F91B675116B18E0A00668A06 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B675016B18E0A00668A06 /* StartViewController.m */; };
-		F91B675B16B18EE000668A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
-		F91B675C16B18EE000668A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662816B1873B00668A06 /* Foundation.framework */; };
-		F91B675D16B18EE000668A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662A16B1873B00668A06 /* CoreGraphics.framework */; };
 		F91B676316B18EE000668A06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F91B676116B18EE000668A06 /* InfoPlist.strings */; };
 		F91B676516B18EE000668A06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B676416B18EE000668A06 /* main.m */; };
 		F91B676916B18EE000668A06 /* StartAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B676816B18EE000668A06 /* StartAppDelegate.m */; };
@@ -333,8 +336,6 @@
 		F91B676D16B18EE000668A06 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91B676C16B18EE000668A06 /* Default@2x.png */; };
 		F91B676F16B18EE000668A06 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91B676E16B18EE000668A06 /* Default-568h@2x.png */; };
 		F91B677216B18EE000668A06 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91B677016B18EE000668A06 /* MainStoryboard.storyboard */; };
-		F91B677916B18FD700668A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
-		F91B677A16B18FDB00668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		F91B678616B1903900668A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
 		F91B678716B1903E00668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		F91B678A16B1905000668A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
@@ -346,19 +347,11 @@
 		F91B679016B1908500668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		F91B679116B1908B00668A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
 		F91B679216B1909000668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
-		F91B679316B1909B00668A06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664916B1893000668A06 /* AudioToolbox.framework */; };
-		F91B679416B1909F00668A06 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664A16B1893000668A06 /* AVFoundation.framework */; };
-		F91B679516B190A500668A06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664B16B1893000668A06 /* CFNetwork.framework */; };
-		F91B679616B190AA00668A06 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664D16B1893000668A06 /* CoreMedia.framework */; };
-		F91B679716B190AD00668A06 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664E16B1893000668A06 /* CoreVideo.framework */; };
-		F91B679816B190B100668A06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B665016B1893000668A06 /* Security.framework */; };
 		F91B679916B190B700668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91B6A9616B196E200668A06 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B6A9516B196E200668A06 /* RegisterViewController.m */; };
-		F91B6AA516B1A23E00668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F91B6AA716B1A2EA00668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91B6AB116B1A33400668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91B6AB616B1A35600668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
-		F91B6ABB16B1A36C00668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91B6AC016B1A38400668A06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91B6AC716B6883300668A06 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B6AC616B6883300668A06 /* ChatViewController.m */; };
 		F91B6ACA16B6EBF600668A06 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
@@ -1087,16 +1080,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F91B666016B18CD400668A06 /* Foundation.framework in Frameworks */,
-				F91B665F16B18CD400668A06 /* UIKit.framework in Frameworks */,
+				D3A9280E1A9DFEE100D0059F /* UIKit.framework in Frameworks */,
 				917C47361864885900FBB55D /* SystemConfiguration.framework in Frameworks */,
-				F91B677916B18FD700668A06 /* CFNetwork.framework in Frameworks */,
-				F91B677A16B18FDB00668A06 /* Security.framework in Frameworks */,
-				917C47341864884A00FBB55D /* CoreLocation.framework in Frameworks */,
-				F91B666116B18CD400668A06 /* CoreGraphics.framework in Frameworks */,
-				D36C533E18DE522E00B080D2 /* CoreData.framework in Frameworks */,
-				917C47351864885300FBB55D /* MapKit.framework in Frameworks */,
-				F91B6AA516B1A23E00668A06 /* libz.dylib in Frameworks */,
+				D3A9280D1A9DFEA600D0059F /* CFNetwork.framework in Frameworks */,
+				D3A9280C1A9DFE9800D0059F /* Security.framework in Frameworks */,
+				D3A9280B1A9DFE8900D0059F /* CoreLocation.framework in Frameworks */,
+				D3A928091A9DFE4000D0059F /* MapKit.framework in Frameworks */,
+				D3A9280A1A9DFE6900D0059F /* CoreData.framework in Frameworks */,
 				D36C533D18DE51F200B080D2 /* libsqlite3.dylib in Frameworks */,
 				F9BB00C318785AB60076BC6D /* CommLibiOS.a in Frameworks */,
 				F9BB00AF18785AB30076BC6D /* backendless.a in Frameworks */,
@@ -1192,14 +1182,11 @@
 				917C47401864887400FBB55D /* SystemConfiguration.framework in Frameworks */,
 				F91B6ACA16B6EBF600668A06 /* MapKit.framework in Frameworks */,
 				F91B678F16B1907F00668A06 /* CoreLocation.framework in Frameworks */,
-				F91B671416B18DF500668A06 /* Foundation.framework in Frameworks */,
-				F91B671516B18DF500668A06 /* CoreGraphics.framework in Frameworks */,
 				F91B678E16B1907700668A06 /* CFNetwork.framework in Frameworks */,
 				F91B679016B1908500668A06 /* Security.framework in Frameworks */,
 				F9BB00B418785AB40076BC6D /* backendless.a in Frameworks */,
 				F9BB00C818785AB70076BC6D /* CommLibiOS.a in Frameworks */,
 				9154F47C1869CD6500426C78 /* libsqlite3.dylib in Frameworks */,
-				F91B6ABB16B1A36C00668A06 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1227,28 +1214,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F91B675C16B18EE000668A06 /* Foundation.framework in Frameworks */,
-				F91B675B16B18EE000668A06 /* UIKit.framework in Frameworks */,
+				D3A927FD1A9DFC9000D0059F /* UIKit.framework in Frameworks */,
+				D3A928031A9DFD6D00D0059F /* MapKit.framework in Frameworks */,
+				D3A927FF1A9DFCD700D0059F /* CoreData.framework in Frameworks */,
+				D3A928041A9DFD8000D0059F /* CoreLocation.framework in Frameworks */,
+				D3A928001A9DFD2400D0059F /* CoreMedia.framework in Frameworks */,
+				D3A928011A9DFD3500D0059F /* CoreVideo.framework in Frameworks */,
+				D3A928021A9DFD4A00D0059F /* CoreGraphics.framework in Frameworks */,
+				D3A928051A9DFD9400D0059F /* Security.framework in Frameworks */,
+				D3A928061A9DFDA400D0059F /* CFNetwork.framework in Frameworks */,
+				D3A928071A9DFDBA00D0059F /* AVFoundation.framework in Frameworks */,
 				917C47441864888300FBB55D /* SystemConfiguration.framework in Frameworks */,
+				D3A928081A9DFDCF00D0059F /* AudioToolbox.framework in Frameworks */,
 				D30E679719DE9E4600AE3949 /* libspeexdsp.a in Frameworks */,
 				D30E677A19DE9C6D00AE3949 /* libavfilter.a in Frameworks */,
-				F91B679516B190A500668A06 /* CFNetwork.framework in Frameworks */,
-				F91B679816B190B100668A06 /* Security.framework in Frameworks */,
 				D30E679819DE9E4600AE3949 /* libx264.a in Frameworks */,
-				61AC79F01851FB6A00E620E2 /* MapKit.framework in Frameworks */,
-				61AC79EF1851FB5500E620E2 /* CoreLocation.framework in Frameworks */,
 				D30E677C19DE9C6D00AE3949 /* libavutil.a in Frameworks */,
-				918CF4791729142E00088560 /* CoreData.framework in Frameworks */,
-				F91B675D16B18EE000668A06 /* CoreGraphics.framework in Frameworks */,
-				F91B679316B1909B00668A06 /* AudioToolbox.framework in Frameworks */,
 				D30E677919DE9C6D00AE3949 /* libavdevice.a in Frameworks */,
-				F91B679416B1909F00668A06 /* AVFoundation.framework in Frameworks */,
 				D30E677B19DE9C6D00AE3949 /* libavformat.a in Frameworks */,
-				F91B679616B190AA00668A06 /* CoreMedia.framework in Frameworks */,
 				D30E677E19DE9C6D00AE3949 /* libswscale.a in Frameworks */,
 				D30E679619DE9E4600AE3949 /* libspeex.a in Frameworks */,
 				D30E677D19DE9C6D00AE3949 /* libswresample.a in Frameworks */,
-				F91B679716B190AD00668A06 /* CoreVideo.framework in Frameworks */,
 				F91B679916B190B700668A06 /* libz.dylib in Frameworks */,
 				D30E677819DE9C6D00AE3949 /* libavcodec.a in Frameworks */,
 				9154F47E1869CD6E00426C78 /* libsqlite3.dylib in Frameworks */,

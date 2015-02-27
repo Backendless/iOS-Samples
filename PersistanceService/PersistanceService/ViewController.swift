@@ -58,10 +58,10 @@ class ViewController: UIViewController {
         //clusteringSearchInRadius()
         //clusteringSearchInRectangularArea()
         
-        //loadingGeoPointMetadata()
-        //loadingGeoClusterMetadata()
+        loadingGeoPointMetadata()
+        loadingGeoClusterMetadata()
         
-        searchingDataObjectByDistance()
+        //searchingDataObjectByDistance()
     }
 
     override func didReceiveMemoryWarning() {
