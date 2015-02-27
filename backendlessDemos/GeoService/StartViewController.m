@@ -53,7 +53,7 @@
         
         _locationManager = ((StartAppDelegate *)[[UIApplication sharedApplication] delegate]).locationManager;
 
-#if 0 // loading default geopoints
+#if 1 // loading default geopoints
         [self performSelector:@selector(invokeGeo) withObject:nil afterDelay:.2f];
 #endif
         
@@ -93,7 +93,7 @@
         [self clusteringSearchInRectangularArea];
 #endif
         
-#if 1 // sample: load geo point metadata
+#if 0 // sample: load geo point metadata
         [self loadingGeoPointMetadata];
         [self loadingGeoClusterMetadata];
 #endif

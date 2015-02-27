@@ -24,19 +24,8 @@
 
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
-#if 1
-static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
-static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
-#else // "geoservice_sample"
-static NSString *APP_ID = @"88977ABC-84C1-7892-FF31-FE65E43DBB00";
-static NSString *SECRET_KEY = @"33C75331-6DAE-EAFB-FFEF-3D6D1F52D600";
-#endif
-// 10.0.1.66:9000
-//static NSString *APP_ID = @"2C159E62-C300-25C3-FFDD-67BB9497F800";
-//static NSString *SECRET_KEY = @"C7348714-A5E0-6F91-FF97-6DDDA8297400";
-// 10.0.1.14:9000
-//static NSString *APP_ID = @"75FE3923-4C2F-EB91-FF0F-ACFC96167800";
-//static NSString *SECRET_KEY = @"10C0A5FC-161C-ABEC-FFA5-6413F804AF00";
+static NSString *APP_ID = @"";
+static NSString *SECRET_KEY = @"";
 static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate
@@ -48,9 +37,6 @@ static NSString *VERSION_NUM = @"v1";
     //[DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
-    backendless.hostURL = @"http://api.backendless.com";
-    //backendless.hostURL = @"http://10.0.1.66:9000";
-    //backendless.hostURL = @"http://10.0.1.14:9000";
 
     if ([CLLocationManager locationServicesEnabled]) {
         
