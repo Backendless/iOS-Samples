@@ -75,17 +75,17 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [(UILabel *)[self.view viewWithTag:100] setText:@""];
     [_netActivity startAnimating];
     
-    PublishOptions *p = [PublishOptions new];
-    NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:PUBLISHER_ANONYMOUS, PUBLISHER_NAME_HEADER, @"1", @"ios-badge", @"Sound12.aif",@"ios-sound", nil];
-    p.headers = headers;
+    PublishOptions *options = [PublishOptions new];
+    options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif"};
+    DeliveryOptions *delivery = [DeliveryOptions deliveryOptionsForNotification:PUSHONLY];
 
 #if 1 //async
     
     [backendless.messagingService
      publish:MESSAGING_CHANNEL
      message:_textField.text
-     publishOptions:p
-     deliveryOptions:[DeliveryOptions deliveryOptionsForNotification:PUSHONLY]
+     publishOptions:options
+     deliveryOptions:delivery
      response:^(MessageStatus *res) {
          [_netActivity stopAnimating];
          NSLog(@"sendMessage: res = %@", res);
@@ -102,7 +102,8 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 #else //sync
     
     @try {
-        MessageStatus *res = [backendless.messagingService publish:MESSAGING_CHANNEL message:_textField.text publishOptions:p deliveryOptions:[DeliveryOptions deliveryOptionsForNotification:PUSHONLY]];
+        
+        MessageStatus *res = [backendless.messagingService publish:MESSAGING_CHANNEL message:_textField.text publishOptions:options deliveryOptions:delivery];
         NSLog(@"sendMessage: res = %@", res);
         [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:%@", res.messageId, res.status, res.errorMessage]];
     }

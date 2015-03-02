@@ -24,6 +24,6 @@
 @interface StartViewController : UIViewController<UITextFieldDelegate>
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 @property (nonatomic, strong) IBOutlet UITextField *textField;
-- (void)showNotification:(NSString *)notification;
-- (IBAction)sendMessage:(id)sender;
+-(void)showNotification:(NSString *)notification;
+-(IBAction)sendMessage:(id)sender;
 @end

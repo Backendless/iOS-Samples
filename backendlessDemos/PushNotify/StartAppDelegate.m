@@ -95,7 +95,7 @@ static NSString *VERSION_NUM = @"v1";
         NSLog(@"deviceToken = %@, deviceRegistrationId = %@", deviceTokenStr, deviceRegistrationId);
     }
     @catch (Fault *fault) {
-        NSLog(@"deviceToken = %@, FAULT = %@ <%@>", deviceTokenStr, fault.message, fault.detail);
+        NSLog(@"deviceToken = %@, FAULT = %@", deviceTokenStr, fault);
     }
  }
                                                                                            
@@ -106,6 +106,7 @@ static NSString *VERSION_NUM = @"v1";
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
+    NSLog(@"APN didReceiveRemoteNotification: %@", userInfo);
     [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] showNotification:[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]];
 }
                                                                     
