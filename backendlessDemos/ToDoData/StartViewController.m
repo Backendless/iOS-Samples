@@ -52,8 +52,9 @@
     @catch (Fault *fault) {
         [self showAlert:fault.message];
     }
-    
+#if 1
     [self getAllEntitysAsync];
+#endif
     editedIndexPath = nil;
     
     // ----------------------------------------------------------------------------
@@ -72,6 +73,10 @@
     [self sendEmailAsync];
 #endif
     
+#if 0
+    [self cacheServiceGetObject];
+#endif
+    
     // ----------------------------------------------------------------------------
     
 }
@@ -86,6 +91,49 @@
 #pragma mark Private Methods
 
 // --------------------- SAMPLES -------------------------------------------------------
+
+
+-(void)cacheServiceGetObject {
+    
+    Fault *fault = nil;
+    
+    Task *task = [Task new];
+    task.title =@"testCacheWeather";
+    task.status = @101;
+
+#if 0 // sync
+    [backendless.cache put:@"testCacheWeather" object:task fault:&fault];
+    if (fault) {
+        NSLog(@"cacheServiceGetObject  -> FAULT (A): %@", fault);
+        return;
+    }
+    NSLog(@"cacheServiceGetObject -> entity (PUT): %@\n%@",  task, [Types propertyDictionary:task]);
+    id entity = [backendless.cache get:@"testCacheWeather" fault:&fault];
+    if (fault) {
+        NSLog(@"cacheServiceGetObject  -> FAULT (B): %@", fault);
+        return;
+    }
+    NSLog(@"cacheServiceGetObject -> entity (GET): %@\n%@",  entity, [Types propertyDictionary:entity]);
+#else //async
+    [backendless.cache
+     put:@"testCacheWeather"
+     object:task
+     response:^(id entity) {
+         NSLog(@"cacheServiceGetObject -> entity (ASYNC PUT): %@\n%@",  task, [Types propertyDictionary:task]);
+         [backendless.cache
+          get:@"testCacheWeather"
+          response:^(id entity) {
+              NSLog(@"cacheServiceGetObject -> entity (ASYNC GET): %@\n%@",  entity, [Types propertyDictionary:entity]);
+          }
+          error:^(Fault *fault) {
+              NSLog(@"cacheServiceGetObject  -> ASYNC FAULT (B): %@", fault);
+          }];
+     }
+     error:^(Fault *fault){
+         NSLog(@"cacheServiceGetObject  -> ASYNC FAULT (A): %@", fault);
+     }];
+#endif
+}
 
 -(void)sendEmailSync {
     

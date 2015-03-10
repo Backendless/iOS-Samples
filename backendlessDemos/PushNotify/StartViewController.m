@@ -22,7 +22,7 @@
 #import "StartViewController.h"
 #import "Backendless.h"
 
-static NSString *MESSAGING_CHANNEL = @"default";
+static NSString *MESSAGING_CHANNEL = @"testing";
 static NSString *PUBLISHER_ANONYMOUS = @"Anonymous";
 static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
@@ -42,7 +42,11 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     @try {
         [backendless initAppFault];
         [self initNetActivity];
+        
+        NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
+        NSLog(@"registerDevice: %@ \n[%@]", info, [backendless.messagingService getRegistrations]);
     }
+    
     @catch (Fault *fault) {
         [self showAlert:fault.message];
     }

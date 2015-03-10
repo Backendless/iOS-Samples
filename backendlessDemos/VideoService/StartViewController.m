@@ -95,7 +95,11 @@
     
     NSLog(@"publishControl: -> backendless.mediaService: %@ [%@]", backendless.mediaService, [Types classByName:@"MediaService"]);
     
+#if 1 // record "from the scratch" if it is not live
     MediaPublishOptions *options = _switchView.on?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions recordStream:self.preview];
+#else // "continued" record if it is not live
+    MediaPublishOptions *options = _switchView.on?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions appendStream:self.preview];
+#endif
     options.orientation = AVCaptureVideoOrientationPortrait;
     options.resolution = RESOLUTION_CIF;
     _publisher =[backendless.mediaService publishStream:_streamName tube:VIDEO_TUBE options:options responder:self];

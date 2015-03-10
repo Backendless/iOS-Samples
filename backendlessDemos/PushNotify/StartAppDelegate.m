@@ -107,7 +107,8 @@ static NSString *VERSION_NUM = @"v1";
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     NSLog(@"APN didReceiveRemoteNotification: %@", userInfo);
-    [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] showNotification:[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]];
+    NSString *notification = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+    [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] showNotification:notification];
 }
                                                                     
 @end
