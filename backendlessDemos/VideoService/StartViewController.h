@@ -25,6 +25,8 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *btnPublish;
 @property (strong, nonatomic) IBOutlet UIButton *btnPlayback;
+@property (strong, nonatomic) IBOutlet UIButton *btnPauseMedia;
+@property (strong, nonatomic) IBOutlet UIButton *btnResumeMedia;
 @property (strong, nonatomic) IBOutlet UIButton *btnStopMedia;
 @property (strong, nonatomic) IBOutlet UIButton *btnSwapCamera;
 @property (strong, nonatomic) IBOutlet UIView *preview;
@@ -37,4 +39,6 @@
 -(IBAction)stopMediaControl:(id)sender;
 -(IBAction)playbackControl:(id)sender;
 -(IBAction)publishControl:(id)sender;
+-(IBAction)pauseControl:(id)sender;
+-(IBAction)resumeControl:(id)sender;
 @end

@@ -22,6 +22,7 @@
 #import "StartViewController.h"
 #import "Backendless.h"
 
+//static NSString *MESSAGING_CHANNEL = @"default";
 static NSString *MESSAGING_CHANNEL = @"testing";
 static NSString *PUBLISHER_ANONYMOUS = @"Anonymous";
 static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
@@ -42,9 +43,10 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     @try {
         [backendless initAppFault];
         [self initNetActivity];
-        
+#if 1
         NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
         NSLog(@"registerDevice: %@ \n[%@]", info, [backendless.messagingService getRegistrations]);
+#endif
     }
     
     @catch (Fault *fault) {
@@ -81,6 +83,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     
     PublishOptions *options = [PublishOptions new];
     options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif"};
+    //options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"};
     DeliveryOptions *delivery = [DeliveryOptions deliveryOptionsForNotification:PUSHONLY];
 
 #if 1 //async
@@ -93,7 +96,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
      response:^(MessageStatus *res) {
          [_netActivity stopAnimating];
          NSLog(@"sendMessage: res = %@", res);
-         [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:%@", res.messageId, res.status, res.errorMessage]];
+         [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:'%@'\n", res.messageId, res.status, res.errorMessage]];
          _textField.text = @"";
      }
      error:^(Fault *fault) {

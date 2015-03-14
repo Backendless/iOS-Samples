@@ -53,7 +53,7 @@
         
         _locationManager = ((StartAppDelegate *)[[UIApplication sharedApplication] delegate]).locationManager;
 
-#if 0 // loading default geopoints
+#if 1 // loading default geopoints
         [self performSelector:@selector(invokeGeo) withObject:nil afterDelay:.2f];
 #endif
         
@@ -80,7 +80,7 @@
         [self partialMatchSearchInWhereClause];
 #endif
         
-#if 1 // samples: Linking a data object with a geo point and vice versa
+#if 0 // samples: Linking a data object with a geo point and vice versa
         //[self linkingDataObjectWithGeoPoints];
         [self linkingGeoPointWithDataObject];
         [self linkingGeoPointWithSeveralDataObjects];

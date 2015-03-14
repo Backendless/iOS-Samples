@@ -23,7 +23,6 @@
 #import "Backendless.h"
 #import "StartViewController.h"
 
-
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
 static NSString *APP_ID = @"";
@@ -36,6 +35,7 @@ static NSString *VERSION_NUM = @"v1";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
+    //backendless.hostURL = @"http://api.backendless.com";
 
     NSDictionary *remoteDict = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if (remoteDict)

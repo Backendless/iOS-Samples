@@ -131,6 +131,48 @@
     [_netActivity startAnimating];
 }
 
+-(IBAction)pauseControl:(id)sender {
+    
+    if (_publisher)
+    {
+        [_publisher pause];
+        
+        self.preview.hidden = YES;
+        self.btnPauseMedia.hidden = YES;
+        self.btnResumeMedia.hidden = NO;
+    }
+    
+    if (_player)
+    {
+        [_player pause];
+        
+        self.playbackView.hidden = YES;
+        self.btnPauseMedia.hidden = YES;
+        self.btnResumeMedia.hidden = NO;
+    }
+}
+
+-(IBAction)resumeControl:(id)sender {
+    
+    if (_publisher)
+    {
+        [_publisher resume];
+        
+        self.preview.hidden = NO;
+        self.btnPauseMedia.hidden = NO;
+        self.btnResumeMedia.hidden = YES;
+    }
+    
+    if (_player)
+    {
+        [_player pause];
+        
+        self.playbackView.hidden = NO;
+        self.btnPauseMedia.hidden = NO;
+        self.btnResumeMedia.hidden = YES;
+    }
+}
+
 -(IBAction)stopMediaControl:(id)sender {
     
     if (_publisher)
@@ -139,8 +181,6 @@
         _publisher = nil;
         
         self.preview.hidden = YES;
-        self.btnStopMedia.hidden = YES;
-        self.btnSwapCamera.hidden = YES;
     }
     
     if (_player)
@@ -148,8 +188,12 @@
         [_player disconnect];
         _player = nil;
         self.playbackView.hidden = YES;
-        self.btnStopMedia.hidden = YES;
     }
+    
+    self.btnStopMedia.hidden = YES;
+    self.btnPauseMedia.hidden = YES;
+    self.btnResumeMedia.hidden = YES;
+    self.btnSwapCamera.hidden = YES;
     
     self.btnPublish.hidden = NO;
     self.btnPlayback.hidden = NO;
@@ -193,22 +237,12 @@
             break;
         }
             
-        case STREAM_PAUSED: {
-            
-            if ([description isEqualToString:@"NetStream.Play.StreamNotFound"]) {
-                [self showAlert:[NSString stringWithString:description]];
-            }
-            
-            [self stopMediaControl:sender];
-            break;
-        }
-            
         case STREAM_PLAYING: {
             
             // PUBLISHER
             if (_publisher) {
                 
-                if (![description isEqualToString:@"NetStream.Publish.Start"]) {
+                if (!([description isEqualToString:@"NetStream.Publish.Start"] || [description isEqualToString:@"RTMP.Client.Stream.Playing"])) {
                     [self stopMediaControl:sender];
                     break;
                 }
@@ -216,6 +250,8 @@
                 self.preview.hidden = NO;
                 self.btnStopMedia.hidden = NO;
                 self.btnSwapCamera.hidden = NO;
+                self.btnPauseMedia.hidden = NO;
+                
                 [_netActivity stopAnimating];
             }
            
@@ -235,9 +271,29 @@
                 
                 self.playbackView.hidden = NO;
                 self.btnStopMedia.hidden = NO;
+                self.btnPauseMedia.hidden = NO;
                 
                 [_netActivity stopAnimating];
             }
+            break;
+        }
+            
+        case STREAM_PAUSED: {
+            
+            if ([description isEqualToString:@"RTMP.Client.Stream.isPaused"]) {
+                if (_player) {
+                    [self showAlert:[NSString stringWithString:description]];
+                }
+                if (_publisher) {
+                    break;                
+                }
+            }
+           
+            if ([description isEqualToString:@"NetStream.Play.StreamNotFound"]) {
+                [self showAlert:[NSString stringWithString:description]];
+            }
+            
+            [self stopMediaControl:sender];
             break;
         }
             

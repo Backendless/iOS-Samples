@@ -24,8 +24,13 @@
 
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+#if 0
+static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
+static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
+#else // "geoservice_sample"
+static NSString *APP_ID = @"88977ABC-84C1-7892-FF31-FE65E43DBB00";
+static NSString *SECRET_KEY = @"33C75331-6DAE-EAFB-FFEF-3D6D1F52D600";
+#endif
 static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate

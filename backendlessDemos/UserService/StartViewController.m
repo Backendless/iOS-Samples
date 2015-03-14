@@ -24,6 +24,7 @@
 #import "Backendless.h"
 
 #define _ASYNC_REQUEST 1
+#define _STAY_LOGGED_IN 0
 
 @interface StartViewController ()
 -(void)showAlert:(NSString *)message;
@@ -42,7 +43,7 @@
         
         [backendless initAppFault];
 
-#if 1
+#if _STAY_LOGGED_IN
         [self stayLoggedIn ];
 #endif
     }
@@ -143,6 +144,39 @@
         }];
 }
 
+// test: \n in property on update --------------
+-(void)userPropertiesUpdate:(BackendlessUser *)user {
+    
+    [user setProperty:@"titanic" object:@"TEST555\nline1\nline2\n"];
+    [user setProperty:@"music" object:@"TEST333\nline1\nline2\nline3\n"];
+    [user setProperty:@"boool" object:@(NO)]; //[NSNumber numberWithBool:YES]];
+    
+#if _ASYNC_REQUEST // as an async call
+    
+    [backendless.userService update:user
+                           response:^(BackendlessUser *user) {
+                               NSLog(@"StartViewController -> userLogin: (ASYNC UPDATED) %@ ", user);
+                           }
+                              error:^(Fault *fault) {
+                                  NSLog(@"StartViewController -> userLogin: <ASYNC FAULT> %@", fault);
+                                  [self showAlert:fault.detail];
+                              }];
+    
+#else // as a sync call
+    
+    @try {
+        [backendless.userService update:user];
+        NSLog(@"StartViewController -> userLogin: (SYNC UPDATED) %@ ", backendless.userService.currentUser);
+    }
+    @catch (Fault *fault) {
+        NSLog(@"StartViewController -> userLogin: <SYNC FAULT> %@", fault);
+        [self showAlert:fault.detail];
+    }
+    
+#endif
+
+}
+
 #pragma mark -
 #pragma mark Private Methods
 
@@ -179,38 +213,6 @@
          
          NSLog(@"StartViewController -> userLogin: (ASYNC LOGIN) user -> %@\n currentUser -> %@", user, backendless.userService.currentUser);
  
-#if 0 // test: \n in property on update ---------------
-         
-         [user setProperty:@"titanic" object:@"TEST555\nline1\nline2\n"];
-         [user setProperty:@"music" object:@"TEST333\nline1\nline2\nline3\n"];
-         [user setProperty:@"boool" object:@(NO)]; //[NSNumber numberWithBool:YES]];
-    
-    #if 1 // as an async call
-         
-         [backendless.userService update:user
-          response:^(BackendlessUser *user) {
-              NSLog(@"StartViewController -> userLogin: (ASYNC UPDATED) %@ ", user);
-          }
-          error:^(Fault *fault) {
-              NSLog(@"StartViewController -> userLogin: <ASYNC FAULT> %@", fault);
-              [self showAlert:fault.detail];
-          }];
-    
-    #else // as a sync call
-         
-         @try {
-             [backendless.userService update:user];
-             NSLog(@"StartViewController -> userLogin: (SYNC UPDATED) %@ ", backendless.userService.currentUser);
-         }
-         @catch (Fault *fault) {
-             NSLog(@"StartViewController -> userLogin: <SYNC FAULT> %@", fault);
-             [self showAlert:fault.detail];
-         }
-         
-    #endif
-
-#endif
-
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
          [self switchToLogout];
      }
@@ -249,7 +251,7 @@
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 
-#if 0 // async
+#if _ASYNC_REQUEST // async
     
     [backendless.userService logout:
         ^(BackendlessUser *user) {
