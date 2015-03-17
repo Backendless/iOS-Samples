@@ -165,7 +165,7 @@
     
     if (_player)
     {
-        [_player pause];
+        [_player resume];
         
         self.playbackView.hidden = NO;
         self.btnPauseMedia.hidden = NO;
@@ -221,7 +221,7 @@
             
         case CONN_DISCONNECTED: {
             
-            if ([description isEqualToString:@"streamIsBusy"]) {
+            if ([description isEqualToString:MP_STREAM_IS_BUSY]) {
                 [self showAlert:[NSString stringWithString:description]];
             }
             
@@ -242,7 +242,7 @@
             // PUBLISHER
             if (_publisher) {
                 
-                if (!([description isEqualToString:@"NetStream.Publish.Start"] || [description isEqualToString:@"RTMP.Client.Stream.Playing"])) {
+                if (!([description isEqualToString:MP_NETSTREAM_PUBLISH_START] || [description isEqualToString:MP_RTMP_CLIENT_STREAM_IS_PLAYING])) {
                     [self stopMediaControl:sender];
                     break;
                 }
@@ -258,16 +258,18 @@
             // PLAYER
             if (_player) {
                 
-                if ([description isEqualToString:@"NetStream.Play.StreamNotFound"]) {
+                if ([description isEqualToString:MP_NETSTREAM_PLAY_STREAM_NOT_FOUND]) {
                     [self showAlert:[NSString stringWithString:description]];
                     [self stopMediaControl:sender];
                     break;
                 }
             
-                if (![description isEqualToString:@"NetStream.Play.Start"]) {
+                if (!([description isEqualToString:MP_NETSTREAM_PLAY_START] || [description isEqualToString:MP_RTMP_CLIENT_STREAM_IS_PLAYING])) {
                     [self showAlert:[NSString stringWithString:description]];
                     break;
                 }
+                
+                [MPMediaData routeAudioToSpeaker];
                 
                 self.playbackView.hidden = NO;
                 self.btnStopMedia.hidden = NO;
@@ -280,16 +282,11 @@
             
         case STREAM_PAUSED: {
             
-            if ([description isEqualToString:@"RTMP.Client.Stream.isPaused"]) {
-                if (_player) {
-                    [self showAlert:[NSString stringWithString:description]];
-                }
-                if (_publisher) {
-                    break;                
-                }
+            if ([description isEqualToString:MP_RTMP_CLIENT_STREAM_IS_PAUSED]) {
+                break;
             }
            
-            if ([description isEqualToString:@"NetStream.Play.StreamNotFound"]) {
+            if ([description isEqualToString:MP_NETSTREAM_PLAY_STREAM_NOT_FOUND]) {
                 [self showAlert:[NSString stringWithString:description]];
             }
             

@@ -43,10 +43,14 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     @try {
         [backendless initAppFault];
         [self initNetActivity];
-#if 1
+
         NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
-        NSLog(@"registerDevice: %@ \n[%@]", info, [backendless.messagingService getRegistrations]);
+        NSLog(@"viewDidLoad -> registerDevice (CHANNELS): %@", info);
+#if 1
+        self.textField.text = [backendless randomString:3000];
+        NSLog(@"viewDidLoad -> registerDevice (TEXT): [%lu]", (unsigned long)self.textField.text.length);
 #endif
+
     }
     
     @catch (Fault *fault) {
@@ -71,6 +75,16 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [self.view addSubview:_netActivity];
 }
 
+-(void)startNetIndicator {
+    self.textField.hidden = YES;
+    [_netActivity startAnimating];
+}
+
+-(void)stopNetIndicator {
+    self.textField.hidden = NO;
+    [_netActivity stopAnimating];
+}
+
 -(void)showNotification:(NSString *)notification {
     _textView.hidden = NO;
     _textView.text = [_textView.text stringByAppendingFormat:@"APNS: %@\n", notification];
@@ -79,11 +93,10 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 -(void)sendMessage:(id)sender {
     
     [(UILabel *)[self.view viewWithTag:100] setText:@""];
-    [_netActivity startAnimating];
+    [self startNetIndicator];
     
     PublishOptions *options = [PublishOptions new];
-    options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif"};
-    //options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"};
+    options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"0"};
     DeliveryOptions *delivery = [DeliveryOptions deliveryOptionsForNotification:PUSHONLY];
 
 #if 1 //async
@@ -94,16 +107,16 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
      publishOptions:options
      deliveryOptions:delivery
      response:^(MessageStatus *res) {
-         [_netActivity stopAnimating];
+         [self stopNetIndicator];
+         self.textField.text = @"";
          NSLog(@"sendMessage: res = %@", res);
          [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:'%@'\n", res.messageId, res.status, res.errorMessage]];
-         _textField.text = @"";
      }
      error:^(Fault *fault) {
-         [_netActivity stopAnimating];
+         [self stopNetIndicator];
+         self.textField.text = @"";
          [self showAlert:fault.message];
-         NSLog(@"sendMessage: fault = %@", fault.detail);         
-         _textField.text = @"";
+         NSLog(@"sendMessage: fault = %@", fault);
      }];
 
 #else //sync
@@ -121,8 +134,8 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     }
     
     @finally {
-        [_netActivity stopAnimating];
-        _textField.text = @"";
+        [self stopNetIndicator];
+        self.textField.text = @"";
     }
 #endif
 }

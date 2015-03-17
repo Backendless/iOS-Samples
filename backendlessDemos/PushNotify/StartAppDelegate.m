@@ -34,8 +34,9 @@ static NSString *VERSION_NUM = @"v1";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [DebLog setIsActive:YES];
+    
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
-    //backendless.hostURL = @"http://api.backendless.com";
 
     NSDictionary *remoteDict = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if (remoteDict)
@@ -88,17 +89,22 @@ static NSString *VERSION_NUM = @"v1";
 
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
+    [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] startNetIndicator];
+    
     NSString *deviceTokenStr = [backendless.messagingService deviceTokenAsString:deviceToken];
+    NSLog(@"registerDeviceToken: deviceToken = %@", deviceTokenStr);
    
     @try {
         NSString *deviceRegistrationId = [backendless.messagingService registerDeviceToken:deviceTokenStr];
-        NSLog(@"deviceToken = %@, deviceRegistrationId = %@", deviceTokenStr, deviceRegistrationId);
+        NSLog(@"registerDeviceToken: deviceRegistrationId = %@", deviceRegistrationId);
     }
     @catch (Fault *fault) {
-        NSLog(@"deviceToken = %@, FAULT = %@", deviceTokenStr, fault);
+        NSLog(@"registerDeviceToken: FAULT = %@", fault);
     }
+    
+    [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] stopNetIndicator];
  }
-                                                                                           
+
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err
 {
     NSLog(@"APN Registration Error: %@", err);
@@ -110,5 +116,10 @@ static NSString *VERSION_NUM = @"v1";
     NSString *notification = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
     [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] showNotification:notification];
 }
-                                                                    
+#if 0
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
+{
+    NSLog(@"APN didReceiveRemoteNotification:fetchCompletionHandler: %@", userInfo);
+}
+#endif
 @end
