@@ -24,8 +24,8 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let APP_ID = "7B92560B-91F0-E94D-FFEB-77451B0F9700"
-    let SECRET_KEY = "B9D27BA8-3964-F3AE-FF26-E71FFF487300"
+    let APP_ID = ""
+    let SECRET_KEY = ""
     let VERSION_NUM = "v1"
     
     var backendless = Backendless.sharedInstance()
