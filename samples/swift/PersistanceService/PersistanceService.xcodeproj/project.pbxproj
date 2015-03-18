@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D38575E719F7F60400B68561 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D7419F1284C0044DBFE /* backendless.a */; };
-		D38575E819F7F61100B68561 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D7619F1285E0044DBFE /* CommLibiOS.a */; };
+		D30947461AB9F8E800A75DDC /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947451AB9F8E800A75DDC /* backendless.a */; };
+		D30947481AB9F8FB00A75DDC /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947471AB9F8FB00A75DDC /* CommLibiOS.a */; };
+		D30948351AB9FDE800A75DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4219F0170B0044DBFE /* Main.storyboard */; };
+		D30948361AB9FDEE00A75DDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4719F0170B0044DBFE /* LaunchScreen.xib */; };
 		D38575E919F7F68B00B68561 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6319F1282B0044DBFE /* libsqlite3.dylib */; };
 		D38575EA19F7F6BF00B68561 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6719F1282B0044DBFE /* SystemConfiguration.framework */; };
 		D3AC1D3F19F0170A0044DBFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC1D3E19F0170A0044DBFE /* AppDelegate.swift */; };
 		D3AC1D4119F0170A0044DBFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC1D4019F0170A0044DBFE /* ViewController.swift */; };
-		D3AC1D4419F0170B0044DBFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4219F0170B0044DBFE /* Main.storyboard */; };
 		D3AC1D4619F0170B0044DBFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4519F0170B0044DBFE /* Images.xcassets */; };
-		D3AC1D4919F0170B0044DBFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4719F0170B0044DBFE /* LaunchScreen.xib */; };
 		D3AC1D7919F128B30044DBFE /* PersistentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC1D7819F128B30044DBFE /* PersistentObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D30947451AB9F8E800A75DDC /* backendless.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = backendless.a; path = ../../../lib/backendless/backendless.a; sourceTree = "<group>"; };
+		D30947471AB9F8FB00A75DDC /* CommLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = CommLibiOS.a; path = ../../../lib/CommLibiOS/CommLibiOS.a; sourceTree = "<group>"; };
 		D3AC1D3919F0170A0044DBFE /* PersistanceService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistanceService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AC1D3D19F0170A0044DBFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3AC1D3E19F0170A0044DBFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,8 +31,6 @@
 		D3AC1D4819F0170B0044DBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D3AC1D6319F1282B0044DBFE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D3AC1D6719F1282B0044DBFE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D3AC1D7419F1284C0044DBFE /* backendless.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = backendless.a; path = ../lib/backendless/backendless.a; sourceTree = "<group>"; };
-		D3AC1D7619F1285E0044DBFE /* CommLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = CommLibiOS.a; path = ../lib/CommLibiOS/CommLibiOS.a; sourceTree = "<group>"; };
 		D3AC1D7819F128B30044DBFE /* PersistentObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,8 +41,8 @@
 			files = (
 				D38575EA19F7F6BF00B68561 /* SystemConfiguration.framework in Frameworks */,
 				D38575E919F7F68B00B68561 /* libsqlite3.dylib in Frameworks */,
-				D38575E819F7F61100B68561 /* CommLibiOS.a in Frameworks */,
-				D38575E719F7F60400B68561 /* backendless.a in Frameworks */,
+				D30947481AB9F8FB00A75DDC /* CommLibiOS.a in Frameworks */,
+				D30947461AB9F8E800A75DDC /* backendless.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +52,9 @@
 		D3AC1D3019F0170A0044DBFE = {
 			isa = PBXGroup;
 			children = (
+				D30947471AB9F8FB00A75DDC /* CommLibiOS.a */,
+				D30947451AB9F8E800A75DDC /* backendless.a */,
 				D3AC1D3B19F0170A0044DBFE /* PersistanceService */,
-				D3AC1D7619F1285E0044DBFE /* CommLibiOS.a */,
-				D3AC1D7419F1284C0044DBFE /* backendless.a */,
 				D3AC1D6319F1282B0044DBFE /* libsqlite3.dylib */,
 				D3AC1D6719F1282B0044DBFE /* SystemConfiguration.framework */,
 				D3AC1D3A19F0170A0044DBFE /* Products */,
@@ -148,8 +148,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3AC1D4419F0170B0044DBFE /* Main.storyboard in Resources */,
-				D3AC1D4919F0170B0044DBFE /* LaunchScreen.xib in Resources */,
+				D30948351AB9FDE800A75DDC /* Main.storyboard in Resources */,
+				D30948361AB9FDEE00A75DDC /* LaunchScreen.xib in Resources */,
 				D3AC1D4619F0170B0044DBFE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,19 +226,19 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(PROJECT_DIR)/../lib/CommLibiOS/include",
-					"$(PROJECT_DIR)/../lib/backendless/include",
+					"$(PROJECT_DIR)/../../../lib/CommLibiOS/include",
+					"$(PROJECT_DIR)/../../../lib/backendless/include",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../lib/CommLibiOS",
-					"$(PROJECT_DIR)/../lib/backendless",
+					"$(PROJECT_DIR)/../../../lib/CommLibiOS",
+					"$(PROJECT_DIR)/../../../lib/backendless",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/../lib/backendless/include/Backendless-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/../../../lib/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -274,18 +274,18 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(PROJECT_DIR)/../lib/CommLibiOS/include",
-					"$(PROJECT_DIR)/../lib/backendless/include",
+					"$(PROJECT_DIR)/../../../lib/CommLibiOS/include",
+					"$(PROJECT_DIR)/../../../lib/backendless/include",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../lib/CommLibiOS",
-					"$(PROJECT_DIR)/../lib/backendless",
+					"$(PROJECT_DIR)/../../../lib/CommLibiOS",
+					"$(PROJECT_DIR)/../../../lib/backendless",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/../lib/backendless/include/Backendless-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/../../../lib/backendless/include/Backendless-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -294,14 +294,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/../../../lib/CommLibiOS/include",
+					"$(PROJECT_DIR)/../../../lib/backendless/include",
+				);
 				INFOPLIST_FILE = PersistanceService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../lib/CommLibiOS",
-					"$(PROJECT_DIR)/../lib/backendless",
+					"$(PROJECT_DIR)/../../../lib/CommLibiOS",
+					"$(PROJECT_DIR)/../../../lib/backendless",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/../../../lib/backendless/include/Backendless-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -309,14 +316,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/../../../lib/CommLibiOS/include",
+					"$(PROJECT_DIR)/../../../lib/backendless/include",
+				);
 				INFOPLIST_FILE = PersistanceService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../lib/CommLibiOS",
-					"$(PROJECT_DIR)/../lib/backendless",
+					"$(PROJECT_DIR)/../../../lib/CommLibiOS",
+					"$(PROJECT_DIR)/../../../lib/backendless",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/../../../lib/backendless/include/Backendless-Bridging-Header.h";
 			};
 			name = Release;
 		};

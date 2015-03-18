@@ -23,17 +23,10 @@
 #import "Backendless.h"
 #import "StartViewController.h"
 
-#define IS_PRODUCTION 1
-
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
-#if IS_PRODUCTION
-static NSString *APP_ID = @"88977ABC-84C1-7892-FF31-FE65E43DBB00";
-static NSString *SECRET_KEY = @"33C75331-6DAE-EAFB-FFEF-3D6D1F52D600";
-#else
-static NSString *APP_ID = @"F86D8AA8-06A2-B17F-FF8D-D41B3633E900";
-static NSString *SECRET_KEY = @"CBDD92FA-4386-0F35-FF7D-49E0863A2200";
-#endif
+static NSString *APP_ID = @"";
+static NSString *SECRET_KEY = @"";
 static NSString *VERSION_NUM = @"v1";
 
 
@@ -44,11 +37,6 @@ static NSString *VERSION_NUM = @"v1";
     //[DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
-#if IS_PRODUCTION
-    backendless.hostURL = @"http://api.backendless.com";
-#else
-    backendless.hostURL = @"http://10.0.1.53:9000";
-#endif
 
     NSDictionary *remoteDict = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if (remoteDict)
