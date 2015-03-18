@@ -46,7 +46,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
         NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
         NSLog(@"viewDidLoad -> registerDevice (CHANNELS): %@", info);
-#if 1
+#if 0
         self.textField.text = [backendless randomString:3000];
         NSLog(@"viewDidLoad -> registerDevice (TEXT): [%lu]", (unsigned long)self.textField.text.length);
 #endif
@@ -96,7 +96,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [self startNetIndicator];
     
     PublishOptions *options = [PublishOptions new];
-    options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"0"};
+    options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"};
     DeliveryOptions *delivery = [DeliveryOptions deliveryOptionsForNotification:PUSHONLY];
 
 #if 1 //async
