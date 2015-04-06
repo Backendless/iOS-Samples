@@ -23,6 +23,3 @@
 
 @implementation Task
 @end
-
-@implementation Person
-@end

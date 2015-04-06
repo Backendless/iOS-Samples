@@ -34,7 +34,7 @@ static NSString *VERSION_NUM = @"v1";
 {
     // Override point for customization after application launch.
     
-    //[DebLog setIsActive:YES];
+    [DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     return YES;

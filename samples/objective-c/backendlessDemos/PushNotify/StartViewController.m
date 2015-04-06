@@ -46,11 +46,11 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
         NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
         NSLog(@"viewDidLoad -> registerDevice (CHANNELS): %@", info);
-#if 0
+
+#if 0 // try to publish text with lenght more then max = 2K
         self.textField.text = [backendless randomString:3000];
         NSLog(@"viewDidLoad -> registerDevice (TEXT): [%lu]", (unsigned long)self.textField.text.length);
 #endif
-
     }
     
     @catch (Fault *fault) {

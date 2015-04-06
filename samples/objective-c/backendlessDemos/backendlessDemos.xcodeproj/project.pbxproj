@@ -210,7 +210,6 @@
 		D35CA53F1A66903600F500B0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5291A66881600F500B0 /* IOKit.framework */; };
 		D35CA5411A66905000F500B0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5281A66881600F500B0 /* Cocoa.framework */; };
 		D35CA5421A66905000F500B0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5291A66881600F500B0 /* IOKit.framework */; };
-		D35CA60F1A7BA5AE00F500B0 /* Infos.m in Sources */ = {isa = PBXBuildFile; fileRef = D35CA60E1A7BA5AE00F500B0 /* Infos.m */; };
 		D36C533D18DE51F200B080D2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
 		D373366A1AB2FC3C0003E36F /* radio_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5A16D51358001AE512 /* radio_checked.png */; };
 		D37F5ED619CB0AFC0077F0C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B662616B1873B00668A06 /* UIKit.framework */; };
@@ -651,8 +650,6 @@
 		D35CA5271A66881600F500B0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		D35CA5281A66881600F500B0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D35CA5291A66881600F500B0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
-		D35CA60D1A7BA5AE00F500B0 /* Infos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Infos.h; sourceTree = "<group>"; };
-		D35CA60E1A7BA5AE00F500B0 /* Infos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Infos.m; sourceTree = "<group>"; };
 		D37F5ED319CB0AFC0077F0C5 /* CustomService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37F5ED919CB0AFC0077F0C5 /* CustomService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomService-Info.plist"; sourceTree = "<group>"; };
 		D37F5EDB19CB0AFC0077F0C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1235,13 +1232,13 @@
 		91628F5C17FDA79E00ACC36F /* FileServiceMac */ = {
 			isa = PBXGroup;
 			children = (
+				91628F8017FEB6C600ACC36F /* BEFile.h */,
+				91628F8117FEB6C600ACC36F /* BEFile.m */,
 				91628F6817FDA79F00ACC36F /* Document.h */,
 				91628F6917FDA79F00ACC36F /* Document.m */,
 				91628F6B17FDA79F00ACC36F /* Document.xib */,
 				91628F6E17FDA79F00ACC36F /* MainMenu.xib */,
 				91628F5D17FDA79F00ACC36F /* Supporting Files */,
-				91628F8017FEB6C600ACC36F /* BEFile.h */,
-				91628F8117FEB6C600ACC36F /* BEFile.m */,
 			);
 			path = FileServiceMac;
 			sourceTree = "<group>";
@@ -1751,13 +1748,13 @@
 				D37F5ED719CB0AFC0077F0C5 /* CustomService */,
 				91F1390D17C4E37800D1AC4C /* Caching-demo */,
 				917650D21827CA5D00745497 /* UIElementsSample */,
-				91628E6417FADBDB00ACC36F /* ToDoDataMac */,
 				91628E9917FC147900ACC36F /* UserServiceMac */,
 				91628EC117FC38D300ACC36F /* UserSocialMac */,
+				91628E6417FADBDB00ACC36F /* ToDoDataMac */,
 				91628EE817FC557400ACC36F /* PubSubChatMac */,
+				9101186D180D343F008102A7 /* PushNotifyMac */,
 				91628F3517FD9A5200ACC36F /* GeoServiceMac */,
 				91628F5C17FDA79E00ACC36F /* FileServiceMac */,
-				9101186D180D343F008102A7 /* PushNotifyMac */,
 				F91B662516B1873B00668A06 /* Frameworks */,
 				F91B662316B1873B00668A06 /* Products */,
 			);
@@ -1965,8 +1962,6 @@
 		F91B671616B18DF500668A06 /* GeoService */ = {
 			isa = PBXGroup;
 			children = (
-				D35CA60D1A7BA5AE00F500B0 /* Infos.h */,
-				D35CA60E1A7BA5AE00F500B0 /* Infos.m */,
 				F91B671F16B18DF500668A06 /* StartAppDelegate.h */,
 				F91B672016B18DF500668A06 /* StartAppDelegate.m */,
 				F91B672B16B18DF500668A06 /* StartViewController.h */,
@@ -2804,7 +2799,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91B671D16B18DF500668A06 /* main.m in Sources */,
-				D35CA60F1A7BA5AE00F500B0 /* Infos.m in Sources */,
 				F91B672116B18DF500668A06 /* StartAppDelegate.m in Sources */,
 				F91B672D16B18DF500668A06 /* StartViewController.m in Sources */,
 			);

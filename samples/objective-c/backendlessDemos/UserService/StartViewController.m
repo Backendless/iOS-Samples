@@ -50,15 +50,6 @@
     @catch (Fault *fault) {
         [self showAlert:fault.message];
     }
-    
-#if 0
-    [self validUserTokenSync];
-    [self validUserTokenAsync];
-#endif
-    
-#if 0
-    [self getUserRolesSync];
-#endif
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,96 +76,6 @@
     else {
         [backendless.userService setStayLoggedIn:YES];
     }
-}
-
--(void)validUserTokenSync {
-    
-    @try {
-        
-        NSNumber *result = [backendless.userService isValidUserToken];
-        NSLog(@"isValidUserToken (SYNC): %@", [result boolValue]?@"YES":@"NO");
-    }
-    @catch (Fault *fault) {
-        NSLog(@"FAULT (SYNC): %@", fault);
-    }
-}
-
--(void)validUserTokenAsync {
-    
-    [backendless.userService isValidUserToken:
-     ^(NSNumber *result) {
-         NSLog(@"isValidUserToken (ASYNC): %@", [result boolValue]?@"YES":@"NO");
-     }
-     error:^(Fault *fault) {
-         NSLog(@"login FAULT (ASYNC): %@", fault);
-     }];
-}
-
--(void)getUserRolesSync {
-    
-    @try {
-        
-        BackendlessUser *user = [backendless.userService login:@"bob@foo.com" password:@"bob"];
-        NSLog(@" USER: %@", user);
-        
-        NSArray *roles = [backendless.userService getUserRoles];
-        NSLog(@"ROLES: %@ ", roles);
-    }
-    @catch (Fault *fault) {
-        NSLog(@"FAULT: %@", fault);
-    }
-}
-
--(void)getUserRolesAsync {
-    
-    [backendless.userService login:@"bob@foo.com" password:@"bob"
-        response:^(BackendlessUser *user) {
-                              
-            NSLog(@"login USER: %@", user);
-            [backendless.userService
-                getUserRoles:^(NSArray *roles) {
-                    NSLog(@"getUserRoles ROLES: %@ ", roles);
-                }
-                error:^(Fault *fault) {
-                    NSLog(@"getUserRoles FAULT: %@", fault);
-                }];
-        }
-        error:^(Fault *fault) {
-            NSLog(@"login FAULT: %@", fault);
-        }];
-}
-
-// test: \n in property on update --------------
--(void)userPropertiesUpdate:(BackendlessUser *)user {
-    
-    [user setProperty:@"titanic" object:@"TEST555\nline1\nline2\n"];
-    [user setProperty:@"music" object:@"TEST333\nline1\nline2\nline3\n"];
-    [user setProperty:@"boool" object:@(NO)]; //[NSNumber numberWithBool:YES]];
-    
-#if _ASYNC_REQUEST // as an async call
-    
-    [backendless.userService update:user
-                           response:^(BackendlessUser *user) {
-                               NSLog(@"StartViewController -> userLogin: (ASYNC UPDATED) %@ ", user);
-                           }
-                              error:^(Fault *fault) {
-                                  NSLog(@"StartViewController -> userLogin: <ASYNC FAULT> %@", fault);
-                                  [self showAlert:fault.detail];
-                              }];
-    
-#else // as a sync call
-    
-    @try {
-        [backendless.userService update:user];
-        NSLog(@"StartViewController -> userLogin: (SYNC UPDATED) %@ ", backendless.userService.currentUser);
-    }
-    @catch (Fault *fault) {
-        NSLog(@"StartViewController -> userLogin: <SYNC FAULT> %@", fault);
-        [self showAlert:fault.detail];
-    }
-    
-#endif
-
 }
 
 #pragma mark -
