@@ -22,7 +22,8 @@
 #import "ChatViewController.h"
 #import "Backendless.h"
 
-static NSString *MESSAGING_CHANNEL = @"default";
+//static NSString *MESSAGING_CHANNEL = @"default";
+static NSString *MESSAGING_CHANNEL = @"checking";
 static NSString *PUBLISHER_ANONYMOUS = @"Anonymous";
 static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
@@ -101,12 +102,11 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
         MessageStatus *status = [backendless.messagingService publish:MESSAGING_CHANNEL message:message publishOptions:publishOptions];
         self.textField.text = @"";
         
-        NSLog(@"ChatViewController -> subscribe: PUBLISH STATUS: %@", status);
+        NSLog(@"ChatViewController -> publish: PUBLISH STATUS: %@", status);
     }
     
     @catch (Fault *fault) {
-        
-        NSLog(@"ChatViewController -> subscribe: FAULT = %@ <%@>", fault.message, fault.detail);
+        NSLog(@"ChatViewController -> publish: %@", fault);
     }
     
     @finally {
@@ -114,34 +114,94 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     }
 }
 
+#if 1
 -(void)subscribe {
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    @try {
-        
-        responder = [[Responder alloc] initWithResponder:self
-                                      selResponseHandler:@selector(responseHandler:) selErrorHandler:@selector(errorHandler:)];
-        subscription = [backendless.messagingService
-                        subscribe:MESSAGING_CHANNEL subscriptionResponder:responder subscriptionOptions:subscriptionOptions];
-        
-        NSLog(@"ChatViewController -> subscribe: SUBSCRIPTION: %@", subscription);
-    }
-    
-    @catch (Fault *fault) {
-        
-        NSLog(@"ChatViewController -> subscribe: FAULT = %@ <%@>", fault.message, fault.detail);
-        
-        [self showAlert:fault.message];
-    }
-    
-    @finally {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    }
+    [backendless.messagingService
+      subscribe:MESSAGING_CHANNEL
+      subscriptionResponse:^(NSArray *messages) {
+          [self responseHandler:messages];
+      }
+      subscriptionError:^(Fault *error) {
+          NSLog(@"ChatViewController -> subscribe (ERROR): %@", error);
+          [self showAlert:error.message];
+      }
+      subscriptionOptions:subscriptionOptions
+      response:^(BESubscription *response) {
+          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+          subscription = response;
+          NSLog(@"ChatViewController -> subscribe: SUBSCRIPTION: %@", subscription);
+      }
+      error:^(Fault *fault) {
+          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+          NSLog(@"ChatViewController -> subscribe (FAULT: %@", fault);
+          [self showAlert:fault.message];
+      }];
 }
+ //
+#else
+-(void)subscribe {
+   
+    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        
+        @try {
+            
+            responder = [[Responder alloc] initWithResponder:self
+                                          selResponseHandler:@selector(responseHandler:) selErrorHandler:@selector(errorHandler:)];
+            subscription = [backendless.messagingService
+                            subscribe:MESSAGING_CHANNEL subscriptionResponder:responder subscriptionOptions:subscriptionOptions];
+            
+            NSLog(@"ChatViewController -> subscribe: SUBSCRIPTION: %@", subscription);
+        }
+        
+        @catch (Fault *fault) {
+            
+            NSLog(@"ChatViewController -> subscribe: %@", fault.message);
+            
+            [self showAlert:fault.message];
+        }
+        
+        @finally {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        }
+    });
+}
+#endif
 
 -(void)unsubscribe {
     [subscription cancel];
+}
+
+#pragma mark -
+#pragma mark IResponder Methods
+
+-(id)responseHandler:(id)response {
+    
+    dispatch_async( dispatch_get_main_queue(), ^{
+        
+        //NSLog(@"ChatViewController -> responseHandler: RESPONSE = %@ <%@>", response, response?[response class]:@"NULL");
+        
+        NSArray *messages = response;
+        for (id obj in messages) {
+            if ([obj isKindOfClass:[Message class]]) {
+                Message *message = (Message *)obj;
+                NSString *publisher = message.publisherId;
+                self.textView.text = self.isTextAppended ?
+                [self.textView.text stringByAppendingFormat:@"%@ : '%@'\n", publisher ? publisher : PUBLISHER_ANONYMOUS, message.data] :
+                [NSString stringWithFormat:@"%@ : '%@'\n%@", publisher ? publisher : PUBLISHER_ANONYMOUS, message.data, self.textView.text];
+            }
+        }
+    });
+    
+    return response;
+}
+
+-(void)errorHandler:(Fault *)fault {
+    NSLog(@"ChatViewController -> errorHandler: %@", fault);
 }
 
 #pragma mark -
@@ -160,34 +220,6 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
         return;
     }
 }
-
-
-#pragma mark -
-#pragma mark IResponder Methods
-
--(id)responseHandler:(id)response {
-    
-    NSLog(@"ChatViewController -> responseHandler: RESPONSE = %@ <%@>", response, response?[response class]:@"NULL");
-    
-    NSArray *messages = response;
-    for (id obj in messages) {
-        if ([obj isKindOfClass:[Message class]]) {
-            Message *message = (Message *)obj;
-            NSString *publisher = message.publisherId;
-            self.textView.text = self.isTextAppended ?
-            [self.textView.text stringByAppendingFormat:@"%@ : '%@'\n", publisher ? publisher : PUBLISHER_ANONYMOUS, message.data] :
-            [NSString stringWithFormat:@"%@ : '%@'\n%@", publisher ? publisher : PUBLISHER_ANONYMOUS, message.data, self.textView.text];
-        }
-    }
-    
-    return response;
-}
-
--(void)errorHandler:(Fault *)fault {
-    
-    NSLog(@"ChatViewController -> errorHandler: FAULT = %@ <%@>", fault.message, fault.detail);
-}
-
 
 #pragma mark -
 #pragma mark UITextFieldDelegate Methods
