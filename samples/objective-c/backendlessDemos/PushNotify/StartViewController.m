@@ -110,7 +110,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
          [self stopNetIndicator];
          self.textField.text = @"";
          NSLog(@"sendMessage: res = %@", res);
-         [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:'%@'\n", res.messageId, res.status, res.errorMessage]];
+         [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:'%@'", res.messageId, res.status, res.errorMessage]];
      }
      error:^(Fault *fault) {
          [self stopNetIndicator];
