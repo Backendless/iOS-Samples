@@ -114,7 +114,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     }
 }
 
-#if 1
+#if 0
 -(void)subscribe {
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -180,7 +180,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 #pragma mark IResponder Methods
 
 -(id)responseHandler:(id)response {
-    
+
     dispatch_async( dispatch_get_main_queue(), ^{
         
         //NSLog(@"ChatViewController -> responseHandler: RESPONSE = %@ <%@>", response, response?[response class]:@"NULL");
@@ -196,7 +196,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
             }
         }
     });
-    
+
     return response;
 }
 

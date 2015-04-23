@@ -647,6 +647,8 @@
 		D30E65E619CB0C5000AE3949 /* SampleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleService.m; sourceTree = "<group>"; };
 		D30E65F219CC1C2C00AE3949 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		D30E65F319CC1C2C00AE3949 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		D30FC9B91AE6616B007C9A83 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = ../../../../SamplesForDoc/lib/backendless/include/Logger.h; sourceTree = "<group>"; };
+		D30FC9BA1AE6616B007C9A83 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logging.h; path = ../../../../SamplesForDoc/lib/backendless/include/Logging.h; sourceTree = "<group>"; };
 		D35CA5271A66881600F500B0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		D35CA5281A66881600F500B0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D35CA5291A66881600F500B0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -1336,6 +1338,8 @@
 		D309462D1AB9E78000A75DDC /* include */ = {
 			isa = PBXGroup;
 			children = (
+				D30FC9B91AE6616B007C9A83 /* Logger.h */,
+				D30FC9BA1AE6616B007C9A83 /* Logging.h */,
 				D309462E1AB9E78000A75DDC /* AbstractProperty.h */,
 				D309462F1AB9E78000A75DDC /* AbstractQuery.h */,
 				D30946301AB9E78000A75DDC /* AtomicCounters.h */,
@@ -2390,6 +2394,9 @@
 						DevelopmentTeam = 73FSJC7BUF;
 					};
 					F91B66EC16B18DD800668A06 = {
+						DevelopmentTeam = 73FSJC7BUF;
+					};
+					F91B675816B18EE000668A06 = {
 						DevelopmentTeam = 73FSJC7BUF;
 					};
 				};
@@ -4051,7 +4058,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushNotify/PushNotify-Prefix.pch";
 				INFOPLIST_FILE = "PushNotify/PushNotify-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../lib/backendless",
@@ -4073,7 +4080,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushNotify/PushNotify-Prefix.pch";
 				INFOPLIST_FILE = "PushNotify/PushNotify-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../lib/backendless",

@@ -23,7 +23,8 @@
 #import "Backendless.h"
 #import "MediaService.h"
 
-#define VIDEO_TUBE @"videoTube"
+//#define VIDEO_TUBE @"videoTube"
+#define VIDEO_TUBE @"Default"
 #define DEFAULT_STREAM_NAME @"defaultStreamName"
 
 @interface StartViewController () <IMediaStreamerDelegate> {
@@ -104,6 +105,8 @@
     options.resolution = RESOLUTION_CIF;
     _publisher =[backendless.mediaService publishStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
+    NSLog(@"publishControl: -> published stream: '%@/%@'", _publisher.streamPath, _publisher.streamName);
+    
     self.btnPublish.hidden = YES;
     self.btnPlayback.hidden = YES;
     self.textField.hidden = YES;
@@ -121,6 +124,8 @@
     options.orientation = UIImageOrientationUp;
     options.isRealTime = _switchView.on;
     _player = [backendless.mediaService playbackStream:_streamName tube:VIDEO_TUBE options:options responder:self];
+    
+    NSLog(@"playbackControl: -> playing stream: '%@/%@'", _player.streamPath, _player.streamName);
     
     self.btnPublish.hidden = YES;
     self.btnPlayback.hidden = YES;
