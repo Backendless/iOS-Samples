@@ -321,6 +321,17 @@
 		F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		F99EFF5C16D51358001AE512 /* radio_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5A16D51358001AE512 /* radio_checked.png */; };
 		F99EFF5D16D51358001AE512 /* radio_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5B16D51358001AE512 /* radio_unchecked.png */; };
+		F9E635CC1B0B2F97008B896C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E635CB1B0B2F97008B896C /* main.m */; };
+		F9E635CF1B0B2F97008B896C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E635CE1B0B2F97008B896C /* AppDelegate.m */; };
+		F9E635D21B0B2F97008B896C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E635D11B0B2F97008B896C /* ViewController.m */; };
+		F9E635D51B0B2F97008B896C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E635D31B0B2F97008B896C /* Main.storyboard */; };
+		F9E635D71B0B2F97008B896C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E635D61B0B2F97008B896C /* Images.xcassets */; };
+		F9E635DA1B0B2F97008B896C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E635D81B0B2F97008B896C /* LaunchScreen.xib */; };
+		F9E635ED1B0B3029008B896C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
+		F9E635EE1B0B3029008B896C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
+		F9E635EF1B0B3034008B896C /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D309462C1AB9E78000A75DDC /* backendless.a */; };
+		F9E635F01B0B303A008B896C /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30946661AB9E78000A75DDC /* CommLibiOS.a */; };
+		F9E635F31B0B3A21008B896C /* CallbackObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E635F21B0B3A21008B896C /* CallbackObjects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -647,8 +658,6 @@
 		D30E65E619CB0C5000AE3949 /* SampleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleService.m; sourceTree = "<group>"; };
 		D30E65F219CC1C2C00AE3949 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		D30E65F319CC1C2C00AE3949 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		D30FC9B91AE6616B007C9A83 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = ../../../../SamplesForDoc/lib/backendless/include/Logger.h; sourceTree = "<group>"; };
-		D30FC9BA1AE6616B007C9A83 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logging.h; path = ../../../../SamplesForDoc/lib/backendless/include/Logging.h; sourceTree = "<group>"; };
 		D35CA5271A66881600F500B0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		D35CA5281A66881600F500B0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D35CA5291A66881600F500B0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -781,8 +790,25 @@
 		F91B6AC516B6883200668A06 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		F91B6AC616B6883300668A06 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		F91B6AC816B6EBDC00668A06 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F954C0411B05226800F509E0 /* GeoFence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFence.h; sourceTree = "<group>"; };
+		F954C0421B05226800F509E0 /* ICallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICallback.h; sourceTree = "<group>"; };
+		F954C0471B05239500F509E0 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		F954C0481B05239500F509E0 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		F99EFF5A16D51358001AE512 /* radio_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_checked.png; sourceTree = "<group>"; };
 		F99EFF5B16D51358001AE512 /* radio_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_unchecked.png; sourceTree = "<group>"; };
+		F9E635981B0A307C008B896C /* LocationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTracker.h; sourceTree = "<group>"; };
+		F9E635C71B0B2F97008B896C /* GeoFence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoFence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E635CA1B0B2F97008B896C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E635CB1B0B2F97008B896C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F9E635CD1B0B2F97008B896C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F9E635CE1B0B2F97008B896C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F9E635D01B0B2F97008B896C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F9E635D11B0B2F97008B896C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F9E635D41B0B2F97008B896C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9E635D61B0B2F97008B896C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F9E635D91B0B2F97008B896C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F9E635F11B0B3A21008B896C /* CallbackObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallbackObjects.h; sourceTree = "<group>"; };
+		F9E635F21B0B3A21008B896C /* CallbackObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallbackObjects.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1082,6 +1108,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9E635C41B0B2F97008B896C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E635EE1B0B3029008B896C /* SystemConfiguration.framework in Frameworks */,
+				F9E635ED1B0B3029008B896C /* libsqlite3.dylib in Frameworks */,
+				F9E635F01B0B303A008B896C /* CommLibiOS.a in Frameworks */,
+				F9E635EF1B0B3034008B896C /* backendless.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1338,8 +1375,11 @@
 		D309462D1AB9E78000A75DDC /* include */ = {
 			isa = PBXGroup;
 			children = (
-				D30FC9B91AE6616B007C9A83 /* Logger.h */,
-				D30FC9BA1AE6616B007C9A83 /* Logging.h */,
+				F9E635981B0A307C008B896C /* LocationTracker.h */,
+				F954C0471B05239500F509E0 /* Logger.h */,
+				F954C0481B05239500F509E0 /* Logging.h */,
+				F954C0411B05226800F509E0 /* GeoFence.h */,
+				F954C0421B05226800F509E0 /* ICallback.h */,
 				D309462E1AB9E78000A75DDC /* AbstractProperty.h */,
 				D309462F1AB9E78000A75DDC /* AbstractQuery.h */,
 				D30946301AB9E78000A75DDC /* AtomicCounters.h */,
@@ -1759,6 +1799,7 @@
 				9101186D180D343F008102A7 /* PushNotifyMac */,
 				91628F3517FD9A5200ACC36F /* GeoServiceMac */,
 				91628F5C17FDA79E00ACC36F /* FileServiceMac */,
+				F9E635C81B0B2F97008B896C /* GeoFence */,
 				F91B662516B1873B00668A06 /* Frameworks */,
 				F91B662316B1873B00668A06 /* Products */,
 			);
@@ -1785,6 +1826,7 @@
 				9101183B180D33D4008102A7 /* PushNotifyMac.app */,
 				917650CE1827CA5D00745497 /* UIElementsSample.app */,
 				D37F5ED319CB0AFC0077F0C5 /* CustomService.app */,
+				F9E635C71B0B2F97008B896C /* GeoFence.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2061,6 +2103,32 @@
 				F99EFF5B16D51358001AE512 /* radio_unchecked.png */,
 			);
 			path = art;
+			sourceTree = "<group>";
+		};
+		F9E635C81B0B2F97008B896C /* GeoFence */ = {
+			isa = PBXGroup;
+			children = (
+				F9E635F11B0B3A21008B896C /* CallbackObjects.h */,
+				F9E635F21B0B3A21008B896C /* CallbackObjects.m */,
+				F9E635CD1B0B2F97008B896C /* AppDelegate.h */,
+				F9E635CE1B0B2F97008B896C /* AppDelegate.m */,
+				F9E635D01B0B2F97008B896C /* ViewController.h */,
+				F9E635D11B0B2F97008B896C /* ViewController.m */,
+				F9E635D31B0B2F97008B896C /* Main.storyboard */,
+				F9E635D61B0B2F97008B896C /* Images.xcassets */,
+				F9E635D81B0B2F97008B896C /* LaunchScreen.xib */,
+				F9E635C91B0B2F97008B896C /* Supporting Files */,
+			);
+			path = GeoFence;
+			sourceTree = "<group>";
+		};
+		F9E635C91B0B2F97008B896C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9E635CA1B0B2F97008B896C /* Info.plist */,
+				F9E635CB1B0B2F97008B896C /* main.m */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2372,6 +2440,23 @@
 			productReference = F91B675916B18EE000668A06 /* VideoService.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F9E635C61B0B2F97008B896C /* GeoFence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E635E71B0B2F98008B896C /* Build configuration list for PBXNativeTarget "GeoFence" */;
+			buildPhases = (
+				F9E635C31B0B2F97008B896C /* Sources */,
+				F9E635C41B0B2F97008B896C /* Frameworks */,
+				F9E635C51B0B2F97008B896C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoFence;
+			productName = GeoFence;
+			productReference = F9E635C71B0B2F97008B896C /* GeoFence.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2398,6 +2483,14 @@
 					};
 					F91B675816B18EE000668A06 = {
 						DevelopmentTeam = 73FSJC7BUF;
+					};
+					F9E635C61B0B2F97008B896C = {
+						CreatedOnToolsVersion = 6.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -2432,6 +2525,7 @@
 				9101183A180D33D3008102A7 /* PushNotifyMac */,
 				91628F3217FD9A5200ACC36F /* GeoServiceMac */,
 				91628F5917FDA79E00ACC36F /* FileServiceMac */,
+				F9E635C61B0B2F97008B896C /* GeoFence */,
 			);
 		};
 /* End PBXProject section */
@@ -2646,6 +2740,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9E635C51B0B2F97008B896C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E635D51B0B2F97008B896C /* Main.storyboard in Resources */,
+				F9E635DA1B0B2F97008B896C /* LaunchScreen.xib in Resources */,
+				F9E635D71B0B2F97008B896C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2833,6 +2937,17 @@
 				F91B676916B18EE000668A06 /* StartAppDelegate.m in Sources */,
 				915144F416DFCDB2007F0E50 /* StartViewController.m in Sources */,
 				91660D35174F61FB00D956EE /* SettingsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E635C31B0B2F97008B896C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E635D21B0B2F97008B896C /* ViewController.m in Sources */,
+				F9E635CF1B0B2F97008B896C /* AppDelegate.m in Sources */,
+				F9E635CC1B0B2F97008B896C /* main.m in Sources */,
+				F9E635F31B0B3A21008B896C /* CallbackObjects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3229,6 +3344,22 @@
 				F91B677116B18EE000668A06 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		F9E635D31B0B2F97008B896C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9E635D41B0B2F97008B896C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9E635D81B0B2F97008B896C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9E635D91B0B2F97008B896C /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -4228,6 +4359,82 @@
 			};
 			name = Release;
 		};
+		F9E635E81B0B2F98008B896C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GeoFence/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../../lib/backendless",
+					"$(SRCROOT)/../../../lib/CommLibiOS",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9E635E91B0B2F98008B896C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GeoFence/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../../lib/backendless",
+					"$(SRCROOT)/../../../lib/CommLibiOS",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -4401,6 +4608,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F9E635E71B0B2F98008B896C /* Build configuration list for PBXNativeTarget "GeoFence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E635E81B0B2F98008B896C /* Debug */,
+				F9E635E91B0B2F98008B896C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

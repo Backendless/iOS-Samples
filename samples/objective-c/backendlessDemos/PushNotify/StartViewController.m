@@ -23,7 +23,9 @@
 #import "Backendless.h"
 
 //static NSString *MESSAGING_CHANNEL = @"default";
-static NSString *MESSAGING_CHANNEL = @"testing";
+//static NSString *MESSAGING_CHANNEL = @"testing";
+static NSString *MESSAGING_CHANNEL = @"channelB";
+//static NSString *MESSAGING_CHANNEL = @"channelC";
 static NSString *PUBLISHER_ANONYMOUS = @"Anonymous";
 static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
@@ -44,8 +46,10 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
         [backendless initAppFault];
         [self initNetActivity];
 
-        NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
-        NSLog(@"viewDidLoad -> registerDevice (CHANNELS): %@", info);
+        //NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
+        //NSString *info = [backendless.messagingService registerDevice:@[@"channelA", @"channelB"]];
+        NSString *info = [backendless.messagingService registerDevice:@[@"channelB", @"channelC"]];
+        NSLog(@"viewDidLoad -> registerDevice: %@", info);
 
 #if 0 // try to publish text with lenght more then max = 2K
         self.textField.text = [backendless randomString:3000];
@@ -90,7 +94,15 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     _textView.text = [_textView.text stringByAppendingFormat:@"APNS: %@\n", notification];
 }
 
+-(void)showDeviceRegistration {
+    DeviceRegistration *devReg = [backendless.messaging currentDevice];
+    DeviceRegistration *getReg = [backendless.messaging getRegistrations:devReg.deviceId];
+    NSLog(@"viewDidLoad -> showDeviceRegistration: \n%@ =?\n[%@]", devReg, getReg);
+}
+
 -(void)sendMessage:(id)sender {
+    
+    [self showDeviceRegistration];
     
     [(UILabel *)[self.view viewWithTag:100] setText:@""];
     [self startNetIndicator];
@@ -98,7 +110,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     PublishOptions *options = [PublishOptions new];
     options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"};
     DeliveryOptions *delivery = [DeliveryOptions deliveryOptionsForNotification:PUSHONLY];
-
+    
 #if 1 //async
     
     [backendless.messagingService

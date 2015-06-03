@@ -20,6 +20,7 @@
  */
 
 // applications & services deployment
+#define OLD_ASYNC_WITH_FAULT 0
 #define OLD_MEDIA_APP 0
 #define TEST_MEDIA_INSTANCE 0
 
@@ -31,8 +32,8 @@
 #import "Responder.h"
 #import "AMFSerializer.h"
 
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 //UI
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import "BEMapView.h"
 #import "BETableView.h"
 #import "BECollectionView.h"
@@ -58,6 +59,9 @@
 #import "GeoCategory.h"
 #import "BackendlessGeoQuery.h"
 #import "GeoService.h"
+#import "ICallback.h"
+#import "GeoFence.h"
+#import "LocationTracker.h"
 #import "Message.h"
 #import "MessageStatus.h"
 #import "DeliveryOptions.h"
@@ -122,6 +126,11 @@
 @property (strong, nonatomic, readonly) CacheService *cache;
 @property (strong, nonatomic, readonly) AtomicCounters *counters;
 @property (strong, nonatomic, readonly) Logging *logging;
+// service shortcuts
+@property (assign, nonatomic, readonly) PersistenceService *data;
+@property (assign, nonatomic, readonly) GeoService *geo;
+@property (assign, nonatomic, readonly) MessagingService *messaging;
+@property (assign, nonatomic, readonly) FileService *file;
 // delegates
 @property (strong, nonatomic) id <ReachabilityDelegate> reachabilityDelegate;
 
@@ -141,8 +150,10 @@
 -(void)initApp;
 -(void)initAppFault;
 -(NSString *)mediaServerUrl;
+#pragma mark - exceptions management
 -(void)setThrowException:(BOOL)needThrow;
 -(id)throwFault:(Fault *)fault;
+#pragma mark - utils
 -(NSString *)GUIDString;
 -(NSString *)randomString:(int)numCharacters;
 -(NSString *)applicationType;

@@ -96,10 +96,10 @@ class ViewController: UIViewController, UITextFieldDelegate, IMediaStreamerDeleg
         
         var options: MediaPlaybackOptions
         if (switchView.on) {
-            options = MediaPlaybackOptions.liveStream(self.playbackView) as MediaPlaybackOptions
+            options = MediaPlaybackOptions.liveStream(self.playbackView) as! MediaPlaybackOptions
         }
         else {
-            options = MediaPlaybackOptions.recordStream(self.playbackView) as MediaPlaybackOptions
+            options = MediaPlaybackOptions.recordStream(self.playbackView) as! MediaPlaybackOptions
         }
         
         options.orientation = .Up
@@ -121,10 +121,10 @@ class ViewController: UIViewController, UITextFieldDelegate, IMediaStreamerDeleg
         
         var options: MediaPublishOptions
         if (switchView.on) {
-            options = MediaPublishOptions.liveStream(self.preView) as MediaPublishOptions
+            options = MediaPublishOptions.liveStream(self.preView) as! MediaPublishOptions
         }
         else {
-            options = MediaPublishOptions.recordStream(self.preView) as MediaPublishOptions
+            options = MediaPublishOptions.recordStream(self.preView) as! MediaPublishOptions
         }
         
         options.orientation = .Portrait

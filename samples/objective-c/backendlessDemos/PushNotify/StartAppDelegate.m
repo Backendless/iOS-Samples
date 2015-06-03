@@ -99,7 +99,7 @@ static NSString *VERSION_NUM = @"v1";
         NSLog(@"application:didRegisterForRemoteNotificationsWithDeviceToken: -> registerDeviceToken: deviceRegistrationId = %@", deviceRegistrationId);
     }
     @catch (Fault *fault) {
-        NSLog(@"application:didRegisterForRemoteNotificationsWithDeviceToken: -> registerDeviceToken: FAULT = %@", fault);
+        NSLog(@"application:didRegisterForRemoteNotificationsWithDeviceToken: -> registerDeviceToken: %@", fault);
     }
     
     [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] stopNetIndicator];
