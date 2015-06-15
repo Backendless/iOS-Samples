@@ -198,8 +198,6 @@
 		D30E65EE19CB0E8200AE3949 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		D30E65EF19CB0E9300AE3949 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		D30E65F419CC1C2C00AE3949 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D30E65F319CC1C2C00AE3949 /* Person.m */; };
-		D35CA52E1A6688B000F500B0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5281A66881600F500B0 /* Cocoa.framework */; };
-		D35CA52F1A6688B000F500B0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5291A66881600F500B0 /* IOKit.framework */; };
 		D35CA5351A66900100F500B0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5281A66881600F500B0 /* Cocoa.framework */; };
 		D35CA5361A66900100F500B0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5291A66881600F500B0 /* IOKit.framework */; };
 		D35CA5381A66901300F500B0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5281A66881600F500B0 /* Cocoa.framework */; };
@@ -321,6 +319,14 @@
 		F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		F99EFF5C16D51358001AE512 /* radio_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5A16D51358001AE512 /* radio_checked.png */; };
 		F99EFF5D16D51358001AE512 /* radio_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5B16D51358001AE512 /* radio_unchecked.png */; };
+		F9BE41B91B2EC6A500CD0A72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947391AB9F50500A75DDC /* CoreLocation.framework */; };
+		F9BE41BA1B2EC6C300CD0A72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947391AB9F50500A75DDC /* CoreLocation.framework */; };
+		F9BE41BB1B2EC70D00CD0A72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947391AB9F50500A75DDC /* CoreLocation.framework */; };
+		F9BE41BC1B2EC71800CD0A72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947391AB9F50500A75DDC /* CoreLocation.framework */; };
+		F9BE41BD1B2EC75D00CD0A72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947391AB9F50500A75DDC /* CoreLocation.framework */; };
+		F9BE41BE1B2EC86900CD0A72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5281A66881600F500B0 /* Cocoa.framework */; };
+		F9BE41BF1B2EC93B00CD0A72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947391AB9F50500A75DDC /* CoreLocation.framework */; };
+		F9BE41C01B2ECA4100CD0A72 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35CA5291A66881600F500B0 /* IOKit.framework */; };
 		F9E635CC1B0B2F97008B896C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E635CB1B0B2F97008B896C /* main.m */; };
 		F9E635CF1B0B2F97008B896C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E635CE1B0B2F97008B896C /* AppDelegate.m */; };
 		F9E635D21B0B2F97008B896C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E635D11B0B2F97008B896C /* ViewController.m */; };
@@ -816,6 +822,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BE41BC1B2EC71800CD0A72 /* CoreLocation.framework in Frameworks */,
 				D35CA5411A66905000F500B0 /* Cocoa.framework in Frameworks */,
 				D35CA5421A66905000F500B0 /* IOKit.framework in Frameworks */,
 				9154F4921869CE0C00426C78 /* SystemConfiguration.framework in Frameworks */,
@@ -829,6 +836,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BE41BA1B2EC6C300CD0A72 /* CoreLocation.framework in Frameworks */,
 				D30947301AB9F36D00A75DDC /* Cocoa.framework in Frameworks */,
 				D309472F1AB9F35300A75DDC /* IOKit.framework in Frameworks */,
 				D309472E1AB9F32F00A75DDC /* SystemConfiguration.framework in Frameworks */,
@@ -842,8 +850,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D35CA52E1A6688B000F500B0 /* Cocoa.framework in Frameworks */,
-				D35CA52F1A6688B000F500B0 /* IOKit.framework in Frameworks */,
+				F9BE41C01B2ECA4100CD0A72 /* IOKit.framework in Frameworks */,
+				F9BE41BF1B2EC93B00CD0A72 /* CoreLocation.framework in Frameworks */,
+				F9BE41BE1B2EC86900CD0A72 /* Cocoa.framework in Frameworks */,
 				9154F4831869CD9500426C78 /* SystemConfiguration.framework in Frameworks */,
 				9154F4841869CD9800426C78 /* libsqlite3.dylib in Frameworks */,
 				D30947311AB9F39900A75DDC /* libCommLibMac.a in Frameworks */,
@@ -855,6 +864,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BE41B91B2EC6A500CD0A72 /* CoreLocation.framework in Frameworks */,
 				D35CA5351A66900100F500B0 /* Cocoa.framework in Frameworks */,
 				D35CA5361A66900100F500B0 /* IOKit.framework in Frameworks */,
 				9154F48C1869CDF800426C78 /* SystemConfiguration.framework in Frameworks */,
@@ -868,6 +878,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BE41BB1B2EC70D00CD0A72 /* CoreLocation.framework in Frameworks */,
 				D35CA5381A66901300F500B0 /* Cocoa.framework in Frameworks */,
 				D35CA5391A66901300F500B0 /* IOKit.framework in Frameworks */,
 				9154F4891869CDED00426C78 /* SystemConfiguration.framework in Frameworks */,
@@ -895,6 +906,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BE41BD1B2EC75D00CD0A72 /* CoreLocation.framework in Frameworks */,
 				D35CA53E1A66903600F500B0 /* Cocoa.framework in Frameworks */,
 				D35CA53F1A66903600F500B0 /* IOKit.framework in Frameworks */,
 				9154F4901869CE0800426C78 /* SystemConfiguration.framework in Frameworks */,
@@ -3454,6 +3466,12 @@
 				GCC_PREFIX_HEADER = "ToDoDataMac/ToDoDataMac-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../lib/backendless/include",
+					"$(SRCROOT)/../../../lib/CommLibiOS/include",
+				);
 				INFOPLIST_FILE = "ToDoDataMac/ToDoDataMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3482,6 +3500,12 @@
 				GCC_PREFIX_HEADER = "ToDoDataMac/ToDoDataMac-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../lib/backendless/include",
+					"$(SRCROOT)/../../../lib/CommLibiOS/include",
+				);
 				INFOPLIST_FILE = "ToDoDataMac/ToDoDataMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4371,6 +4395,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -4410,6 +4435,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -4616,6 +4642,7 @@
 				F9E635E91B0B2F98008B896C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
