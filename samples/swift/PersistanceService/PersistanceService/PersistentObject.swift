@@ -31,7 +31,7 @@ class Weather : BackendlessEntity {
     var condition = "Very Nice"
     
     // description func
-    func description() -> NSString {
+    func show() -> NSString {
         return "<Weather> \(condition):\(temperature)"
     }
     
@@ -51,7 +51,7 @@ class PersistentObjectQB : NSObject {
     var companies = [Weather(), Weather(), Weather()]
     
     // description func
-    func description() -> NSString {
+    func show() -> NSString {
         return  "<PersistentObjectQB> \(title)/\(nik) count = \(count) part = \(part) date = \(today)"
     }
 }

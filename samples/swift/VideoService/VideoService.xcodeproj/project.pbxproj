@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		D30948241AB9FD8D00A75DDC /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D309474B1AB9FD8C00A75DDC /* backendless.a */; };
 		D30948261AB9FD8D00A75DDC /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947851AB9FD8D00A75DDC /* CommLibiOS.a */; };
-		D30948271AB9FD8D00A75DDC /* Communication Library for iOS User Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D30947871AB9FD8D00A75DDC /* Communication Library for iOS User Guide.pdf */; };
-		D30948281AB9FD8D00A75DDC /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = D30947881AB9FD8D00A75DDC /* WeborbClient Class Reference.odt */; };
 		D309482A1AB9FD8D00A75DDC /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947FD1AB9FD8D00A75DDC /* libavcodec.a */; };
 		D309482B1AB9FD8D00A75DDC /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947FE1AB9FD8D00A75DDC /* libavdevice.a */; };
 		D309482C1AB9FD8D00A75DDC /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947FF1AB9FD8D00A75DDC /* libavfilter.a */; };
@@ -88,10 +86,7 @@
 		D30947801AB9FD8D00A75DDC /* SubscriptionOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionOptions.h; sourceTree = "<group>"; };
 		D30947811AB9FD8D00A75DDC /* UserProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProperty.h; sourceTree = "<group>"; };
 		D30947821AB9FD8D00A75DDC /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
-		D30947831AB9FD8D00A75DDC /* libbackendless-mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libbackendless-mac.a"; sourceTree = "<group>"; };
 		D30947851AB9FD8D00A75DDC /* CommLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = CommLibiOS.a; sourceTree = "<group>"; };
-		D30947871AB9FD8D00A75DDC /* Communication Library for iOS User Guide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Communication Library for iOS User Guide.pdf"; sourceTree = "<group>"; };
-		D30947881AB9FD8D00A75DDC /* WeborbClient Class Reference.odt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WeborbClient Class Reference.odt"; sourceTree = "<group>"; };
 		D309478A1AB9FD8D00A75DDC /* AMFSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMFSerializer.h; sourceTree = "<group>"; };
 		D309478B1AB9FD8D00A75DDC /* BinaryCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryCodec.h; sourceTree = "<group>"; };
 		D309478C1AB9FD8D00A75DDC /* BinaryStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryStream.h; sourceTree = "<group>"; };
@@ -111,7 +106,6 @@
 		D309479A1AB9FD8D00A75DDC /* RTMPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMPClient.h; sourceTree = "<group>"; };
 		D309479B1AB9FD8D00A75DDC /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		D309479C1AB9FD8D00A75DDC /* WeborbClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeborbClient.h; sourceTree = "<group>"; };
-		D309479D1AB9FD8D00A75DDC /* libCommLibMac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCommLibMac.a; sourceTree = "<group>"; };
 		D30947A11AB9FD8D00A75DDC /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
 		D30947A21AB9FD8D00A75DDC /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
 		D30947A31AB9FD8D00A75DDC /* dxva2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dxva2.h; sourceTree = "<group>"; };
@@ -288,7 +282,6 @@
 			children = (
 				D309474B1AB9FD8C00A75DDC /* backendless.a */,
 				D309474C1AB9FD8C00A75DDC /* include */,
-				D30947831AB9FD8D00A75DDC /* libbackendless-mac.a */,
 			);
 			path = backendless;
 			sourceTree = "<group>";
@@ -358,20 +351,9 @@
 			isa = PBXGroup;
 			children = (
 				D30947851AB9FD8D00A75DDC /* CommLibiOS.a */,
-				D30947861AB9FD8D00A75DDC /* doc */,
 				D30947891AB9FD8D00A75DDC /* include */,
-				D309479D1AB9FD8D00A75DDC /* libCommLibMac.a */,
 			);
 			path = CommLibiOS;
-			sourceTree = "<group>";
-		};
-		D30947861AB9FD8D00A75DDC /* doc */ = {
-			isa = PBXGroup;
-			children = (
-				D30947871AB9FD8D00A75DDC /* Communication Library for iOS User Guide.pdf */,
-				D30947881AB9FD8D00A75DDC /* WeborbClient Class Reference.odt */,
-			);
-			path = doc;
 			sourceTree = "<group>";
 		};
 		D30947891AB9FD8D00A75DDC /* include */ = {
@@ -782,8 +764,6 @@
 			files = (
 				D385760C19FA5E2E00B68561 /* Main.storyboard in Resources */,
 				D385761119FA5E2E00B68561 /* LaunchScreen.xib in Resources */,
-				D30948281AB9FD8D00A75DDC /* WeborbClient Class Reference.odt in Resources */,
-				D30948271AB9FD8D00A75DDC /* Communication Library for iOS User Guide.pdf in Resources */,
 				D385760E19FA5E2E00B68561 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

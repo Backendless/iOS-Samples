@@ -87,7 +87,7 @@ class ViewController: UIViewController {
             },
             
             catch: { (exception) -> Void in
-                NSLog("FAULT: %@", exception as Fault)
+                NSLog("FAULT: %@", exception as! Fault)
             },
             
             finally: { () -> Void in
@@ -105,7 +105,7 @@ class ViewController: UIViewController {
             },
             
             catch: { (exception) -> Void in
-                println("Server reported an error (SYNC): \(exception as Fault)")
+                println("Server reported an error (SYNC): \(exception as! Fault)")
             }
         )
     }
@@ -129,12 +129,12 @@ class ViewController: UIViewController {
             
             var obj = PersistentObjectQB()
             var result : AnyObject? = self.backendless.persistenceService.save(obj)
-            NSLog("PersistentObjectQB: %@", (result as PersistentObjectQB).description)
+            NSLog("PersistentObjectQB: %@", (result as! PersistentObjectQB).description)
             
             },
             
             catch: { (exception) -> Void in
-                NSLog("FAULT: %@", exception as Fault)
+                NSLog("FAULT: %@", exception as! Fault)
             }
         )
         
@@ -148,9 +148,9 @@ class ViewController: UIViewController {
         // - sync method with fault as reference (fault as exception should be shutted off !)
         var item : AnyObject? = backendless.persistenceService.save(OrderItem(), error: &fault)
         if (fault == nil) {
-            var obj : AnyObject = backendless.persistenceService.findById("OrderItem", sid: (item as OrderItem).objectId)
+            var obj : AnyObject = backendless.persistenceService.findById("OrderItem", sid: (item as! OrderItem).objectId)
             if (obj is OrderItem) {
-                println("OrderItem: \((obj as OrderItem).itemName) <\((obj as OrderItem).objectId)>")
+                println("OrderItem: \((obj as! OrderItem).itemName) <\((obj as! OrderItem).objectId)>")
             }
             else {
                 println("\nFAULT (0): \(fault!.description)")
@@ -185,9 +185,9 @@ class ViewController: UIViewController {
         // - sync method with class instance/fault as return (fault as exception should be shutted off !)
         result = backendless.persistenceService.save(Weather())
         if (result is Weather) {
-            var obj : AnyObject = backendless.persistenceService.findById("Weather", sid:(result as Weather).objectId)
+            var obj : AnyObject = backendless.persistenceService.findById("Weather", sid:(result as! Weather).objectId)
             if (obj is Weather) {
-                var obj1 = obj as Weather
+                var obj1 = obj as! Weather
                 println("\nWeather (1): \(obj1.description)")
             }
         }
@@ -198,9 +198,9 @@ class ViewController: UIViewController {
         // - sync method with fault as reference (fault as exception should be shutted off !)
         var weather : AnyObject? = backendless.persistenceService.save(Weather(), error: &fault)
         if (fault == nil) {
-            var obj : AnyObject = backendless.persistenceService.findById("Weather", sid: (weather as Weather).objectId)
+            var obj : AnyObject = backendless.persistenceService.findById("Weather", sid: (weather as! Weather).objectId)
             if (obj is Weather) {
-                println("\nWeather (2): \((obj as Weather).description)")
+                println("\nWeather (2): \((obj as! Weather).description)")
             }
         }
         else {
@@ -211,9 +211,9 @@ class ViewController: UIViewController {
         backendless.persistenceService.save(
             Weather(),
             response: { (var result : AnyObject!) -> () in
-                var obj : AnyObject = self.backendless.persistenceService.findById("Weather", sid: (result as Weather).objectId)
+                var obj : AnyObject = self.backendless.persistenceService.findById("Weather", sid: (result as! Weather).objectId)
                 if (obj is Weather) {
-                    println("\nWeather (3): \((obj as Weather).description)")
+                    println("\nWeather (3): \((obj as! Weather).description)")
                 }
             },
             error: { (var fault : Fault!) -> () in
@@ -228,7 +228,7 @@ class ViewController: UIViewController {
             println("\nFAULT (4): \(fault!.description)")
         }
         
-        var q = BackendlessDataQuery.query() as BackendlessDataQuery;
+        var q = BackendlessDataQuery.query() as! BackendlessDataQuery;
         
     }
     
@@ -254,22 +254,22 @@ class ViewController: UIViewController {
                 GEO_POINT(latitude: 40.757977, longitude: -73.98557),
                 categories: ["DropOffs"],
                 metadata: ["name":"Times Square"]
-                ) as GeoPoint
+                ) as! GeoPoint
             
             var droppOff2 = GeoPoint.geoPoint(
                 GEO_POINT(latitude: 40.748379, longitude: -73.985565),
                 categories: ["DropOffs"],
                 metadata: ["name":"Empire State Building"]
-                ) as GeoPoint
+                ) as! GeoPoint
             
             taxi.previousDropOffs = [droppOff1, droppOff2]
             
-            taxi = self.backendless.persistenceService.save(taxi) as TaxiCab
+            taxi = self.backendless.persistenceService.save(taxi) as! TaxiCab
             println("linkingDataObjectWithGeoPoints: \(taxi)")
             },
             
             catch: { (exception) -> Void in
-                println("linkingDataObjectWithGeoPoints (FAULT): \(exception as Fault)")
+                println("linkingDataObjectWithGeoPoints (FAULT): \(exception as! Fault)")
             }
         )
     }
@@ -286,14 +286,14 @@ class ViewController: UIViewController {
                 GEO_POINT(latitude: 40.750549, longitude: -73.994232),
                 categories: ["Pickups"],
                 metadata: ["TaxiCab":cab]
-                ) as GeoPoint
+                ) as! GeoPoint
             
             pickupLocation = self.backendless.geoService.savePoint(pickupLocation)
             println("linkingGeoPointWithDataObject: \(pickupLocation)")
             },
             
             catch: { (exception) -> Void in
-                println("linkingGeoPointWithDataObject (FAULT): \(exception as Fault)")
+                println("linkingGeoPointWithDataObject (FAULT): \(exception as! Fault)")
             }
         )
     }
@@ -314,14 +314,14 @@ class ViewController: UIViewController {
                 GEO_POINT(latitude: 40.750549, longitude: -73.994232),
                 categories: ["Pickups"],
                 metadata: ["AvailableCabs":[cab1, cab2]]
-                ) as GeoPoint
+                ) as! GeoPoint
             
             pickupLocation = self.backendless.geoService.savePoint(pickupLocation)
             println("linkingGeoPointWithSeveralDataObjects: \(pickupLocation)")
             },
             
             catch: { (exception) -> Void in
-                println("linkingGeoPointWithSeveralDataObjects (FAULT): \(exception as Fault)")
+                println("linkingGeoPointWithSeveralDataObjects (FAULT): \(exception as! Fault)")
             }
         )
     }
@@ -333,14 +333,14 @@ class ViewController: UIViewController {
         
         Types.try({ () -> Void in
             
-            var query = BackendlessGeoQuery.queryWithCategories(["City"]) as BackendlessGeoQuery
+            var query = BackendlessGeoQuery.queryWithCategories(["City"]) as! BackendlessGeoQuery
             query.setClusteringParams(-157.9 , eastLongitude: -157.8, mapWidth: 480)
             var points = self.backendless.geoService.getPoints(query)
             println("Loaded geo points and clusters: \(points)")
             },
             
             catch: { (exception) -> Void in
-                println("Server reported an error: \(exception as Fault)")
+                println("Server reported an error: \(exception as! Fault)")
             }
         )
     }
@@ -350,14 +350,14 @@ class ViewController: UIViewController {
         Types.try({ () -> Void in
             
             var query = BackendlessGeoQuery.queryWithPoint(
-                GEO_POINT(latitude: 21.306944, longitude: -157.858333), radius: 50.0, units: KILOMETERS, categories: ["City"]) as BackendlessGeoQuery
+                GEO_POINT(latitude: 21.306944, longitude: -157.858333), radius: 50.0, units: KILOMETERS, categories: ["City"]) as! BackendlessGeoQuery
             query.setClusteringParams(157.9 , eastLongitude: 157.8, mapWidth: 480)
             var points = self.backendless.geoService.getPoints(query)
             println("Loaded geo points and clusters: \(points)")
             },
             
             catch: { (exception) -> Void in
-                println("Server reported an error: \(exception as Fault)")
+                println("Server reported an error: \(exception as! Fault)")
             }
         )
     }
@@ -367,14 +367,14 @@ class ViewController: UIViewController {
         Types.try({ () -> Void in
             
             var rect = self.backendless.geoService.geoRectangle(GEO_POINT(latitude: 21.306944, longitude: -157.858333), length: 0.5, widht: 0.5)
-            var query = BackendlessGeoQuery.queryWithRect(rect.nordWest, southEast: rect.southEast, categories: ["City"]) as BackendlessGeoQuery
+            var query = BackendlessGeoQuery.queryWithRect(rect.nordWest, southEast: rect.southEast, categories: ["City"]) as! BackendlessGeoQuery
             query.setClusteringParams(157.9 , eastLongitude: 157.8, mapWidth: 480)
             var points = self.backendless.geoService.getPoints(query)
             println("Loaded geo points and clusters: \(points)")
             },
             
             catch: { (exception) -> Void in
-                println("Server reported an error: \(exception as Fault)")
+                println("Server reported an error: \(exception as! Fault)")
             }
         )
     }
@@ -385,18 +385,18 @@ class ViewController: UIViewController {
         
         Types.try({ () -> Void in
             
-            var query = BackendlessGeoQuery.queryWithCategories(["City"]) as BackendlessGeoQuery
+            var query = BackendlessGeoQuery.queryWithCategories(["City"]) as! BackendlessGeoQuery
             var points = self.backendless.geoService.getPoints(query)
             println("Loaded geo points with metadata:")
             
             for point in points.data {
-                var geoPoint = self.backendless.geoService.loadMetadata(point as GeoPoint)
+                var geoPoint = self.backendless.geoService.loadMetadata(point as! GeoPoint)
                 println("\(geoPoint)")
             }
             },
             
             catch: { (exception) -> Void in
-                println("Server reported an error: \(exception as Fault)")
+                println("Server reported an error: \(exception as! Fault)")
             }
         )
     }
@@ -405,19 +405,19 @@ class ViewController: UIViewController {
         
         Types.try({ () -> Void in
             
-            var query = BackendlessGeoQuery.queryWithCategories(["City"]) as BackendlessGeoQuery
+            var query = BackendlessGeoQuery.queryWithCategories(["City"]) as! BackendlessGeoQuery
             query.setClusteringParams(-157.9 , eastLongitude: -157.8, mapWidth: 480)
             var points = self.backendless.geoService.getPoints(query)
             println("Loaded geo points and clusters with metadata:")
             
             for point in points.data {
-                var geoPoint = self.backendless.geoService.loadMetadata(point as GeoPoint)
+                var geoPoint = self.backendless.geoService.loadMetadata(point as! GeoPoint)
                 println("\(geoPoint)")
             }
             },
             
             catch: { (exception) -> Void in
-                println("Server reported an error: \(exception as Fault)")
+                println("Server reported an error: \(exception as! Fault)")
             }
         )
     }
@@ -470,14 +470,14 @@ class ViewController: UIViewController {
             dataQuery.whereClause = "distance( 30.26715, -97.74306, Coordinates.latitude, Coordinates.longitude ) < mi(200)"
             
             var friends = self.backendless.persistenceService.find(Friend.ofClass(), dataQuery:dataQuery) as BackendlessCollection
-            for friend in friends.data as [Friend] {
-                var info = friend.coordinates!.metadata["description"] as String
+            for friend in friends.data as! [Friend] {
+                var info = friend.coordinates!.metadata["description"] as! String
                 println("\(friend.name) lives at \(friend.coordinates!.latitude), \(friend.coordinates!.longitude) tagged as '\(info)'")
             }
             },
             
             catch: { (exception) -> Void in
-                println("searchingDataObjectByDistance (FAULT): \(exception as Fault)")
+                println("searchingDataObjectByDistance (FAULT): \(exception as! Fault)")
             }
         )
     }

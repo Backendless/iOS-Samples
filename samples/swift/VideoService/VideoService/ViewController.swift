@@ -21,7 +21,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, IMediaStreamerDelegate {
+class ViewController: UIViewController, IMediaStreamerDelegate {
 
     @IBOutlet var btnPublish : UIButton!
     @IBOutlet var btnPlayback : UIButton!
