@@ -878,6 +878,13 @@
 		F98A7F671B3071C8007635B6 /* libCommLib-osx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCommLib-osx.a"; sourceTree = "<group>"; };
 		F99EFF5A16D51358001AE512 /* radio_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_checked.png; sourceTree = "<group>"; };
 		F99EFF5B16D51358001AE512 /* radio_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_unchecked.png; sourceTree = "<group>"; };
+		F9E13D5E1B30736500A30556 /* Atomic Counters API.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Atomic Counters API.pdf"; sourceTree = "<group>"; };
+		F9E13D5F1B30736500A30556 /* Backendless Mac OS application setup.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Backendless Mac OS application setup.pdf"; sourceTree = "<group>"; };
+		F9E13D601B30736500A30556 /* Caching API.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Caching API.pdf"; sourceTree = "<group>"; };
+		F9E13D611B30736500A30556 /* Communication Library for iOS User Guide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Communication Library for iOS User Guide.pdf"; sourceTree = "<group>"; };
+		F9E13D621B30736500A30556 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf"; sourceTree = "<group>"; };
+		F9E13D631B30736500A30556 /* Sending Email API.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Sending Email API.pdf"; sourceTree = "<group>"; };
+		F9E13D641B30736500A30556 /* WeborbClient Class Reference.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "WeborbClient Class Reference.pdf"; sourceTree = "<group>"; };
 		F9E635981B0A307C008B896C /* LocationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTracker.h; sourceTree = "<group>"; };
 		F9E635C71B0B2F97008B896C /* GeoFence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoFence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E635CA1B0B2F97008B896C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1855,6 +1862,7 @@
 		F91B661716B1873B00668A06 = {
 			isa = PBXGroup;
 			children = (
+				F9E13D5D1B30736500A30556 /* doc */,
 				D309462A1AB9E78000A75DDC /* lib */,
 				F98A7F131B3071C8007635B6 /* osx */,
 				F99EFF5916D51358001AE512 /* art */,
@@ -2300,6 +2308,21 @@
 				F99EFF5B16D51358001AE512 /* radio_unchecked.png */,
 			);
 			path = art;
+			sourceTree = "<group>";
+		};
+		F9E13D5D1B30736500A30556 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				F9E13D5E1B30736500A30556 /* Atomic Counters API.pdf */,
+				F9E13D5F1B30736500A30556 /* Backendless Mac OS application setup.pdf */,
+				F9E13D601B30736500A30556 /* Caching API.pdf */,
+				F9E13D611B30736500A30556 /* Communication Library for iOS User Guide.pdf */,
+				F9E13D621B30736500A30556 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf */,
+				F9E13D631B30736500A30556 /* Sending Email API.pdf */,
+				F9E13D641B30736500A30556 /* WeborbClient Class Reference.pdf */,
+			);
+			name = doc;
+			path = ../../../doc;
 			sourceTree = "<group>";
 		};
 		F9E635C81B0B2F97008B896C /* GeoFence */ = {
