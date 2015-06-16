@@ -234,6 +234,7 @@
 		D385770E19FA8CFC00B68561 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D385771019FA8D2500B68561 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D385771219FA8D8000B68561 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F9D8198D1B307F0A004CA537 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf"; path = "../../../doc/Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -648,6 +649,7 @@
 		D38575F819FA5E2D00B68561 = {
 			isa = PBXGroup;
 			children = (
+				F9D8198D1B307F0A004CA537 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf */,
 				D323EA6819FFAF7F001F84BD /* Bridging-Header.h */,
 				D30947491AB9FD8C00A75DDC /* lib */,
 				D385760319FA5E2D00B68561 /* VideoService */,
