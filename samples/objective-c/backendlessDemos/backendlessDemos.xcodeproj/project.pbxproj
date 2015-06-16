@@ -303,20 +303,20 @@
 		F91B6AC716B6883300668A06 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B6AC616B6883300668A06 /* ChatViewController.m */; };
 		F91B6ACA16B6EBF600668A06 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B6AC816B6EBDC00668A06 /* MapKit.framework */; };
 		F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
-		F98A7E551B305080007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E3E1B305080007635B6 /* libbackendless-mac.a */; };
-		F98A7E561B305081007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E3E1B305080007635B6 /* libbackendless-mac.a */; };
-		F98A7E571B305081007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E3E1B305080007635B6 /* libbackendless-mac.a */; };
-		F98A7E581B305081007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E3E1B305080007635B6 /* libbackendless-mac.a */; };
-		F98A7E591B305081007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E3E1B305080007635B6 /* libbackendless-mac.a */; };
-		F98A7E5A1B305081007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E3E1B305080007635B6 /* libbackendless-mac.a */; };
-		F98A7E5B1B305081007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E3E1B305080007635B6 /* libbackendless-mac.a */; };
-		F98A7E5C1B305081007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E541B305080007635B6 /* libCommLib-osx.a */; };
-		F98A7E5D1B305081007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E541B305080007635B6 /* libCommLib-osx.a */; };
-		F98A7E5E1B305081007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E541B305080007635B6 /* libCommLib-osx.a */; };
-		F98A7E5F1B305081007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E541B305080007635B6 /* libCommLib-osx.a */; };
-		F98A7E601B305081007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E541B305080007635B6 /* libCommLib-osx.a */; };
-		F98A7E611B305081007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E541B305080007635B6 /* libCommLib-osx.a */; };
-		F98A7E621B305081007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7E541B305080007635B6 /* libCommLib-osx.a */; };
+		F98A7F681B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
+		F98A7F691B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
+		F98A7F6A1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
+		F98A7F6B1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
+		F98A7F6C1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
+		F98A7F6D1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
+		F98A7F6E1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
+		F98A7F6F1B3071C8007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F671B3071C8007635B6 /* libCommLib-osx.a */; };
+		F98A7F701B3071C8007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F671B3071C8007635B6 /* libCommLib-osx.a */; };
+		F98A7F711B3071C8007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F671B3071C8007635B6 /* libCommLib-osx.a */; };
+		F98A7F721B3071C8007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F671B3071C8007635B6 /* libCommLib-osx.a */; };
+		F98A7F731B3071C8007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F671B3071C8007635B6 /* libCommLib-osx.a */; };
+		F98A7F741B3071C9007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F671B3071C8007635B6 /* libCommLib-osx.a */; };
+		F98A7F751B3071C9007635B6 /* libCommLib-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F671B3071C8007635B6 /* libCommLib-osx.a */; };
 		F99EFF5C16D51358001AE512 /* radio_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5A16D51358001AE512 /* radio_checked.png */; };
 		F99EFF5D16D51358001AE512 /* radio_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = F99EFF5B16D51358001AE512 /* radio_unchecked.png */; };
 		F9BE41B91B2EC6A500CD0A72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947391AB9F50500A75DDC /* CoreLocation.framework */; };
@@ -796,93 +796,86 @@
 		F954C0421B05226800F509E0 /* ICallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICallback.h; sourceTree = "<group>"; };
 		F954C0471B05239500F509E0 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		F954C0481B05239500F509E0 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
-		F98A7E031B305080007635B6 /* AbstractProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractProperty.h; sourceTree = "<group>"; };
-		F98A7E041B305080007635B6 /* AbstractQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractQuery.h; sourceTree = "<group>"; };
-		F98A7E051B305080007635B6 /* AtomicCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCounters.h; sourceTree = "<group>"; };
-		F98A7E061B305080007635B6 /* AtomicCountersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCountersFactory.h; sourceTree = "<group>"; };
-		F98A7E071B305080007635B6 /* Backendless-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Backendless-Bridging-Header.h"; sourceTree = "<group>"; };
-		F98A7E081B305080007635B6 /* Backendless.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Backendless.h; sourceTree = "<group>"; };
-		F98A7E091B305080007635B6 /* BackendlessCachePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCachePolicy.h; sourceTree = "<group>"; };
-		F98A7E0A1B305080007635B6 /* BackendlessCacheProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCacheProtocol.h; sourceTree = "<group>"; };
-		F98A7E0B1B305080007635B6 /* BackendlessCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCollection.h; sourceTree = "<group>"; };
-		F98A7E0C1B305080007635B6 /* BackendlessDataQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessDataQuery.h; sourceTree = "<group>"; };
-		F98A7E0D1B305080007635B6 /* BackendlessEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessEntity.h; sourceTree = "<group>"; };
-		F98A7E0E1B305080007635B6 /* BackendlessFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessFile.h; sourceTree = "<group>"; };
-		F98A7E0F1B305080007635B6 /* BackendlessGeoQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessGeoQuery.h; sourceTree = "<group>"; };
-		F98A7E101B305080007635B6 /* BackendlessUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessUser.h; sourceTree = "<group>"; };
-		F98A7E111B305080007635B6 /* BEAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEAnnotation.h; sourceTree = "<group>"; };
-		F98A7E121B305080007635B6 /* BECollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BECollectionView.h; sourceTree = "<group>"; };
-		F98A7E131B305080007635B6 /* BEMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMapView.h; sourceTree = "<group>"; };
-		F98A7E141B305080007635B6 /* BESubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BESubscription.h; sourceTree = "<group>"; };
-		F98A7E151B305080007635B6 /* BETableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BETableView.h; sourceTree = "<group>"; };
-		F98A7E161B305080007635B6 /* CacheFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFactory.h; sourceTree = "<group>"; };
-		F98A7E171B305080007635B6 /* CacheService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheService.h; sourceTree = "<group>"; };
-		F98A7E181B305080007635B6 /* CustomService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomService.h; sourceTree = "<group>"; };
-		F98A7E191B305080007635B6 /* DataPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPermission.h; sourceTree = "<group>"; };
-		F98A7E1A1B305080007635B6 /* DataStoreFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStoreFactory.h; sourceTree = "<group>"; };
-		F98A7E1B1B305080007635B6 /* DeliveryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryOptions.h; sourceTree = "<group>"; };
-		F98A7E1C1B305080007635B6 /* DeviceRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceRegistration.h; sourceTree = "<group>"; };
-		F98A7E1D1B305080007635B6 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
-		F98A7E1E1B305080007635B6 /* FilePermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePermission.h; sourceTree = "<group>"; };
-		F98A7E1F1B305080007635B6 /* FileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileService.h; sourceTree = "<group>"; };
-		F98A7E201B305080007635B6 /* GeoCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoCategory.h; sourceTree = "<group>"; };
-		F98A7E211B305080007635B6 /* GeoCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoCluster.h; sourceTree = "<group>"; };
-		F98A7E221B305080007635B6 /* GeoFence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFence.h; sourceTree = "<group>"; };
-		F98A7E231B305080007635B6 /* GeoPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPoint.h; sourceTree = "<group>"; };
-		F98A7E241B305080007635B6 /* GeoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoService.h; sourceTree = "<group>"; };
-		F98A7E251B305080007635B6 /* HashMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashMap.h; sourceTree = "<group>"; };
-		F98A7E261B305080007635B6 /* IAtomicCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAtomicCounters.h; sourceTree = "<group>"; };
-		F98A7E271B305080007635B6 /* ICacheService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICacheService.h; sourceTree = "<group>"; };
-		F98A7E281B305080007635B6 /* ICallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICallback.h; sourceTree = "<group>"; };
-		F98A7E291B305080007635B6 /* IDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDataStore.h; sourceTree = "<group>"; };
-		F98A7E2A1B305080007635B6 /* IMediaStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMediaStreamer.h; sourceTree = "<group>"; };
-		F98A7E2B1B305080007635B6 /* LocationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTracker.h; sourceTree = "<group>"; };
-		F98A7E2C1B305080007635B6 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
-		F98A7E2D1B305080007635B6 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
-		F98A7E2E1B305080007635B6 /* MediaPlaybackOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlaybackOptions.h; sourceTree = "<group>"; };
-		F98A7E2F1B305080007635B6 /* MediaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayer.h; sourceTree = "<group>"; };
-		F98A7E301B305080007635B6 /* MediaPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPublisher.h; sourceTree = "<group>"; };
-		F98A7E311B305080007635B6 /* MediaPublishOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPublishOptions.h; sourceTree = "<group>"; };
-		F98A7E321B305080007635B6 /* MediaService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaService.h; sourceTree = "<group>"; };
-		F98A7E331B305080007635B6 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		F98A7E341B305080007635B6 /* MessageStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageStatus.h; sourceTree = "<group>"; };
-		F98A7E351B305080007635B6 /* MessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingService.h; sourceTree = "<group>"; };
-		F98A7E361B305080007635B6 /* ObjectProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectProperty.h; sourceTree = "<group>"; };
-		F98A7E371B305080007635B6 /* PersistenceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceService.h; sourceTree = "<group>"; };
-		F98A7E381B305080007635B6 /* ProtectedBackendlessGeoQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtectedBackendlessGeoQuery.h; sourceTree = "<group>"; };
-		F98A7E391B305080007635B6 /* PublishOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishOptions.h; sourceTree = "<group>"; };
-		F98A7E3A1B305080007635B6 /* QueryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryOptions.h; sourceTree = "<group>"; };
-		F98A7E3B1B305080007635B6 /* SubscriptionOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionOptions.h; sourceTree = "<group>"; };
-		F98A7E3C1B305080007635B6 /* UserProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProperty.h; sourceTree = "<group>"; };
-		F98A7E3D1B305080007635B6 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
-		F98A7E3E1B305080007635B6 /* libbackendless-mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libbackendless-mac.a"; sourceTree = "<group>"; };
-		F98A7E411B305080007635B6 /* AMFSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMFSerializer.h; sourceTree = "<group>"; };
-		F98A7E421B305080007635B6 /* BinaryCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryCodec.h; sourceTree = "<group>"; };
-		F98A7E431B305080007635B6 /* BinaryStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryStream.h; sourceTree = "<group>"; };
-		F98A7E441B305080007635B6 /* DEBUG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEBUG.h; sourceTree = "<group>"; };
-		F98A7E451B305080007635B6 /* FlashorbBinaryReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashorbBinaryReader.h; sourceTree = "<group>"; };
-		F98A7E461B305080007635B6 /* FlashorbBinaryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashorbBinaryWriter.h; sourceTree = "<group>"; };
-		F98A7E471B305080007635B6 /* IAttributeStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAttributeStore.h; sourceTree = "<group>"; };
-		F98A7E481B305080007635B6 /* IClientSharedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IClientSharedObject.h; sourceTree = "<group>"; };
-		F98A7E491B305080007635B6 /* IClientSharedObjectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IClientSharedObjectDelegate.h; sourceTree = "<group>"; };
-		F98A7E4A1B305080007635B6 /* IPendingServiceCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPendingServiceCallback.h; sourceTree = "<group>"; };
-		F98A7E4B1B305080007635B6 /* IPersistable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPersistable.h; sourceTree = "<group>"; };
-		F98A7E4C1B305080007635B6 /* IRTMProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRTMProtocol.h; sourceTree = "<group>"; };
-		F98A7E4D1B305080007635B6 /* IServiceCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IServiceCall.h; sourceTree = "<group>"; };
-		F98A7E4E1B305080007635B6 /* ISharedObjectListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISharedObjectListener.h; sourceTree = "<group>"; };
-		F98A7E4F1B305080007635B6 /* MemoryTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryTicker.h; sourceTree = "<group>"; };
-		F98A7E501B305080007635B6 /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
-		F98A7E511B305080007635B6 /* RTMPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMPClient.h; sourceTree = "<group>"; };
-		F98A7E521B305080007635B6 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
-		F98A7E531B305080007635B6 /* WeborbClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeborbClient.h; sourceTree = "<group>"; };
-		F98A7E541B305080007635B6 /* libCommLib-osx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCommLib-osx.a"; sourceTree = "<group>"; };
-		F98A7E641B3050FD007635B6 /* Atomic Counters API.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Atomic Counters API.pdf"; sourceTree = "<group>"; };
-		F98A7E651B3050FD007635B6 /* Backendless Mac OS application setup.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Backendless Mac OS application setup.pdf"; sourceTree = "<group>"; };
-		F98A7E661B3050FD007635B6 /* Caching API.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Caching API.pdf"; sourceTree = "<group>"; };
-		F98A7E671B3050FD007635B6 /* Communication Library for iOS User Guide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Communication Library for iOS User Guide.pdf"; sourceTree = "<group>"; };
-		F98A7E681B3050FD007635B6 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf"; sourceTree = "<group>"; };
-		F98A7E691B3050FD007635B6 /* Sending Email API.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Sending Email API.pdf"; sourceTree = "<group>"; };
-		F98A7E6A1B3050FD007635B6 /* WeborbClient Class Reference.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "WeborbClient Class Reference.pdf"; sourceTree = "<group>"; };
+		F98A7F161B3071C8007635B6 /* AbstractProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractProperty.h; sourceTree = "<group>"; };
+		F98A7F171B3071C8007635B6 /* AbstractQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractQuery.h; sourceTree = "<group>"; };
+		F98A7F181B3071C8007635B6 /* AtomicCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCounters.h; sourceTree = "<group>"; };
+		F98A7F191B3071C8007635B6 /* AtomicCountersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCountersFactory.h; sourceTree = "<group>"; };
+		F98A7F1A1B3071C8007635B6 /* Backendless-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Backendless-Bridging-Header.h"; sourceTree = "<group>"; };
+		F98A7F1B1B3071C8007635B6 /* Backendless.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Backendless.h; sourceTree = "<group>"; };
+		F98A7F1C1B3071C8007635B6 /* BackendlessCachePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCachePolicy.h; sourceTree = "<group>"; };
+		F98A7F1D1B3071C8007635B6 /* BackendlessCacheProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCacheProtocol.h; sourceTree = "<group>"; };
+		F98A7F1E1B3071C8007635B6 /* BackendlessCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessCollection.h; sourceTree = "<group>"; };
+		F98A7F1F1B3071C8007635B6 /* BackendlessDataQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessDataQuery.h; sourceTree = "<group>"; };
+		F98A7F201B3071C8007635B6 /* BackendlessEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessEntity.h; sourceTree = "<group>"; };
+		F98A7F211B3071C8007635B6 /* BackendlessFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessFile.h; sourceTree = "<group>"; };
+		F98A7F221B3071C8007635B6 /* BackendlessGeoQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessGeoQuery.h; sourceTree = "<group>"; };
+		F98A7F231B3071C8007635B6 /* BackendlessUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendlessUser.h; sourceTree = "<group>"; };
+		F98A7F241B3071C8007635B6 /* BEAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEAnnotation.h; sourceTree = "<group>"; };
+		F98A7F251B3071C8007635B6 /* BECollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BECollectionView.h; sourceTree = "<group>"; };
+		F98A7F261B3071C8007635B6 /* BEMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMapView.h; sourceTree = "<group>"; };
+		F98A7F271B3071C8007635B6 /* BESubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BESubscription.h; sourceTree = "<group>"; };
+		F98A7F281B3071C8007635B6 /* BETableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BETableView.h; sourceTree = "<group>"; };
+		F98A7F291B3071C8007635B6 /* CacheFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFactory.h; sourceTree = "<group>"; };
+		F98A7F2A1B3071C8007635B6 /* CacheService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheService.h; sourceTree = "<group>"; };
+		F98A7F2B1B3071C8007635B6 /* CustomService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomService.h; sourceTree = "<group>"; };
+		F98A7F2C1B3071C8007635B6 /* DataPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPermission.h; sourceTree = "<group>"; };
+		F98A7F2D1B3071C8007635B6 /* DataStoreFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStoreFactory.h; sourceTree = "<group>"; };
+		F98A7F2E1B3071C8007635B6 /* DeliveryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryOptions.h; sourceTree = "<group>"; };
+		F98A7F2F1B3071C8007635B6 /* DeviceRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceRegistration.h; sourceTree = "<group>"; };
+		F98A7F301B3071C8007635B6 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
+		F98A7F311B3071C8007635B6 /* FilePermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePermission.h; sourceTree = "<group>"; };
+		F98A7F321B3071C8007635B6 /* FileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileService.h; sourceTree = "<group>"; };
+		F98A7F331B3071C8007635B6 /* GeoCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoCategory.h; sourceTree = "<group>"; };
+		F98A7F341B3071C8007635B6 /* GeoCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoCluster.h; sourceTree = "<group>"; };
+		F98A7F351B3071C8007635B6 /* GeoFence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFence.h; sourceTree = "<group>"; };
+		F98A7F361B3071C8007635B6 /* GeoPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPoint.h; sourceTree = "<group>"; };
+		F98A7F371B3071C8007635B6 /* GeoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoService.h; sourceTree = "<group>"; };
+		F98A7F381B3071C8007635B6 /* HashMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashMap.h; sourceTree = "<group>"; };
+		F98A7F391B3071C8007635B6 /* IAtomicCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAtomicCounters.h; sourceTree = "<group>"; };
+		F98A7F3A1B3071C8007635B6 /* ICacheService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICacheService.h; sourceTree = "<group>"; };
+		F98A7F3B1B3071C8007635B6 /* ICallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICallback.h; sourceTree = "<group>"; };
+		F98A7F3C1B3071C8007635B6 /* IDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDataStore.h; sourceTree = "<group>"; };
+		F98A7F3D1B3071C8007635B6 /* IMediaStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMediaStreamer.h; sourceTree = "<group>"; };
+		F98A7F3E1B3071C8007635B6 /* LocationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTracker.h; sourceTree = "<group>"; };
+		F98A7F3F1B3071C8007635B6 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		F98A7F401B3071C8007635B6 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		F98A7F411B3071C8007635B6 /* MediaPlaybackOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlaybackOptions.h; sourceTree = "<group>"; };
+		F98A7F421B3071C8007635B6 /* MediaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayer.h; sourceTree = "<group>"; };
+		F98A7F431B3071C8007635B6 /* MediaPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPublisher.h; sourceTree = "<group>"; };
+		F98A7F441B3071C8007635B6 /* MediaPublishOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPublishOptions.h; sourceTree = "<group>"; };
+		F98A7F451B3071C8007635B6 /* MediaService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaService.h; sourceTree = "<group>"; };
+		F98A7F461B3071C8007635B6 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		F98A7F471B3071C8007635B6 /* MessageStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageStatus.h; sourceTree = "<group>"; };
+		F98A7F481B3071C8007635B6 /* MessagingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingService.h; sourceTree = "<group>"; };
+		F98A7F491B3071C8007635B6 /* ObjectProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectProperty.h; sourceTree = "<group>"; };
+		F98A7F4A1B3071C8007635B6 /* PersistenceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceService.h; sourceTree = "<group>"; };
+		F98A7F4B1B3071C8007635B6 /* ProtectedBackendlessGeoQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtectedBackendlessGeoQuery.h; sourceTree = "<group>"; };
+		F98A7F4C1B3071C8007635B6 /* PublishOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishOptions.h; sourceTree = "<group>"; };
+		F98A7F4D1B3071C8007635B6 /* QueryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryOptions.h; sourceTree = "<group>"; };
+		F98A7F4E1B3071C8007635B6 /* SubscriptionOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionOptions.h; sourceTree = "<group>"; };
+		F98A7F4F1B3071C8007635B6 /* UserProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProperty.h; sourceTree = "<group>"; };
+		F98A7F501B3071C8007635B6 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		F98A7F511B3071C8007635B6 /* libbackendless-mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libbackendless-mac.a"; sourceTree = "<group>"; };
+		F98A7F541B3071C8007635B6 /* AMFSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMFSerializer.h; sourceTree = "<group>"; };
+		F98A7F551B3071C8007635B6 /* BinaryCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryCodec.h; sourceTree = "<group>"; };
+		F98A7F561B3071C8007635B6 /* BinaryStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryStream.h; sourceTree = "<group>"; };
+		F98A7F571B3071C8007635B6 /* DEBUG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEBUG.h; sourceTree = "<group>"; };
+		F98A7F581B3071C8007635B6 /* FlashorbBinaryReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashorbBinaryReader.h; sourceTree = "<group>"; };
+		F98A7F591B3071C8007635B6 /* FlashorbBinaryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashorbBinaryWriter.h; sourceTree = "<group>"; };
+		F98A7F5A1B3071C8007635B6 /* IAttributeStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAttributeStore.h; sourceTree = "<group>"; };
+		F98A7F5B1B3071C8007635B6 /* IClientSharedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IClientSharedObject.h; sourceTree = "<group>"; };
+		F98A7F5C1B3071C8007635B6 /* IClientSharedObjectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IClientSharedObjectDelegate.h; sourceTree = "<group>"; };
+		F98A7F5D1B3071C8007635B6 /* IPendingServiceCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPendingServiceCallback.h; sourceTree = "<group>"; };
+		F98A7F5E1B3071C8007635B6 /* IPersistable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPersistable.h; sourceTree = "<group>"; };
+		F98A7F5F1B3071C8007635B6 /* IRTMProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRTMProtocol.h; sourceTree = "<group>"; };
+		F98A7F601B3071C8007635B6 /* IServiceCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IServiceCall.h; sourceTree = "<group>"; };
+		F98A7F611B3071C8007635B6 /* ISharedObjectListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISharedObjectListener.h; sourceTree = "<group>"; };
+		F98A7F621B3071C8007635B6 /* MemoryTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryTicker.h; sourceTree = "<group>"; };
+		F98A7F631B3071C8007635B6 /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
+		F98A7F641B3071C8007635B6 /* RTMPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMPClient.h; sourceTree = "<group>"; };
+		F98A7F651B3071C8007635B6 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		F98A7F661B3071C8007635B6 /* WeborbClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeborbClient.h; sourceTree = "<group>"; };
+		F98A7F671B3071C8007635B6 /* libCommLib-osx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCommLib-osx.a"; sourceTree = "<group>"; };
 		F99EFF5A16D51358001AE512 /* radio_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_checked.png; sourceTree = "<group>"; };
 		F99EFF5B16D51358001AE512 /* radio_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_unchecked.png; sourceTree = "<group>"; };
 		F9E635981B0A307C008B896C /* LocationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTracker.h; sourceTree = "<group>"; };
@@ -909,9 +902,9 @@
 				D35CA5411A66905000F500B0 /* Cocoa.framework in Frameworks */,
 				D35CA5421A66905000F500B0 /* IOKit.framework in Frameworks */,
 				9154F4921869CE0C00426C78 /* SystemConfiguration.framework in Frameworks */,
+				F98A7F731B3071C8007635B6 /* libCommLib-osx.a in Frameworks */,
 				9154F4911869CE0C00426C78 /* libsqlite3.dylib in Frameworks */,
-				F98A7E601B305081007635B6 /* libCommLib-osx.a in Frameworks */,
-				F98A7E591B305081007635B6 /* libbackendless-mac.a in Frameworks */,
+				F98A7F6C1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -923,9 +916,9 @@
 				D30947301AB9F36D00A75DDC /* Cocoa.framework in Frameworks */,
 				D309472F1AB9F35300A75DDC /* IOKit.framework in Frameworks */,
 				D309472E1AB9F32F00A75DDC /* SystemConfiguration.framework in Frameworks */,
+				F98A7F711B3071C8007635B6 /* libCommLib-osx.a in Frameworks */,
 				9154F4801869CD7A00426C78 /* libsqlite3.dylib in Frameworks */,
-				F98A7E5E1B305081007635B6 /* libCommLib-osx.a in Frameworks */,
-				F98A7E571B305081007635B6 /* libbackendless-mac.a in Frameworks */,
+				F98A7F6A1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,9 +930,9 @@
 				F9BE41BF1B2EC93B00CD0A72 /* CoreLocation.framework in Frameworks */,
 				F9BE41BE1B2EC86900CD0A72 /* Cocoa.framework in Frameworks */,
 				9154F4831869CD9500426C78 /* SystemConfiguration.framework in Frameworks */,
+				F98A7F6F1B3071C8007635B6 /* libCommLib-osx.a in Frameworks */,
 				9154F4841869CD9800426C78 /* libsqlite3.dylib in Frameworks */,
-				F98A7E5C1B305081007635B6 /* libCommLib-osx.a in Frameworks */,
-				F98A7E551B305080007635B6 /* libbackendless-mac.a in Frameworks */,
+				F98A7F681B3071C8007635B6 /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,9 +944,9 @@
 				D35CA5351A66900100F500B0 /* Cocoa.framework in Frameworks */,
 				D35CA5361A66900100F500B0 /* IOKit.framework in Frameworks */,
 				9154F48C1869CDF800426C78 /* SystemConfiguration.framework in Frameworks */,
+				F98A7F701B3071C8007635B6 /* libCommLib-osx.a in Frameworks */,
 				9154F48B1869CDF800426C78 /* libsqlite3.dylib in Frameworks */,
-				F98A7E5D1B305081007635B6 /* libCommLib-osx.a in Frameworks */,
-				F98A7E561B305081007635B6 /* libbackendless-mac.a in Frameworks */,
+				F98A7F691B3071C8007635B6 /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,9 +958,9 @@
 				D35CA5381A66901300F500B0 /* Cocoa.framework in Frameworks */,
 				D35CA5391A66901300F500B0 /* IOKit.framework in Frameworks */,
 				9154F4891869CDED00426C78 /* SystemConfiguration.framework in Frameworks */,
+				F98A7F721B3071C8007635B6 /* libCommLib-osx.a in Frameworks */,
 				9154F48A1869CDEF00426C78 /* libsqlite3.dylib in Frameworks */,
-				F98A7E5F1B305081007635B6 /* libCommLib-osx.a in Frameworks */,
-				F98A7E581B305081007635B6 /* libbackendless-mac.a in Frameworks */,
+				F98A7F6B1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,9 +972,9 @@
 				D35CA53B1A66902400F500B0 /* Cocoa.framework in Frameworks */,
 				D35CA53C1A66902400F500B0 /* IOKit.framework in Frameworks */,
 				9154F48E1869CE0200426C78 /* SystemConfiguration.framework in Frameworks */,
+				F98A7F741B3071C9007635B6 /* libCommLib-osx.a in Frameworks */,
 				9154F48D1869CE0200426C78 /* libsqlite3.dylib in Frameworks */,
-				F98A7E611B305081007635B6 /* libCommLib-osx.a in Frameworks */,
-				F98A7E5A1B305081007635B6 /* libbackendless-mac.a in Frameworks */,
+				F98A7F6D1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,9 +986,9 @@
 				D35CA53E1A66903600F500B0 /* Cocoa.framework in Frameworks */,
 				D35CA53F1A66903600F500B0 /* IOKit.framework in Frameworks */,
 				9154F4901869CE0800426C78 /* SystemConfiguration.framework in Frameworks */,
+				F98A7F751B3071C9007635B6 /* libCommLib-osx.a in Frameworks */,
 				9154F48F1869CE0800426C78 /* libsqlite3.dylib in Frameworks */,
-				F98A7E621B305081007635B6 /* libCommLib-osx.a in Frameworks */,
-				F98A7E5B1B305081007635B6 /* libbackendless-mac.a in Frameworks */,
+				F98A7F6E1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1862,9 +1855,8 @@
 		F91B661716B1873B00668A06 = {
 			isa = PBXGroup;
 			children = (
-				F98A7E631B3050FD007635B6 /* doc */,
 				D309462A1AB9E78000A75DDC /* lib */,
-				F98A7E001B305080007635B6 /* osx */,
+				F98A7F131B3071C8007635B6 /* osx */,
 				F99EFF5916D51358001AE512 /* art */,
 				F91B666216B18CD400668A06 /* UserService */,
 				F91B668616B18D2600668A06 /* UserSocial */,
@@ -2181,139 +2173,124 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F98A7E001B305080007635B6 /* osx */ = {
+		F98A7F131B3071C8007635B6 /* osx */ = {
 			isa = PBXGroup;
 			children = (
-				F98A7E011B305080007635B6 /* backendless */,
-				F98A7E3F1B305080007635B6 /* CommLib */,
+				F98A7F141B3071C8007635B6 /* backendless */,
+				F98A7F521B3071C8007635B6 /* CommLib */,
 			);
 			name = osx;
 			path = ../../../osx;
 			sourceTree = "<group>";
 		};
-		F98A7E011B305080007635B6 /* backendless */ = {
+		F98A7F141B3071C8007635B6 /* backendless */ = {
 			isa = PBXGroup;
 			children = (
-				F98A7E021B305080007635B6 /* include */,
-				F98A7E3E1B305080007635B6 /* libbackendless-mac.a */,
+				F98A7F151B3071C8007635B6 /* include */,
+				F98A7F511B3071C8007635B6 /* libbackendless-mac.a */,
 			);
 			path = backendless;
 			sourceTree = "<group>";
 		};
-		F98A7E021B305080007635B6 /* include */ = {
+		F98A7F151B3071C8007635B6 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				F98A7E031B305080007635B6 /* AbstractProperty.h */,
-				F98A7E041B305080007635B6 /* AbstractQuery.h */,
-				F98A7E051B305080007635B6 /* AtomicCounters.h */,
-				F98A7E061B305080007635B6 /* AtomicCountersFactory.h */,
-				F98A7E071B305080007635B6 /* Backendless-Bridging-Header.h */,
-				F98A7E081B305080007635B6 /* Backendless.h */,
-				F98A7E091B305080007635B6 /* BackendlessCachePolicy.h */,
-				F98A7E0A1B305080007635B6 /* BackendlessCacheProtocol.h */,
-				F98A7E0B1B305080007635B6 /* BackendlessCollection.h */,
-				F98A7E0C1B305080007635B6 /* BackendlessDataQuery.h */,
-				F98A7E0D1B305080007635B6 /* BackendlessEntity.h */,
-				F98A7E0E1B305080007635B6 /* BackendlessFile.h */,
-				F98A7E0F1B305080007635B6 /* BackendlessGeoQuery.h */,
-				F98A7E101B305080007635B6 /* BackendlessUser.h */,
-				F98A7E111B305080007635B6 /* BEAnnotation.h */,
-				F98A7E121B305080007635B6 /* BECollectionView.h */,
-				F98A7E131B305080007635B6 /* BEMapView.h */,
-				F98A7E141B305080007635B6 /* BESubscription.h */,
-				F98A7E151B305080007635B6 /* BETableView.h */,
-				F98A7E161B305080007635B6 /* CacheFactory.h */,
-				F98A7E171B305080007635B6 /* CacheService.h */,
-				F98A7E181B305080007635B6 /* CustomService.h */,
-				F98A7E191B305080007635B6 /* DataPermission.h */,
-				F98A7E1A1B305080007635B6 /* DataStoreFactory.h */,
-				F98A7E1B1B305080007635B6 /* DeliveryOptions.h */,
-				F98A7E1C1B305080007635B6 /* DeviceRegistration.h */,
-				F98A7E1D1B305080007635B6 /* Events.h */,
-				F98A7E1E1B305080007635B6 /* FilePermission.h */,
-				F98A7E1F1B305080007635B6 /* FileService.h */,
-				F98A7E201B305080007635B6 /* GeoCategory.h */,
-				F98A7E211B305080007635B6 /* GeoCluster.h */,
-				F98A7E221B305080007635B6 /* GeoFence.h */,
-				F98A7E231B305080007635B6 /* GeoPoint.h */,
-				F98A7E241B305080007635B6 /* GeoService.h */,
-				F98A7E251B305080007635B6 /* HashMap.h */,
-				F98A7E261B305080007635B6 /* IAtomicCounters.h */,
-				F98A7E271B305080007635B6 /* ICacheService.h */,
-				F98A7E281B305080007635B6 /* ICallback.h */,
-				F98A7E291B305080007635B6 /* IDataStore.h */,
-				F98A7E2A1B305080007635B6 /* IMediaStreamer.h */,
-				F98A7E2B1B305080007635B6 /* LocationTracker.h */,
-				F98A7E2C1B305080007635B6 /* Logger.h */,
-				F98A7E2D1B305080007635B6 /* Logging.h */,
-				F98A7E2E1B305080007635B6 /* MediaPlaybackOptions.h */,
-				F98A7E2F1B305080007635B6 /* MediaPlayer.h */,
-				F98A7E301B305080007635B6 /* MediaPublisher.h */,
-				F98A7E311B305080007635B6 /* MediaPublishOptions.h */,
-				F98A7E321B305080007635B6 /* MediaService.h */,
-				F98A7E331B305080007635B6 /* Message.h */,
-				F98A7E341B305080007635B6 /* MessageStatus.h */,
-				F98A7E351B305080007635B6 /* MessagingService.h */,
-				F98A7E361B305080007635B6 /* ObjectProperty.h */,
-				F98A7E371B305080007635B6 /* PersistenceService.h */,
-				F98A7E381B305080007635B6 /* ProtectedBackendlessGeoQuery.h */,
-				F98A7E391B305080007635B6 /* PublishOptions.h */,
-				F98A7E3A1B305080007635B6 /* QueryOptions.h */,
-				F98A7E3B1B305080007635B6 /* SubscriptionOptions.h */,
-				F98A7E3C1B305080007635B6 /* UserProperty.h */,
-				F98A7E3D1B305080007635B6 /* UserService.h */,
+				F98A7F161B3071C8007635B6 /* AbstractProperty.h */,
+				F98A7F171B3071C8007635B6 /* AbstractQuery.h */,
+				F98A7F181B3071C8007635B6 /* AtomicCounters.h */,
+				F98A7F191B3071C8007635B6 /* AtomicCountersFactory.h */,
+				F98A7F1A1B3071C8007635B6 /* Backendless-Bridging-Header.h */,
+				F98A7F1B1B3071C8007635B6 /* Backendless.h */,
+				F98A7F1C1B3071C8007635B6 /* BackendlessCachePolicy.h */,
+				F98A7F1D1B3071C8007635B6 /* BackendlessCacheProtocol.h */,
+				F98A7F1E1B3071C8007635B6 /* BackendlessCollection.h */,
+				F98A7F1F1B3071C8007635B6 /* BackendlessDataQuery.h */,
+				F98A7F201B3071C8007635B6 /* BackendlessEntity.h */,
+				F98A7F211B3071C8007635B6 /* BackendlessFile.h */,
+				F98A7F221B3071C8007635B6 /* BackendlessGeoQuery.h */,
+				F98A7F231B3071C8007635B6 /* BackendlessUser.h */,
+				F98A7F241B3071C8007635B6 /* BEAnnotation.h */,
+				F98A7F251B3071C8007635B6 /* BECollectionView.h */,
+				F98A7F261B3071C8007635B6 /* BEMapView.h */,
+				F98A7F271B3071C8007635B6 /* BESubscription.h */,
+				F98A7F281B3071C8007635B6 /* BETableView.h */,
+				F98A7F291B3071C8007635B6 /* CacheFactory.h */,
+				F98A7F2A1B3071C8007635B6 /* CacheService.h */,
+				F98A7F2B1B3071C8007635B6 /* CustomService.h */,
+				F98A7F2C1B3071C8007635B6 /* DataPermission.h */,
+				F98A7F2D1B3071C8007635B6 /* DataStoreFactory.h */,
+				F98A7F2E1B3071C8007635B6 /* DeliveryOptions.h */,
+				F98A7F2F1B3071C8007635B6 /* DeviceRegistration.h */,
+				F98A7F301B3071C8007635B6 /* Events.h */,
+				F98A7F311B3071C8007635B6 /* FilePermission.h */,
+				F98A7F321B3071C8007635B6 /* FileService.h */,
+				F98A7F331B3071C8007635B6 /* GeoCategory.h */,
+				F98A7F341B3071C8007635B6 /* GeoCluster.h */,
+				F98A7F351B3071C8007635B6 /* GeoFence.h */,
+				F98A7F361B3071C8007635B6 /* GeoPoint.h */,
+				F98A7F371B3071C8007635B6 /* GeoService.h */,
+				F98A7F381B3071C8007635B6 /* HashMap.h */,
+				F98A7F391B3071C8007635B6 /* IAtomicCounters.h */,
+				F98A7F3A1B3071C8007635B6 /* ICacheService.h */,
+				F98A7F3B1B3071C8007635B6 /* ICallback.h */,
+				F98A7F3C1B3071C8007635B6 /* IDataStore.h */,
+				F98A7F3D1B3071C8007635B6 /* IMediaStreamer.h */,
+				F98A7F3E1B3071C8007635B6 /* LocationTracker.h */,
+				F98A7F3F1B3071C8007635B6 /* Logger.h */,
+				F98A7F401B3071C8007635B6 /* Logging.h */,
+				F98A7F411B3071C8007635B6 /* MediaPlaybackOptions.h */,
+				F98A7F421B3071C8007635B6 /* MediaPlayer.h */,
+				F98A7F431B3071C8007635B6 /* MediaPublisher.h */,
+				F98A7F441B3071C8007635B6 /* MediaPublishOptions.h */,
+				F98A7F451B3071C8007635B6 /* MediaService.h */,
+				F98A7F461B3071C8007635B6 /* Message.h */,
+				F98A7F471B3071C8007635B6 /* MessageStatus.h */,
+				F98A7F481B3071C8007635B6 /* MessagingService.h */,
+				F98A7F491B3071C8007635B6 /* ObjectProperty.h */,
+				F98A7F4A1B3071C8007635B6 /* PersistenceService.h */,
+				F98A7F4B1B3071C8007635B6 /* ProtectedBackendlessGeoQuery.h */,
+				F98A7F4C1B3071C8007635B6 /* PublishOptions.h */,
+				F98A7F4D1B3071C8007635B6 /* QueryOptions.h */,
+				F98A7F4E1B3071C8007635B6 /* SubscriptionOptions.h */,
+				F98A7F4F1B3071C8007635B6 /* UserProperty.h */,
+				F98A7F501B3071C8007635B6 /* UserService.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		F98A7E3F1B305080007635B6 /* CommLib */ = {
+		F98A7F521B3071C8007635B6 /* CommLib */ = {
 			isa = PBXGroup;
 			children = (
-				F98A7E401B305080007635B6 /* include */,
-				F98A7E541B305080007635B6 /* libCommLib-osx.a */,
+				F98A7F531B3071C8007635B6 /* include */,
+				F98A7F671B3071C8007635B6 /* libCommLib-osx.a */,
 			);
 			path = CommLib;
 			sourceTree = "<group>";
 		};
-		F98A7E401B305080007635B6 /* include */ = {
+		F98A7F531B3071C8007635B6 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				F98A7E411B305080007635B6 /* AMFSerializer.h */,
-				F98A7E421B305080007635B6 /* BinaryCodec.h */,
-				F98A7E431B305080007635B6 /* BinaryStream.h */,
-				F98A7E441B305080007635B6 /* DEBUG.h */,
-				F98A7E451B305080007635B6 /* FlashorbBinaryReader.h */,
-				F98A7E461B305080007635B6 /* FlashorbBinaryWriter.h */,
-				F98A7E471B305080007635B6 /* IAttributeStore.h */,
-				F98A7E481B305080007635B6 /* IClientSharedObject.h */,
-				F98A7E491B305080007635B6 /* IClientSharedObjectDelegate.h */,
-				F98A7E4A1B305080007635B6 /* IPendingServiceCallback.h */,
-				F98A7E4B1B305080007635B6 /* IPersistable.h */,
-				F98A7E4C1B305080007635B6 /* IRTMProtocol.h */,
-				F98A7E4D1B305080007635B6 /* IServiceCall.h */,
-				F98A7E4E1B305080007635B6 /* ISharedObjectListener.h */,
-				F98A7E4F1B305080007635B6 /* MemoryTicker.h */,
-				F98A7E501B305080007635B6 /* Responder.h */,
-				F98A7E511B305080007635B6 /* RTMPClient.h */,
-				F98A7E521B305080007635B6 /* Types.h */,
-				F98A7E531B305080007635B6 /* WeborbClient.h */,
+				F98A7F541B3071C8007635B6 /* AMFSerializer.h */,
+				F98A7F551B3071C8007635B6 /* BinaryCodec.h */,
+				F98A7F561B3071C8007635B6 /* BinaryStream.h */,
+				F98A7F571B3071C8007635B6 /* DEBUG.h */,
+				F98A7F581B3071C8007635B6 /* FlashorbBinaryReader.h */,
+				F98A7F591B3071C8007635B6 /* FlashorbBinaryWriter.h */,
+				F98A7F5A1B3071C8007635B6 /* IAttributeStore.h */,
+				F98A7F5B1B3071C8007635B6 /* IClientSharedObject.h */,
+				F98A7F5C1B3071C8007635B6 /* IClientSharedObjectDelegate.h */,
+				F98A7F5D1B3071C8007635B6 /* IPendingServiceCallback.h */,
+				F98A7F5E1B3071C8007635B6 /* IPersistable.h */,
+				F98A7F5F1B3071C8007635B6 /* IRTMProtocol.h */,
+				F98A7F601B3071C8007635B6 /* IServiceCall.h */,
+				F98A7F611B3071C8007635B6 /* ISharedObjectListener.h */,
+				F98A7F621B3071C8007635B6 /* MemoryTicker.h */,
+				F98A7F631B3071C8007635B6 /* Responder.h */,
+				F98A7F641B3071C8007635B6 /* RTMPClient.h */,
+				F98A7F651B3071C8007635B6 /* Types.h */,
+				F98A7F661B3071C8007635B6 /* WeborbClient.h */,
 			);
 			path = include;
-			sourceTree = "<group>";
-		};
-		F98A7E631B3050FD007635B6 /* doc */ = {
-			isa = PBXGroup;
-			children = (
-				F98A7E641B3050FD007635B6 /* Atomic Counters API.pdf */,
-				F98A7E651B3050FD007635B6 /* Backendless Mac OS application setup.pdf */,
-				F98A7E661B3050FD007635B6 /* Caching API.pdf */,
-				F98A7E671B3050FD007635B6 /* Communication Library for iOS User Guide.pdf */,
-				F98A7E681B3050FD007635B6 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf */,
-				F98A7E691B3050FD007635B6 /* Sending Email API.pdf */,
-				F98A7E6A1B3050FD007635B6 /* WeborbClient Class Reference.pdf */,
-			);
-			name = doc;
-			path = ../../../doc;
 			sourceTree = "<group>";
 		};
 		F99EFF5916D51358001AE512 /* art */ = {
