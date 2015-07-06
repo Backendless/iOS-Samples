@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lnq-dK-uDs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="552"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wem-bo-gKP">
+                                <rect key="frame" x="29" y="562" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="i7b-u3-B50"/>
+                                </constraints>
+                                <state key="normal" title="Publish">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="publish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kml-zo-ilZ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk0-dO-YfH">
+                                <rect key="frame" x="487" y="562" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="xLY-7Y-fRO"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FIX-0o-oKd"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FRA-DV-Wpc">
+                                <rect key="frame" x="290" y="237" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97p-YV-IVs">
+                                <rect key="frame" x="138" y="562" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="GJc-vY-L3s"/>
+                                </constraints>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Avh-5R-BdM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Lnq-dK-uDs" secondAttribute="trailing" id="7FO-bJ-8zP"/>
+                            <constraint firstItem="97p-YV-IVs" firstAttribute="leading" secondItem="Wem-bo-gKP" secondAttribute="trailing" constant="24" id="F6L-d5-hcZ"/>
+                            <constraint firstItem="97p-YV-IVs" firstAttribute="baseline" secondItem="Wem-bo-gKP" secondAttribute="baseline" id="Fbm-Hc-h8g"/>
+                            <constraint firstItem="97p-YV-IVs" firstAttribute="baseline" secondItem="Tk0-dO-YfH" secondAttribute="baseline" id="JAp-U8-qui"/>
+                            <constraint firstItem="FRA-DV-Wpc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="217" id="Q7e-eZ-vZh"/>
+                            <constraint firstItem="Lnq-dK-uDs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aJD-tH-8vv"/>
+                            <constraint firstItem="Wem-bo-gKP" firstAttribute="top" secondItem="Lnq-dK-uDs" secondAttribute="bottom" constant="10" id="ef0-4W-PJy"/>
+                            <constraint firstItem="FRA-DV-Wpc" firstAttribute="centerX" secondItem="Lnq-dK-uDs" secondAttribute="centerX" id="lYi-BM-JAL"/>
+                            <constraint firstItem="Tk0-dO-YfH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mKy-pZ-nxh"/>
+                            <constraint firstItem="Lnq-dK-uDs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="opk-W9-adG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wem-bo-gKP" secondAttribute="bottom" constant="8" symbolic="YES" id="tKr-qc-Ow4"/>
+                            <constraint firstItem="Wem-bo-gKP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="xcE-rX-xhS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPublish" destination="Wem-bo-gKP" id="qlH-m3-YxA"/>
+                        <outlet property="btnStop" destination="97p-YV-IVs" id="xXw-fx-qx8"/>
+                        <outlet property="btnTakePhoto" destination="Tk0-dO-YfH" id="vUQ-d1-Bj3"/>
+                        <outlet property="imageView" destination="Lnq-dK-uDs" id="NTF-uU-XhJ"/>
+                        <outlet property="netActivity" destination="FRA-DV-Wpc" id="Y1R-Ge-MjG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
