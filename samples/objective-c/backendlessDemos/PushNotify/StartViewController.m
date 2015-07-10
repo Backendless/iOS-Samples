@@ -23,8 +23,8 @@
 #import "Backendless.h"
 
 //static NSString *MESSAGING_CHANNEL = @"default";
-//static NSString *MESSAGING_CHANNEL = @"testing";
-static NSString *MESSAGING_CHANNEL = @"channelB";
+static NSString *MESSAGING_CHANNEL = @"testing";
+//static NSString *MESSAGING_CHANNEL = @"channelB";
 //static NSString *MESSAGING_CHANNEL = @"channelC";
 static NSString *PUBLISHER_ANONYMOUS = @"Anonymous";
 static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
@@ -46,9 +46,9 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
         [backendless initAppFault];
         [self initNetActivity];
 
-        //NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
+        NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
         //NSString *info = [backendless.messagingService registerDevice:@[@"channelA", @"channelB"]];
-        NSString *info = [backendless.messagingService registerDevice:@[@"channelB", @"channelC"]];
+        //NSString *info = [backendless.messagingService registerDevice:@[@"channelB", @"channelC"]];
         NSLog(@"viewDidLoad -> registerDevice: %@", info);
 
 #if 0 // try to publish text with lenght more then max = 2K
@@ -108,7 +108,11 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [self startNetIndicator];
     
     PublishOptions *options = [PublishOptions new];
+#if 0
+    options.headers = @{@"ios-content-available":@"1"};
+#else
     options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"};
+#endif
     DeliveryOptions *delivery = [DeliveryOptions deliveryOptionsForNotification:PUSHONLY];
     
 #if 1 //async

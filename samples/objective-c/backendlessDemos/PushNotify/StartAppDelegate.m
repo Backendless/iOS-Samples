@@ -25,8 +25,8 @@
 
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+static NSString *APP_ID = @"CF47722D-EB7B-A0D0-FFE3-1FADE3346100";
+static NSString *SECRET_KEY = @"43B43EF7-247A-ED56-FF2F-ECD43C6E9000";
 static NSString *VERSION_NUM = @"v1";
 
 
@@ -44,8 +44,11 @@ static NSString *VERSION_NUM = @"v1";
     
     // check if iOS8
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-        
+#if 0
+        UIUserNotificationType types = UIUserNotificationTypeNone;
+#else
         UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+#endif
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
         [[UIApplication sharedApplication] registerForRemoteNotifications];
@@ -116,10 +119,14 @@ static NSString *VERSION_NUM = @"v1";
     NSString *notification = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
     [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] showNotification:notification];
 }
-#if 0
+
+#if 1
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
 {
     NSLog(@"application:didReceiveRemoteNotification:fetchCompletionHandler: %@", userInfo);
+    
+    handler(UIBackgroundFetchResultNewData);
 }
 #endif
+
 @end
