@@ -1,6 +1,6 @@
 //
-//  StartViewController.h
-//  PushNotify
+//  Backendless-With-Media-Bridging-Header.h
+//  backendlessAPI
 /*
  * *********************************************************************************************************************
  *
@@ -8,7 +8,7 @@
  *
  *  ********************************************************************************************************************
  *
- *  Copyright 2012 BACKENDLESS.COM. All Rights Reserved.
+ *  Copyright 2015 BACKENDLESS.COM. All Rights Reserved.
  *
  *  NOTICE: All information contained herein is, and remains the property of Backendless.com and its suppliers,
  *  if any. The intellectual and technical concepts contained herein are proprietary to Backendless.com and its
@@ -19,15 +19,6 @@
  *  ********************************************************************************************************************
  */
 
-#import <UIKit/UIKit.h>
+#import "Backendless.h"
+#import "MediaService.h"
 
-#define _SILENT_PUSH_ON_ 1
-
-@interface StartViewController : UIViewController<UITextFieldDelegate>
-@property (nonatomic, strong) IBOutlet UITextView *textView;
-@property (nonatomic, strong) IBOutlet UITextField *textField;
--(void)showNotification:(NSString *)notification;
--(void)startNetIndicator;
--(void)stopNetIndicator;
--(IBAction)sendMessage:(id)sender;
-@end

@@ -308,9 +308,7 @@
 		F91FE4221B4AB69A008FD81A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91FE4201B4AB69A008FD81A /* Main.storyboard */; };
 		F91FE4241B4AB69A008FD81A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91FE4231B4AB69A008FD81A /* Images.xcassets */; };
 		F91FE4271B4AB69A008FD81A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F91FE4251B4AB69A008FD81A /* LaunchScreen.xib */; };
-		F91FE43A1B4AB739008FD81A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		F91FE43B1B4AB739008FD81A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154F4771869CD4A00426C78 /* libsqlite3.dylib */; };
-		F91FE43C1B4AB739008FD81A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F91FE43D1B4AB739008FD81A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611275851861B8BB00B6ACE6 /* SystemConfiguration.framework */; };
 		F91FE43E1B4AB747008FD81A /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D309462C1AB9E78000A75DDC /* backendless.a */; };
 		F91FE43F1B4AB74C008FD81A /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30946661AB9E78000A75DDC /* CommLibiOS.a */; };
@@ -325,6 +323,7 @@
 		F91FE4481B4AB797008FD81A /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30946F51AB9E78000A75DDC /* libspeexdsp.a */; };
 		F91FE4491B4AB79F008FD81A /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30946FB1AB9E78100A75DDC /* libx264.a */; };
 		F91FE44A1B4AB7A4008FD81A /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947041AB9E78100A75DDC /* MediaLibiOS.a */; };
+		F9356C691B6F8DFF009A01D9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F91B664F16B1893000668A06 /* libz.dylib */; };
 		F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		F98A7F681B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
 		F98A7F691B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
@@ -825,6 +824,7 @@
 		F91FE4211B4AB69A008FD81A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F91FE4231B4AB69A008FD81A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F91FE4261B4AB69A008FD81A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F9356C711B6FA4BB009A01D9 /* getting-started.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "getting-started.pdf"; path = "../../../getting-started.pdf"; sourceTree = "<group>"; };
 		F954C0411B05226800F509E0 /* GeoFence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFence.h; sourceTree = "<group>"; };
 		F954C0421B05226800F509E0 /* ICallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICallback.h; sourceTree = "<group>"; };
 		F954C0471B05239500F509E0 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
@@ -1240,10 +1240,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F91FE43A1B4AB739008FD81A /* CoreData.framework in Frameworks */,
 				F91FE43D1B4AB739008FD81A /* SystemConfiguration.framework in Frameworks */,
 				F91FE43B1B4AB739008FD81A /* libsqlite3.dylib in Frameworks */,
-				F91FE43C1B4AB739008FD81A /* libz.dylib in Frameworks */,
+				F9356C691B6F8DFF009A01D9 /* libz.dylib in Frameworks */,
 				F91FE4401B4AB754008FD81A /* libavcodec.a in Frameworks */,
 				F91FE4411B4AB75A008FD81A /* libavdevice.a in Frameworks */,
 				F91FE4421B4AB75E008FD81A /* libavfilter.a in Frameworks */,
@@ -1919,6 +1918,7 @@
 		F91B661716B1873B00668A06 = {
 			isa = PBXGroup;
 			children = (
+				F9356C711B6FA4BB009A01D9 /* getting-started.pdf */,
 				F9E13D5D1B30736500A30556 /* doc */,
 				D309462A1AB9E78000A75DDC /* lib */,
 				F98A7F131B3071C8007635B6 /* osx */,
@@ -5144,6 +5144,7 @@
 				F91FE4351B4AB69A008FD81A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9E635E71B0B2F98008B896C /* Build configuration list for PBXNativeTarget "GeoFence" */ = {
 			isa = XCConfigurationList;

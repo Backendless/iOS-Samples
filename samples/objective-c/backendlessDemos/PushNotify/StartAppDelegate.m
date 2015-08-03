@@ -44,7 +44,7 @@ static NSString *VERSION_NUM = @"v1";
     
     // check if iOS8
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-#if 0
+#if _SILENT_PUSH_ON_
         UIUserNotificationType types = UIUserNotificationTypeNone;
 #else
         UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
@@ -120,10 +120,12 @@ static NSString *VERSION_NUM = @"v1";
     [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] showNotification:notification];
 }
 
-#if 1
+#if _SILENT_PUSH_ON_
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
 {
     NSLog(@"application:didReceiveRemoteNotification:fetchCompletionHandler: %@", userInfo);
+    NSString *notification = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+    [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] showNotification:notification];
     
     handler(UIBackgroundFetchResultNewData);
 }

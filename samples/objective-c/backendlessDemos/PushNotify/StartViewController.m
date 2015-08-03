@@ -97,18 +97,18 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 -(void)showDeviceRegistration {
     DeviceRegistration *devReg = [backendless.messaging currentDevice];
     DeviceRegistration *getReg = [backendless.messaging getRegistrations:devReg.deviceId];
-    NSLog(@"viewDidLoad -> showDeviceRegistration: \n%@ =?\n[%@]", devReg, getReg);
+    NSLog(@"showDeviceRegistration: \n%@ =?\n[%@]", devReg, getReg);
 }
 
 -(void)sendMessage:(id)sender {
     
-    [self showDeviceRegistration];
+    //[self showDeviceRegistration];
     
     [(UILabel *)[self.view viewWithTag:100] setText:@""];
     [self startNetIndicator];
     
     PublishOptions *options = [PublishOptions new];
-#if 0
+#if _SILENT_PUSH_ON_
     options.headers = @{@"ios-content-available":@"1"};
 #else
     options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"};
