@@ -23,10 +23,19 @@
 #import "Backendless.h"
 #import "StartViewController.h"
 
+#define _PRODUCTION_ 0
+#define _TEST_SERVER_ 1
+
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
+#if _PRODUCTION_
 static NSString *APP_ID = @"CF47722D-EB7B-A0D0-FFE3-1FADE3346100";
 static NSString *SECRET_KEY = @"43B43EF7-247A-ED56-FF2F-ECD43C6E9000";
+#endif
+#if _TEST_SERVER_
+static NSString *APP_ID = @"D8614D1F-D542-7F85-FFE0-0B04270E2100";
+static NSString *SECRET_KEY = @"A9E97576-6BF6-0E88-FFA0-C7B6FD3CB100";
+#endif
 static NSString *VERSION_NUM = @"v1";
 
 
@@ -34,29 +43,15 @@ static NSString *VERSION_NUM = @"v1";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //[DebLog setIsActive:YES];
+    [DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
-
-    NSDictionary *remoteDict = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-    if (remoteDict)
-        [self application:application didReceiveRemoteNotification:remoteDict];
-    
-    // check if iOS8
-    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-#if _SILENT_PUSH_ON_
-        UIUserNotificationType types = UIUserNotificationTypeNone;
-#else
-        UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+#if _TEST_SERVER_
+    backendless.hostURL = @"http://10.0.1.115:9000";
 #endif
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
-        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
-    }
-    else {
-        UIRemoteNotificationType types = UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound;
-        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:types];
-    }
+    
+    [backendless.messaging didFinishLaunchingWithOptions:launchOptions];
+    [backendless.messaging registerForRemoteNotifications];
     
     return YES;
 }
@@ -86,49 +81,25 @@ static NSString *VERSION_NUM = @"v1";
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    NSLog(@"APN Unregistration");
-    [[UIApplication sharedApplication] unregisterForRemoteNotifications];
+    [backendless.messaging unregisterForRemoteNotifications];
 }
 
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
     [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] startNetIndicator];
-    
-    NSString *deviceTokenStr = [backendless.messagingService deviceTokenAsString:deviceToken];
-    NSLog(@"application:didRegisterForRemoteNotificationsWithDeviceToken: ->  deviceToken = %@", deviceTokenStr);
-   
-    @try {
-        NSString *deviceRegistrationId = [backendless.messagingService registerDeviceToken:deviceTokenStr];
-        NSLog(@"application:didRegisterForRemoteNotificationsWithDeviceToken: -> registerDeviceToken: deviceRegistrationId = %@", deviceRegistrationId);
-    }
-    @catch (Fault *fault) {
-        NSLog(@"application:didRegisterForRemoteNotificationsWithDeviceToken: -> registerDeviceToken: %@", fault);
-    }
-    
+    [backendless.messaging didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
     [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] stopNetIndicator];
- }
+}
 
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err
 {
-    NSLog(@"application:didFailToRegisterForRemoteNotificationsWithError: %@", err);
+    [backendless.messaging didFailToRegisterForRemoteNotificationsWithError:err];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    NSLog(@"application:didReceiveRemoteNotification: %@", userInfo);
-    NSString *notification = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+    NSString *notification = [backendless.messaging didReceiveRemoteNotification:userInfo];
     [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] showNotification:notification];
 }
-
-#if _SILENT_PUSH_ON_
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
-{
-    NSLog(@"application:didReceiveRemoteNotification:fetchCompletionHandler: %@", userInfo);
-    NSString *notification = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
-    [(StartViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] showNotification:notification];
-    
-    handler(UIBackgroundFetchResultNewData);
-}
-#endif
 
 @end

@@ -22,10 +22,7 @@
 #import "StartViewController.h"
 #import "Backendless.h"
 
-//static NSString *MESSAGING_CHANNEL = @"default";
 static NSString *MESSAGING_CHANNEL = @"testing";
-//static NSString *MESSAGING_CHANNEL = @"channelB";
-//static NSString *MESSAGING_CHANNEL = @"channelC";
 static NSString *PUBLISHER_ANONYMOUS = @"Anonymous";
 static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
@@ -47,8 +44,6 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
         [self initNetActivity];
 
         NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
-        //NSString *info = [backendless.messagingService registerDevice:@[@"channelA", @"channelB"]];
-        //NSString *info = [backendless.messagingService registerDevice:@[@"channelB", @"channelC"]];
         NSLog(@"viewDidLoad -> registerDevice: %@", info);
 
 #if 0 // try to publish text with lenght more then max = 2K
@@ -67,17 +62,8 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     // Dispose of any resources that can be recreated.
 }
 
--(void)showAlert:(NSString *)message {
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error:" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-    [av show];
-}
-
--(void)initNetActivity {
-    // Create and add the activity indicator
-    _netActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    _netActivity.center = CGPointMake(160.0f, 400.0f);
-    [self.view addSubview:_netActivity];
-}
+#pragma mark -
+#pragma mark Public Methods
 
 -(void)startNetIndicator {
     self.textField.hidden = YES;
@@ -94,6 +80,21 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     _textView.text = [_textView.text stringByAppendingFormat:@"APNS: %@\n", notification];
 }
 
+#pragma mark -
+#pragma mark Private Methods
+
+-(void)showAlert:(NSString *)message {
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error:" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [av show];
+}
+
+-(void)initNetActivity {
+    // Create and add the activity indicator
+    _netActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _netActivity.center = CGPointMake(160.0f, 400.0f);
+    [self.view addSubview:_netActivity];
+}
+
 -(void)showDeviceRegistration {
     DeviceRegistration *devReg = [backendless.messaging currentDevice];
     DeviceRegistration *getReg = [backendless.messaging getRegistrations:devReg.deviceId];
@@ -108,12 +109,9 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [self startNetIndicator];
     
     PublishOptions *options = [PublishOptions new];
-#if _SILENT_PUSH_ON_
-    options.headers = @{@"ios-content-available":@"1"};
-#else
     options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"};
-#endif
-    DeliveryOptions *delivery = [DeliveryOptions deliveryOptionsForNotification:PUSHONLY];
+
+    DeliveryOptions *delivery = [DeliveryOptions deliveryOptionsForNotification:PUSH_ONLY];
     
 #if 1 //async
     
@@ -155,6 +153,9 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     }
 #endif
 }
+
+#pragma mark -
+#pragma mark UITextFieldDelegate Methods
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {

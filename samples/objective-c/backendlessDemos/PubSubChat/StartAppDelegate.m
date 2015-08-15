@@ -22,10 +22,19 @@
 #import "StartAppDelegate.h"
 #import "Backendless.h"
 
+#define _PRODUCTION_ 0
+#define _TEST_SERVER_ 1
+
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
+#if _PRODUCTION_
 static NSString *APP_ID = @"CF47722D-EB7B-A0D0-FFE3-1FADE3346100";
 static NSString *SECRET_KEY = @"43B43EF7-247A-ED56-FF2F-ECD43C6E9000";
+#endif
+#if _TEST_SERVER_
+static NSString *APP_ID = @"D8614D1F-D542-7F85-FFE0-0B04270E2100";
+static NSString *SECRET_KEY = @"A9E97576-6BF6-0E88-FFA0-C7B6FD3CB100";
+#endif
 static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate
@@ -34,9 +43,13 @@ static NSString *VERSION_NUM = @"v1";
 {
     // Override point for customization after application launch.
     
-    //[DebLog setIsActive:YES];
+    [DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
+#if _TEST_SERVER_
+    backendless.hostURL = @"http://10.0.1.115:9000";
+#endif
+    
     return YES;
 }
 							

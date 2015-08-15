@@ -21,13 +21,10 @@
 
 #import <UIKit/UIKit.h>
 
-#define _SILENT_PUSH_ON_ 1
-
 @interface StartViewController : UIViewController<UITextFieldDelegate>
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 @property (nonatomic, strong) IBOutlet UITextField *textField;
 -(void)showNotification:(NSString *)notification;
 -(void)startNetIndicator;
 -(void)stopNetIndicator;
--(IBAction)sendMessage:(id)sender;
 @end

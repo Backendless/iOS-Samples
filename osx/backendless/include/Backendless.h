@@ -26,11 +26,16 @@
 
 #import <Foundation/Foundation.h>
 
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#import <AdSupport/AdSupport.h>
+#endif
+
 // CommLibiOS
 #import "DEBUG.h"
 #import "Types.h"
 #import "Responder.h"
 #import "AMFSerializer.h"
+#import "BinaryCodec.h"
 
 //UI
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
@@ -80,6 +85,8 @@
 #import "FilePermission.h"
 #import "Logging.h"
 #import "Logger.h"
+#import "BackendlessSimpleQuery.h"
+#import "BEFileInfo.h"
 
 //Cache
 #import "BackendlessCachePolicy.h"

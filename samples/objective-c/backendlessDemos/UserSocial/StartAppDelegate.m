@@ -26,7 +26,7 @@
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
 
-static NSString *APP_ID = @"";
+//static NSString *APP_ID = @"";
         /**********************************************************************************************************************
         * It is important to make a change in UserSocial-Info.plist. You need to modify the following element:
         * "URL types" -> "Item 0" -> "URL Schemes"
@@ -34,7 +34,9 @@ static NSString *APP_ID = @"";
         * if the ID of your application is AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA, the value of the element will be
         * "backendlessAAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
         **********************************************************************************************************************/
-static NSString *SECRET_KEY = @"";
+//static NSString *SECRET_KEY = @"";
+static NSString *APP_ID = @"CF47722D-EB7B-A0D0-FFE3-1FADE3346100";
+static NSString *SECRET_KEY = @"43B43EF7-247A-ED56-FF2F-ECD43C6E9000";
 static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate
