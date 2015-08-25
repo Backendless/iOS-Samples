@@ -22,7 +22,7 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    DELIVERY_PULL,
+    DELIVERY_POLL,
     DELIVERY_PUSH
 } DeliveryMethodEnum;
 
