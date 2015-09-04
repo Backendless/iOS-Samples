@@ -24,7 +24,7 @@
 #import "Backendless.h"
 
 #define _ASYNC_REQUEST 1
-#define _STAY_LOGGED_IN 0
+#define _STAY_LOGGED_IN 1
 
 @interface StartViewController ()
 -(void)showAlert:(NSString *)message;
@@ -44,7 +44,23 @@
         [backendless initAppFault];
 
 #if _STAY_LOGGED_IN
+        
         [self stayLoggedIn ];
+        
+        id user = backendless.userService.currentUser;
+        NSLog(@"viewDidLoad -> currentUser: %@", user);
+        
+        if (user) {
+#if 1
+            [user setProperty:@"second" object:@"5"];
+            NSLog(@"viewDidLoad -> currentUser (UPDATED): %@", backendless.userService.currentUser);
+#endif
+#if 1
+            user = [backendless.data findByClassId:BackendlessUser.class sid:backendless.userService.currentUser.objectId];
+            NSLog(@"viewDidLoad -> findByClassId: %@", user);
+#endif
+        }
+    
 #endif
     }
     @catch (Fault *fault) {
