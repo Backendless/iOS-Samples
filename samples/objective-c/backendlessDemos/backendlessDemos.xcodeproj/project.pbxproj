@@ -335,6 +335,13 @@
 		F9356C9E1B70C3E3009A01D9 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D309462C1AB9E78000A75DDC /* backendless.a */; };
 		F9356C9F1B70C3E6009A01D9 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30946661AB9E78000A75DDC /* CommLibiOS.a */; };
 		F9356CA41B724B99009A01D9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
+		F93B442F1B99CFB0004DE3D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
+		F93B44301B99CFBB004DE3D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
+		F93B44311B99CFC9004DE3D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
+		F93B44321B99CFD4004DE3D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
+		F93B44331B99CFDD004DE3D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
+		F93B44341B99CFE7004DE3D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
+		F93B44351B99CFF0004DE3D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
 		F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
 		F98A7F681B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
 		F98A7F691B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
@@ -1092,6 +1099,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93B44351B99CFF0004DE3D0 /* AdSupport.framework in Frameworks */,
 				917C47491864889700FBB55D /* SystemConfiguration.framework in Frameworks */,
 				917C474A1864889700FBB55D /* MapKit.framework in Frameworks */,
 				9176510B1827CB3B00745497 /* CoreLocation.framework in Frameworks */,
@@ -1109,6 +1117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93B44341B99CFE7004DE3D0 /* AdSupport.framework in Frameworks */,
 				91F1393A17C4E4D800D1AC4C /* CoreLocation.framework in Frameworks */,
 				91F1393617C4E4B400D1AC4C /* MapKit.framework in Frameworks */,
 				91F1393917C4E4D800D1AC4C /* CFNetwork.framework in Frameworks */,
@@ -1126,6 +1135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93B44331B99CFDD004DE3D0 /* AdSupport.framework in Frameworks */,
 				D37F5ED619CB0AFC0077F0C5 /* UIKit.framework in Frameworks */,
 				D30E65E919CB0E6700AE3949 /* SystemConfiguration.framework in Frameworks */,
 				D30E65EA19CB0E6D00AE3949 /* CFNetwork.framework in Frameworks */,
@@ -1179,6 +1189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93B44301B99CFBB004DE3D0 /* AdSupport.framework in Frameworks */,
 				D3CF37EA1A38B0F70070B746 /* UIKit.framework in Frameworks */,
 				611275861861B8BB00B6ACE6 /* SystemConfiguration.framework in Frameworks */,
 				D3CF37EB1A38B1000070B746 /* CFNetwork.framework in Frameworks */,
@@ -1232,6 +1243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93B44311B99CFC9004DE3D0 /* AdSupport.framework in Frameworks */,
 				91EF13A4174A41C6009C7A38 /* CoreData.framework in Frameworks */,
 				F91B671316B18DF500668A06 /* UIKit.framework in Frameworks */,
 				917C47401864887400FBB55D /* SystemConfiguration.framework in Frameworks */,
@@ -1249,6 +1261,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93B442F1B99CFB0004DE3D0 /* AdSupport.framework in Frameworks */,
 				917C47411864887700FBB55D /* SystemConfiguration.framework in Frameworks */,
 				917C47421864887700FBB55D /* MapKit.framework in Frameworks */,
 				917C47431864887700FBB55D /* CoreLocation.framework in Frameworks */,
@@ -1266,6 +1279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93B44321B99CFD4004DE3D0 /* AdSupport.framework in Frameworks */,
 				D3A927FD1A9DFC9000D0059F /* UIKit.framework in Frameworks */,
 				D3A928031A9DFD6D00D0059F /* MapKit.framework in Frameworks */,
 				D3A927FF1A9DFCD700D0059F /* CoreData.framework in Frameworks */,
