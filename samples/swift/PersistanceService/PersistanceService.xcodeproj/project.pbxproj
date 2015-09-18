@@ -11,12 +11,12 @@
 		D30947481AB9F8FB00A75DDC /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D30947471AB9F8FB00A75DDC /* CommLibiOS.a */; };
 		D30948351AB9FDE800A75DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4219F0170B0044DBFE /* Main.storyboard */; };
 		D30948361AB9FDEE00A75DDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4719F0170B0044DBFE /* LaunchScreen.xib */; };
-		D38575E919F7F68B00B68561 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6319F1282B0044DBFE /* libsqlite3.dylib */; };
 		D38575EA19F7F6BF00B68561 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC1D6719F1282B0044DBFE /* SystemConfiguration.framework */; };
 		D3AC1D3F19F0170A0044DBFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC1D3E19F0170A0044DBFE /* AppDelegate.swift */; };
 		D3AC1D4119F0170A0044DBFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC1D4019F0170A0044DBFE /* ViewController.swift */; };
 		D3AC1D4619F0170B0044DBFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AC1D4519F0170B0044DBFE /* Images.xcassets */; };
 		D3AC1D7919F128B30044DBFE /* PersistentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC1D7819F128B30044DBFE /* PersistentObject.swift */; };
+		F9C3F2A41BAC614A00421D56 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2A31BAC614A00421D56 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		D3AC1D4319F0170B0044DBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3AC1D4519F0170B0044DBFE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D3AC1D4819F0170B0044DBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D3AC1D6319F1282B0044DBFE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D3AC1D6719F1282B0044DBFE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D3AC1D7819F128B30044DBFE /* PersistentObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentObject.swift; sourceTree = "<group>"; };
+		F9C3F2A31BAC614A00421D56 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,8 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C3F2A41BAC614A00421D56 /* libsqlite3.tbd in Frameworks */,
 				D38575EA19F7F6BF00B68561 /* SystemConfiguration.framework in Frameworks */,
-				D38575E919F7F68B00B68561 /* libsqlite3.dylib in Frameworks */,
 				D30947481AB9F8FB00A75DDC /* CommLibiOS.a in Frameworks */,
 				D30947461AB9F8E800A75DDC /* backendless.a in Frameworks */,
 			);
@@ -52,10 +52,10 @@
 		D3AC1D3019F0170A0044DBFE = {
 			isa = PBXGroup;
 			children = (
+				F9C3F2A31BAC614A00421D56 /* libsqlite3.tbd */,
 				D30947471AB9F8FB00A75DDC /* CommLibiOS.a */,
 				D30947451AB9F8E800A75DDC /* backendless.a */,
 				D3AC1D3B19F0170A0044DBFE /* PersistanceService */,
-				D3AC1D6319F1282B0044DBFE /* libsqlite3.dylib */,
 				D3AC1D6719F1282B0044DBFE /* SystemConfiguration.framework */,
 				D3AC1D3A19F0170A0044DBFE /* Products */,
 			);
@@ -117,7 +117,8 @@
 		D3AC1D3119F0170A0044DBFE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = BACKENDLESS.COM;
 				TargetAttributes = {
 					D3AC1D3819F0170A0044DBFE = {
@@ -209,6 +210,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -307,6 +309,7 @@
 					"$(PROJECT_DIR)/../../../lib/CommLibiOS",
 					"$(PROJECT_DIR)/../../../lib/backendless",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/../../../lib/backendless/include/Backendless-Bridging-Header.h";
 			};
@@ -329,6 +332,7 @@
 					"$(PROJECT_DIR)/../../../lib/CommLibiOS",
 					"$(PROJECT_DIR)/../../../lib/backendless",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/../../../lib/backendless/include/Backendless-Bridging-Header.h";
 			};

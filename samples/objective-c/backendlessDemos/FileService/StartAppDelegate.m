@@ -25,8 +25,26 @@
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
 
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+
+#define _LOCALHOST_ 0
+#define _PRODUCTION_ 1
+#define _TEST_ 0
+
+#if _LOCALHOST_
+static NSString *HOST_URL = @"http://10.0.1.62:9000";
+static NSString *APP_ID = @"9E2E39D8-0A73-D2CE-FF84-E21661EF2700";
+static NSString *SECRET_KEY = @"ADE0B282-A1CF-1229-FF46-DB768BB9BE00";
+#endif
+#if _PRODUCTION_
+static NSString *HOST_URL = @"https://api.backendless.com";
+static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
+static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
+#endif
+#if _TEST_
+static NSString *HOST_URL = @"http://apitest.backendless.com";
+static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
+static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
+#endif
 static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate

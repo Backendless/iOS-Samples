@@ -55,14 +55,14 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
     
     @IBAction func switchCamerasControl(sender: AnyObject) {
         
-        println("----------------------- pswitchCamerasControl ------------------------------------------------------")
+        print("----------------------- pswitchCamerasControl ------------------------------------------------------")
         
         _publisher?.switchCameras()
     }
     
     @IBAction func stopMediaControl(sender: AnyObject) {
         
-        println("----------------------- stopMediaControl ------------------------------------------------------")
+        print("----------------------- stopMediaControl ------------------------------------------------------")
         
         if (_publisher != nil) {
             
@@ -92,7 +92,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
     
     @IBAction func playbackControl(sender: AnyObject) {
         
-        println("----------------------- playbackControl ------------------------------------------------------")
+        print("----------------------- playbackControl ------------------------------------------------------")
         
         var options: MediaPlaybackOptions
         if (switchView.on) {
@@ -117,7 +117,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
     
     @IBAction func publishControl(sender: AnyObject) {
         
-        println("----------------------- publishControl ------------------------------------------------------")
+        print("----------------------- publishControl ------------------------------------------------------")
         
         var options: MediaPublishOptions
         if (switchView.on) {
@@ -154,7 +154,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
     
     func streamStateChanged(sender: AnyObject!, state: Int32, description: String!) {
         
-        println("<IMediaStreamerDelegate> streamStateChanged: \(state) = \(description)");
+        print("<IMediaStreamerDelegate> streamStateChanged: \(state) = \(description)");
         
         switch state {
         
@@ -221,7 +221,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
     
     func streamConnectFailed(sender: AnyObject!, code: Int32, description: String!) {
         
-        println("<IMediaStreamerDelegate> streamConnectFailed: \(code) = \(description)");
+        print("<IMediaStreamerDelegate> streamConnectFailed: \(code) = \(description)");
         
         stopMediaControl(sender)
     }

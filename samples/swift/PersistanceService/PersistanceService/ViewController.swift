@@ -114,10 +114,10 @@ class ViewController: UIViewController {
         
         backendless.userService.isValidUserToken(
             { (var result : AnyObject!) -> () in
-                println("isValidUserToken (ASYNC): \(result.boolValue)")
+                print("isValidUserToken (ASYNC): \(result.boolValue)")
             },
             error: { (var fault : Fault!) -> () in
-                println("Server reported an error (ASYNC): \(fault)")
+                print("Server reported an error (ASYNC): \(fault)")
             }
         )
     }
@@ -150,14 +150,14 @@ class ViewController: UIViewController {
         if (fault == nil) {
             var obj : AnyObject = backendless.persistenceService.findById("OrderItem", sid: (item as! OrderItem).objectId)
             if (obj is OrderItem) {
-                println("OrderItem: \((obj as! OrderItem).itemName) <\((obj as! OrderItem).objectId)>")
+                print("OrderItem: \((obj as! OrderItem).itemName) <\((obj as! OrderItem).objectId)>")
             }
             else {
-                println("\nFAULT (0): \(fault!.description)")
+                prprint\nFAULT (0): \(fault!.description)")
             }
         }
         else {
-            println("\nFAULT (0): \(fault!.description)")
+            prprint\nFAULT (0): \(fault!.description)")
         }
         
         /* - sorting for the selected columns (ascending and descending)
@@ -188,11 +188,11 @@ class ViewController: UIViewController {
             var obj : AnyObject = backendless.persistenceService.findById("Weather", sid:(result as! Weather).objectId)
             if (obj is Weather) {
                 var obj1 = obj as! Weather
-                println("\nWeather (1): \(obj1.description)")
+                print("\nWeather (1): \(obj1.description)")
             }
         }
         if (result is Fault) {
-            println("\nFAULT (1): \(fault!.description)")
+            prprint\nFAULT (1): \(fault!.description)")
         }
         
         // - sync method with fault as reference (fault as exception should be shutted off !)
@@ -200,11 +200,11 @@ class ViewController: UIViewController {
         if (fault == nil) {
             var obj : AnyObject = backendless.persistenceService.findById("Weather", sid: (weather as! Weather).objectId)
             if (obj is Weather) {
-                println("\nWeather (2): \((obj as! Weather).description)")
+                prprint\nWeather (2): \((obj as! Weather).description)")
             }
         }
         else {
-            println("\nFAULT (2): \(fault!.description)")
+            print("\nFAULT (2): \(fault!.description)")
         }
         
         // - async method with block-based callbacks

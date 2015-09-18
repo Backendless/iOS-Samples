@@ -68,11 +68,11 @@ static NSString *FEMALE_GENDER_VAL = @"female";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#if 0
 -(NSUInteger)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }
-
+#endif
 
 #pragma mark -
 #pragma mark Private Methods
