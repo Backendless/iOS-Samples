@@ -56,7 +56,6 @@ static NSString *VERSION_NUM = @"v1";
     // Override point for customization after application launch.
     [DebLog setIsActive:YES];
     
-    //backendless.hostURL = HOST_URL;
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     return YES;
 }
