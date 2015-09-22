@@ -25,26 +25,8 @@
 
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
-
-#define _LOCALHOST_ 0
-#define _PRODUCTION_ 1
-#define _TEST_ 0
-
-#if _LOCALHOST_
-static NSString *HOST_URL = @"http://10.0.1.62:9000";
-static NSString *APP_ID = @"9E2E39D8-0A73-D2CE-FF84-E21661EF2700";
-static NSString *SECRET_KEY = @"ADE0B282-A1CF-1229-FF46-DB768BB9BE00";
-#endif
-#if _PRODUCTION_
-static NSString *HOST_URL = @"http://api.backendless.com";
-static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
-static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
-#endif
-#if _TEST_
-static NSString *HOST_URL = @"http://10.0.1.48:9000";
-static NSString *APP_ID = @"377CB0A1-9B1F-A104-FFF8-970BD9496E00";
-static NSString *SECRET_KEY = @"D65A0798-4650-F3CD-FFF6-C35E6DDB8500";
-#endif
+static NSString *APP_ID = @"";
+static NSString *SECRET_KEY = @"";
 static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate
@@ -55,7 +37,6 @@ static NSString *VERSION_NUM = @"v1";
     
     //[DebLog setIsActive:YES];
     
-    backendless.hostURL = HOST_URL;
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     backendless.mediaService = [MediaService new];
 
