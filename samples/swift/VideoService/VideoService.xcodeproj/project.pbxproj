@@ -227,19 +227,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9C3F2A01BAC5EAC00421D56 /* libswscale.a in Frameworks */,
-				F9C3F29D1BAC5EAC00421D56 /* libavfilter.a in Frameworks */,
 				F9C3F2301BAC5E4D00421D56 /* libsqlite3.tbd in Frameworks */,
 				F9C3F2311BAC5E4D00421D56 /* libz.tbd in Frameworks */,
-				F9C3F2A11BAC5EAC00421D56 /* libspeex.a in Frameworks */,
+				D385771119FA8D2500B68561 /* SystemConfiguration.framework in Frameworks */,
+				F9C3F29B1BAC5EAC00421D56 /* libavcodec.a in Frameworks */,
+				F9C3F29C1BAC5EAC00421D56 /* libavdevice.a in Frameworks */,
+				F9C3F2A01BAC5EAC00421D56 /* libswscale.a in Frameworks */,
+				F9C3F29D1BAC5EAC00421D56 /* libavfilter.a in Frameworks */,
 				F9C3F29E1BAC5EAC00421D56 /* libavformat.a in Frameworks */,
 				F9C3F29F1BAC5EAC00421D56 /* libavutil.a in Frameworks */,
+				F9C3F2A11BAC5EAC00421D56 /* libspeex.a in Frameworks */,
 				F9C3F2A21BAC5EAC00421D56 /* libx264.a in Frameworks */,
-				F9C3F29C1BAC5EAC00421D56 /* libavdevice.a in Frameworks */,
-				D385771119FA8D2500B68561 /* SystemConfiguration.framework in Frameworks */,
 				D30948261AB9FD8D00A75DDC /* CommLibiOS.a in Frameworks */,
 				D30948341AB9FD8D00A75DDC /* MediaLibiOS.a in Frameworks */,
-				F9C3F29B1BAC5EAC00421D56 /* libavcodec.a in Frameworks */,
 				D30948241AB9FD8D00A75DDC /* backendless.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

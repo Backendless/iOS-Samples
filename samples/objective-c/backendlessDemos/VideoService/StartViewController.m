@@ -102,7 +102,7 @@
     MediaPublishOptions *options = _switchView.on?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions appendStream:self.preview];
 #endif
     options.orientation = AVCaptureVideoOrientationPortrait;
-    options.resolution = RESOLUTION_CIF;
+    options.resolution = RESOLUTION_VGA;
     _publisher =[backendless.mediaService publishStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     NSLog(@"publishControl: -> published stream: '%@/%@'", _publisher.streamPath, _publisher.streamName);

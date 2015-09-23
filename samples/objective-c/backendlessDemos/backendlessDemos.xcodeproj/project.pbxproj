@@ -610,6 +610,7 @@
 		D37F5EE619CB0AFC0077F0C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D37F5EE719CB0AFC0077F0C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D37F5EE919CB0AFC0077F0C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F90F2B5D1BB2DDBF004F8D33 /* Update Project with Backendless SDK for iOS9.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Update Project with Backendless SDK for iOS9.pdf"; path = "../../../Update Project with Backendless SDK for iOS9.pdf"; sourceTree = "<group>"; };
 		F91B662616B1873B00668A06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F91B662816B1873B00668A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F91B662A16B1873B00668A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1743,6 +1744,7 @@
 		F91B661716B1873B00668A06 = {
 			isa = PBXGroup;
 			children = (
+				F90F2B5D1BB2DDBF004F8D33 /* Update Project with Backendless SDK for iOS9.pdf */,
 				F9C7DE891B74AA5600AFCD06 /* Default-568h@2x.png */,
 				F9356C711B6FA4BB009A01D9 /* getting-started.pdf */,
 				F9E13D5D1B30736500A30556 /* doc */,
