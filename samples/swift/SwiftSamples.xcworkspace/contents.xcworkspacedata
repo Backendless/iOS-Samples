@@ -5,6 +5,6 @@
       location = "group:VideoService/VideoService.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:PersistanceService/PersistanceService.xcodeproj">
+      location = "group:DocSamples/DocSamples.xcodeproj">
    </FileRef>
 </Workspace>

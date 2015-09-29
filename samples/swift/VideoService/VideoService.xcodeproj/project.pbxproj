@@ -219,7 +219,6 @@
 		F9C3F2971BAC5EAC00421D56 /* x264.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x264.h; sourceTree = "<group>"; };
 		F9C3F2981BAC5EAC00421D56 /* x264_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x264_config.h; sourceTree = "<group>"; };
 		F9C3F29A1BAC5EAC00421D56 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libx264.a; sourceTree = "<group>"; };
-		F9D8198D1B307F0A004CA537 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf"; path = "../../../doc/Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,7 +396,6 @@
 		D38575F819FA5E2D00B68561 = {
 			isa = PBXGroup;
 			children = (
-				F9D8198D1B307F0A004CA537 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.pdf */,
 				D323EA6819FFAF7F001F84BD /* Bridging-Header.h */,
 				D30947491AB9FD8C00A75DDC /* lib */,
 				D385760319FA5E2D00B68561 /* VideoService */,
