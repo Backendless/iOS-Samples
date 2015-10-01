@@ -1737,9 +1737,9 @@
 		F91B661716B1873B00668A06 = {
 			isa = PBXGroup;
 			children = (
+				F9356C711B6FA4BB009A01D9 /* getting-started.pdf */,
 				F90F2B5D1BB2DDBF004F8D33 /* Update Project with Backendless SDK for iOS9.pdf */,
 				F9C7DE891B74AA5600AFCD06 /* Default-568h@2x.png */,
-				F9356C711B6FA4BB009A01D9 /* getting-started.pdf */,
 				D309462A1AB9E78000A75DDC /* lib */,
 				F98A7F131B3071C8007635B6 /* osx */,
 				F99EFF5916D51358001AE512 /* art */,
