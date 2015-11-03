@@ -53,30 +53,50 @@
 
 - (void)login:(id)sender
 {
-    NSLog(@"StartViewController -> login: (START)");
+    NSLog(@"StartViewController -> login: (START) sender.tag = %ld", (long)[sender tag]);
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    if ([sender tag] == 1)
-    {
-        [backendless.userService
-         easyLoginWithFacebookFieldsMapping:@{@"email":@"email", @"username":@"username", @"user_location":@"user_location"}
-         permissions:@[@"email"]
-         response:^(id response) {
-             //response - NSNumber with bool Yes
-             NSLog(@"StartViewController -> login: (Facebook) result = %@", response);
-         } error:^(Fault *fault) {
-             NSLog(@"StartViewController -> login: (FAULT) %@", fault.detail);
-         }];
-    }
-    else
-    {
-        [backendless.userService
-         easyLoginWithTwitterFieldsMapping:@{@"email":@"email"}
-         response:^(id response) {
-             NSLog(@"StartViewController -> login: (Twitter) result = %@", response);
-         } error:^(Fault *fault) {
-             NSLog(@"StartViewController -> login: (FAULT) %@", fault.detail);
-         }];
+
+    switch ([sender tag]) {
+        // Facebook
+        case 1: {
+            [backendless.userService
+             easyLoginWithFacebookFieldsMapping:@{@"email":@"email", @"username":@"username", @"user_location":@"user_location"}
+             permissions:@[@"email"]
+             response:^(id response) {
+                 //response - NSNumber with bool Yes
+                 NSLog(@"StartViewController -> login: (Facebook) result = %@", response);
+             } error:^(Fault *fault) {
+                 NSLog(@"StartViewController -> login: (FAULT) %@", fault.detail);
+             }];
+            break;
+        }
+        // Twitter
+        case 2: {
+            [backendless.userService
+             easyLoginWithTwitterFieldsMapping:@{@"email":@"email"}
+             response:^(id response) {
+                 NSLog(@"StartViewController -> login: (Twitter) result = %@", response);
+             } error:^(Fault *fault) {
+                 NSLog(@"StartViewController -> login: (FAULT) %@", fault.detail);
+             }];
+            break;
+        }
+        // Google+
+        case 3: {
+            [backendless.userService
+             easyLoginWithGooglePlusFieldsMapping:@{@"email":@"email"}
+             permissions:@[@"email"]
+             response:^(id response) {
+                 NSLog(@"StartViewController -> login: (Google+) result = %@", response);
+             } error:^(Fault *fault) {
+                 NSLog(@"StartViewController -> login: (FAULT) %@", fault.detail);
+             }];
+            break;
+        }
+            
+        default:
+            break;
     }
 }
 

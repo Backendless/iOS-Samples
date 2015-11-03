@@ -287,6 +287,12 @@
 		F93B44341B99CFE7004DE3D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
 		F93B44351B99CFF0004DE3D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
 		F9571EF11743AE7C003D8902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1E984170596DC00728AA1 /* CoreData.framework */; };
+		F98508991BE78F440052716C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F98508981BE78F440052716C /* main.m */; };
+		F985089C1BE78F440052716C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F985089B1BE78F440052716C /* AppDelegate.m */; };
+		F985089F1BE78F440052716C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F985089E1BE78F440052716C /* ViewController.m */; };
+		F98508A21BE78F440052716C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98508A01BE78F440052716C /* Main.storyboard */; };
+		F98508A41BE78F440052716C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F98508A31BE78F440052716C /* Assets.xcassets */; };
+		F98508A71BE78F440052716C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98508A51BE78F440052716C /* LaunchScreen.storyboard */; };
 		F98A7F681B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
 		F98A7F691B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
 		F98A7F6A1B3071C8007635B6 /* libbackendless-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A7F511B3071C8007635B6 /* libbackendless-mac.a */; };
@@ -348,22 +354,22 @@
 		F9C3F1AF1BAC41F200421D56 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F1841BAC40C000421D56 /* libz.tbd */; };
 		F9C3F1B01BAC420700421D56 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F1831BAC40C000421D56 /* libsqlite3.tbd */; };
 		F9C3F1B11BAC420B00421D56 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F1841BAC40C000421D56 /* libz.tbd */; };
-		F9C3F21B1BAC427F00421D56 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2041BAC427F00421D56 /* libavcodec.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F21C1BAC427F00421D56 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2041BAC427F00421D56 /* libavcodec.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F21D1BAC427F00421D56 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2051BAC427F00421D56 /* libavdevice.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F21E1BAC427F00421D56 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2051BAC427F00421D56 /* libavdevice.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F21F1BAC427F00421D56 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2061BAC427F00421D56 /* libavfilter.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2201BAC427F00421D56 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2061BAC427F00421D56 /* libavfilter.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2211BAC427F00421D56 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2071BAC427F00421D56 /* libavformat.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2221BAC427F00421D56 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2071BAC427F00421D56 /* libavformat.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2231BAC427F00421D56 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2081BAC427F00421D56 /* libavutil.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2241BAC427F00421D56 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2081BAC427F00421D56 /* libavutil.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2251BAC427F00421D56 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2091BAC427F00421D56 /* libswscale.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2261BAC427F00421D56 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2091BAC427F00421D56 /* libswscale.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2271BAC427F00421D56 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2141BAC427F00421D56 /* libspeex.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2281BAC427F00421D56 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2141BAC427F00421D56 /* libspeex.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2291BAC427F00421D56 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F21A1BAC427F00421D56 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F22A1BAC427F00421D56 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F21A1BAC427F00421D56 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
+		F9C3F21B1BAC427F00421D56 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2041BAC427F00421D56 /* libavcodec.a */; };
+		F9C3F21C1BAC427F00421D56 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2041BAC427F00421D56 /* libavcodec.a */; };
+		F9C3F21D1BAC427F00421D56 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2051BAC427F00421D56 /* libavdevice.a */; };
+		F9C3F21E1BAC427F00421D56 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2051BAC427F00421D56 /* libavdevice.a */; };
+		F9C3F21F1BAC427F00421D56 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2061BAC427F00421D56 /* libavfilter.a */; };
+		F9C3F2201BAC427F00421D56 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2061BAC427F00421D56 /* libavfilter.a */; };
+		F9C3F2211BAC427F00421D56 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2071BAC427F00421D56 /* libavformat.a */; };
+		F9C3F2221BAC427F00421D56 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2071BAC427F00421D56 /* libavformat.a */; };
+		F9C3F2231BAC427F00421D56 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2081BAC427F00421D56 /* libavutil.a */; };
+		F9C3F2241BAC427F00421D56 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2081BAC427F00421D56 /* libavutil.a */; };
+		F9C3F2251BAC427F00421D56 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2091BAC427F00421D56 /* libswscale.a */; };
+		F9C3F2261BAC427F00421D56 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2091BAC427F00421D56 /* libswscale.a */; };
+		F9C3F2271BAC427F00421D56 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2141BAC427F00421D56 /* libspeex.a */; };
+		F9C3F2281BAC427F00421D56 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2141BAC427F00421D56 /* libspeex.a */; };
+		F9C3F2291BAC427F00421D56 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F21A1BAC427F00421D56 /* libx264.a */; };
+		F9C3F22A1BAC427F00421D56 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F21A1BAC427F00421D56 /* libx264.a */; };
 		F9C7DE8A1B74AA5600AFCD06 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9C7DE891B74AA5600AFCD06 /* Default-568h@2x.png */; };
 		F9C7DE8B1B74E0C500AFCD06 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
 		F9C7DE8C1B78CE8100AFCD06 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9356CA01B724437009A01D9 /* AdSupport.framework */; };
@@ -754,6 +760,16 @@
 		F954C0421B05226800F509E0 /* ICallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICallback.h; sourceTree = "<group>"; };
 		F954C0471B05239500F509E0 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		F954C0481B05239500F509E0 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		F98508951BE78F440052716C /* GooglePlusLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlusLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F98508981BE78F440052716C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F985089A1BE78F440052716C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F985089B1BE78F440052716C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F985089D1BE78F440052716C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F985089E1BE78F440052716C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F98508A11BE78F440052716C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F98508A31BE78F440052716C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F98508A61BE78F440052716C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F98508A81BE78F440052716C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F98A7F161B3071C8007635B6 /* AbstractProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractProperty.h; sourceTree = "<group>"; };
 		F98A7F171B3071C8007635B6 /* AbstractQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractQuery.h; sourceTree = "<group>"; };
 		F98A7F181B3071C8007635B6 /* AtomicCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicCounters.h; sourceTree = "<group>"; };
@@ -1300,6 +1316,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F98508921BE78F440052716C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9C7E1C31B8CA2B700AFCD06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1765,6 +1788,7 @@
 				F91FE4151B4AB69A008FD81A /* PhotoStreamer */,
 				F9356C771B70C313009A01D9 /* SilentPushChat */,
 				F9C7E1C71B8CA2B700AFCD06 /* FacebookLogin */,
+				F98508961BE78F440052716C /* GooglePlusLogin */,
 				F91B662516B1873B00668A06 /* Frameworks */,
 				F91B662316B1873B00668A06 /* Products */,
 			);
@@ -1795,6 +1819,7 @@
 				F91FE4141B4AB69A008FD81A /* PhotoStreamer.app */,
 				F9356C761B70C313009A01D9 /* SilentPushChat.app */,
 				F9C7E1C61B8CA2B700AFCD06 /* FacebookLogin.app */,
+				F98508951BE78F440052716C /* GooglePlusLogin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2105,6 +2130,30 @@
 			children = (
 				F9356C791B70C313009A01D9 /* Info.plist */,
 				F9356C7A1B70C313009A01D9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F98508961BE78F440052716C /* GooglePlusLogin */ = {
+			isa = PBXGroup;
+			children = (
+				F985089A1BE78F440052716C /* AppDelegate.h */,
+				F985089B1BE78F440052716C /* AppDelegate.m */,
+				F985089D1BE78F440052716C /* ViewController.h */,
+				F985089E1BE78F440052716C /* ViewController.m */,
+				F98508A01BE78F440052716C /* Main.storyboard */,
+				F98508A31BE78F440052716C /* Assets.xcassets */,
+				F98508A51BE78F440052716C /* LaunchScreen.storyboard */,
+				F98508A81BE78F440052716C /* Info.plist */,
+				F98508971BE78F440052716C /* Supporting Files */,
+			);
+			path = GooglePlusLogin;
+			sourceTree = "<group>";
+		};
+		F98508971BE78F440052716C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F98508981BE78F440052716C /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -2845,6 +2894,23 @@
 			productReference = F9356C761B70C313009A01D9 /* SilentPushChat.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F98508941BE78F440052716C /* GooglePlusLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F98508AB1BE78F440052716C /* Build configuration list for PBXNativeTarget "GooglePlusLogin" */;
+			buildPhases = (
+				F98508911BE78F440052716C /* Sources */,
+				F98508921BE78F440052716C /* Frameworks */,
+				F98508931BE78F440052716C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GooglePlusLogin;
+			productName = GooglePlusLogin;
+			productReference = F98508951BE78F440052716C /* GooglePlusLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F9C7E1C51B8CA2B700AFCD06 /* FacebookLogin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9C7E1E61B8CA2B800AFCD06 /* Build configuration list for PBXNativeTarget "FacebookLogin" */;
@@ -2915,6 +2981,9 @@
 					F9356C751B70C313009A01D9 = {
 						CreatedOnToolsVersion = 6.4;
 					};
+					F98508941BE78F440052716C = {
+						CreatedOnToolsVersion = 7.1;
+					};
 					F9C7E1C51B8CA2B700AFCD06 = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -2963,6 +3032,7 @@
 				F91FE4131B4AB699008FD81A /* PhotoStreamer */,
 				F9356C751B70C313009A01D9 /* SilentPushChat */,
 				F9C7E1C51B8CA2B700AFCD06 /* FacebookLogin */,
+				F98508941BE78F440052716C /* GooglePlusLogin */,
 			);
 		};
 /* End PBXProject section */
@@ -3198,6 +3268,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F98508931BE78F440052716C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F98508A71BE78F440052716C /* LaunchScreen.storyboard in Resources */,
+				F98508A41BE78F440052716C /* Assets.xcassets in Resources */,
+				F98508A21BE78F440052716C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9C7E1C41B8CA2B700AFCD06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3425,6 +3505,16 @@
 				F9356C811B70C314009A01D9 /* ViewController.m in Sources */,
 				F9356C7E1B70C314009A01D9 /* AppDelegate.m in Sources */,
 				F9356C7B1B70C313009A01D9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F98508911BE78F440052716C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F985089F1BE78F440052716C /* ViewController.m in Sources */,
+				F985089C1BE78F440052716C /* AppDelegate.m in Sources */,
+				F98508991BE78F440052716C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3874,6 +3964,22 @@
 				F9356C881B70C314009A01D9 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		F98508A01BE78F440052716C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F98508A11BE78F440052716C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F98508A51BE78F440052716C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F98508A61BE78F440052716C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		F9C7E1D21B8CA2B700AFCD06 /* Main.storyboard */ = {
@@ -5192,6 +5298,70 @@
 			};
 			name = Release;
 		};
+		F98508A91BE78F440052716C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GooglePlusLogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.themidnightcoders.GooglePlusLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F98508AA1BE78F440052716C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GooglePlusLogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.themidnightcoders.GooglePlusLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F9C7E1E71B8CA2B800AFCD06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -5553,6 +5723,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F98508AB1BE78F440052716C /* Build configuration list for PBXNativeTarget "GooglePlusLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F98508A91BE78F440052716C /* Debug */,
+				F98508AA1BE78F440052716C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		F9C7E1E61B8CA2B800AFCD06 /* Build configuration list for PBXNativeTarget "FacebookLogin" */ = {
 			isa = XCConfigurationList;
