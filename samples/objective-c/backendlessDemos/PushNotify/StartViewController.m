@@ -26,7 +26,7 @@ static NSString *MESSAGING_CHANNEL = @"testing";
 static NSString *PUBLISHER_ANONYMOUS = @"Anonymous";
 static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
-@interface StartViewController () {
+@interface StartViewController () <IBEPushReceiver> {
     UIActivityIndicatorView *_netActivity;
 }
 -(void)showAlert:(NSString *)message;
@@ -41,10 +41,13 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     
     @try {
         [backendless initAppFault];
-        [self initNetActivity];
 
         NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
+        backendless.messagingService.pushReceiver = self;
+
         NSLog(@"viewDidLoad -> registerDevice: %@", info);
+        
+        [self initNetActivity];
 
 #if 0 // try to publish text with lenght more then max = 2K
         self.textField.text = [backendless randomString:3000];
@@ -63,24 +66,6 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 }
 
 #pragma mark -
-#pragma mark Public Methods
-
--(void)startNetIndicator {
-    self.textField.hidden = YES;
-    [_netActivity startAnimating];
-}
-
--(void)stopNetIndicator {
-    self.textField.hidden = NO;
-    [_netActivity stopAnimating];
-}
-
--(void)showNotification:(NSString *)notification {
-    _textView.hidden = NO;
-    _textView.text = [_textView.text stringByAppendingFormat:@"APNS: %@\n", notification];
-}
-
-#pragma mark -
 #pragma mark Private Methods
 
 -(void)showAlert:(NSString *)message {
@@ -95,35 +80,33 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [self.view addSubview:_netActivity];
 }
 
--(void)showDeviceRegistration {
-    DeviceRegistration *devReg = [backendless.messaging currentDevice];
-    DeviceRegistration *getReg = [backendless.messaging getRegistrations:devReg.deviceId];
-    NSLog(@"showDeviceRegistration: \n%@ =?\n[%@]", devReg, getReg);
+-(void)startNetIndicator {
+    self.textField.hidden = YES;
+    [_netActivity startAnimating];
 }
 
--(void)sendMessage:(id)sender {
-    
-    //[self showDeviceRegistration];
+-(void)stopNetIndicator {
+    self.textField.hidden = NO;
+    [_netActivity stopAnimating];
+}
+
+-(void)publish {
     
     [(UILabel *)[self.view viewWithTag:100] setText:@""];
     [self startNetIndicator];
     
     PublishOptions *options = [PublishOptions new];
     options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"};
-
-    DeliveryOptions *delivery = [DeliveryOptions deliveryOptionsForNotification:PUSH_ONLY];
-    
-#if 1 //async
     
     [backendless.messagingService
      publish:MESSAGING_CHANNEL
      message:_textField.text
      publishOptions:options
-     deliveryOptions:delivery
+     deliveryOptions:[DeliveryOptions deliveryOptionsForNotification:PUSH_ONLY]
      response:^(MessageStatus *res) {
+         NSLog(@"showMessageStatus: %@", res);
          [self stopNetIndicator];
          self.textField.text = @"";
-         NSLog(@"sendMessage: res = %@", res);
          [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:'%@'", res.messageId, res.status, res.errorMessage]];
      }
      error:^(Fault *fault) {
@@ -132,27 +115,30 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
          [self showAlert:fault.message];
          NSLog(@"sendMessage: fault = %@", fault);
      }];
-
-#else //sync
-    
-    @try {
-        
-        MessageStatus *res = [backendless.messagingService publish:MESSAGING_CHANNEL message:_textField.text publishOptions:options deliveryOptions:delivery];
-        NSLog(@"sendMessage: res = %@", res);
-        [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:%@", res.messageId, res.status, res.errorMessage]];
-    }
-    
-    @catch (Fault *fault) {
-        [self showAlert:fault.message];
-        NSLog(@"sendMessage: fault = %@", fault.detail);
-    }
-    
-    @finally {
-        [self stopNetIndicator];
-        self.textField.text = @"";
-    }
-#endif
 }
+
+
+#pragma mark -
+#pragma mark IBEPushReceiver Methods
+
+-(void)didReceiveRemoteNotification:(NSString *)notification headers:(NSDictionary *)headers {
+    _textView.hidden = NO;
+    _textView.text = [_textView.text stringByAppendingFormat:@"%@: %@\n", headers[PUBLISHER_NAME_HEADER], notification];
+}
+
+-(void)didRegisterForRemoteNotificationsWithDeviceId:(NSString *)deviceId fault:(Fault *)fault {
+    
+    if (fault) {
+        NSLog(@"didRegisterForRemoteNotificationsWithDeviceId: (FAULT) %@", fault);
+        return;
+    }
+    NSLog(@"didRegisterForRemoteNotificationsWithDeviceId: %@", deviceId);
+}
+
+-(void)didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+    NSLog(@"didFailToRegisterForRemoteNotificationsWithError: %@", err);
+}
+
 
 #pragma mark -
 #pragma mark UITextFieldDelegate Methods
@@ -160,7 +146,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
-    [self sendMessage:nil];
+    [self publish];
     return YES;
 }
 

@@ -11,7 +11,5 @@
 @interface ViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 @property (nonatomic, strong) IBOutlet UITextField *textField;
--(void)subscribe;
--(void)unsubscribe;
 @end
 

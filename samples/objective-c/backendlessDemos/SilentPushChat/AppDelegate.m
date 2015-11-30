@@ -12,8 +12,27 @@
 
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+
+#define _PRODUCTION_ 0
+#define _TEST_ 1
+
+#if _PRODUCTION_
+static NSString *HOST_URL = @"https://api.backendless.com";
+static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
+static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
+#endif
+#if _TEST_
+#if 0
+static NSString *HOST_URL = @"http://10.0.1.116:9000";
+static NSString *APP_ID = @"8C2263E0-8A50-5133-FF6E-7497E19A4C00";
+static NSString *SECRET_KEY = @"3748791C-9BFB-67C3-FFA4-EBBFD9859600";
+#endif
+#if 1
+static NSString *HOST_URL = @"http://api.test.backendless.com";
+static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
+static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
+#endif
+#endif
 static NSString *VERSION_NUM = @"v1";
 
 @implementation AppDelegate
@@ -23,26 +42,12 @@ static NSString *VERSION_NUM = @"v1";
     
     [DebLog setIsActive:YES];
     
+    backendless.hostURL = HOST_URL;
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     
-    [backendless.messaging didFinishLaunchingWithOptions:launchOptions];
-    [backendless.messaging registerForRemoteNotifications];
+    [backendless.messaging registerForPushPubSub];
 
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -50,15 +55,11 @@ static NSString *VERSION_NUM = @"v1";
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    
-    [backendless.messaging unregisterForRemoteNotifications];
-    [(ViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] unsubscribe];
+    [backendless.messaging applicationWillTerminate];
 }
 
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken {
-
     [backendless.messaging didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-    [(ViewController *)[[(UINavigationController *)[self.window rootViewController] viewControllers] objectAtIndex:0] subscribe];
 }
 
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {

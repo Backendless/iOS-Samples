@@ -11,7 +11,7 @@
 
 static NSString *MESSAGING_CHANNEL = @"silentpush";
 
-@interface ViewController () <IResponder>
+@interface ViewController () <IBEPushReceiver>
 @property (nonatomic, strong) BESubscription *subscription;
 -(void)showAlert:(NSString *)message;
 @end
@@ -25,8 +25,11 @@ static NSString *MESSAGING_CHANNEL = @"silentpush";
     @try {
         [backendless initAppFault];
         
-        NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
+        backendless.messaging.pushReceiver = self;
+        
+        NSString *info = [backendless.messaging registerDevice:@[MESSAGING_CHANNEL]];
         NSLog(@"viewDidLoad -> registerDevice: %@", info);
+        
         
 #if 0 // try to publish text with lenght more then max = 2K
         self.textField.text = [backendless randomString:3000];
@@ -50,66 +53,49 @@ static NSString *MESSAGING_CHANNEL = @"silentpush";
 #pragma mark Private Methods
 
 -(void)showAlert:(NSString *)message {
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error:" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-    [av show];
+    [[[UIAlertView alloc] initWithTitle:@"Error:" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
 }
 
--(void)showDeviceRegistration {
-    DeviceRegistration *devReg = [backendless.messaging currentDevice];
-    DeviceRegistration *getReg = [backendless.messaging getRegistrations:devReg.deviceId];
-    NSLog(@"showDeviceRegistration: \n%@ =?\n[%@]", devReg, getReg);
-}
-
--(void)sendMessage {
+-(void)publish {
     
-    PublishOptions *publishOptions = [PublishOptions new];
-    DeliveryOptions *deliveryOptions = [DeliveryOptions deliveryOptionsForNotification:PUSH_NONE];
-    
-    [backendless.messagingService
+    [backendless.messaging
      publish:MESSAGING_CHANNEL
      message:_textField.text
-     publishOptions:publishOptions
-     deliveryOptions:deliveryOptions
+     deliveryOptions:[DeliveryOptions deliveryOptionsForNotification:PUSH_PUBSUB]
      response:^(MessageStatus *res) {
          NSLog(@"sendMessage: res = %@", res);
      }
      error:^(Fault *fault) {
-         [self showAlert:fault.message];
          NSLog(@"sendMessage: %@", fault);
+         [self showAlert:fault.message];
      }];
     
     self.textField.text = @"";
 }
 
-#pragma mark -
-#pragma mark Public Methods
-
 -(void)subscribe {
-    
-    [self showDeviceRegistration];
     
     NSLog(@">>>>>>>>>>>>>>>>> subscribe");
     
-    @try {
-        
-        SubscriptionOptions *subscriptionOptions = [SubscriptionOptions new];
-        [subscriptionOptions deliveryMethod:DELIVERY_PUSH];
-        
-        Responder *responder = [[Responder alloc] initWithResponder:self
-                                                 selResponseHandler:@selector(responseHandler:)
-                                                    selErrorHandler:@selector(errorHandler:)];
-        
-        self.subscription = [backendless.messagingService subscribe:MESSAGING_CHANNEL
-                                              subscriptionResponder:responder
-                                                subscriptionOptions:subscriptionOptions];
-        
-        NSLog(@"subscribe: SUBSCRIPTION: %@", _subscription);
-    }
-    
-    @catch (Fault *fault) {
-        NSLog(@"subscribe: %@", fault);
-        [self showAlert:fault.message];
-    }
+    [backendless.messaging
+     subscribe:MESSAGING_CHANNEL
+     subscriptionResponse:^(NSArray *messages) {
+         for (Message *message in messages) {
+             _textView.text = [_textView.text stringByAppendingFormat:@"APNS: %@\n", message.data];
+         }
+     }
+     subscriptionError:^(Fault *fault) {
+         NSLog(@"subscriptionError: %@", fault);
+     }
+     subscriptionOptions:[SubscriptionOptions subscriptionOptionsWithDeliveryMethod:DELIVERY_PUSH]
+     response:^(BESubscription *subscription) {
+         self.subscription = subscription;
+         NSLog(@"subscribe: SUBSCRIPTION: %@", _subscription);
+     }
+     error:^(Fault *fault) {
+         NSLog(@"subscribe: %@", fault);
+         [self showAlert:fault.message];
+     }];
 }
 
 -(void)unsubscribe {
@@ -120,23 +106,28 @@ static NSString *MESSAGING_CHANNEL = @"silentpush";
 }
 
 #pragma mark -
-#pragma mark IResponder Methods
+#pragma mark IBEPushReceiver Methods
 
--(id)responseHandler:(id)response {
+-(void)didRegisterForRemoteNotificationsWithDeviceId:(NSString *)deviceId fault:(Fault *)fault {
     
-    dispatch_async( dispatch_get_main_queue(), ^{
-        NSArray *messages = response;
-        for (Message *message in messages) {
-            _textView.text = [_textView.text stringByAppendingFormat:@"APNS: %@\n", message.data];
-        }
-    });
+    if (fault) {
+        NSLog(@"didRegisterForRemoteNotificationsWithDeviceId: (FAULT) %@", fault);
+        return;
+    }
     
-    return response;
+    NSLog(@"didRegisterForRemoteNotificationsWithDeviceId: %@", deviceId);
+    [self subscribe];
 }
 
--(void)errorHandler:(Fault *)fault {
-    NSLog(@"errorHandler: %@", fault);
+-(void)didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+    NSLog(@"didFailToRegisterForRemoteNotificationsWithError: %@", err);
 }
+
+-(void)applicationWillTerminate {
+    NSLog(@"applicationWillTerminate");
+    [self unsubscribe];
+}
+
 
 #pragma mark -
 #pragma mark UITextFieldDelegate Methods
@@ -144,7 +135,7 @@ static NSString *MESSAGING_CHANNEL = @"silentpush";
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
 
     [textField resignFirstResponder];
-    [self sendMessage];
+    [self publish];
     
     return YES;
 }

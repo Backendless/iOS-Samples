@@ -23,7 +23,7 @@
 #import "Backendless.h"
 #import "MediaService.h"
 
-//#define VIDEO_TUBE @"videoTube"
+//#define VIDEO_TUBE @"VideoTube"
 #define VIDEO_TUBE @"Default"
 #define DEFAULT_STREAM_NAME @"defaultStreamName"
 
@@ -274,7 +274,7 @@
                     break;
                 }
                 
-                [MPMediaData routeAudioToSpeaker];
+                //[MPMediaData routeAudioToSpeaker];
                 
                 self.playbackView.hidden = NO;
                 self.btnStopMedia.hidden = NO;

@@ -22,10 +22,9 @@ static NSString *VERSION_NUM = @"v1";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [DebLog setIsActive:YES];
+    //[DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
-    //backendless.hostURL = @"http://api.backendless.com";
     
     [[LocationTracker sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 

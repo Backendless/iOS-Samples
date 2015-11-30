@@ -33,8 +33,8 @@
         * if the ID of your application is AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA, the value of the element will be
         * "backendlessAAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
         **********************************************************************************************************************/
-static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
-static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
+static NSString *APP_ID = @"";
+static NSString *SECRET_KEY = @"";
 static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate
@@ -54,7 +54,7 @@ static NSString *VERSION_NUM = @"v1";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [DebLog setIsActive:YES];
+    //[DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     return YES;
