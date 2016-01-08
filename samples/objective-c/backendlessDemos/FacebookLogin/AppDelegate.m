@@ -39,6 +39,8 @@ static NSString *VERSION_NUM = @"v1";
     FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
     
     NSLog(@"openURL: result = %@, url = %@\n userId: %@, token = %@, expirationDate = %@, permissions = %@", @(result), url, [token valueForKey:@"userID"], [token valueForKey:@"tokenString"], [token valueForKey:@"expirationDate"], [token valueForKey:@"permissions"]);
+
+#if 0 // sync
     
     @try {
         BackendlessUser *user = [backendless.userService loginWithFacebookSDK:token fieldsMapping:nil];
@@ -46,7 +48,22 @@ static NSString *VERSION_NUM = @"v1";
     }
     @catch (Fault *fault) {
         NSLog(@"openURL: %@", fault);
+    
     }
+    
+#else // async
+    
+    [backendless.userService
+     loginWithFacebookSDK:token
+     fieldsMapping:nil
+     response:^(id user) {
+         NSLog(@"USER: %@", user);
+     }
+     error:^(Fault *fault) {
+         NSLog(@"openURL: %@", fault);
+     }];
+    
+#endif
     
     return result;
 }
