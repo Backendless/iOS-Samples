@@ -5573,7 +5573,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/slava/Documents/Projects/backendless/iOS-Samples/sdks/FacebookSDK",
+					"$(SRCROOT)/../../../sdks/FacebookSDK",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -5621,7 +5621,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/slava/Documents/Projects/backendless/iOS-Samples/sdks/FacebookSDK",
+					"$(SRCROOT)/../../../sdks/FacebookSDK",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
