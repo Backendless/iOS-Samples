@@ -45,8 +45,19 @@ static NSString *VERSION_NUM = @"v1";
     [DebLog log:@"[BackendlessDemos.UserSosial] AppDelegate -> application:openURL: url.scheme = '%@'[%@]", url.scheme, sourceApplication];
     
     BackendlessUser *user = [backendless.userService handleOpenURL:url];
+    NSLog(@"USER (0): %@", user);
     if (user) {
         [(StartViewController *)self.window.rootViewController showSuccessView];
+#if 0
+        @try {
+            user.name = @"Slava";
+            user = [backendless.userService update:user];
+            NSLog(@"USER (1): %@", user);
+        }
+        @catch (Fault *fault) {
+            NSLog(@"%@", fault);
+        }
+#endif
     }
     return YES;
 }

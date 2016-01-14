@@ -56,12 +56,25 @@
     NSLog(@"StartViewController -> login: (START) sender.tag = %ld", (long)[sender tag]);
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
+    NSDictionary *fieldsMapping = @{
+                                    @"id" : @"facebookId",
+                                    @"name" : @"name",
+                                    @"birthday": @"birthday",
+                                    @"first_name": @"first_name",
+                                    @"last_name" : @"last_name",
+                                    @"gender": @"gender",
+                                    @"email": @"email"};
 
     switch ([sender tag]) {
         // Facebook
         case 1: {
             [backendless.userService
+#if 0
              easyLoginWithFacebookFieldsMapping:@{@"email":@"email", @"username":@"username", @"user_location":@"user_location"}
+#else
+             easyLoginWithFacebookFieldsMapping:fieldsMapping
+#endif
              permissions:@[@"email"]
              response:^(id response) {
                  //response - NSNumber with bool Yes
@@ -102,9 +115,15 @@
 
 -(void)back:(UIStoryboardSegue *)segue
 {
-    NSLog(@"[BackendlessDemos.UserSosial] StartViewController -> back: (START)");
+    NSLog(@"[BackendlessDemos.UserSosial] StartViewController -> back:");
     
-    [backendless.userService logout:nil];
+    @try {
+        [backendless.userService logout];
+        NSLog(@"LOGOUT");
+    }
+    @catch (Fault *fault) {
+        NSLog(@"%@", fault);
+    }
 }
 
 -(void)showSuccessView

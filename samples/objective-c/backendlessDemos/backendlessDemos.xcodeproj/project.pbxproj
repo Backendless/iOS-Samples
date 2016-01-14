@@ -5077,7 +5077,7 @@
 					"$(SRCROOT)/../../../lib/backendless",
 					"$(SRCROOT)/../../../lib/CommLibiOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.backendless.PushNotificationDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.backendless.PushTeamDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -5100,7 +5100,7 @@
 					"$(SRCROOT)/../../../lib/backendless",
 					"$(SRCROOT)/../../../lib/CommLibiOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.backendless.PushNotificationDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.backendless.PushTeamDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
