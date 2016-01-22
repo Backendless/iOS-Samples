@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 BACKENDLESS.COM. All rights reserved.
 //
 
+
+// Facebook "Back­e­n­d­l­e­s­s­U­s­e­r­L­ogin" App ID: 1077032488973601
+
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "Backendless.h"
@@ -18,7 +21,7 @@ static NSString *VERSION_NUM = @"v1";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    //[DebLog setIsActive:YES];
+    [DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     
@@ -39,28 +42,20 @@ static NSString *VERSION_NUM = @"v1";
     FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
     
     NSLog(@"openURL: result = %@, url = %@\n userId: %@, token = %@, expirationDate = %@, permissions = %@", @(result), url, [token valueForKey:@"userID"], [token valueForKey:@"tokenString"], [token valueForKey:@"expirationDate"], [token valueForKey:@"permissions"]);
-   
-    NSDictionary *fieldsMapping =
-#if 0
-    nil;
-#else
-  @{
+    
+    NSDictionary *fieldsMapping = @{
                                     @"id" : @"facebookId",
                                     @"name" : @"name",
                                     @"birthday": @"birthday",
-                                    @"first_name": @"first_name",
-                                    @"last_name" : @"last_name",
+                                    @"first_name": @"fb_first_name",
+                                    @"last_name" : @"fb_last_name",
                                     @"gender": @"gender",
-                                    @"email": @"email"};
-#endif
-
+                                    @"email": @"email"
+                                    };
 #if 0 // sync
     
     @try {
-        BackendlessUser *user = [backendless.userService
-                                 loginWithFacebookSDK:token
-                                 fieldsMapping:fieldsMapping
-                                 ];
+        BackendlessUser *user = [backendless.userService loginWithFacebookSDK:token fieldsMapping:fieldsMapping];
         NSLog(@"USER: %@", user);
 
         [backendless.userService logout];
@@ -79,11 +74,6 @@ static NSString *VERSION_NUM = @"v1";
      response:^(BackendlessUser *user) {
          NSLog(@"USER (0): %@", user);
          @try {
-#if 1
-             user.name = @"Slava";
-             user = [backendless.userService update:user];
-             NSLog(@"USER (1): %@", user);
-#endif
              [backendless.userService logout];
              NSLog(@"LOGOUT");
          }

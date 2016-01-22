@@ -48,16 +48,6 @@ static NSString *VERSION_NUM = @"v1";
     NSLog(@"USER (0): %@", user);
     if (user) {
         [(StartViewController *)self.window.rootViewController showSuccessView];
-#if 0
-        @try {
-            user.name = @"Slava";
-            user = [backendless.userService update:user];
-            NSLog(@"USER (1): %@", user);
-        }
-        @catch (Fault *fault) {
-            NSLog(@"%@", fault);
-        }
-#endif
     }
     return YES;
 }
@@ -65,9 +55,10 @@ static NSString *VERSION_NUM = @"v1";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    //[DebLog setIsActive:YES];
+    [DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
+    
     return YES;
 }
 							
