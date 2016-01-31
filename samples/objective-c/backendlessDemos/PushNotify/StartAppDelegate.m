@@ -36,6 +36,7 @@ static NSString *VERSION_NUM = @"v1";
     
     //[DebLog setIsActive:YES];
     
+    backendless.hostURL = HOST_URL;
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     
     [backendless.messaging registerForRemoteNotifications];
