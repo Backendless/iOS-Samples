@@ -13,8 +13,18 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "Backendless.h"
 
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+#if 0 // BEVideoChat
+static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
+static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
+#endif
+#if 0 // BKNDLSS11252
+static NSString *APP_ID = @"3A5F63C4-6EFC-992D-FF0D-B6CAA3456000";
+static NSString *SECRET_KEY = @"EC607A66-4531-8FD5-FFC4-BE02F0690500";
+#endif
+#if 1 // BKNDLSS11252d
+static NSString *APP_ID = @"1C5B19B3-953D-9548-FF59-95999A2FE800";
+static NSString *SECRET_KEY = @"CE0A96CD-0421-B988-FF80-E16A6A8F7200";
+#endif
 static NSString *VERSION_NUM = @"v1";
 
 #if 1

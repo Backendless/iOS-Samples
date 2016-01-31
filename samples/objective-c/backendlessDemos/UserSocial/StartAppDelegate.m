@@ -33,8 +33,32 @@
         * if the ID of your application is AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA, the value of the element will be
         * "backendlessAAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
         **********************************************************************************************************************/
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+#define _LOCALHOST_ 1
+#define _PRODUCTION_ 0
+
+#if _LOCALHOST_
+//static NSString *HOST_URL = @"http://10.0.1.103:9000";
+static NSString *HOST_URL = @"http://tc.themidnightcoders.com:7772";
+static NSString *APP_ID = @"2E29454F-FDF7-9DA1-FF49-9C5A4AB55900";
+static NSString *SECRET_KEY = @"A895770D-9D40-4171-FF7E-759A78EC6400";
+#endif
+
+#if _PRODUCTION_
+static NSString *HOST_URL = @"https://api.backendless.com";
+#if 0 // BEVideoChat
+static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
+static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
+#endif
+#if 0 // BKNDLSS11252a
+static NSString *APP_ID = @"CB95ACB9-E041-40DE-FFA0-B205F5897000";
+static NSString *SECRET_KEY = @"C82BA900-8090-8D1B-FF99-395DD6FF6B00";
+#endif
+#if 1 // BKNDLSS11252b
+static NSString *APP_ID = @"7A899B44-C380-CA43-FF20-18F535E56300";
+static NSString *SECRET_KEY = @"8632A223-EAA5-07F4-FF5B-C7A75C59A000";
+#endif
+#endif
+
 static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate
