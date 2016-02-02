@@ -91,18 +91,6 @@ static NSString *VERSION_NUM = @"v1";
      response:^(BackendlessUser *user) {
          NSLog(@"USER (0): %@", user);
          @try {
-#if 0
-             Task *task = [Task new];
-             task.title = [backendless randomString:12];
-             [user setProperty:@"task" object:task];
-             user = [backendless.userService update:user];
-             NSLog(@"USER (1): %@", user);
-#endif
-#if 1
-             [user setProperty:@"currentUser" object:backendless.userService.currentUser];
-             user = [backendless.userService update:user];
-             NSLog(@"USER (2): %@", user);
-#endif
              [backendless.userService logout];
              NSLog(@"LOGOUT");
          }
