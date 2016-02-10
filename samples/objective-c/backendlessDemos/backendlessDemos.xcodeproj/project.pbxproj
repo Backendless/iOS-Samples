@@ -770,6 +770,7 @@
 		F954C0421B05226800F509E0 /* ICallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICallback.h; sourceTree = "<group>"; };
 		F954C0471B05239500F509E0 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		F954C0481B05239500F509E0 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		F96502091C63B6CA001B8B28 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
 		F98508951BE78F440052716C /* GooglePlusLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlusLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98508981BE78F440052716C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F985089A1BE78F440052716C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1791,6 +1792,7 @@
 		F91B661716B1873B00668A06 = {
 			isa = PBXGroup;
 			children = (
+				F96502091C63B6CA001B8B28 /* README.md */,
 				F9356C711B6FA4BB009A01D9 /* getting-started.pdf */,
 				F90F2B5D1BB2DDBF004F8D33 /* Update Project with Backendless SDK for iOS9.pdf */,
 				F9C7DE891B74AA5600AFCD06 /* Default-568h@2x.png */,
