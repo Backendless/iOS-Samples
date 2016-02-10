@@ -3,61 +3,26 @@ iOS-Samples
 
 Contains sample projects demonstrating the usage of various Backendless API and functionality
 
-======= ADDITIONAL SWIFT PROJECT SETTINGS: =======
+Backendless iOS SDK (http://backendless.com)
+_____________________________________________
 
-    Set target's Build Settings -> "Swift Compiller - Code Generation" -> "Objective-C Bridging Header" option in:
-    $(PROJECT_DIR)/../lib/backendless/include/Backendless-Bridging-Header.h
+============== USING WITH COCOAPODS:
 
-======= SWIFT DEMO CODE: =========================
+To create a new project with CocoaPods, follow these simple steps:
 
-    class Weather : BackendlessEntity {
-    
-        var temperature = 24.7
-        var condition = "Very Nice"
-    
-        // description func
-        func description() -> NSString {
-            return "<Weather> " + condition + ":" + temperature.description
-        }
-    
-    }
-        
-    // create Backendless instance
-    var backendless = Backendless.sharedInstance();
+- Create a new project in Xcode as you would normally, then close this project.
+- Open a Terminal window, and $ cd into your project directory.
+- Create a Podfile. This can be done by running $ touch Podfile.
+- Open your Podfile using your favorite text editor (or Xcode), and add a text that looks like this:
 
-    // - sync method with class instance/fault as return
-    var result : AnyObject = backendless.persistenceService.save(Weather())
-    if (result is Weather) {
-        var obj : AnyObject = backendless.persistenceService.findById("Weather", sid:(result as Weather).objectId)
-    }
-    if (result is Fault) {
-        var fault : Fault = result as Fault
-        NSLog("FAULT")
-    }
+pod 'Backendless-ios-SDK'
 
-    // - sync method with fault as reference
-    var fault : Fault?
-    var weather : Weather = backendless.persistenceService.save(Weather(), error: &fault) as Weather
-    if (fault == nil) {
-        var obj : AnyObject = backendless.persistenceService.findById("Weather", sid: weather.objectId)
-    }
-    else {
-        NSLog("FAULT")
-    }
+- Save Podfile, return to Terminal window and run $ pod install. Once all of the pod data is downloaded, Xcode project workspace file will be created. This should be the file you use everyday to create your app.
+- Open .xcworkspace file to launch your project, and build it.
 
-    // - async method with block-based callbacks
-    backendless.persistenceService.save(
-        Weather(),
-        response: { (var result : AnyObject!) -> () in
-            var obj : AnyObject = self.backendless.persistenceService.findById("Weather", sid: (result as Weather).objectId)
-        },
-        error: { (var fault : Fault!) -> () in
-            NSLog("FAULT")
-        }
-    )
 
-    // - save object as dictionary of properties
-    var os = ["iOS":"Apple", "android":"Google"]
-    var fault : Fault?
-    var result = backendless.persistenceService.save("MobileOS", entity:os, error: &fault)
+======= USING WIHOUT COCOAPODS 
 
+To create a new project, follow the guide: 'getting-started'
+
+If you need to update your existing project to iOS 9.x, follow the guide: 'Update Project with Backendless SDK for iOS9'
