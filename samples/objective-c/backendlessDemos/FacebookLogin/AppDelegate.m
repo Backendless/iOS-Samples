@@ -37,7 +37,7 @@ static NSString *VERSION_NUM = @"v1";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [DebLog setIsActive:YES];
+    //[DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     backendless.hostURL = @"http://api.backendless.com";
@@ -60,6 +60,7 @@ static NSString *VERSION_NUM = @"v1";
     
     NSLog(@"openURL: result = %@, url = %@\n userId: %@, token = %@, expirationDate = %@, permissions = %@", @(result), url, [token valueForKey:@"userID"], [token valueForKey:@"tokenString"], [token valueForKey:@"expirationDate"], [token valueForKey:@"permissions"]);
     
+#if 1
     NSDictionary *fieldsMapping = @{
                                     @"id" : @"facebookId",
                                     @"name" : @"name",
@@ -69,12 +70,22 @@ static NSString *VERSION_NUM = @"v1";
                                     @"gender": @"gender",
                                     @"email": @"email"
                                     };
-#if 0 // sync
+#else
+    NSDictionary *fieldsMapping = @{
+                                    @"name" : @"name",
+                                    @"email": @"email"
+                                    };
+#endif
+
+#if 1 // sync
     
     @try {
         BackendlessUser *user = [backendless.userService loginWithFacebookSDK:token fieldsMapping:fieldsMapping];
-        NSLog(@"USER: %@", user);
-
+        NSLog(@"USER (0): %@", user);
+#if 0
+        token = [FBSDKAccessToken currentAccessToken];
+        NSLog(@"currentAccessToken: userId: %@, token = %@, expirationDate = %@, permissions = %@", [token valueForKey:@"userID"], [token valueForKey:@"tokenString"], [token valueForKey:@"expirationDate"], [token valueForKey:@"permissions"]);
+#endif
         [backendless.userService logout];
         NSLog(@"LOGOUT");
 }
@@ -89,7 +100,8 @@ static NSString *VERSION_NUM = @"v1";
      loginWithFacebookSDK:token
      fieldsMapping:fieldsMapping
      response:^(BackendlessUser *user) {
-         NSLog(@"USER (0): %@", user);
+         NSLog(@"USER (0): %@\ncurrentAccessToken = %@", user, [FBSDKAccessToken currentAccessToken]);
+         
          @try {
 #if 0
              Task *task = [Task new];
@@ -102,6 +114,14 @@ static NSString *VERSION_NUM = @"v1";
              [user setProperty:@"currentUser" object:backendless.userService.currentUser];
              user = [backendless.userService update:user];
              NSLog(@"USER (2): %@", user);
+#endif
+#if 0
+             Task *task = [Task new];
+             task.title = [backendless randomString:12];
+             Task *saved = [backendless.data save:task];
+             id result = [backendless.data.permissions grantForUser:user.objectId entity:saved operation:DATA_UPDATE];
+             NSLog(@"GRANT): %@", result);
+             
 #endif
              [backendless.userService logout];
              NSLog(@"LOGOUT");
