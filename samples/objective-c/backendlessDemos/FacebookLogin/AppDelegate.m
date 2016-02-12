@@ -49,6 +49,7 @@ static NSString *VERSION_NUM = @"v1";
     [FBSDKAppEvents activateApp];
 }
 
+
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     
     BOOL result = [[FBSDKApplicationDelegate sharedInstance] application:application
@@ -60,7 +61,7 @@ static NSString *VERSION_NUM = @"v1";
     
     NSLog(@"openURL: result = %@, url = %@\n userId: %@, token = %@, expirationDate = %@, permissions = %@", @(result), url, [token valueForKey:@"userID"], [token valueForKey:@"tokenString"], [token valueForKey:@"expirationDate"], [token valueForKey:@"permissions"]);
     
-#if 1
+#if 0
     NSDictionary *fieldsMapping = @{
                                     @"id" : @"facebookId",
                                     @"name" : @"name",
@@ -82,15 +83,11 @@ static NSString *VERSION_NUM = @"v1";
     @try {
         BackendlessUser *user = [backendless.userService loginWithFacebookSDK:token fieldsMapping:fieldsMapping];
         NSLog(@"USER (0): %@", user);
-#if 0
-        token = [FBSDKAccessToken currentAccessToken];
-        NSLog(@"currentAccessToken: userId: %@, token = %@, expirationDate = %@, permissions = %@", [token valueForKey:@"userID"], [token valueForKey:@"tokenString"], [token valueForKey:@"expirationDate"], [token valueForKey:@"permissions"]);
-#endif
         [backendless.userService logout];
         NSLog(@"LOGOUT");
 }
     @catch (Fault *fault) {
-        NSLog(@"openURL: %@", fault);
+        NSLog(@"ERROR: %@", fault);
     
     }
     
@@ -122,6 +119,10 @@ static NSString *VERSION_NUM = @"v1";
              id result = [backendless.data.permissions grantForUser:user.objectId entity:saved operation:DATA_UPDATE];
              NSLog(@"GRANT): %@", result);
              
+#endif
+#if 0
+             token = [FBSDKAccessToken currentAccessToken];
+             NSLog(@"currentAccessToken: userId: %@, token = %@, expirationDate = %@, permissions = %@", [token valueForKey:@"userID"], [token valueForKey:@"tokenString"], [token valueForKey:@"expirationDate"], [token valueForKey:@"permissions"]);
 #endif
              [backendless.userService logout];
              NSLog(@"LOGOUT");

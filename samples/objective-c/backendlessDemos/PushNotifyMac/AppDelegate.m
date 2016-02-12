@@ -41,7 +41,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     PublishOptions *p = [PublishOptions new];
     NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:PUBLISHER_ANONYMOUS, PUBLISHER_NAME_HEADER, nil];
     p.headers = headers;
-    [backendless.messagingService publish:MESSAGING_CHANNEL message:sender.stringValue publishOptions:p deliveryOptions:[DeliveryOptions deliveryOptionsForNotification:PUSHONLY] response:^(MessageStatus *status) {
+    [backendless.messagingService publish:MESSAGING_CHANNEL message:sender.stringValue publishOptions:p deliveryOptions:[DeliveryOptions deliveryOptionsForNotification:PUSH_ONLY] response:^(MessageStatus *status) {
     } error:^(Fault *error) {
         NSLog(@"%@", error.detail);
     }];

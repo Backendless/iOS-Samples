@@ -58,7 +58,7 @@ static NSString *VERSION_NUM = @"v1";
 - (void)windowControllerDidLoadNib:(NSWindowController *) aController
 {
 	[super windowControllerDidLoadNib:aController];
-    
+
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     
     @try {

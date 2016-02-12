@@ -396,6 +396,48 @@
 		F9C7E1F31B8CA37B00AFCD06 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7E1F01B8CA37B00AFCD06 /* FBSDKCoreKit.framework */; };
 		F9C7E1F41B8CA37B00AFCD06 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7E1F11B8CA37B00AFCD06 /* FBSDKLoginKit.framework */; };
 		F9C7E1F51B8CA37B00AFCD06 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7E1F21B8CA37B00AFCD06 /* FBSDKShareKit.framework */; };
+		F9D8A2651C6DDEE20084AB7D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2641C6DDEE20084AB7D /* Security.framework */; };
+		F9D8A2661C6DDF270084AB7D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2641C6DDEE20084AB7D /* Security.framework */; };
+		F9D8A2691C6DDF270084AB7D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2671C6DDF270084AB7D /* CFNetwork.framework */; };
+		F9D8A26A1C6DDF270084AB7D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2681C6DDF270084AB7D /* CoreData.framework */; };
+		F9D8A26C1C6DDFA70084AB7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26B1C6DDFA70084AB7D /* CoreLocation.framework */; };
+		F9D8A26E1C6DE0080084AB7D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26D1C6DE0080084AB7D /* AppKit.framework */; };
+		F9D8A2701C6DE89B0084AB7D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26F1C6DE89B0084AB7D /* IOKit.framework */; };
+		F9D8A2711C6E2A9B0084AB7D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26D1C6DE0080084AB7D /* AppKit.framework */; };
+		F9D8A2721C6E2A9B0084AB7D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2671C6DDF270084AB7D /* CFNetwork.framework */; };
+		F9D8A2731C6E2A9B0084AB7D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2681C6DDF270084AB7D /* CoreData.framework */; };
+		F9D8A2741C6E2A9B0084AB7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26B1C6DDFA70084AB7D /* CoreLocation.framework */; };
+		F9D8A2751C6E2A9B0084AB7D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26F1C6DE89B0084AB7D /* IOKit.framework */; };
+		F9D8A2761C6E2A9B0084AB7D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2641C6DDEE20084AB7D /* Security.framework */; };
+		F9D8A2771C6E2BC50084AB7D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26D1C6DE0080084AB7D /* AppKit.framework */; };
+		F9D8A2781C6E2BC50084AB7D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2671C6DDF270084AB7D /* CFNetwork.framework */; };
+		F9D8A2791C6E2BC50084AB7D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2681C6DDF270084AB7D /* CoreData.framework */; };
+		F9D8A27A1C6E2BC50084AB7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26B1C6DDFA70084AB7D /* CoreLocation.framework */; };
+		F9D8A27B1C6E2BC50084AB7D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26F1C6DE89B0084AB7D /* IOKit.framework */; };
+		F9D8A27C1C6E2EA00084AB7D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26D1C6DE0080084AB7D /* AppKit.framework */; };
+		F9D8A27D1C6E2EA00084AB7D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2671C6DDF270084AB7D /* CFNetwork.framework */; };
+		F9D8A27E1C6E2EA00084AB7D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2681C6DDF270084AB7D /* CoreData.framework */; };
+		F9D8A27F1C6E2EA00084AB7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26B1C6DDFA70084AB7D /* CoreLocation.framework */; };
+		F9D8A2801C6E2EA00084AB7D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26F1C6DE89B0084AB7D /* IOKit.framework */; };
+		F9D8A2811C6E2EA00084AB7D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2641C6DDEE20084AB7D /* Security.framework */; };
+		F9D8A2821C6E2F030084AB7D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26D1C6DE0080084AB7D /* AppKit.framework */; };
+		F9D8A2831C6E2F030084AB7D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2671C6DDF270084AB7D /* CFNetwork.framework */; };
+		F9D8A2841C6E2F030084AB7D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2681C6DDF270084AB7D /* CoreData.framework */; };
+		F9D8A2851C6E2F030084AB7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26B1C6DDFA70084AB7D /* CoreLocation.framework */; };
+		F9D8A2861C6E2F030084AB7D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26F1C6DE89B0084AB7D /* IOKit.framework */; };
+		F9D8A2871C6E2F030084AB7D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2641C6DDEE20084AB7D /* Security.framework */; };
+		F9D8A2881C6E2F7E0084AB7D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26D1C6DE0080084AB7D /* AppKit.framework */; };
+		F9D8A2891C6E2F7E0084AB7D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2671C6DDF270084AB7D /* CFNetwork.framework */; };
+		F9D8A28A1C6E2F7E0084AB7D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2681C6DDF270084AB7D /* CoreData.framework */; };
+		F9D8A28B1C6E2F7E0084AB7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26B1C6DDFA70084AB7D /* CoreLocation.framework */; };
+		F9D8A28C1C6E2F7E0084AB7D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26F1C6DE89B0084AB7D /* IOKit.framework */; };
+		F9D8A28D1C6E2F7E0084AB7D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2641C6DDEE20084AB7D /* Security.framework */; };
+		F9D8A28E1C6E2FDC0084AB7D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26D1C6DE0080084AB7D /* AppKit.framework */; };
+		F9D8A28F1C6E2FDC0084AB7D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2671C6DDF270084AB7D /* CFNetwork.framework */; };
+		F9D8A2901C6E2FDC0084AB7D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2681C6DDF270084AB7D /* CoreData.framework */; };
+		F9D8A2911C6E2FDC0084AB7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26B1C6DDFA70084AB7D /* CoreLocation.framework */; };
+		F9D8A2921C6E2FDC0084AB7D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A26F1C6DE89B0084AB7D /* IOKit.framework */; };
+		F9D8A2931C6E2FDC0084AB7D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D8A2641C6DDEE20084AB7D /* Security.framework */; };
 		F9E635CC1B0B2F97008B896C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E635CB1B0B2F97008B896C /* main.m */; };
 		F9E635CF1B0B2F97008B896C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E635CE1B0B2F97008B896C /* AppDelegate.m */; };
 		F9E635D21B0B2F97008B896C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E635D11B0B2F97008B896C /* ViewController.m */; };
@@ -981,6 +1023,12 @@
 		F9C7E1F01B8CA37B00AFCD06 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../sdks/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		F9C7E1F11B8CA37B00AFCD06 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../sdks/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		F9C7E1F21B8CA37B00AFCD06 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../sdks/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		F9D8A2641C6DDEE20084AB7D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		F9D8A2671C6DDF270084AB7D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		F9D8A2681C6DDF270084AB7D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		F9D8A26B1C6DDFA70084AB7D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		F9D8A26D1C6DE0080084AB7D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		F9D8A26F1C6DE89B0084AB7D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
 		F9E635981B0A307C008B896C /* LocationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTracker.h; sourceTree = "<group>"; };
 		F9E635C71B0B2F97008B896C /* GeoFence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoFence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E635CA1B0B2F97008B896C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1001,6 +1049,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D8A2821C6E2F030084AB7D /* AppKit.framework in Frameworks */,
+				F9D8A2831C6E2F030084AB7D /* CFNetwork.framework in Frameworks */,
+				F9D8A2841C6E2F030084AB7D /* CoreData.framework in Frameworks */,
+				F9D8A2851C6E2F030084AB7D /* CoreLocation.framework in Frameworks */,
+				F9D8A2861C6E2F030084AB7D /* IOKit.framework in Frameworks */,
+				F9D8A2871C6E2F030084AB7D /* Security.framework in Frameworks */,
 				F9C3F1A41BAC41B100421D56 /* libsqlite3.tbd in Frameworks */,
 				F9C3F1A51BAC41B600421D56 /* libz.tbd in Frameworks */,
 				9154F4921869CE0C00426C78 /* SystemConfiguration.framework in Frameworks */,
@@ -1013,6 +1067,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D8A2701C6DE89B0084AB7D /* IOKit.framework in Frameworks */,
+				F9D8A26E1C6DE0080084AB7D /* AppKit.framework in Frameworks */,
+				F9D8A26C1C6DDFA70084AB7D /* CoreLocation.framework in Frameworks */,
+				F9D8A2691C6DDF270084AB7D /* CFNetwork.framework in Frameworks */,
+				F9D8A26A1C6DDF270084AB7D /* CoreData.framework in Frameworks */,
+				F9D8A2661C6DDF270084AB7D /* Security.framework in Frameworks */,
 				F9C3F19F1BAC418F00421D56 /* libsqlite3.tbd in Frameworks */,
 				F9C3F1A01BAC419800421D56 /* libz.tbd in Frameworks */,
 				F9C3F1A11BAC41A100421D56 /* SystemConfiguration.framework in Frameworks */,
@@ -1025,6 +1085,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D8A2711C6E2A9B0084AB7D /* AppKit.framework in Frameworks */,
+				F9D8A2721C6E2A9B0084AB7D /* CFNetwork.framework in Frameworks */,
+				F9D8A2731C6E2A9B0084AB7D /* CoreData.framework in Frameworks */,
+				F9D8A2741C6E2A9B0084AB7D /* CoreLocation.framework in Frameworks */,
+				F9D8A2751C6E2A9B0084AB7D /* IOKit.framework in Frameworks */,
+				F9D8A2761C6E2A9B0084AB7D /* Security.framework in Frameworks */,
 				F9C3F19B1BAC417200421D56 /* libsqlite3.tbd in Frameworks */,
 				F9C3F19C1BAC417800421D56 /* libz.tbd in Frameworks */,
 				9154F4831869CD9500426C78 /* SystemConfiguration.framework in Frameworks */,
@@ -1037,6 +1103,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D8A2771C6E2BC50084AB7D /* AppKit.framework in Frameworks */,
+				F9D8A2781C6E2BC50084AB7D /* CFNetwork.framework in Frameworks */,
+				F9D8A2791C6E2BC50084AB7D /* CoreData.framework in Frameworks */,
+				F9D8A27A1C6E2BC50084AB7D /* CoreLocation.framework in Frameworks */,
+				F9D8A27B1C6E2BC50084AB7D /* IOKit.framework in Frameworks */,
+				F9D8A2651C6DDEE20084AB7D /* Security.framework in Frameworks */,
 				F9C3F19D1BAC417C00421D56 /* libsqlite3.tbd in Frameworks */,
 				F9C3F19E1BAC418300421D56 /* libz.tbd in Frameworks */,
 				9154F48C1869CDF800426C78 /* SystemConfiguration.framework in Frameworks */,
@@ -1049,6 +1121,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D8A27C1C6E2EA00084AB7D /* AppKit.framework in Frameworks */,
+				F9D8A27D1C6E2EA00084AB7D /* CFNetwork.framework in Frameworks */,
+				F9D8A27E1C6E2EA00084AB7D /* CoreData.framework in Frameworks */,
+				F9D8A27F1C6E2EA00084AB7D /* CoreLocation.framework in Frameworks */,
+				F9D8A2801C6E2EA00084AB7D /* IOKit.framework in Frameworks */,
+				F9D8A2811C6E2EA00084AB7D /* Security.framework in Frameworks */,
 				F9C3F1A21BAC41A800421D56 /* libsqlite3.tbd in Frameworks */,
 				F9C3F1A31BAC41AC00421D56 /* libz.tbd in Frameworks */,
 				9154F4891869CDED00426C78 /* SystemConfiguration.framework in Frameworks */,
@@ -1061,6 +1139,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D8A2881C6E2F7E0084AB7D /* AppKit.framework in Frameworks */,
+				F9D8A2891C6E2F7E0084AB7D /* CFNetwork.framework in Frameworks */,
+				F9D8A28A1C6E2F7E0084AB7D /* CoreData.framework in Frameworks */,
+				F9D8A28B1C6E2F7E0084AB7D /* CoreLocation.framework in Frameworks */,
+				F9D8A28C1C6E2F7E0084AB7D /* IOKit.framework in Frameworks */,
+				F9D8A28D1C6E2F7E0084AB7D /* Security.framework in Frameworks */,
 				F9C3F1A61BAC41C300421D56 /* libsqlite3.tbd in Frameworks */,
 				F9C3F1A71BAC41C600421D56 /* libz.tbd in Frameworks */,
 				9154F48E1869CE0200426C78 /* SystemConfiguration.framework in Frameworks */,
@@ -1073,6 +1157,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D8A28E1C6E2FDC0084AB7D /* AppKit.framework in Frameworks */,
+				F9D8A28F1C6E2FDC0084AB7D /* CFNetwork.framework in Frameworks */,
+				F9D8A2901C6E2FDC0084AB7D /* CoreData.framework in Frameworks */,
+				F9D8A2911C6E2FDC0084AB7D /* CoreLocation.framework in Frameworks */,
+				F9D8A2921C6E2FDC0084AB7D /* IOKit.framework in Frameworks */,
+				F9D8A2931C6E2FDC0084AB7D /* Security.framework in Frameworks */,
 				F9C3F1A81BAC41CC00421D56 /* libsqlite3.tbd in Frameworks */,
 				F9C3F1A91BAC41CF00421D56 /* libz.tbd in Frameworks */,
 				9154F4901869CE0800426C78 /* SystemConfiguration.framework in Frameworks */,
@@ -1862,6 +1952,12 @@
 		F91B662516B1873B00668A06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9D8A26F1C6DE89B0084AB7D /* IOKit.framework */,
+				F9D8A26D1C6DE0080084AB7D /* AppKit.framework */,
+				F9D8A26B1C6DDFA70084AB7D /* CoreLocation.framework */,
+				F9D8A2671C6DDF270084AB7D /* CFNetwork.framework */,
+				F9D8A2681C6DDF270084AB7D /* CoreData.framework */,
+				F9D8A2641C6DDEE20084AB7D /* Security.framework */,
 				F9C3F1831BAC40C000421D56 /* libsqlite3.tbd */,
 				F9C3F1841BAC40C000421D56 /* libz.tbd */,
 				F9C7E1F01B8CA37B00AFCD06 /* FBSDKCoreKit.framework */,
