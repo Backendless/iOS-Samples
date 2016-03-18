@@ -111,7 +111,7 @@
             
 #if 1 // image file
             NSString *fileName = [NSString stringWithFormat:@"img/%0.0f.jpeg",[[NSDate date] timeIntervalSince1970] ];
-#if 1 // use saveFile method
+#if 0 // use saveFile method
             BackendlessFile *uploadFile = [backendless.fileService saveFile:fileName content:UIImageJPEGRepresentation(mainImage, 0.1)];
 #else // use upload method
             BackendlessFile *uploadFile = [backendless.fileService upload:fileName content:UIImageJPEGRepresentation(mainImage, 0.1)];

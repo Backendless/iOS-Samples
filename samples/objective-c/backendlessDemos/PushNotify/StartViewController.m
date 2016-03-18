@@ -22,7 +22,7 @@
 #import "StartViewController.h"
 #import "Backendless.h"
 
-static NSString *MESSAGING_CHANNEL = @"testing";
+static NSString *MESSAGING_CHANNEL = @"default";
 static NSString *PUBLISHER_ANONYMOUS = @"Anonymous";
 static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
@@ -41,12 +41,15 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     
     @try {
         [backendless initAppFault];
-
+#if __OLD__
         NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
+        NSLog(@"viewDidLoad -> registerDevice: %@", info);
+#else
+        backendless.messaging.notificationTypes = UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+        [backendless.messaging startupRegisterDeviceWithChannels:@[MESSAGING_CHANNEL]];
+#endif
         backendless.messagingService.pushReceiver = self;
 
-        NSLog(@"viewDidLoad -> registerDevice: %@", info);
-        
         [self initNetActivity];
 
 #if 0 // try to publish text with lenght more then max = 2K
@@ -90,19 +93,24 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [_netActivity stopAnimating];
 }
 
+#if 1
 -(void)publish {
     
     [(UILabel *)[self.view viewWithTag:100] setText:@""];
     [self startNetIndicator];
     
     PublishOptions *options = [PublishOptions new];
-    options.headers = @{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"};
+    options.headers =  [NSMutableDictionary dictionaryWithDictionary:@{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"}];
+    
+    DeliveryOptions *delivery = [DeliveryOptions new];
+    [delivery pushPolicy:PUSH_ONLY];
+    [delivery pushBroadcast:FOR_ANDROID|FOR_IOS];
     
     [backendless.messagingService
      publish:MESSAGING_CHANNEL
      message:_textField.text
      publishOptions:options
-     deliveryOptions:[DeliveryOptions deliveryOptionsForNotification:PUSH_ONLY]
+     deliveryOptions:delivery
      response:^(MessageStatus *res) {
          NSLog(@"showMessageStatus: %@", res);
          [self stopNetIndicator];
@@ -116,7 +124,39 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
          NSLog(@"sendMessage: fault = %@", fault);
      }];
 }
+#else
 
+-(void)publish {
+    
+    [(UILabel *)[self.view viewWithTag:100] setText:@""];
+    [self startNetIndicator];
+    
+    DeliveryOptions *delivery = [DeliveryOptions new];
+    [delivery pushPolicy:PUSH_ALSO];
+    
+    PublishOptions *options = [PublishOptions new];
+    [options addHeader:PUBLISHER_NAME_HEADER value:PUBLISHER_ANONYMOUS];
+    [options addHeader:@"ios-sound" value:@"mySound.aif"];
+    
+    [backendless.messagingService
+     publish:MESSAGING_CHANNEL
+     message:_textField.text
+     publishOptions:options
+     deliveryOptions:delivery
+     response:^(MessageStatus *res) {
+         NSLog(@"showMessageStatus: %@", res);
+         [self stopNetIndicator];
+         self.textField.text = @"";
+         [(UILabel *)[self.view viewWithTag:100] setText:[NSString stringWithFormat:@"messageId: %@\n\nstatus:%@\n\nerrorMessage:'%@'", res.messageId, res.status, res.errorMessage]];
+     }
+     error:^(Fault *fault) {
+         [self stopNetIndicator];
+         self.textField.text = @"";
+         [self showAlert:fault.message];
+         NSLog(@"sendMessage: fault = %@", fault);
+     }];
+}
+#endif
 
 #pragma mark -
 #pragma mark IBEPushReceiver Methods

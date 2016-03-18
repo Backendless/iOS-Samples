@@ -24,8 +24,16 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UITextFieldDelegate {
     
-    let APP_ID = ""
-    let SECRET_KEY = ""
+    
+    //
+    let APP_ID = "9F18023A-BBAF-7F2E-FFAB-0955B97FE100"
+    let SECRET_KEY = "67577018-6B77-9167-FFAF-538D8E417500"
+    //
+    /*
+    let APP_ID = "7B92560B-91F0-E94D-FFEB-77451B0F9700"
+    let SECRET_KEY = "B9D27BA8-3964-F3AE-FF26-E71FFF487300"
+    */
+    
     let VERSION_NUM = "v1"
     
     var backendless = Backendless.sharedInstance()

@@ -24,7 +24,6 @@
 
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
-
 static NSString *APP_ID = @"";
 static NSString *SECRET_KEY = @"";
 static NSString *VERSION_NUM = @"v1";
@@ -107,7 +106,7 @@ static NSString *VERSION_NUM = @"v1";
     user.email = _emailReg.stringValue;
     user.password = _passReg.stringValue;
     user.name = _loginReg.stringValue;
-    [user setProperty:_loginReg.stringValue object:@"login"];
+    [user setProperty:@"username" object:_loginReg.stringValue];
     [backendless.userService registering:user response:^(BackendlessUser *_user) {
         NSAlert *aler = [NSAlert alertWithMessageText:@"User Service" defaultButton:@"Done" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You are now successfully register."];
         [aler runModal];

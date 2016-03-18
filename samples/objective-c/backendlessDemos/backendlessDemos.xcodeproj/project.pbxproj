@@ -668,6 +668,9 @@
 		D37F5EE619CB0AFC0077F0C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D37F5EE719CB0AFC0077F0C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D37F5EE919CB0AFC0077F0C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F90A1D861C75091A0011C82B /* BackendlessBeacon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackendlessBeacon.h; sourceTree = "<group>"; };
+		F90A1D871C75091A0011C82B /* IPresenceListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPresenceListener.h; sourceTree = "<group>"; };
+		F90A1D881C75091A0011C82B /* Presence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presence.h; sourceTree = "<group>"; };
 		F90F2B5D1BB2DDBF004F8D33 /* Update Project with Backendless SDK for iOS9.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Update Project with Backendless SDK for iOS9.pdf"; path = "../../../Update Project with Backendless SDK for iOS9.pdf"; sourceTree = "<group>"; };
 		F91B662616B1873B00668A06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F91B662816B1873B00668A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -984,7 +987,6 @@
 		F9C3F1FA1BAC427F00421D56 /* samplefmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = samplefmt.h; sourceTree = "<group>"; };
 		F9C3F1FB1BAC427F00421D56 /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
 		F9C3F1FC1BAC427F00421D56 /* stereo3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stereo3d.h; sourceTree = "<group>"; };
-		F9C3F1FD1BAC427F00421D56 /* time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time.h; sourceTree = "<group>"; };
 		F9C3F1FE1BAC427F00421D56 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		F9C3F1FF1BAC427F00421D56 /* xtea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xtea.h; sourceTree = "<group>"; };
 		F9C3F2011BAC427F00421D56 /* swscale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swscale.h; sourceTree = "<group>"; };
@@ -1727,6 +1729,9 @@
 		D309462D1AB9E78000A75DDC /* include */ = {
 			isa = PBXGroup;
 			children = (
+				F90A1D861C75091A0011C82B /* BackendlessBeacon.h */,
+				F90A1D871C75091A0011C82B /* IPresenceListener.h */,
+				F90A1D881C75091A0011C82B /* Presence.h */,
 				F9C7DE9D1B7CDB0F00AFCD06 /* Backendless-With-Media-Bridging-Header.h */,
 				F9C7DE9E1B7CDB0F00AFCD06 /* BackendlessSimpleQuery.h */,
 				F9C7DE9F1B7CDB0F00AFCD06 /* BEFileInfo.h */,
@@ -2570,7 +2575,6 @@
 				F9C3F1FA1BAC427F00421D56 /* samplefmt.h */,
 				F9C3F1FB1BAC427F00421D56 /* sha.h */,
 				F9C3F1FC1BAC427F00421D56 /* stereo3d.h */,
-				F9C3F1FD1BAC427F00421D56 /* time.h */,
 				F9C3F1FE1BAC427F00421D56 /* version.h */,
 				F9C3F1FF1BAC427F00421D56 /* xtea.h */,
 			);
@@ -5693,7 +5697,7 @@
 					"$(SRCROOT)/../../../lib/CommLibiOS",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.themidnightcoders.FacebookLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -5737,7 +5741,7 @@
 					"$(SRCROOT)/../../../lib/CommLibiOS",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.themidnightcoders.FacebookLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

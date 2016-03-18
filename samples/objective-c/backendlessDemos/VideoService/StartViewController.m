@@ -101,8 +101,12 @@
 #else // "continued" record if it is not live
     MediaPublishOptions *options = _switchView.on?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions appendStream:self.preview];
 #endif
+#if 1
     options.orientation = AVCaptureVideoOrientationPortrait;
     options.resolution = RESOLUTION_VGA;
+#else
+    options.content = ONLY_AUDIO;
+#endif
     _publisher =[backendless.mediaService publishStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     NSLog(@"publishControl: -> published stream: '%@/%@'", _publisher.streamPath, _publisher.streamName);

@@ -154,6 +154,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
                                           selResponseHandler:@selector(responseHandler:) selErrorHandler:@selector(errorHandler:)];
             subscription = [backendless.messagingService
                             subscribe:MESSAGING_CHANNEL subscriptionResponder:responder subscriptionOptions:subscriptionOptions];
+            [subscription setPollingInterval:1000];
             
             NSLog(@"ChatViewController -> subscribe: SUBSCRIPTION: %@", subscription);
         }

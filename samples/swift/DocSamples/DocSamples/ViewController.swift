@@ -37,11 +37,24 @@ class ViewController: UIViewController {
         
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
         
+        /*
+        let deliveryOptions = DeliveryOptions()
+        deliveryOptions.pushBroadcast(FOR_ANDROID.rawValue|FOR_IOS.rawValue)
+        print("deliveryOptions (1) -> \(deliveryOptions)")
+        deliveryOptions.pushBroadcast(FOR_ALL.rawValue)
+        print("deliveryOptions (2) -> \(deliveryOptions)")
+        print("deliveryOptions props -> \(Types.propertyDictionary(deliveryOptions))")
+        
+        let subscriptionOptions = SubscriptionOptions()
+        subscriptionOptions.deliveryMethod(DELIVERY_POLL)
+        print("subscriptionOptions = \(subscriptionOptions)")
+        */
+        
         // -------------- PersistenceService -------------------------------
         //testPersistenceService()
         
         // --------------- UserService -------------------------------------
-        userLoginSync()
+        //userLoginSync()
         //validUserTokenSync()
         //validUserTokenAsync()
         

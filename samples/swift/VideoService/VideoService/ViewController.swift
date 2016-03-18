@@ -39,10 +39,14 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
     var _publisher: MediaPublisher?
     var _player: MediaPlayer?
     
-    let VIDEO_TUBE = "videoTube"
+    let VIDEO_TUBE = "Default"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //registerUser()
+        //userLogin()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -50,6 +54,42 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func registerUser() {
+        
+        Types.tryblock({ () -> Void in
+            
+            let user = BackendlessUser()
+            user.email = "bob@foo.com"
+            user.password = "bob"
+            
+            let registeredUser = self.backendless.userService.registering(user)
+            print("User has been registered (SYNC): \(registeredUser)")
+            },
+            
+            catchblock: { (exception) -> Void in
+                print("Server reported an error: \(exception as! Fault)")
+            }
+        )
+    }
+
+    func userLogin() {
+        
+        // - sync methods with fault as exception (full "try/catch/finally" version)
+        Types.tryblock({ () -> Void in
+            
+            // - user login
+            let user = self.backendless.userService.login("bob@foo.com", password:"bob")
+            print("LOGINED USER: \(user)")
+            },
+            
+            catchblock: { (exception) -> Void in
+                print("Server reported an error: \(exception as! Fault)")
+            }
+        )
+    }
+
     
     // IBActions
     

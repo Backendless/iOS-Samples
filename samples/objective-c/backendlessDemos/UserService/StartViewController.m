@@ -51,11 +51,11 @@
         NSLog(@"viewDidLoad -> currentUser: %@", user);
         
         if (user) {
-#if 1
+#if 0
             [user setProperty:@"second" object:@"5"];
             NSLog(@"viewDidLoad -> currentUser (UPDATED): %@", backendless.userService.currentUser);
 #endif
-#if 1
+#if 0
             user = [backendless.data findByClassId:BackendlessUser.class sid:backendless.userService.currentUser.objectId];
             NSLog(@"viewDidLoad -> findByClassId: %@", user);
 #endif
@@ -170,14 +170,19 @@
 
 #if _ASYNC_REQUEST // async
     
+#if 0
+    [backendless.userService logout:NULL error:NULL];
+#else
+    
     [backendless.userService logout:
-        ^(BackendlessUser *user) {
-            NSLog(@"StartViewController -> userLogout: (ASYNC LOGOUT) %@ ", user);
+        ^(id result) {
+            NSLog(@"StartViewController -> userLogout: (ASYNC LOGOUT) %@ ", result);
         }
         error:^(Fault *fault) {
             NSLog(@"StartViewController -> userLogout: <ASYNC FAULT> %@, currentUser = %@", fault, backendless.userService.currentUser);
             [self showAlert:fault.detail];
         }];
+#endif
     
 #else // sync
     

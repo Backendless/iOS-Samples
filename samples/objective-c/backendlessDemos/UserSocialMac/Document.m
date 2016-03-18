@@ -40,6 +40,9 @@ static NSString *VERSION_NUM = @"v1";
     [_lable setStringValue:@"You are now successfully login."];
     [_signin setHidden:YES];
     [_signout setHidden:NO];
+    
+    
+    NSColor *color;
 }
 
 - (id)init

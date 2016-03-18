@@ -27,11 +27,23 @@
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
     loginButton.center = self.view.center;
     [self.view addSubview:loginButton];
+    
+    [self checkValidUserToken];
 }
 
 -(void)showAlert:(NSString *)message {
     UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error:" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     [av show];
+}
+
+-(void)checkValidUserToken {
+    
+    NSLog(@"%@: Is UserToken Valid? %@", [NSDate date], [backendless.userService isValidUserToken].boolValue?@"YES":@"NO");
+    
+    dispatch_time_t interval = dispatch_time(DISPATCH_TIME_NOW, 1ull*NSEC_PER_SEC*60);
+    dispatch_after(interval, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self checkValidUserToken];
+    });
 }
 
 @end

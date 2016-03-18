@@ -57,25 +57,12 @@
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
-    NSDictionary *fieldsMapping = @{
-                                    @"id" : @"facebookId",
-                                    @"name" : @"name",
-                                    @"birthday": @"birthday",
-                                    @"first_name": @"first_name",
-                                    @"last_name" : @"last_name",
-                                    @"gender": @"gender",
-                                    @"email": @"email"};
-
     switch ([sender tag]) {
         // Facebook
         case 1: {
             [backendless.userService
-#if 0
-             easyLoginWithFacebookFieldsMapping:@{@"email":@"email", @"username":@"username", @"user_location":@"user_location"}
-#else
-             easyLoginWithFacebookFieldsMapping:fieldsMapping
-#endif
-             permissions:@[@"email"]
+             easyLoginWithFacebookFieldsMapping:@{@"email":@"email", @"first_name":@"name", @"favorite_teams":@"favorite_teams"}
+             permissions:@[@"email", @"user_likes"]
              response:^(id response) {
                  //response - NSNumber with bool Yes
                  NSLog(@"StartViewController -> login: (Facebook) result = %@", response);

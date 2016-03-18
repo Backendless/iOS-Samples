@@ -29,6 +29,7 @@ static NSString *APP_ID = @"";
 static NSString *SECRET_KEY = @"";
 static NSString *VERSION_NUM = @"v1";
 
+#define __OLD__ 0
 
 @implementation StartAppDelegate
 
@@ -39,7 +40,9 @@ static NSString *VERSION_NUM = @"v1";
     //backendless.hostURL = HOST_URL;
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     
+#if __OLD__
     [backendless.messaging registerForRemoteNotifications];
+#endif
     
     return YES;
 }

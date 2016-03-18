@@ -23,6 +23,8 @@
 #import "HashMap.h"
 #import "DeviceRegistration.h"
 
+#define DEVICE_TOKEN_AS_STRING 0
+
 #define MESSAGE_TAG @"message"
 
 #define IOS_ALERT_TAG @"ios-alert"
@@ -45,7 +47,7 @@
 #define WP_TILE_BACK_CONTENT @"wp-backContent"
 #define WP_RAW_DATA @"wp-raw"
 
-@class MessageStatus, PublishOptions, DeliveryOptions, SubscriptionOptions, BESubscription, BodyParts, Fault;
+@class MessageStatus, PublishOptions, DeliveryOptions, SubscriptionOptions, BESubscription, BodyParts, Message, Fault;
 @protocol IResponder;
 
 @protocol IBEPushReceiver <NSObject>
@@ -60,17 +62,23 @@
 @property (nonatomic) uint pollingFrequencyMs;
 @property (strong, nonatomic, readonly) HashMap *subscriptions;
 @property (assign, nonatomic) id <IBEPushReceiver> pushReceiver;
+@property NSUInteger notificationTypes;
 
 // sync methods with fault return (as exception)
--(NSString *)registerDeviceWithTokenData:(NSData *)deviceToken;
+#if DEVICE_TOKEN_AS_STRING
+-(NSString *)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration token:(NSString *)deviceToken;
 -(NSString *)registerDeviceToken:(NSString *)deviceToken;
+-(NSString *)registerDeviceWithTokenData:(NSData *)deviceToken;
+#else
+-(NSString *)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration token:(NSData *)deviceToken;
+-(NSString *)registerDeviceToken:(NSData *)deviceToken;
+#endif
 -(NSString *)registerDeviceExpiration:(NSDate *)expiration;
--(NSString *)registerDevice:(NSArray *)channels;
--(NSString *)registerDevice:(NSArray *)channels expiration:(NSDate *)expiration;
--(NSString *)registerDevice:(NSArray *)channels expiration:(NSDate *)expiration token:(NSString *)deviceToken;
+-(NSString *)registerDevice:(NSArray<NSString*> *)channels;
+-(NSString *)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration;
 -(NSString *)registerDevice;
--(DeviceRegistration *)getRegistrations;
--(DeviceRegistration *)getRegistrations:(NSString *)deviceId;
+-(DeviceRegistration *)getRegistration;
+-(DeviceRegistration *)getRegistration:(NSString *)deviceId;
 -(id)unregisterDevice;
 -(id)unregisterDevice:(NSString *)deviceId;
 -(MessageStatus *)publish:(NSString *)channelName message:(id)message;
@@ -81,26 +89,31 @@
 -(BESubscription *)subscribe:(NSString *)channelName;
 -(BESubscription *)subscribe:(NSString *)channelName subscriptionResponder:(id <IResponder>)subscriptionResponder;
 -(BESubscription *)subscribe:(NSString *)channelName subscriptionResponder:(id <IResponder>)subscriptionResponder subscriptionOptions:(SubscriptionOptions *)subscriptionOptions;
--(BESubscription *)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock;
--(BESubscription *)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock subscriptionOptions:(SubscriptionOptions *)subscriptionOptions;
+-(BESubscription *)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray<Message*> *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock;
+-(BESubscription *)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray<Message*> *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock subscriptionOptions:(SubscriptionOptions *)subscriptionOptions;
 -(BESubscription *)subscribe:(BESubscription *)subscription subscriptionOptions:(SubscriptionOptions *)subscriptionOptions;
 -(NSArray *)pollMessages:(NSString *)channelName subscriptionId:(NSString *)subscriptionId;
 //
--(id)sendTextEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray *)recipients;
--(id)sendHTMLEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray *)recipients;
--(id)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray *)recipients;
--(id)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray *)recipients attachment:(NSArray *)attachments;
+-(id)sendTextEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray<NSString*> *)recipients;
+-(id)sendHTMLEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray<NSString*> *)recipients;
+-(id)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray<NSString*> *)recipients;
+-(id)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray<NSString*> *)recipients attachment:(NSArray *)attachments;
 
 // sync methods with fault option
--(NSString *)registerDeviceWithTokenData:(NSData *)deviceToken error:(Fault **)fault;
+#if DEVICE_TOKEN_AS_STRING
+-(NSString *)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration token:(NSString *)deviceToken error:(Fault **)fault;
 -(NSString *)registerDeviceToken:(NSString *)deviceToken error:(Fault **)fault;
+-(NSString *)registerDeviceWithTokenData:(NSData *)deviceToken error:(Fault **)fault;
+#else
+-(NSString *)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration token:(NSData *)deviceToken error:(Fault **)fault;
+-(NSString *)registerDeviceToken:(NSData *)deviceToken error:(Fault **)fault;
+#endif
 -(NSString *)registerDeviceExpiration:(NSDate *)expiration error:(Fault **)fault;
--(NSString *)registerDevice:(NSArray *)channels error:(Fault **)fault;
--(NSString *)registerDevice:(NSArray *)channels expiration:(NSDate *)expiration error:(Fault **)fault;
--(NSString *)registerDevice:(NSArray *)channels expiration:(NSDate *)expiration token:(NSString *)deviceToken error:(Fault **)fault;
+-(NSString *)registerDevice:(NSArray<NSString*> *)channels error:(Fault **)fault;
+-(NSString *)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration error:(Fault **)fault;
 -(NSString *)registerDeviceError:(Fault **)fault;
--(DeviceRegistration *)getRegistrationsError:(Fault **)fault;
--(DeviceRegistration *)getRegistrations:(NSString *)deviceId error:(Fault **)fault;
+-(DeviceRegistration *)getRegistrationError:(Fault **)fault;
+-(DeviceRegistration *)getRegistration:(NSString *)deviceId error:(Fault **)fault;
 -(BOOL)unregisterDeviceError:(Fault **)fault;
 -(BOOL)unregisterDevice:(NSString *)deviceId error:(Fault **)fault;
 -(MessageStatus *)publish:(NSString *)channelName message:(id)message error:(Fault **)fault;
@@ -111,26 +124,31 @@
 -(BESubscription *)subscribe:(NSString *)channelName error:(Fault **)fault;
 -(BESubscription *)subscribe:(NSString *)channelName subscriptionResponder:(id <IResponder>)subscriptionResponder error:(Fault **)fault;
 -(BESubscription *)subscribe:(NSString *)channelName subscriptionResponder:(id <IResponder>)subscriptionResponder subscriptionOptions:(SubscriptionOptions *)subscriptionOptions error:(Fault **)fault;
--(BESubscription *)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock error:(Fault **)fault;
--(BESubscription *)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock subscriptionOptions:(SubscriptionOptions *)subscriptionOptions error:(Fault **)fault;
+-(BESubscription *)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray<Message*> *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock error:(Fault **)fault;
+-(BESubscription *)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray<Message*> *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock subscriptionOptions:(SubscriptionOptions *)subscriptionOptions error:(Fault **)fault;
 -(BESubscription *)subscribe:(BESubscription *)subscription subscriptionOptions:(SubscriptionOptions *)subscriptionOptions error:(Fault **)fault;
 -(NSArray *)pollMessages:(NSString *)channelName subscriptionId:(NSString *)subscriptionId error:(Fault **)fault;
 //
--(BOOL)sendTextEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray *)recipients error:(Fault **)fault;
--(BOOL)sendHTMLEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray *)recipients error:(Fault **)fault;
--(BOOL)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray *)recipients error:(Fault **)fault;
--(BOOL)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray *)recipients attachment:(NSArray *)attachments error:(Fault **)fault;
+-(BOOL)sendTextEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray<NSString*> *)recipients error:(Fault **)fault;
+-(BOOL)sendHTMLEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray<NSString*> *)recipients error:(Fault **)fault;
+-(BOOL)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray<NSString*> *)recipients error:(Fault **)fault;
+-(BOOL)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray<NSString*> *)recipients attachment:(NSArray *)attachments error:(Fault **)fault;
 
 // async methods with responder
--(void)registerDevice:(NSArray *)channels expiration:(NSDate *)expiration token:(NSString *)deviceToken responder:(id <IResponder>)responder;
+#if DEVICE_TOKEN_AS_STRING
+-(void)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration token:(NSString *)deviceToken responder:(id <IResponder>)responder;
 -(void)registerDeviceToken:(NSString *)deviceToken responder:(id <IResponder>)responder;
 -(void)registerDeviceWithTokenData:(NSData *)deviceToken responder:(id <IResponder>)responder;
+#else
+-(void)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration token:(NSData *)deviceToken responder:(id <IResponder>)responder;
+-(void)registerDeviceToken:(NSData *)deviceToken responder:(id <IResponder>)responder;
+#endif
 -(void)registerDeviceExpiration:(NSDate *)expiration responder:(id <IResponder>)responder;
--(void)registerDevice:(NSArray *)channels responder:(id <IResponder>)responder;
--(void)registerDevice:(NSArray *)channels expiration:(NSDate *)expiration responder:(id <IResponder>)responder;
+-(void)registerDevice:(NSArray<NSString*> *)channels responder:(id <IResponder>)responder;
+-(void)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration responder:(id <IResponder>)responder;
 -(void)registerDeviceAsync:(id <IResponder>)responder;
--(void)getRegistrationsAsync:(id<IResponder>)responder;
--(void)getRegistrationsAsync:(NSString *)deviceId responder:(id<IResponder>)responder;
+-(void)getRegistrationAsync:(id<IResponder>)responder;
+-(void)getRegistrationAsync:(NSString *)deviceId responder:(id<IResponder>)responder;
 -(void)unregisterDeviceAsync:(id<IResponder>)responder;
 -(void)unregisterDeviceAsync:(NSString *)deviceId responder:(id<IResponder>)responder;
 -(void)publish:(NSString *)channelName message:(id)message responder:(id <IResponder>)responder;
@@ -144,21 +162,26 @@
 -(void)subscribe:(BESubscription *)subscription subscriptionOptions:(SubscriptionOptions *)subscriptionOptions responder:(id <IResponder>)responder;
 -(void)pollMessages:(NSString *)channelName subscriptionId:(NSString *)subscriptionId responder:(id <IResponder>)responder;
 //
--(void)sendTextEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray *)recipients responder:(id <IResponder>)responder;
--(void)sendHTMLEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray *)recipients responder:(id <IResponder>)responder;
--(void)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray *)recipients responder:(id <IResponder>)responder;
--(void)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray *)recipients attachment:(NSArray *)attachments responder:(id <IResponder>)responder;
+-(void)sendTextEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray<NSString*> *)recipients responder:(id <IResponder>)responder;
+-(void)sendHTMLEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray<NSString*> *)recipients responder:(id <IResponder>)responder;
+-(void)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray<NSString*> *)recipients responder:(id <IResponder>)responder;
+-(void)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray<NSString*> *)recipients attachment:(NSArray *)attachments responder:(id <IResponder>)responder;
 
 // async methods with block-based callbacks
--(void)registerDevice:(NSArray *)channels expiration:(NSDate *)expiration token:(NSString *)deviceToken response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)registerDeviceWithTokenData:(NSData *)deviceToken response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
+#if DEVICE_TOKEN_AS_STRING
+-(void)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration token:(NSString *)deviceToken response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)registerDeviceToken:(NSString *)deviceToken response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)registerDeviceWithTokenData:(NSData *)deviceToken response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
+#else
+-(void)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration token:(NSData *)deviceToken response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)registerDeviceToken:(NSData *)deviceToken response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
+#endif
 -(void)registerDeviceExpiration:(NSDate *)expiration response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)registerDevice:(NSArray *)channels response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)registerDevice:(NSArray *)channels expiration:(NSDate *)expiration response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)registerDevice:(NSArray<NSString*> *)channels response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)registerDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration response:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)registerDeviceAsync:(void(^)(NSString *))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)getRegistrationsAsync:(void(^)(DeviceRegistration *))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)getRegistrationsAsync:(NSString *)deviceId response:(void(^)(DeviceRegistration *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)getRegistrationAsync:(void(^)(DeviceRegistration *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)getRegistrationAsync:(NSString *)deviceId response:(void(^)(DeviceRegistration *))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)unregisterDeviceAsync:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)unregisterDeviceAsync:(NSString *)deviceId response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)publish:(NSString *)channelName message:(id)message response:(void(^)(MessageStatus *))responseBlock error:(void(^)(Fault *))errorBlock;
@@ -167,15 +190,15 @@
 -(void)publish:(NSString *)channelName message:(id)message publishOptions:(PublishOptions *)publishOptions deliveryOptions:(DeliveryOptions *)deliveryOptions response:(void(^)(MessageStatus *))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)cancel:(NSString *)messageId response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)subscribe:(NSString *)channelName response:(void(^)(BESubscription *))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock response:(void(^)(BESubscription *))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock subscriptionOptions:(SubscriptionOptions *)subscriptionOptions response:(void(^)(BESubscription *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray<Message*> *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock response:(void(^)(BESubscription *))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)subscribe:(NSString *)channelName subscriptionResponse:(void(^)(NSArray<Message*> *))subscriptionResponseBlock subscriptionError:(void(^)(Fault *))subscriptionErrorBlock subscriptionOptions:(SubscriptionOptions *)subscriptionOptions response:(void(^)(BESubscription *))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)subscribe:(BESubscription *)subscription subscriptionOptions:(SubscriptionOptions *)subscriptionOptions response:(void(^)(BESubscription *))responseBlock error:(void(^)(Fault *))errorBlock;
 -(void)pollMessages:(NSString *)channelName subscriptionId:(NSString *)subscriptionId response:(void(^)(NSArray *))responseBlock error:(void(^)(Fault *))errorBlock;
 //
--(void)sendTextEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray *)recipients response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)sendHTMLEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray *)recipients response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray *)recipients response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
--(void)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray *)recipients attachment:(NSArray *)attachments response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)sendTextEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray<NSString*> *)recipients response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)sendHTMLEmail:(NSString *)subject body:(NSString *)messageBody to:(NSArray<NSString*> *)recipients response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray<NSString*> *)recipients response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
+-(void)sendEmail:(NSString *)subject body:(BodyParts *)bodyParts to:(NSArray<NSString*> *)recipients attachment:(NSArray *)attachments response:(void(^)(id))responseBlock error:(void(^)(Fault *))errorBlock;
 
 // utilites
 -(DeviceRegistration *)currentDevice;
@@ -199,6 +222,11 @@
 // - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 // -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
 -(void)didReceiveRemoteNotification:(NSDictionary *)userInfo;
+
+// start up register device methods
+-(void)startupRegisterDeviceWithExpiration:(NSDate *)expiration;
+-(void)startupRegisterDeviceWithChannels:(NSArray<NSString*> *)channels;
+-(void)startupRegisterDevice:(NSArray<NSString*> *)channels expiration:(NSDate *)expiration;
 #endif
 
 @end
