@@ -6,13 +6,54 @@
 //  Copyright (c) 2015 BACKENDLESS.COM. All rights reserved.
 //
 
+// com.themidnightcoders.FacebookLogin
+// my Facebook "Back­e­n­d­l­e­s­s­U­s­e­r­L­ogin" App ID: 1077032488973601 App Secret: 864152891aa661ef1f2eb991be3fb9a8
+// Anatoly's Facebook Application AppId: 276598585828317 App Secret: ddb15e46a7d5e53436617b7a866811d8
+
 
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "Backendless.h"
 
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+#define _PRODUCTION_ 1
+#define _ANATOLY_ 0
+#define BKNDLSS_11806 0
+
+#if _PRODUCTION_
+#if 0 // BEVideoChat
+static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
+static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
+#endif
+#if 0 // BKNDLSS11252
+static NSString *APP_ID = @"3A5F63C4-6EFC-992D-FF0D-B6CAA3456000";
+static NSString *SECRET_KEY = @"EC607A66-4531-8FD5-FFC4-BE02F0690500";
+#endif
+#if 1 // BKNDLSS11252d
+static NSString *APP_ID = @"1C5B19B3-953D-9548-FF59-95999A2FE800";
+static NSString *SECRET_KEY = @"CE0A96CD-0421-B988-FF80-E16A6A8F7200";
+#endif
+#endif
+
+#if _ANATOLY_
+#if 1
+static NSString *APP_ID = @"DF380E99-E4B7-9AA2-FF34-1180B28A7D00";
+static NSString *SECRET_KEY = @"78318653-9B46-F182-FF6B-F9864924CC00";
+#endif
+#endif
+
+#if BKNDLSS_11806
+#if 0
+// com.hermes.iGamacha Facebook AppId: 1642864326002680
+static NSString *APP_ID = @"2A0C7717-B5AC-0B96-FF64-5DD2DD3E8200";
+static NSString *SECRET_KEY = @"380DF4E5-5157-FB72-FF69-B716DA480800";
+#endif
+#if 1
+// com.themidnightcoders.FacebookLogin Facebook AppId: 1660519497541840
+static NSString *APP_ID = @"29FC1C00-10BB-E1E9-FF4C-1AD425339000";
+static NSString *SECRET_KEY = @"2098F6F4-950D-3105-FF0D-3BAC28C95400";
+#endif
+#endif
+
 static NSString *VERSION_NUM = @"v1";
 
 #if 1
@@ -38,7 +79,7 @@ static NSString *VERSION_NUM = @"v1";
     //[DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
-    //backendless.hostURL = @"http://api.backendless.com";
+    backendless.hostURL = @"http://api.backendless.com";
     
     return [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }

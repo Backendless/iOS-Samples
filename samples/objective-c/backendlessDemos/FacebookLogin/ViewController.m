@@ -38,12 +38,40 @@
 
 -(void)checkValidUserToken {
     
+#if 0
     NSLog(@"%@: Is UserToken Valid? %@", [NSDate date], [backendless.userService isValidUserToken].boolValue?@"YES":@"NO");
+#else
+    [backendless.userService isValidUserToken:
+     ^(NSNumber *result) {
+         NSLog(@"%@: Is UserToken Valid? %@", [NSDate date], result.boolValue?@"YES":@"NO");
+     }
+     error:^(Fault *fault) {
+        NSLog(@"%@", fault);
+     }];
+#endif
     
     dispatch_time_t interval = dispatch_time(DISPATCH_TIME_NOW, 1ull*NSEC_PER_SEC*60);
-    dispatch_after(interval, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_after(interval, dispatch_get_main_queue(), ^{
         [self checkValidUserToken];
     });
+
 }
+                   
+#if 0
+
+[backendless.userService isValidUserToken:
+ ^(NSNumber *result) {
+     NSLog(@"%@: Is UserToken Valid? %@", [NSDate date], result.boolValue?@"YES":@"NO");
+     
+     dispatch_async( dispatch_get_main_queue(), ^{
+         // some UI code
+     });
+     
+ }
+ error:^(Fault *fault) {
+    NSLog(@"%@", fault);
+}];
+
+#endif
 
 @end

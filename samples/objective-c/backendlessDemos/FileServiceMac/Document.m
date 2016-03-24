@@ -26,8 +26,8 @@
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
 
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+static NSString *APP_ID = @"1C5B19B3-953D-9548-FF59-95999A2FE800";
+static NSString *SECRET_KEY = @"CE0A96CD-0421-B988-FF80-E16A6A8F7200";
 static NSString *VERSION_NUM = @"v1";
 
 @interface Document ()
@@ -106,11 +106,16 @@ static NSString *VERSION_NUM = @"v1";
     [openPanel setCanChooseFiles:YES];
     [openPanel setAllowsMultipleSelection:YES];
     [openPanel beginWithCompletionHandler:^(NSInteger result) {
+        NSLog(@"save file (0): %ld", (long)result);
         if (result == NSOKButton) {
             for (NSURL *fileUrl in openPanel.URLs)
             {
+                NSLog(@"save file (1): %@ [%@]", fileUrl, fileUrl.lastPathComponent);
                 NSData *data = [[NSData alloc] initWithContentsOfURL:fileUrl];
-                [backendless.fileService upload:fileUrl.lastPathComponent content:data response:^(BackendlessFile *f) {
+                [backendless.fileService
+                 upload:fileUrl.lastPathComponent
+                 content:data
+                 response:^(BackendlessFile *f) {
                     BEFile *file = [BEFile new];
                     file.path = f.fileURL;
                     [backendless.persistenceService save:file response:^(id res) {
