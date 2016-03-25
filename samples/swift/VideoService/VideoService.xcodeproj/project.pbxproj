@@ -18,14 +18,14 @@
 		D385771119FA8D2500B68561 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D385771019FA8D2500B68561 /* SystemConfiguration.framework */; };
 		F9C3F2301BAC5E4D00421D56 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F22E1BAC5E4D00421D56 /* libsqlite3.tbd */; };
 		F9C3F2311BAC5E4D00421D56 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F22F1BAC5E4D00421D56 /* libz.tbd */; };
-		F9C3F29B1BAC5EAC00421D56 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2841BAC5EAC00421D56 /* libavcodec.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F29C1BAC5EAC00421D56 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2851BAC5EAC00421D56 /* libavdevice.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F29D1BAC5EAC00421D56 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2861BAC5EAC00421D56 /* libavfilter.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F29E1BAC5EAC00421D56 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2871BAC5EAC00421D56 /* libavformat.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F29F1BAC5EAC00421D56 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2881BAC5EAC00421D56 /* libavutil.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2A01BAC5EAC00421D56 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2891BAC5EAC00421D56 /* libswscale.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2A11BAC5EAC00421D56 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2941BAC5EAC00421D56 /* libspeex.a */; settings = {ASSET_TAGS = (); }; };
-		F9C3F2A21BAC5EAC00421D56 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F29A1BAC5EAC00421D56 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
+		F9C3F29B1BAC5EAC00421D56 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2841BAC5EAC00421D56 /* libavcodec.a */; };
+		F9C3F29C1BAC5EAC00421D56 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2851BAC5EAC00421D56 /* libavdevice.a */; };
+		F9C3F29D1BAC5EAC00421D56 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2861BAC5EAC00421D56 /* libavfilter.a */; };
+		F9C3F29E1BAC5EAC00421D56 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2871BAC5EAC00421D56 /* libavformat.a */; };
+		F9C3F29F1BAC5EAC00421D56 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2881BAC5EAC00421D56 /* libavutil.a */; };
+		F9C3F2A01BAC5EAC00421D56 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2891BAC5EAC00421D56 /* libswscale.a */; };
+		F9C3F2A11BAC5EAC00421D56 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F2941BAC5EAC00421D56 /* libspeex.a */; };
+		F9C3F2A21BAC5EAC00421D56 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3F29A1BAC5EAC00421D56 /* libx264.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -873,12 +873,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../../lib/backendless",
-					"$(SRCROOT)/../../../lib/CommLibiOS",
-					"$(SRCROOT)/../../../lib/MediaLibiOS3x",
-					"$(SRCROOT)/../../../lib/libav-11.4/lib",
-					"$(SRCROOT)/../../../lib/speex-1.2rc2/lib",
-					"$(SRCROOT)/../../../lib/x264/lib",
+					"$(PROJECT_DIR)/../../../lib/**",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -897,12 +892,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../../lib/backendless",
-					"$(SRCROOT)/../../../lib/CommLibiOS",
-					"$(SRCROOT)/../../../lib/MediaLibiOS3x",
-					"$(SRCROOT)/../../../lib/libav-11.4/lib",
-					"$(SRCROOT)/../../../lib/speex-1.2rc2/lib",
-					"$(SRCROOT)/../../../lib/x264/lib",
+					"$(PROJECT_DIR)/../../../lib/**",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
