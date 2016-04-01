@@ -42,11 +42,6 @@ static NSString *SECRET_KEY = @"78318653-9B46-F182-FF6B-F9864924CC00";
 #endif
 
 #if BKNDLSS_11806
-#if 0
-// com.hermes.iGamacha Facebook AppId: 1642864326002680
-static NSString *APP_ID = @"2A0C7717-B5AC-0B96-FF64-5DD2DD3E8200";
-static NSString *SECRET_KEY = @"380DF4E5-5157-FB72-FF69-B716DA480800";
-#endif
 #if 1
 // com.themidnightcoders.FacebookLogin Facebook AppId: 1660519497541840
 static NSString *APP_ID = @"29FC1C00-10BB-E1E9-FF4C-1AD425339000";

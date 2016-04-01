@@ -44,23 +44,10 @@
         [backendless initAppFault];
 
 #if _STAY_LOGGED_IN
-        
         [self stayLoggedIn ];
         
         id user = backendless.userService.currentUser;
         NSLog(@"viewDidLoad -> currentUser: %@", user);
-        
-        if (user) {
-#if 0
-            [user setProperty:@"second" object:@"5"];
-            NSLog(@"viewDidLoad -> currentUser (UPDATED): %@", backendless.userService.currentUser);
-#endif
-#if 0
-            user = [backendless.data findByClassId:BackendlessUser.class sid:backendless.userService.currentUser.objectId];
-            NSLog(@"viewDidLoad -> findByClassId: %@", user);
-#endif
-        }
-    
 #endif
     }
     @catch (Fault *fault) {
@@ -73,26 +60,47 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#if 0
--(NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-#endif
+
 #pragma mark -
 #pragma mark Test Methods
 
 -(void)stayLoggedIn {
     
     if (backendless.userService.isStayLoggedIn) {
-        
+#if 1
+        [self checkValidUserToken];
+#else
         NSNumber *result = [backendless.userService isValidUserToken];
         NSLog(@"viewDidLoad -> isValidUserToken: %@", [result boolValue]?@"YES":@"NO");
         [result boolValue] ? [self switchToLogout] : [backendless.userService setStayLoggedIn:NO];
+#endif
     }
     else {
         [backendless.userService setStayLoggedIn:YES];
     }
 }
+
+
+-(void)checkValidUserToken {
+    
+    [backendless.userService
+     isValidUserToken: ^(NSNumber *result) {
+         NSLog(@"%@: Is UserToken Valid? %@", [NSDate date], result.boolValue?@"YES":@"NO");
+         [self switchToLogout];
+     }
+     error:^(Fault *fault) {
+         NSLog(@"%@", fault);
+         [backendless.userService setStayLoggedIn:NO];
+         return;
+     }];
+    
+    dispatch_time_t interval = dispatch_time(DISPATCH_TIME_NOW, 1ull*NSEC_PER_SEC*60);
+    dispatch_after(interval, dispatch_get_main_queue(), ^{
+        [self checkValidUserToken];
+    });
+    
+}
+
 
 #pragma mark -
 #pragma mark Private Methods
@@ -103,6 +111,9 @@
 }
 
 -(void)switchToLogout {
+    
+    if (!self.btnLogout.hidden)
+        return;
     
     self.headerLabel.hidden = YES;
     self.loginLabel.hidden = YES;
@@ -131,7 +142,11 @@
          NSLog(@"StartViewController -> userLogin: (ASYNC LOGIN) user -> %@\n currentUser -> %@", user, backendless.userService.currentUser);
  
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+#if _STAY_LOGGED_IN
+         [self checkValidUserToken];
+#else
          [self switchToLogout];
+#endif
      }
      error:^(Fault *fault) {
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -144,10 +159,12 @@
     @try {
         
         BackendlessUser *user = [backendless.userService login:self.loginInput.text password:self.passwordInput.text];
-        
         NSLog(@"StartViewController -> userLogin: (SYNC LOGIN) user -> %@\n currentUser -> %@", user, backendless.userService.currentUser);
-        
+#if _STAY_LOGGED_IN
+        [self checkValidUserToken];
+#else
         [self switchToLogout];
+#endif
     }
     
     @catch (Fault *fault) {
@@ -170,7 +187,7 @@
 
 #if _ASYNC_REQUEST // async
     
-#if 0
+#if 0 // test: async logout without blocks
     [backendless.userService logout:NULL error:NULL];
 #else
     

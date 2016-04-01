@@ -67,9 +67,9 @@ static NSString *SECRET_KEY = @"CE0A96CD-0421-B988-FF80-E16A6A8F7200";
 #endif
 
 #if _ANATOLY_
-static NSString *HOST_URL = @"http://api.backendless.com";
-static NSString *APP_ID = @"DF380E99-E4B7-9AA2-FF34-1180B28A7D00";
-static NSString *SECRET_KEY = @"78318653-9B46-F182-FF6B-F9864924CC00";
+static NSString *HOST_URL = @"http://tc.themidnightcoders.com:7782";
+static NSString *APP_ID = @"2E0535D6-FDA3-6665-FF85-95914A416000";
+static NSString *SECRET_KEY = @"A8F10638-9D6C-F32C-FF3A-DA2878F83000";
 #endif
 
 #if BKNDLSS_11806

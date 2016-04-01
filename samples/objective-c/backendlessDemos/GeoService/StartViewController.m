@@ -82,6 +82,7 @@
     
     _currentLocation = _locationManager.location.coordinate;
     self.coordinatesLabel.text = [NSString stringWithFormat:COORDINATE_STR, _currentLocation.latitude, _currentLocation.longitude];
+    NSLog(@"CURRENT LOCATION: %@", self.coordinatesLabel.text);
 
 }
 

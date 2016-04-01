@@ -44,7 +44,7 @@
     [self startMonitoringAllGeofencesWithRemoteCallback];
 #endif
     
-#if 1
+#if 0 // default
     [self startMonitoringAllGeofencesWithLocalCallback];
 #endif
     
@@ -52,7 +52,7 @@
     [self startMonitoringSpesificGeofenceWithRemoteCallback];
 #endif
     
-#if 0
+#if 1
     [self startMonitoringSpesificGeofenceWithLocalCallback];
 #endif
     
@@ -118,7 +118,7 @@
     geoFenceCallback.vc = self;
     
     [backendless.geo
-     startGeofenceMonitoring:@"WorkRect"
+     startGeofenceMonitoring:@"Test"
      callback:geoFenceCallback
      response:^(id response) {
          NSLog(@"Geofence monitoring has been started: %@", response);
@@ -161,7 +161,7 @@ const NSString *deviceToken = @"iOS GeoFence";
     [myLocation metadata:@{@"deviceId":deviceToken}];
     
     [backendless.geo
-     startGeofenceMonitoringGeoPoint:@"WorkRect"
+     startGeofenceMonitoringGeoPoint:@"Test"
      geoPoint:myLocation
      response:^(id response) {
          NSLog(@"Geofence monitoring has been started: %@", response);
@@ -192,7 +192,7 @@ const NSString *deviceToken = @"iOS GeoFence";
 
 // Stop location monitoring for a specific geofence
 -(void)stopMonitoringSpesificGeofence {
-    [backendless.geo stopGeofenceMonitoring:@"WorkRect"];
+    [backendless.geo stopGeofenceMonitoring:@"Test"];
 }
 
 // Stop location monitoring for all geofences
@@ -202,17 +202,17 @@ const NSString *deviceToken = @"iOS GeoFence";
 
 // Run the OnEnter Action
 -(void)runOnEnterAction {
-    [backendless.geo runOnEnterAction:@"WorkRect"];
+    [backendless.geo runOnEnterAction:@"Test"];
 }
 
 // Run the OnStay Action
 -(void)runOnStayAction {
-    [backendless.geo runOnStayAction:@"WorkRect"];
+    [backendless.geo runOnStayAction:@"Test"];
 }
 
 // Run the OnExit Action
 -(void)runOnExitAction {
-    [backendless.geo runOnExitAction:@"WorkRect"];
+    [backendless.geo runOnExitAction:@"Test"];
 }
 
 // Retrieve Geopoints from a Geofence
