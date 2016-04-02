@@ -80,9 +80,9 @@
     }
 }
 
-
 -(void)checkValidUserToken {
     
+#if 1
     [backendless.userService
      isValidUserToken: ^(NSNumber *result) {
          NSLog(@"%@: Is UserToken Valid? %@", [NSDate date], result.boolValue?@"YES":@"NO");
@@ -93,12 +93,17 @@
          [backendless.userService setStayLoggedIn:NO];
          return;
      }];
+#else
+    NSNumber *result = [backendless.userService isValidUserToken];
+    NSLog(@"viewDidLoad -> isValidUserToken: %@", [result boolValue]?@"YES":@"NO");
+    [result boolValue] ? [self switchToLogout] : [backendless.userService setStayLoggedIn:NO];
+#endif
+    
     
     dispatch_time_t interval = dispatch_time(DISPATCH_TIME_NOW, 1ull*NSEC_PER_SEC*60);
     dispatch_after(interval, dispatch_get_main_queue(), ^{
         [self checkValidUserToken];
     });
-    
 }
 
 

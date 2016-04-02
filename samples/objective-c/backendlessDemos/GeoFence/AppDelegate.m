@@ -11,15 +11,8 @@
 
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
-
-/*
- AppId: 1E839676-43B8-8111-FFA1-B677031A2F00
- iOS secret-key: D56A65BC-30B8-8BF2-FFC1-9C74049B2000
- Fence name: Test 
- */
-
-static NSString *APP_ID = @"1E839676-43B8-8111-FFA1-B677031A2F00";
-static NSString *SECRET_KEY = @"D56A65BC-30B8-8BF2-FFC1-9C74049B2000";
+static NSString *APP_ID = @"";
+static NSString *SECRET_KEY = @"";
 static NSString *VERSION_NUM = @"v1";
 
 @implementation AppDelegate

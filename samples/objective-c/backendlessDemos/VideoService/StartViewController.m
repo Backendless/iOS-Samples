@@ -94,7 +94,7 @@
 
 -(IBAction)publishControl:(id)sender {
     
-    NSLog(@"publishControl: -> backendless.mediaService: %@ [%@]", backendless.mediaService, [Types classByName:@"MediaService"]);
+    NSLog(@"publishControl: -> backendless.mediaService: %@ [%@]", backendless.mediaService, [__types classByName:@"MediaService"]);
     
 #if 1 // record "from the scratch" if it is not live
     MediaPublishOptions *options = _switchView.on?[MediaPublishOptions liveStream:self.preview]:[MediaPublishOptions recordStream:self.preview];

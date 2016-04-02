@@ -39,7 +39,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 -(void)sendNotification:(NSTextField *)sender
 {
     PublishOptions *p = [PublishOptions new];
-    NSDictionary *headers = [NSDictionary dictionaryWithObjectsAndKeys:PUBLISHER_ANONYMOUS, PUBLISHER_NAME_HEADER, nil];
+    NSMutableDictionary *headers = [NSMutableDictionary dictionaryWithObjectsAndKeys:PUBLISHER_ANONYMOUS, PUBLISHER_NAME_HEADER, nil];
     p.headers = headers;
     [backendless.messagingService publish:MESSAGING_CHANNEL message:sender.stringValue publishOptions:p deliveryOptions:[DeliveryOptions deliveryOptionsForNotification:PUSH_ONLY] response:^(MessageStatus *status) {
     } error:^(Fault *error) {
@@ -61,7 +61,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 -(void)application:(NSApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     NSLog(@"done");
-    [backendless.messagingService registerDeviceWithTokenData:deviceToken response:^(NSString *res) {
+    [backendless.messagingService registerDeviceToken:deviceToken response:^(NSString *res) {
         NSLog(@"%@", res);
     } error:^(Fault *error) {
         NSLog(@"%@", error.detail);

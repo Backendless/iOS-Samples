@@ -42,7 +42,7 @@ static NSString *VERSION_NUM = @"v1";
     [_signout setHidden:NO];
     
     
-    NSColor *color;
+    //NSColor *color;
 }
 
 - (id)init
