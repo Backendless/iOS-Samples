@@ -100,7 +100,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [self startNetIndicator];
     
     PublishOptions *options = [PublishOptions new];
-    options.headers =  [NSMutableDictionary dictionaryWithDictionary:@{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"}];
+    [options assignHeaders:@{PUBLISHER_NAME_HEADER:PUBLISHER_ANONYMOUS, @"ios-badge":@"1", @"ios-sound":@"Sound12.aif", @"ios-content-available":@"1"}];
     
     DeliveryOptions *delivery = [DeliveryOptions new];
     [delivery pushPolicy:PUSH_ONLY];
