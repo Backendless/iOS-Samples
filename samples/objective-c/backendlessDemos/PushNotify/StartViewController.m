@@ -22,12 +22,14 @@
 #import "StartViewController.h"
 #import "Backendless.h"
 
-static NSString *MESSAGING_CHANNEL = @"default";
+//static NSString *MESSAGING_CHANNEL = @"default";
+static NSString *MESSAGING_CHANNEL = @"testing";
 static NSString *PUBLISHER_ANONYMOUS = @"Anonymous";
 static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
 @interface StartViewController () <IBEPushReceiver> {
     UIActivityIndicatorView *_netActivity;
+    NSString *target;
 }
 -(void)showAlert:(NSString *)message;
 -(void)initNetActivity;
@@ -39,6 +41,8 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     
     [super viewDidLoad];
     
+    target = MESSAGING_CHANNEL;
+    
     @try {
         [backendless initAppFault];
 #if __OLD__
@@ -46,7 +50,8 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
         NSLog(@"viewDidLoad -> registerDevice: %@", info);
 #else
         backendless.messaging.notificationTypes = UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
-        [backendless.messaging startupRegisterDeviceWithChannels:@[MESSAGING_CHANNEL]];
+        [backendless.messaging registerDeviceWithChannels:@[target]];
+        //[backendless.messaging registerDeviceWithChannels:@[@"testing", @"default"]];
 #endif
         backendless.messagingService.pushReceiver = self;
 
@@ -93,6 +98,12 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [_netActivity stopAnimating];
 }
 
+-(void)registerDeviceForRandomChannel {
+    target = [backendless randomString:12];
+    //[backendless.messaging registerDeviceWithChannels:@[target]];
+    [backendless.messaging registerDeviceWithChannels:@[target, @"default"]];
+}
+
 #if 1
 -(void)publish {
     
@@ -107,7 +118,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [delivery pushBroadcast:FOR_ANDROID|FOR_IOS];
     
     [backendless.messagingService
-     publish:MESSAGING_CHANNEL
+     publish:target
      message:_textField.text
      publishOptions:options
      deliveryOptions:delivery
@@ -139,7 +150,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     [options addHeader:@"ios-sound" value:@"mySound.aif"];
     
     [backendless.messagingService
-     publish:MESSAGING_CHANNEL
+     publish:target
      message:_textField.text
      publishOptions:options
      deliveryOptions:delivery
@@ -164,6 +175,8 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 -(void)didReceiveRemoteNotification:(NSString *)notification headers:(NSDictionary *)headers {
     _textView.hidden = NO;
     _textView.text = [_textView.text stringByAppendingFormat:@"%@: %@\n", headers[PUBLISHER_NAME_HEADER], notification];
+    
+    //[self registerDeviceForRandomChannel];
 }
 
 -(void)didRegisterForRemoteNotificationsWithDeviceId:(NSString *)deviceId fault:(Fault *)fault {

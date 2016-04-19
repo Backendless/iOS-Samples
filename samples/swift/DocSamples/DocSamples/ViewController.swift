@@ -37,6 +37,8 @@ class ViewController: UIViewController {
         
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
         
+        //backendless.messaging.notificationTypes = .Alert.rawValue | .Sound.rawValue
+        
         /*
         let deliveryOptions = DeliveryOptions()
         deliveryOptions.pushBroadcast(FOR_ANDROID.rawValue|FOR_IOS.rawValue)

@@ -27,7 +27,7 @@
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
 static NSString *APP_ID = @"";
 static NSString *SECRET_KEY = @"";
-static NSString *VERSION_NUM = @"v1";
+tatic NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate
 

@@ -278,7 +278,7 @@
                     break;
                 }
                 
-                //[MPMediaData routeAudioToSpeaker];
+                [MPMediaData routeAudioToSpeaker];
                 
                 self.playbackView.hidden = NO;
                 self.btnStopMedia.hidden = NO;
