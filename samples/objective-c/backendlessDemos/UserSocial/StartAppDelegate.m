@@ -33,8 +33,9 @@
         * if the ID of your application is AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA, the value of the element will be
         * "backendlessAAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
         **********************************************************************************************************************/
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+// BKNDLSS11933a
+static NSString *APP_ID = @"3AF8862F-5656-C746-FFE4-EE0D0A35E500";
+static NSString *SECRET_KEY = @"AFA33C73-3AD8-58E5-FF7E-B8CEE9D2CE00";
 static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate
@@ -42,7 +43,7 @@ static NSString *VERSION_NUM = @"v1";
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     
-    [DebLog log:@"[BackendlessDemos.UserSosial] AppDelegate -> application:openURL: url.scheme = '%@'[%@]", url.scheme, sourceApplication];
+    [DebLog log:@"[BackendlessDemos.UserSosial] AppDelegate -> application:openURL: url = '%@'[%@]", url, sourceApplication];
     
     BackendlessUser *user = [backendless.userService handleOpenURL:url];
     NSLog(@"USER (0): %@", user);

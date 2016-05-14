@@ -49,7 +49,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
         NSString *info = [backendless.messagingService registerDevice:@[MESSAGING_CHANNEL]];
         NSLog(@"viewDidLoad -> registerDevice: %@", info);
 #else
-        backendless.messaging.notificationTypes = UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+        //backendless.messaging.notificationTypes = UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
         [backendless.messaging registerDeviceWithChannels:@[target]];
         //[backendless.messaging registerDeviceWithChannels:@[@"testing", @"default"]];
 #endif

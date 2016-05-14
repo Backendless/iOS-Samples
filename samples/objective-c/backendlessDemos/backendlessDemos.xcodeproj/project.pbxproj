@@ -2815,6 +2815,9 @@
 					F91B665C16B18CD400668A06 = {
 						DevelopmentTeam = 73FSJC7BUF;
 					};
+					F91B668016B18D2600668A06 = {
+						DevelopmentTeam = 73FSJC7BUF;
+					};
 					F91B66EC16B18DD800668A06 = {
 						DevelopmentTeam = 73FSJC7BUF;
 						SystemCapabilities = {
@@ -4097,6 +4100,7 @@
 					"$(SRCROOT)/../../../osx/CommLib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.backendless.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -4132,6 +4136,7 @@
 					"$(SRCROOT)/../../../osx/CommLib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.backendless.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

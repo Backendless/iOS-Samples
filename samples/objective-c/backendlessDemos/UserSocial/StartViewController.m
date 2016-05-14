@@ -77,9 +77,18 @@
     switch ([sender tag]) {
         // Facebook
         case 1: {
+            NSDictionary *fieldsMapping = @{
+                                            @"id" : @"facebookId",
+                                            @"name" : @"name",
+                                            @"first_name": @"first_name",
+                                            @"last_name" : @"last_name",
+                                            @"gender": @"gender",
+                                            @"email": @"email"
+                                            };
+
             [backendless.userService
-             easyLoginWithFacebookFieldsMapping:@{@"email":@"email", @"first_name":@"name", @"favorite_teams":@"favorite_teams"}
-             permissions:@[@"email", @"user_likes"]
+             easyLoginWithFacebookFieldsMapping:fieldsMapping
+             permissions:@[@"email"]
              response:^(id response) {
                  //response - NSNumber with bool Yes
                  NSLog(@"StartViewController -> login: (Facebook) result = %@", response);
@@ -101,8 +110,15 @@
         }
         // Google+
         case 3: {
+            NSDictionary *fieldsMapping = @{
+                                            @"name" : @"name",
+                                            @"first_name": @"first_name",
+                                            @"last_name" : @"last_name",
+                                            @"gender": @"gender",
+                                            @"email": @"email"
+                                            };
             [backendless.userService
-             easyLoginWithGooglePlusFieldsMapping:@{@"email":@"email"}
+             easyLoginWithGooglePlusFieldsMapping:fieldsMapping
              permissions:@[@"email"]
              response:^(id response) {
                  NSLog(@"StartViewController -> login: (Google+) result = %@", response);
