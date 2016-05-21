@@ -15,25 +15,13 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "Backendless.h"
 
+#define IS_SYNC_ON 1
+#define IS_LOGOUT_ON 1
+
 static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
 static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
 static NSString *VERSION_NUM = @"v1";
 
-#if 1
-
-@interface Task : NSObject
-@property (nonatomic, strong) NSString *objectId;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSNumber *status;
-@end
-
-@implementation Task
--(NSString *)description {
-    return [NSString stringWithFormat:@"<Task> [%@] %@ (%@)", self.objectId, self.title, self.status];
-}
-@end
-
-#endif
 
 @implementation AppDelegate
 
@@ -42,6 +30,8 @@ static NSString *VERSION_NUM = @"v1";
     //[DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
+    backendless.hostURL = @"http://api.backendless.com";
+    
     
     return [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
@@ -75,61 +65,40 @@ static NSString *VERSION_NUM = @"v1";
                                     @"email": @"email"
                                     };
 
-#if 0 // sync
+#if IS_SYNC_ON // SYNC
     
     @try {
         BackendlessUser *user = [backendless.userService loginWithFacebookSDK:token fieldsMapping:fieldsMapping];
-        NSLog(@"USER (0): %@", user);
-#if 0
+        NSLog(@"USER: %@\ncurrentUser: %@", user, backendless.userService.currentUser);
+#if IS_LOGOUT_ON
         [backendless.userService logout];
         NSLog(@"LOGOUT");
 #endif
 }
     @catch (Fault *fault) {
-        NSLog(@"ERROR: %@", fault);
+        NSLog(@"%@", fault);
     
     }
     
-#else // async
+#else // ASYNC
     
     [backendless.userService
      loginWithFacebookSDK:token
      fieldsMapping:fieldsMapping
      response:^(BackendlessUser *user) {
-         NSLog(@"USER (0): %@", user);
-         
-         @try {
-#if 0
-             Task *task = [Task new];
-             task.title = [backendless randomString:12];
-             [user setProperty:@"task" object:task];
-             user = [backendless.userService update:user];
-             NSLog(@"USER (1): %@", user);
+         NSLog(@"USER: %@", user);
+#if IS_LOGOUT_ON
+         [backendless.userService logout:
+          ^(id response) {
+              NSLog(@"LOGOUT");
+          }
+          error:^(Fault *fault) {
+              NSLog(@"%@", fault);
+          }];
 #endif
-#if 0
-             [user setProperty:@"currentUser" object:backendless.userService.currentUser];
-             user = [backendless.userService update:user];
-             NSLog(@"USER (2): %@", user);
-#endif
-#if 0
-             Task *task = [Task new];
-             task.title = [backendless randomString:12];
-             Task *saved = [backendless.data save:task];
-             id result = [backendless.data.permissions grantForUser:user.objectId entity:saved operation:DATA_UPDATE];
-             NSLog(@"GRANT): %@", result);
-             
-#endif
-#if 0
-             [backendless.userService logout];
-             NSLog(@"LOGOUT");
-#endif
-         }
-         @catch (Fault *fault) {
-             NSLog(@"%@", fault);
-         }
      }
      error:^(Fault *fault) {
-         NSLog(@"openURL: %@", fault);
+         NSLog(@"%@", fault);
      }];
     
 #endif

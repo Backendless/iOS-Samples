@@ -33,9 +33,8 @@
         * if the ID of your application is AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA, the value of the element will be
         * "backendlessAAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
         **********************************************************************************************************************/
-// BKNDLSS11933a
-static NSString *APP_ID = @"3AF8862F-5656-C746-FFE4-EE0D0A35E500";
-static NSString *SECRET_KEY = @"AFA33C73-3AD8-58E5-FF7E-B8CEE9D2CE00";
+static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
+static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
 static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate

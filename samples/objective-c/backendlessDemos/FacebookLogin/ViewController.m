@@ -15,7 +15,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     @try {
         [backendless initAppFault];
@@ -38,9 +37,6 @@
 
 -(void)checkValidUserToken {
     
-#if 0
-    NSLog(@"%@: Is UserToken Valid? %@", [NSDate date], [backendless.userService isValidUserToken].boolValue?@"YES":@"NO");
-#else
     [backendless.userService isValidUserToken:
      ^(NSNumber *result) {
          NSLog(@"%@: Is UserToken Valid? %@", [NSDate date], result.boolValue?@"YES":@"NO");
@@ -48,8 +44,7 @@
      error:^(Fault *fault) {
         NSLog(@"%@", fault);
      }];
-#endif
-    
+
     dispatch_time_t interval = dispatch_time(DISPATCH_TIME_NOW, 1ull*NSEC_PER_SEC*60);
     dispatch_after(interval, dispatch_get_main_queue(), ^{
         [self checkValidUserToken];
@@ -57,7 +52,7 @@
 
 }
                    
-#if 0
+#if 0 // HERE is an example how SHOULD run UI code in blocks
 
 [backendless.userService isValidUserToken:
  ^(NSNumber *result) {

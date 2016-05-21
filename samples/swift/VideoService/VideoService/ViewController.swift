@@ -95,7 +95,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
     
     @IBAction func switchCamerasControl(sender: AnyObject) {
         
-        print("----------------------- pswitchCamerasControl ------------------------------------------------------")
+        print("----------------------- switchCamerasControl ------------------------------------------------------")
         
         _publisher?.switchCameras()
     }
