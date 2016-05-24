@@ -167,8 +167,25 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
             options = MediaPublishOptions.recordStream(self.preView) as! MediaPublishOptions
         }
         
-        options.orientation = .Portrait
-        options.resolution = RESOLUTION_CIF
+        let mode = 2 // 0 - VIDEO & AUDIO, 1 - ONLY AUDIO, 2 - ONLY VIDEO
+        
+        switch mode {
+            
+        case 0: //VIDEO & AUDIO
+            options.orientation = .Portrait
+            options.resolution = RESOLUTION_CIF
+            
+        case 1: //ONLY AUDIO
+            options.content = ONLY_AUDIO
+            
+        case 2: //ONLY VIDEO
+            options.orientation = .Portrait
+            options.resolution = RESOLUTION_CIF
+            options.content = ONLY_VIDEO
+        
+        default:
+            return
+        }
         
         _publisher = backendless.mediaService.publishStream(textField.text, tube:VIDEO_TUBE, options:options, responder:self)
         
