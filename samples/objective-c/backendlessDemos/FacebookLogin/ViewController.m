@@ -24,6 +24,7 @@
     }
     
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    loginButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     loginButton.center = self.view.center;
     [self.view addSubview:loginButton];
     

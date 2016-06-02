@@ -18,8 +18,8 @@
 #define IS_SYNC_ON 0
 #define IS_LOGOUT_ON 0
 
-static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
-static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
+static NSString *APP_ID = @"1A9E560D-E6EE-DEF9-FF2C-2565B567E800";
+static NSString *SECRET_KEY = @"2146BA33-CA63-EBC6-FFE4-1EAC4E0CD400";
 static NSString *VERSION_NUM = @"v1";
 
 
@@ -86,7 +86,7 @@ static NSString *VERSION_NUM = @"v1";
      loginWithFacebookSDK:token
      fieldsMapping:fieldsMapping
      response:^(BackendlessUser *user) {
-         NSLog(@"USER: %@", user);
+         NSLog(@"USER: %@\ncurrentUser: %@", user, backendless.userService.currentUser);
 #if IS_LOGOUT_ON
          [backendless.userService logout:
           ^(id response) {

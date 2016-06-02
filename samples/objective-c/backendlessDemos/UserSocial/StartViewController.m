@@ -22,26 +22,6 @@
 #import "StartViewController.h"
 #import "Backendless.h"
 
-#if 1
-
-@interface UserLocation : NSObject
-@property (nonatomic, strong) NSDate *created;
-@property (nonatomic, strong) NSDate *updated;
-@property (nonatomic, strong) NSString *objectId;
-@property (nonatomic, strong) NSString *ownerId;
-@property (nonatomic, strong) NSNumber *isPrivate;
-@property (nonatomic, strong) BackendlessUser *user;
-@property (nonatomic, strong) GeoPoint *location;
-@end
-
-@implementation UserLocation
-@end
-
-#endif
-
-@interface StartViewController ()
-
-@end
 
 @implementation StartViewController
 
@@ -88,7 +68,7 @@
 
             [backendless.userService
              easyLoginWithFacebookFieldsMapping:fieldsMapping
-             permissions:@[@"email"]
+             permissions:@[@"public_profile", @"email", @"user_friends"]
              response:^(id response) {
                  //response - NSNumber with bool Yes
                  NSLog(@"StartViewController -> login: (Facebook) result = %@", response);
