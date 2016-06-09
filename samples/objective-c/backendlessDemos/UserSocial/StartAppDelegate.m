@@ -39,42 +39,44 @@ static NSString *VERSION_NUM = @"v1";
 
 @implementation StartAppDelegate
 
-#if 1 // since iOS 9.0
+// since iOS 9.0
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options {
     
-    [DebLog log:@"[BackendlessDemos.UserSosial] AppDelegate -> application:openURL:options: url = '%@'[%@]", url, options];
+    [DebLog logY:@"[BackendlessDemos.UserSosial] AppDelegate -> application:openURL:options: url = '%@'[%@]", url, options];
     
-    BackendlessUser *user = [backendless.userService handleOpenURL:url];
-    NSLog(@"USER (0): %@", user);
-    if (user) {
-        [(StartViewController *)self.window.rootViewController showSuccessView];
-    }
-    return YES;
-    
-}
-#else
--(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    
-    [DebLog log:@"[BackendlessDemos.UserSosial] AppDelegate -> application:openURL:sourceApplication: url = '%@'[%@]", url, sourceApplication];
-    
-    BackendlessUser *user = [backendless.userService handleOpenURL:url];
-    NSLog(@"USER (0): %@", user);
-    if (user) {
-        [(StartViewController *)self.window.rootViewController showSuccessView];
-    }
-    return YES;
-}
-#endif
+    [backendless.userService
+     handleOpenURL:url
+     completion:^(BackendlessUser *user) {
+         NSLog(@"USER: %@", user);
+         if (user) {
+             [(StartViewController *)self.window.rootViewController showSuccessView];
+         }
+     }];
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-    [DebLog setIsActive:YES];
+    return YES;
+}
+
+// < iOS9
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    [DebLog logY:@"[BackendlessDemos.UserSosial] AppDelegate -> application:openURL:sourceApplication: url = '%@'[%@]", url, sourceApplication];
+    
+    BackendlessUser *user = [backendless.userService handleOpenURL:url];
+    NSLog(@"USER (0): %@", user);
+    if (user) {
+        [(StartViewController *)self.window.rootViewController showSuccessView];
+    }
+    return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    //[DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
     backendless.hostURL = @"http://api.backendless.com";
-    
+        
     return YES;
 }
 							

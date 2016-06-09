@@ -22,7 +22,6 @@
 #import "StartViewController.h"
 #import "Backendless.h"
 
-
 @implementation StartViewController
 
 - (void)viewDidLoad
@@ -65,7 +64,6 @@
                                             @"gender": @"gender",
                                             @"email": @"email"
                                             };
-
             [backendless.userService
              easyLoginWithFacebookFieldsMapping:fieldsMapping
              permissions:@[@"public_profile", @"email", @"user_friends"]
@@ -129,6 +127,8 @@
 -(void)showSuccessView
 {
     NSLog(@"[BackendlessDemos.UserSosial] StartViewController -> showSuccessView");
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
     UIViewController *successView = [self.storyboard instantiateViewControllerWithIdentifier:@"SuccessView"];
     [self presentViewController:successView animated:YES completion:^{

@@ -21,7 +21,6 @@
 
 #import "StartAppDelegate.h"
 #import "Backendless.h"
-#import "StartViewController.h"
 
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
@@ -30,8 +29,6 @@ static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
 static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
 static NSString *VERSION_NUM = @"v1";
 
-#define __OLD__ 0
-
 @implementation StartAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -39,10 +36,6 @@ static NSString *VERSION_NUM = @"v1";
     //[DebLog setIsActive:YES];
     
     [backendless initApp:APP_ID secret:SECRET_KEY version:VERSION_NUM];
-    
-#if __OLD__
-    [backendless.messaging registerForRemoteNotifications];
-#endif
     
     return YES;
 }

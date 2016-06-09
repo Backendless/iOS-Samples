@@ -23,6 +23,7 @@
 
 @interface StartViewController : UIViewController
 -(void)showSuccessView;
+-(void)showAlert:(NSString *)message;
 -(IBAction)back:(UIStoryboardSegue *)segue;
 -(IBAction)login:(id)sender;
 @end
