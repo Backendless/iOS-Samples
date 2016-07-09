@@ -23,7 +23,7 @@
 #import "RegisterViewController.h"
 #import "Backendless.h"
 
-#define _ASYNC_REQUEST 1
+#define _ASYNC_REQUEST 0
 #define _STAY_LOGGED_IN 1
 
 @interface StartViewController ()

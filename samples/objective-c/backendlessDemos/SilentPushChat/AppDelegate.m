@@ -28,7 +28,7 @@ static NSString *APP_ID = @"8C2263E0-8A50-5133-FF6E-7497E19A4C00";
 static NSString *SECRET_KEY = @"3748791C-9BFB-67C3-FFA4-EBBFD9859600";
 #endif
 #if 1
-static NSString *HOST_URL = @"http://api.test.backendless.com";
+static NSString *HOST_URL = @"http://api.backendless.com";
 static NSString *APP_ID = @"7B92560B-91F0-E94D-FFEB-77451B0F9700";
 static NSString *SECRET_KEY = @"B9D27BA8-3964-F3AE-FF26-E71FFF487300";
 #endif

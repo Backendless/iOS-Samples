@@ -48,7 +48,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
         backendless.messaging.pushReceiver = self;
         
         backendless.messaging.notificationTypes = UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
-        [backendless.messaging registerDeviceWithChannels:@[target]];
+        [backendless.messaging registerDeviceWithChannels:@[target, @"three", @"four"]];
 
         [self initNetActivity];
 
@@ -94,8 +94,12 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 }
 
 -(void)registerDeviceForRandomChannel {
+#if 0
     target = [backendless randomString:12];
-    [backendless.messaging registerDeviceWithChannels:@[target, @"default"]];
+    [backendless.messaging registerDeviceWithChannels:@[target]];
+#else
+    [backendless.messaging registerDeviceWithChannels:@[MESSAGING_CHANNEL, [backendless randomString:12], [backendless randomString:12]]];
+#endif
 }
 
 -(void)publish {

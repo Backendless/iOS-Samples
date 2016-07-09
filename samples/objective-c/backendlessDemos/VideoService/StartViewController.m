@@ -126,7 +126,12 @@
     
     MediaPlaybackOptions *options = _switchView.on?[MediaPlaybackOptions liveStream:self.playbackView]:[MediaPlaybackOptions recordStream:self.playbackView];
     options.orientation = UIImageOrientationUp;
+#if 1
     options.isRealTime = _switchView.on;
+#else
+    options.isRealTime = NO;
+    options.clientBufferMs = 1000;
+#endif
     _player = [backendless.mediaService playbackStream:_streamName tube:VIDEO_TUBE options:options responder:self];
     
     NSLog(@"playbackControl: -> playing stream: '%@/%@'", _player.streamPath, _player.streamName);
