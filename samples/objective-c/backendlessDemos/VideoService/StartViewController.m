@@ -103,6 +103,7 @@
 #endif
 #if 1
     options.orientation = AVCaptureVideoOrientationPortrait;
+    //options.orientation = AVCaptureVideoOrientationLandscapeRight;
     options.resolution = RESOLUTION_VGA;
 #else
     options.content = ONLY_AUDIO;
@@ -126,6 +127,7 @@
     
     MediaPlaybackOptions *options = _switchView.on?[MediaPlaybackOptions liveStream:self.playbackView]:[MediaPlaybackOptions recordStream:self.playbackView];
     options.orientation = UIImageOrientationUp;
+    //options.orientation = UIImageOrientationRight;
 #if 1
     options.isRealTime = _switchView.on;
 #else

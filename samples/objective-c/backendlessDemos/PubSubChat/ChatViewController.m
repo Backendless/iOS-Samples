@@ -184,7 +184,7 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
 
     dispatch_async( dispatch_get_main_queue(), ^{
         
-        //NSLog(@"ChatViewController -> responseHandler: RESPONSE = %@ <%@>", response, response?[response class]:@"NULL");
+        NSLog(@"ChatViewController -> responseHandler: RESPONSE = %@ <%@>", response, response?[response class]:@"NULL");
         
         NSArray *messages = response;
         for (id obj in messages) {

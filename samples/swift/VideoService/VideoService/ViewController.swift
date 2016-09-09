@@ -167,7 +167,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
             options = MediaPublishOptions.recordStream(self.preView) as! MediaPublishOptions
         }
         
-        let mode = 2 // 0 - VIDEO & AUDIO, 1 - ONLY AUDIO, 2 - ONLY VIDEO
+        let mode = 0 // 0 - VIDEO & AUDIO, 1 - ONLY AUDIO, 2 - ONLY VIDEO
         
         switch mode {
             
