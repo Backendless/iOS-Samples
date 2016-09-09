@@ -256,6 +256,8 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
                     return
                 }
                 
+                MPMediaData.routeAudioToSpeaker()
+               
                 self.playbackView.hidden = false
                 
                 netActivity.stopAnimating()
