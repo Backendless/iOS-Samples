@@ -39,8 +39,12 @@
     //_locationTracker.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     _locationTracker.monitoringSignificantLocationChanges = NO;
 #endif
-
+    
 #if 0
+    [self startMonitoringSpesificGeofenceWithRemoteCallback];
+#endif
+
+#if 1
     [self startMonitoringAllGeofencesWithRemoteCallback];
 #endif
     
@@ -49,10 +53,6 @@
 #endif
     
 #if 0
-    [self startMonitoringSpesificGeofenceWithRemoteCallback];
-#endif
-    
-#if 1
     [self startMonitoringSpesificGeofenceWithLocalCallback];
 #endif
     
@@ -80,7 +80,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        [DebLog log:@"ViewController -> onLocationChanged: %@", location];
+        //[DebLog log:@"ViewController -> onLocationChanged: %@", location];
         
         NSString *lat = [NSString stringWithFormat:@"LAT: %f", location.coordinate.latitude];
         NSString *lon = [NSString stringWithFormat:@"LON: %f", location.coordinate.longitude];
@@ -161,7 +161,7 @@ const NSString *deviceToken = @"iOS GeoFence";
     [myLocation metadata:@{@"deviceId":deviceToken}];
     
     [backendless.geo
-     startGeofenceMonitoringGeoPoint:@"Test"
+     startGeofenceMonitoringGeoPoint:@"Ukraine"
      geoPoint:myLocation
      response:^(id response) {
          NSLog(@"Geofence monitoring has been started: %@", response);
@@ -176,8 +176,12 @@ const NSString *deviceToken = @"iOS GeoFence";
     
     NSLog(@">>>> startMonitoringAllGeofencesWithRemoteCallback >>>>>");
     
+#if 0
     CLLocation *_location = [_locationTracker getLocation];
     GeoPoint *myLocation = [GeoPoint geoPoint:(GEO_POINT){.latitude=_location.coordinate.latitude, .longitude=_location.coordinate.longitude}];
+#else
+    GeoPoint *myLocation = [GeoPoint new];
+#endif
     [myLocation metadata:@{@"deviceId":deviceToken}];
 
     [backendless.geo

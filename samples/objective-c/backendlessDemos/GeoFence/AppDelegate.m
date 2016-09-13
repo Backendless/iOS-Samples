@@ -11,8 +11,8 @@
 
 // *** YOU SHOULD SET THE FOLLOWING VALUES FROM YOUR BACKENDLESS APPLICATION ***
 // *** COPY/PASTE APP ID and SECRET KET FROM BACKENDLESS CONSOLE (use the Manage > App Settings screen) ***
-static NSString *APP_ID = @"";
-static NSString *SECRET_KEY = @"";
+static NSString *APP_ID = @"6EBEE76C-F30A-FF58-FFF8-3C03BEBE2D00";
+static NSString *SECRET_KEY = @"F661B6FB-FEAC-2ECD-FFD1-0E531C30DE00";
 static NSString *VERSION_NUM = @"v1";
 
 @implementation AppDelegate

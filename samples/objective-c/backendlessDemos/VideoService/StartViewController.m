@@ -326,6 +326,10 @@
      [NSString stringWithFormat:@"connectFailedEvent: %@ \n", description]];
 }
 
+-(void)metadataReceived:(id)sender event:(NSString *)event metadata:(NSDictionary *)metadata {
+    NSLog(@"<IMediaStreamerDelegate> metadataReceived: %@ -> %@", event, metadata);
+}
+
 #pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
