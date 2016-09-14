@@ -30,11 +30,11 @@ pod 'Backendless-osx-SDK'
 - If you use Swift, add to your bridging header file the following
 
 a. for 'Backendless-ios-SDK':
-#import "Backendless.h"
-#import "MediaService.h"
+  #import "Backendless.h"
+  #import "MediaService.h"
 
 b. for other pods:
-#import "Backendless.h"
+  #import "Backendless.h"
 
 If you don't have your briging header file, set "Build Settings -> Swift Compiler ... -> Objective-C Bridgeing Header" (SWIFT_OBJC_BRIDGING_HEADER) option
 
