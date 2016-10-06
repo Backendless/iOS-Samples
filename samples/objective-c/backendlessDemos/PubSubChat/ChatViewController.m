@@ -61,6 +61,8 @@ static NSString *PUBLISHER_NAME_HEADER = @"publisher_name";
     self.isTextAppended = YES;
     
     [self subscribe];
+    
+    self.textField.text = @"Hello, 😄😀😊😈😧";
 }
 
 - (void)didReceiveMemoryWarning

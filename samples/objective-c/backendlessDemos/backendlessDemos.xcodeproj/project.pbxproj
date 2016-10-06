@@ -2818,6 +2818,9 @@
 					F91B668016B18D2600668A06 = {
 						DevelopmentTeam = 73FSJC7BUF;
 					};
+					F91B66C816B18DAB00668A06 = {
+						DevelopmentTeam = 73FSJC7BUF;
+					};
 					F91B66EC16B18DD800668A06 = {
 						DevelopmentTeam = 73FSJC7BUF;
 						SystemCapabilities = {
@@ -4857,6 +4860,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 73FSJC7BUF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PubSubChat/PubSubChat-Prefix.pch";
 				INFOPLIST_FILE = "PubSubChat/PubSubChat-Info.plist";
@@ -4879,6 +4883,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 73FSJC7BUF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PubSubChat/PubSubChat-Prefix.pch";
 				INFOPLIST_FILE = "PubSubChat/PubSubChat-Info.plist";
