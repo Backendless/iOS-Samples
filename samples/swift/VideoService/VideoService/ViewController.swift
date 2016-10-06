@@ -23,6 +23,7 @@ import UIKit
 
 class ViewController: UIViewController, IMediaStreamerDelegate {
 
+
     @IBOutlet var btnPublish : UIButton!
     @IBOutlet var btnPlayback : UIButton!
     @IBOutlet var btnStopMedia : UIButton!
@@ -64,7 +65,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
             user.email = "bob@foo.com"
             user.password = "bob"
             
-            let registeredUser = self.backendless.userService.registering(user)
+            let registeredUser = self.backendless?.userService.registering(user)
             print("User has been registered (SYNC): \(registeredUser)")
             },
             
@@ -80,7 +81,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
         Types.tryblock({ () -> Void in
             
             // - user login
-            let user = self.backendless.userService.login("bob@foo.com", password:"bob")
+            let user = self.backendless?.userService.login("bob@foo.com", password:"bob")
             print("LOGINED USER: \(user)")
             },
             
@@ -93,14 +94,14 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
     
     // IBActions
     
-    @IBAction func switchCamerasControl(sender: AnyObject) {
+    @IBAction func switchCamerasControl(_ sender: Any!) {
         
         print("----------------------- switchCamerasControl ------------------------------------------------------")
         
         _publisher?.switchCameras()
     }
     
-    @IBAction func stopMediaControl(sender: AnyObject) {
+    @IBAction func stopMediaControl(_ sender: Any!) {
         
         print("----------------------- stopMediaControl ------------------------------------------------------")
         
@@ -109,58 +110,58 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
             _publisher?.disconnect()
             _publisher = nil;
             
-            self.preView.hidden = true
-            self.btnStopMedia.hidden = true
-            self.btnSwapCamera.hidden = true
+            self.preView.isHidden = true
+            self.btnStopMedia.isHidden = true
+            self.btnSwapCamera.isHidden = true
         }
         
         if (_player != nil)
         {
             _player?.disconnect()
             _player = nil;
-            self.playbackView.hidden = true
-            self.btnStopMedia.hidden = true
+            self.playbackView.isHidden = true
+            self.btnStopMedia.isHidden = true
         }
         
-        self.btnPublish.hidden = false
-        self.btnPlayback.hidden = false
-        self.textField.enabled = true
-        self.switchView.enabled = true
+        self.btnPublish.isHidden = false
+        self.btnPlayback.isHidden = false
+        self.textField.isEnabled = true
+        self.switchView.isEnabled = true
         
         self.netActivity.stopAnimating()
     }
     
-    @IBAction func playbackControl(sender: AnyObject) {
+    @IBAction func playbackControl(_ sender: Any!) {
         
         print("----------------------- playbackControl ------------------------------------------------------")
         
         var options: MediaPlaybackOptions
-        if (switchView.on) {
+        if (switchView.isOn) {
             options = MediaPlaybackOptions.liveStream(self.playbackView) as! MediaPlaybackOptions
         }
         else {
             options = MediaPlaybackOptions.recordStream(self.playbackView) as! MediaPlaybackOptions
         }
         
-        options.orientation = .Up
-        options.isRealTime = switchView.on
+        options.orientation = .up
+        options.isRealTime = switchView.isOn
         
-        _player = backendless.mediaService.playbackStream(textField.text, tube:VIDEO_TUBE, options:options, responder:self)
+        _player = backendless?.mediaService.playbackStream(textField.text, tube:VIDEO_TUBE, options:options, responder:self)
         
-        self.btnPublish.hidden = true
-        self.btnPlayback.hidden = true
-        self.textField.enabled = false
-        self.switchView.enabled = false
+        self.btnPublish.isHidden = true
+        self.btnPlayback.isHidden = true
+        self.textField.isEnabled = false
+        self.switchView.isEnabled = false
         
         self.netActivity.startAnimating()
     }
     
-    @IBAction func publishControl(sender: AnyObject) {
+    @IBAction func publishControl(_ sender: Any!) {
         
         print("----------------------- publishControl ------------------------------------------------------")
         
         var options: MediaPublishOptions
-        if (switchView.on) {
+        if (switchView.isOn) {
             options = MediaPublishOptions.liveStream(self.preView) as! MediaPublishOptions
         }
         else {
@@ -172,14 +173,14 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
         switch mode {
             
         case 0: //VIDEO & AUDIO
-            options.orientation = .Portrait
+            options.orientation = .portrait
             options.resolution = RESOLUTION_CIF
             
         case 1: //ONLY AUDIO
             options.content = ONLY_AUDIO
             
         case 2: //ONLY VIDEO
-            options.orientation = .Portrait
+            options.orientation = .portrait
             options.resolution = RESOLUTION_CIF
             options.content = ONLY_VIDEO
         
@@ -187,29 +188,30 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
             return
         }
         
-        _publisher = backendless.mediaService.publishStream(textField.text, tube:VIDEO_TUBE, options:options, responder:self)
+        _publisher = backendless?.mediaService.publishStream(textField.text, tube:VIDEO_TUBE, options:options, responder:self)
         
-        self.btnPublish.hidden = true
-        self.btnPlayback.hidden = true
-        self.textField.enabled = false
-        self.switchView.enabled = false
+        self.btnPublish.isHidden = true
+        self.btnPlayback.isHidden = true
+        self.textField.isEnabled = false
+        self.switchView.isEnabled = false
         
         self.netActivity.startAnimating()
     }
     
-    @IBAction func viewTapped(sender: AnyObject) {
+    @IBAction func viewTapped(_ sender: Any!) {
         textField.resignFirstResponder()
     }
 
     // UITextFieldDelegate protocol methods
     
-    func textFieldShouldReturn(_textField: UITextField) {
+    func textFieldShouldReturn(_ _textField: UITextField) {
         textField.resignFirstResponder()
     }
     
     // MediaStreamerDelegate protocol methods
     
-    func streamStateChanged(sender: AnyObject!, state: Int32, description: String!) {
+    //func streamStateChanged(_ sender: AnyObject!, state: Int32, description: String!) {
+    public func streamStateChanged(_ sender: Any!, state: Int32, description: String!) {
         
         print("<IMediaStreamerDelegate> streamStateChanged: \(state) = \(description)");
         
@@ -225,7 +227,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
         
         case 2: //STREAM_CREATED
 
-            self.btnStopMedia.hidden = false
+            self.btnStopMedia.isHidden = false
             return
         
         case 3: //STREAM_PLAYING
@@ -238,8 +240,8 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
                     return
                 }
                 
-                self.preView.hidden = false
-                self.btnSwapCamera.hidden = false
+                self.preView.isHidden = false
+                self.btnSwapCamera.isHidden = false
                 
                 netActivity.stopAnimating()
             }
@@ -258,7 +260,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
                 
                 MPMediaData.routeAudioToSpeaker()
                
-                self.playbackView.hidden = false
+                self.playbackView.isHidden = false
                 
                 netActivity.stopAnimating()
             }
@@ -278,7 +280,7 @@ class ViewController: UIViewController, IMediaStreamerDelegate {
         }
     }
     
-    func streamConnectFailed(sender: AnyObject!, code: Int32, description: String!) {
+    func streamConnectFailed(_ sender: Any!, code: Int32, description: String!) {
         
         print("<IMediaStreamerDelegate> streamConnectFailed: \(code) = \(description)");
         
