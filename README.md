@@ -1,7 +1,7 @@
 iOS-Samples
 ===========
 
-Contains sample projects demonstrating the usage of various Backendless API and functionality
+Contains sample projects demonstrating the usage of various Backendless 3.X API and functionality
 
 Backendless iOS SDK (http://backendless.com)
 _____________________________________________
